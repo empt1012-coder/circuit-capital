@@ -1,7 +1,7 @@
-window.CC_CONFIG = {
+﻿window.CC_CONFIG = {
   siteName: "Circuit & Capital",
   tagline: "Business. Technology. The signal between them.",
-  domain: "https://famous-douhua-f658d9.netlify.app",
+  domain: "https://curcuit.fit",
   contactEmail: "circuitandcapital.desk@gmail.com",
   adsEmail: "circuitandcapital.desk@gmail.com",
   ads: {

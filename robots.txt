@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://famous-douhua-f658d9.netlify.app/sitemap.xml
+Sitemap: https://curcuit.fit/sitemap.xml
