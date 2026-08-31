@@ -158,7 +158,7 @@
       e.preventDefault();
       const email = form.querySelector("input[type=email]")?.value;
       if (!email) return;
-      const to = desk.contactEmail || "editor@example.com";
+      const to = desk.contactEmail || "circuitandcapital.desk@gmail.com";
       location.href = "mailto:" + encodeURIComponent(to) +
         "?subject=" + encodeURIComponent("Newsletter signup") +
         "&body=" + encodeURIComponent("Please add this address to the morning wire: " + email);
@@ -175,7 +175,7 @@
       const topic = form.querySelector("[name=topic]")?.value || "";
       const message = form.querySelector("[name=message]")?.value || "";
       const to = topic.toLowerCase().includes("advert") ? (desk.adsEmail || desk.contactEmail) : desk.contactEmail;
-      location.href = "mailto:" + encodeURIComponent(to || "editor@example.com") +
+      location.href = "mailto:" + encodeURIComponent(to || "circuitandcapital.desk@gmail.com") +
         "?subject=" + encodeURIComponent("Circuit & Capital: " + topic) +
         "&body=" + encodeURIComponent(name + " <" + email + ">\n\n" + message);
       toast("Opening your email app to send the note.");

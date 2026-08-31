@@ -1,9 +1,9 @@
 window.CC_CONFIG = {
   siteName: "Circuit & Capital",
   tagline: "Business. Technology. The signal between them.",
-  domain: "https://example.com",
-  contactEmail: "editor@example.com",
-  adsEmail: "ads@example.com",
+  domain: "https://famous-douhua-f658d9.netlify.app",
+  contactEmail: "circuitandcapital.desk@gmail.com",
+  adsEmail: "circuitandcapital.desk@gmail.com",
   ads: {
     /* Set provider to "adsense" and fill in your publisher IDs after approval. */
     enabled: true,
