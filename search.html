@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search — Circuit &amp; Capital</title>
+  <meta name="description" content="Search Circuit & Capital briefings.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-base="." data-page="search">
+  <div id="site-header"></div>
+  <main id="main" class="wrap">
+    <header class="page-head">
+      <div class="kicker">Index</div>
+      <h1>Search</h1>
+    </header>
+    <form action="search.html" method="get" class="form" style="margin-bottom:1.5rem">
+      <label for="search-page-input">Query</label>
+      <input id="search-page-input" type="search" name="q">
+      <p><button class="btn btn--ink" type="submit">Search</button></p>
+    </form>
+    <aside class="ad-slot ad-slot--leaderboard" data-slot="leaderboard" aria-label="Advertisement">
+      <span class="ad-slot__label">Advertisement</span>
+      <div class="ad-slot__box">728 × 90</div>
+    </aside>
+    <div id="search-results" class="search-results"></div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/ads.js"></script>
+</body>
+</html>

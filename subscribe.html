@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Subscribe — Circuit &amp; Capital</title>
+  <meta name="description" content="Get the Circuit & Capital morning wire.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-base="." data-page="subscribe">
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="newsletter" id="newsletter">
+      <div class="wrap">
+        <div class="kicker" style="color:#e0a57a">The morning wire</div>
+        <h2>One briefing. No filler.</h2>
+        <p>Business and technology stories that affect budgets, boards, and builders — three times a week. Unsubscribe anytime.</p>
+        <form name="newsletter" method="POST" action="/thanks.html" data-newsletter data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="newsletter">
+          <p class="visually-hidden"><label>Don’t fill this out <input name="bot-field"></label></p>
+          <input type="email" name="email" required placeholder="you@company.com" aria-label="Email">
+          <button class="btn btn--copper" type="submit">Get the briefing</button>
+        </form>
+        <p class="note">Locally this opens your email app. On a live Netlify host, signups land in the site’s form inbox.</p>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/ads.js"></script>
+</body>
+</html>

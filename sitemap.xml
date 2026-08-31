@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/</loc></url>
+  <url><loc>https://example.com/about.html</loc></url>
+  <url><loc>https://example.com/advertise.html</loc></url>
+  <url><loc>https://example.com/contact.html</loc></url>
+  <url><loc>https://example.com/privacy.html</loc></url>
+  <url><loc>https://example.com/terms.html</loc></url>
+  <url><loc>https://example.com/search.html</loc></url>
+  <url><loc>https://example.com/categories/business.html</loc></url>
+  <url><loc>https://example.com/categories/technology.html</loc></url>
+  <url><loc>https://example.com/categories/markets.html</loc></url>
+  <url><loc>https://example.com/categories/startups.html</loc></url>
+  <url><loc>https://example.com/categories/policy.html</loc></url>
+  <url><loc>https://example.com/categories/opinion.html</loc></url>
+  <url><loc>https://example.com/articles/ai-productivity-paradox.html</loc></url>
+  <url><loc>https://example.com/articles/private-credit-software.html</loc></url>
+  <url><loc>https://example.com/articles/chip-export-controls.html</loc></url>
+  <url><loc>https://example.com/articles/cyber-insurance-it-budgets.html</loc></url>
+  <url><loc>https://example.com/articles/ai-native-unit-economics.html</loc></url>
+  <url><loc>https://example.com/articles/cloud-repatriation.html</loc></url>
+  <url><loc>https://example.com/articles/board-questions-generative-ai.html</loc></url>
+  <url><loc>https://example.com/articles/retail-media-networks.html</loc></url>
+</urlset>

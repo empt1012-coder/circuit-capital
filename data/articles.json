@@ -1,0 +1,92 @@
+{
+  "articles": [
+    {
+      "slug": "ai-productivity-paradox",
+      "title": "The AI Productivity Paradox at Mid-Market Companies",
+      "dek": "Tools landed in every department. Output did not. The bottleneck is workflow, not the model.",
+      "category": "Technology",
+      "author": "Marcus Hale",
+      "date": "August 26, 2026",
+      "readTime": 9,
+      "image": "assets/images/office.jpg",
+      "body": "licenses pilots training change management"
+    },
+    {
+      "slug": "private-credit-software",
+      "title": "Private Credit Is Quietly Funding the Software Roll-Up",
+      "dek": "When public markets froze on multiples, direct lenders stepped in — and started acting like operators.",
+      "category": "Markets",
+      "author": "Priya Nandakumar",
+      "date": "August 24, 2026",
+      "readTime": 8,
+      "image": "assets/images/finance.jpg",
+      "body": "direct lending EBITDA add-backs covenant"
+    },
+    {
+      "slug": "chip-export-controls",
+      "title": "Chip Export Controls and the Suppliers Caught in Between",
+      "dek": "Policy is written in Washington. The P&L lands on toolmakers, packagers, and the mid-tier vendors nobody briefed.",
+      "category": "Policy",
+      "author": "Elena Voss",
+      "date": "August 21, 2026",
+      "readTime": 8,
+      "image": "assets/images/chips.jpg",
+      "body": "export licenses foundry equipment dual-use"
+    },
+    {
+      "slug": "cyber-insurance-it-budgets",
+      "title": "Cyber Insurance Is Rewriting the IT Budget",
+      "dek": "Underwriters now ask better questions than some boards. The answers are showing up as line items.",
+      "category": "Business",
+      "author": "Elena Voss",
+      "date": "August 19, 2026",
+      "readTime": 7,
+      "image": "assets/images/datacenter.jpg",
+      "body": "MFA EDR backups ransomware questionnaire"
+    },
+    {
+      "slug": "ai-native-unit-economics",
+      "title": "The New Unit Economics of AI-Native Startups",
+      "dek": "Gross margin is no longer a software story. Token costs, evals, and human review decide who scales.",
+      "category": "Startups",
+      "author": "Jonah Reeves",
+      "date": "August 17, 2026",
+      "readTime": 8,
+      "image": "assets/images/workshop.jpg",
+      "body": "COGS inference caching human-in-the-loop"
+    },
+    {
+      "slug": "cloud-repatriation",
+      "title": "Cloud Repatriation: When the Bill Becomes the Strategy",
+      "dek": "Finance is pulling workloads home. Engineering is discovering that “home” is a product decision, not a protest.",
+      "category": "Technology",
+      "author": "Marcus Hale",
+      "date": "August 14, 2026",
+      "readTime": 8,
+      "image": "assets/images/port.jpg",
+      "body": "egress reserved instances colo FinOps"
+    },
+    {
+      "slug": "board-questions-generative-ai",
+      "title": "Six Questions Every Board Should Ask About Generative AI",
+      "dek": "Most decks still sell possibility. Directors need a control framework that survives the next vendor cycle.",
+      "category": "Opinion",
+      "author": "Elena Voss",
+      "date": "August 12, 2026",
+      "readTime": 7,
+      "image": "assets/images/boardroom.jpg",
+      "body": "fiduciary risk data leakage vendor lock-in"
+    },
+    {
+      "slug": "retail-media-networks",
+      "title": "Retail Media Networks Are Eating the Digital Ad Market",
+      "dek": "Closed-loop purchase data beat the open web. The next fight is over who owns the aisle.",
+      "category": "Business",
+      "author": "Priya Nandakumar",
+      "date": "August 10, 2026",
+      "readTime": 8,
+      "image": "assets/images/finance.jpg",
+      "body": "CPG attribution walled garden onsite ads"
+    }
+  ]
+}
