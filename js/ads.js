@@ -48,8 +48,14 @@
   }
 
   const sticky = document.querySelector(".ad-sticky");
+  const liveAds = ads.provider === "adsense" && ads.adsenseClient.indexOf("XXXX") === -1;
+  if (sticky && !liveAds) sticky.remove();
   const close = document.querySelector("[data-close-sticky]");
-  if (close && sticky) {
-    close.addEventListener("click", () => sticky.remove());
+  if (close && sticky && liveAds) {
+    document.body.classList.add("has-live-ads");
+    close.addEventListener("click", () => {
+      sticky.remove();
+      document.body.classList.remove("has-live-ads");
+    });
   }
 })();

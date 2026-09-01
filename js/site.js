@@ -50,9 +50,9 @@
             </span>
           </a>
           <div class="masthead__actions">
-            <button class="btn btn--ghost" type="button" data-toggle-search>Search</button>
+            <button class="btn btn--icon" type="button" data-toggle-search aria-label="Search">Search</button>
             <a class="btn btn--copper" href="${asset("subscribe.html")}">Subscribe</a>
-            <button class="menu-toggle" type="button" data-toggle-nav aria-label="Open menu">☰</button>
+            <button class="menu-toggle" type="button" data-toggle-nav aria-label="Open menu" aria-expanded="false">☰</button>
           </div>
         </div>
         <nav class="nav" id="site-nav">
@@ -125,11 +125,18 @@
   if (headerMount) headerMount.innerHTML = headerHTML();
   if (footerMount) footerMount.innerHTML = footerHTML();
 
+  const viewport = document.querySelector('meta[name="viewport"]');
+  if (viewport) {
+    viewport.setAttribute("content", "width=device-width, initial-scale=1, viewport-fit=cover");
+  }
+
   document.querySelector("[data-toggle-search]")?.addEventListener("click", () => {
     document.getElementById("search-bar")?.classList.toggle("is-open");
   });
   document.querySelector("[data-toggle-nav]")?.addEventListener("click", () => {
-    document.getElementById("site-nav")?.classList.toggle("is-open");
+    const nav = document.getElementById("site-nav");
+    const open = nav?.classList.toggle("is-open");
+    document.querySelector("[data-toggle-nav]")?.setAttribute("aria-expanded", open ? "true" : "false");
   });
 
   const cookie = document.getElementById("cookie");
