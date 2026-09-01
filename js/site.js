@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   const base = document.body.getAttribute("data-base") || ".";
   const page = document.body.getAttribute("data-page") || "";
   const asset = (path) => base.replace(/\/$/, "") + "/" + path.replace(/^\//, "");
@@ -165,7 +165,7 @@
       e.preventDefault();
       const email = form.querySelector("input[type=email]")?.value;
       if (!email) return;
-      const to = desk.contactEmail || "circuitandcapital.desk@gmail.com";
+      const to = desk.contactEmail || "circuit50capital@circuits.fit";
       location.href = "mailto:" + encodeURIComponent(to) +
         "?subject=" + encodeURIComponent("Newsletter signup") +
         "&body=" + encodeURIComponent("Please add this address to the morning wire: " + email);
@@ -182,7 +182,7 @@
       const topic = form.querySelector("[name=topic]")?.value || "";
       const message = form.querySelector("[name=message]")?.value || "";
       const to = topic.toLowerCase().includes("advert") ? (desk.adsEmail || desk.contactEmail) : desk.contactEmail;
-      location.href = "mailto:" + encodeURIComponent(to || "circuitandcapital.desk@gmail.com") +
+      location.href = "mailto:" + encodeURIComponent(to || "circuit50capital@circuits.fit") +
         "?subject=" + encodeURIComponent("Circuit & Capital: " + topic) +
         "&body=" + encodeURIComponent(name + " <" + email + ">\n\n" + message);
       toast("Opening your email app to send the note.");

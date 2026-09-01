@@ -2,8 +2,8 @@
   siteName: "Circuit & Capital",
   tagline: "Business. Technology. The signal between them.",
   domain: "https://circuits.fit",
-  contactEmail: "circuitandcapital.desk@gmail.com",
-  adsEmail: "circuitandcapital.desk@gmail.com",
+  contactEmail: "circuit50capital@circuits.fit",
+  adsEmail: "circuit50capital@circuits.fit",
   ads: {
     /* Set provider to "adsense" and fill in your publisher IDs after approval. */
     enabled: true,
