@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://curcuit.fit/sitemap.xml
+Sitemap: https://circuits.fit/sitemap.xml

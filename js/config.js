@@ -1,7 +1,7 @@
 ﻿window.CC_CONFIG = {
   siteName: "Circuit & Capital",
   tagline: "Business. Technology. The signal between them.",
-  domain: "https://curcuit.fit",
+  domain: "https://circuits.fit",
   contactEmail: "circuitandcapital.desk@gmail.com",
   adsEmail: "circuitandcapital.desk@gmail.com",
   ads: {
