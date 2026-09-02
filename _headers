@@ -3,3 +3,5 @@
 
 /robots.txt
   Content-Type: text/plain; charset=utf-8
+/sitemap.txt
+  Content-Type: text/plain; charset=utf-8
