@@ -130,6 +130,51 @@
     viewport.setAttribute("content", "width=device-width, initial-scale=1, viewport-fit=cover");
   }
 
+  const cfg = window.CC_CONFIG || {};
+  const origin = String(cfg.domain || "https://circuits.fit").replace(/\/$/, "");
+  const path = location.pathname.replace(/index\.html$/, "") || "/";
+  const canonicalHref = origin + path;
+  let canon = document.querySelector('link[rel="canonical"]');
+  if (!canon) {
+    canon = document.createElement("link");
+    canon.rel = "canonical";
+    document.head.appendChild(canon);
+  }
+  canon.href = canonicalHref;
+  function setMeta(attr, key, val) {
+    let el = document.querySelector("meta[" + attr + '="' + key + '"]');
+    if (!el) {
+      el = document.createElement("meta");
+      el.setAttribute(attr, key);
+      document.head.appendChild(el);
+    }
+    el.setAttribute("content", val);
+  }
+  setMeta("property", "og:title", document.title);
+  setMeta("property", "og:url", canonicalHref);
+  setMeta("property", "og:type", page === "home" ? "website" : "article");
+  setMeta("property", "og:site_name", cfg.siteName || "Circuit & Capital");
+  const desc = document.querySelector('meta[name="description"]');
+  if (desc) setMeta("property", "og:description", desc.getAttribute("content") || "");
+  const ogImg = document.querySelector(".article-cover img, .lead__media img");
+  if (ogImg && ogImg.src) setMeta("property", "og:image", ogImg.src);
+
+  function loadAnalytics() {
+    const id = cfg.analyticsId;
+    if (!id || !/^G-/.test(id)) return;
+    if (localStorage.getItem("cc-cookie") === "reject") return;
+    if (window.gtag) return;
+    const s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", id);
+  }
+  if (localStorage.getItem("cc-cookie") === "accept") loadAnalytics();
+
   document.querySelector("[data-toggle-search]")?.addEventListener("click", () => {
     document.getElementById("search-bar")?.classList.toggle("is-open");
   });
@@ -145,6 +190,7 @@
     btn.addEventListener("click", () => {
       localStorage.setItem("cc-cookie", btn.getAttribute("data-cookie"));
       cookie?.classList.remove("is-open");
+      if (btn.getAttribute("data-cookie") === "accept") loadAnalytics();
     });
   });
 

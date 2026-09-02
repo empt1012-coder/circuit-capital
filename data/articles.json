@@ -1,6 +1,28 @@
 {
   "articles": [
     {
+      "slug": "software-buying-is-an-operating-skill",
+      "title": "Software Buying Is an Operating Skill",
+      "dek": "The stack is no longer an IT catalog. It is how the company actually runs — and most firms still buy it like office supplies.",
+      "category": "Business",
+      "author": "Elena Voss",
+      "date": "August 31, 2026",
+      "readTime": 8,
+      "image": "assets/images/boardroom.jpg",
+      "body": "procurement seats renewal workflow owner"
+    },
+    {
+      "slug": "when-compliance-is-the-product",
+      "title": "When Compliance Is the Product",
+      "dek": "Data residency, audit trails, and model clauses are no longer legal footnotes. They are packaging.",
+      "category": "Policy",
+      "author": "Marcus Hale",
+      "date": "August 31, 2026",
+      "readTime": 7,
+      "image": "assets/images/datacenter.jpg",
+      "body": "residency audit logs subprocessors training"
+    },
+    {
       "slug": "ai-productivity-paradox",
       "title": "The AI Productivity Paradox at Mid-Market Companies",
       "dek": "Tools landed in every department. Output did not. The bottleneck is workflow, not the model.",
