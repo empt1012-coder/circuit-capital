@@ -1,6 +1,39 @@
 {
   "articles": [
     {
+      "slug": "ai-spend-is-not-the-same-as-ai-return",
+      "title": "AI Spend Is Not the Same as AI Return",
+      "dek": "Gartner sees $2.59 trillion in AI spending this year. McKinsey still finds only a minority of firms attributing EBIT to it.",
+      "category": "Technology",
+      "author": "Emilio Santos",
+      "date": "September 2, 2026",
+      "readTime": 8,
+      "image": "assets/images/office.jpg",
+      "body": "Gartner McKinsey Ramp EBIT tokens"
+    },
+    {
+      "slug": "chip-licenses-keep-moving",
+      "title": "Chip Licenses Keep Moving. The Mid-Tier Still Waits.",
+      "dek": "BIS opened a case-by-case window for H200-class chips. Korea tightened AI-chip exports on Sept. 1.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "September 2, 2026",
+      "readTime": 8,
+      "image": "assets/images/chips.jpg",
+      "body": "BIS H200 Korea Wassenaar Applied Materials"
+    },
+    {
+      "slug": "cyber-got-cheaper-the-questionnaire-did-not",
+      "title": "Cyber Insurance Got Cheaper. The Questionnaire Did Not.",
+      "dek": "Swiss Re puts 2026 global cyber premium at $16.4 billion with rates still down. The application still wants MFA.",
+      "category": "Business",
+      "author": "Emilio Santos",
+      "date": "September 2, 2026",
+      "readTime": 8,
+      "image": "assets/images/datacenter.jpg",
+      "body": "Swiss Re AM Best Fitch ransomware MFA"
+    },
+    {
       "slug": "software-buying-is-an-operating-skill",
       "title": "Software Buying Is an Operating Skill",
       "dek": "The stack is no longer an IT catalog. It is how the company actually runs — and most firms still buy it like office supplies.",

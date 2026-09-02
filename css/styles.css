@@ -542,6 +542,8 @@ nav.nav {
   color: var(--ink-2);
 }
 .prose ul { padding-left: 1.2rem; }
+.prose .sources { font-family: var(--sans); font-size: 0.92rem; color: var(--ink-2); }
+.prose .sources a { text-decoration: underline; text-underline-offset: 2px; }
 .prose li { margin-bottom: 0.4rem; }
 .byline-row {
   display: flex;
