@@ -1,0 +1,8 @@
+{
+  "name": "circuit-capital",
+  "private": true,
+  "description": "Circuit & Capital static publication",
+  "devDependencies": {
+    "netlify-plugin-submit-sitemap": "^0.4.0"
+  }
+}

@@ -4,6 +4,13 @@
 [build.environment]
   NODE_VERSION = "22"
 
+[[plugins]]
+  package = "netlify-plugin-submit-sitemap"
+
+  [plugins.inputs]
+    baseUrl = "https://circuits.fit"
+    sitemapPath = "/sitemap.xml"
+
 [[headers]]
   for = "/*"
   [headers.values]

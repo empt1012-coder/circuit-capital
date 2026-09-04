@@ -4,13 +4,14 @@
   const asset = (path) => base.replace(/\/$/, "") + "/" + path.replace(/^\//, "");
 
   const navItems = [
-    ["Business", "categories/business.html"],
-    ["Technology", "categories/technology.html"],
-    ["Markets", "categories/markets.html"],
-    ["Startups", "categories/startups.html"],
-    ["Policy", "categories/policy.html"],
+    ["Home", "index.html"],
+    ["Briefing", "briefing.html"],
     ["Guides", "categories/guides.html"],
-    ["Opinion", "categories/opinion.html"]
+    ["Markets", "categories/markets.html"],
+    ["Technology", "categories/technology.html"],
+    ["Policy", "categories/policy.html"],
+    ["About", "about.html"],
+    ["Subscribe", "subscribe.html"]
   ];
 
   function itemHref(a) {
@@ -52,12 +53,11 @@
             <img class="brand__mark" src="${asset("assets/images/mark.jpg")}" alt="">
             <span>
               <div class="brand__name">Circuit <span>&amp;</span> Capital</div>
-              <div class="brand__tag">Business · Technology · Markets</div>
+              <div class="brand__tag">Business and technology briefing</div>
             </span>
           </a>
           <div class="masthead__actions">
             <button class="btn btn--icon" type="button" data-toggle-search aria-label="Search">Search</button>
-            <a class="btn btn--copper" href="${asset("subscribe.html")}">Subscribe</a>
             <button class="menu-toggle" type="button" data-toggle-nav aria-label="Open menu" aria-expanded="false">☰</button>
           </div>
         </div>
@@ -106,7 +106,7 @@
         </div>
         <div class="wrap foot-bottom">
           <div>© ${new Date().getFullYear()} Circuit &amp; Capital. All rights reserved.</div>
-          <div>Independent briefing on business and technology.</div>
+          <div>Circuit &amp; Capital is a business and technology publication. It is not a fitness brand.</div>
         </div>
       </footer>
       <div class="ad-sticky" aria-label="Advertisement">
@@ -156,14 +156,38 @@
     }
     el.setAttribute("content", val);
   }
+  const siteName = cfg.siteName || "Circuit & Capital";
+  const tagline = cfg.tagline || "Business and technology briefing";
+  const fallbackDesc = cfg.defaultDescription || "Independent briefing on how companies buy software, how capital prices it, and how policy changes the map.";
+  const descEl = document.querySelector('meta[name="description"]');
+  const description = (descEl && descEl.getAttribute("content")) || fallbackDesc;
   setMeta("property", "og:title", document.title);
+  setMeta("property", "og:description", description);
   setMeta("property", "og:url", canonicalHref);
-  setMeta("property", "og:type", page === "home" ? "website" : "article");
-  setMeta("property", "og:site_name", cfg.siteName || "Circuit & Capital");
-  const desc = document.querySelector('meta[name="description"]');
-  if (desc) setMeta("property", "og:description", desc.getAttribute("content") || "");
+  setMeta("property", "og:type", page === "home" || page === "briefing" ? "website" : "article");
+  setMeta("property", "og:site_name", siteName);
+  setMeta("name", "twitter:card", "summary_large_image");
+  setMeta("name", "twitter:title", document.title);
+  setMeta("name", "twitter:description", description);
   const ogImg = document.querySelector(".article-cover img, .lead__media img");
-  if (ogImg && ogImg.src) setMeta("property", "og:image", ogImg.src);
+  const shareImg = ogImg && ogImg.src ? ogImg.src : origin + "/assets/images/mark.jpg";
+  setMeta("property", "og:image", shareImg);
+  setMeta("name", "twitter:image", shareImg);
+  setMeta("name", "application-name", siteName);
+  setMeta("name", "apple-mobile-web-app-title", siteName);
+
+  function ensureLink(rel, href, attrs) {
+    let el = document.querySelector('link[rel="' + rel + '"]');
+    if (!el) {
+      el = document.createElement("link");
+      el.rel = rel;
+      document.head.appendChild(el);
+    }
+    el.href = href;
+    if (attrs) Object.keys(attrs).forEach((k) => el.setAttribute(k, attrs[k]));
+  }
+  ensureLink("icon", asset("assets/favicon.svg"), { type: "image/svg+xml" });
+  ensureLink("apple-touch-icon", asset("assets/apple-touch-icon.png"), { sizes: "180x180" });
 
   function loadAnalytics() {
     const id = cfg.analyticsId;
@@ -271,7 +295,7 @@
             .join("")
         : `<p>No briefings matched “${params.get("q") || ""}”.</p>`;
     }).catch(() => {
-      searchRoot.innerHTML = "<p>Could not load the index. Serve the site over HTTP (see README).</p>";
+      searchRoot.innerHTML = "<p>The index could not be loaded. Refresh and try again.</p>";
     });
   }
 
@@ -294,7 +318,29 @@
         )
         .join("");
     } catch {
-      root.innerHTML = "<p>Serve the site over HTTP to load this section.</p>";
+      root.innerHTML = "<p>This section could not be loaded. Refresh and try again.</p>";
+    }
+  });
+
+  document.querySelectorAll("[data-briefing-list]").forEach(async (root) => {
+    try {
+      const articles = await loadArticles();
+      const list = articles.filter((a) => a.type !== "guide");
+      root.innerHTML = list
+        .map(
+          (a) => `<article class="latest-row">
+            <a href="${itemHref(a)}"><img src="${asset(a.image)}" alt=""></a>
+            <div>
+              <div class="kicker">${a.category}</div>
+              <h3><a href="${itemHref(a)}">${a.title}</a></h3>
+              <p>${a.dek}</p>
+              <div class="meta">${a.author} · ${a.date} · ${a.readTime} min read</div>
+            </div>
+          </article>`
+        )
+        .join("");
+    } catch {
+      root.innerHTML = "<p>This section could not be loaded. Refresh and try again.</p>";
     }
   });
 })();
