@@ -1,6 +1,54 @@
 {
   "articles": [
     {
+      "slug": "cyber-insurance-checklist-2026",
+      "type": "guide",
+      "title": "Cyber Insurance Checklist for Mid-Market IT Budgets (2026)",
+      "dek": "MFA, EDR, immutable backups, IR retainer, and who owns broker versus IT while rates are still walking down.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "September 4, 2026",
+      "readTime": 10,
+      "image": "assets/images/datacenter.jpg",
+      "body": "MFA EDR backups retainer broker questionnaire mid-market"
+    },
+    {
+      "slug": "cloud-repatriation-cost",
+      "type": "guide",
+      "title": "When Cloud Repatriation Is a Finance Decision, Not an Engineering Slogan",
+      "dek": "Cost drivers, FinOps questions, and stay-versus-leave — with a labeled list-price egress example, not a fake calculator.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "September 4, 2026",
+      "readTime": 10,
+      "image": "assets/images/port.jpg",
+      "body": "egress FinOps reserved instances colo unit cost"
+    },
+    {
+      "slug": "ai-spend-vs-return",
+      "type": "guide",
+      "title": "How to Tell AI Spend from AI Return",
+      "dek": "Seat cost versus token cost, pilot versus production, and questions a board can ask. No guaranteed-return claims.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "September 4, 2026",
+      "readTime": 10,
+      "image": "assets/images/office.jpg",
+      "body": "Gartner McKinsey seats tokens EBIT pilot production"
+    },
+    {
+      "slug": "software-buying-operating-skill",
+      "type": "guide",
+      "title": "Software Buying as an Operating Skill",
+      "dek": "RFP basics, seat waste, who signs, and the three SaaS-management jobs. The stack is the company.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "September 4, 2026",
+      "readTime": 10,
+      "image": "assets/images/boardroom.jpg",
+      "body": "RFP seats ghost overlap Zylo Vertice procurement"
+    },
+    {
       "slug": "how-to-read-a-saas-renewal",
       "type": "guide",
       "title": "How to Read a SaaS Renewal",

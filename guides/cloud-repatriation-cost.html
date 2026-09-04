@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>When cloud repatriation is a finance decision, not an engineering slogan — Circuit &amp; Capital</title>
+  <meta name="description" content="A U.S. mid-market FinOps pass: cost drivers, stay-versus-leave questions, and a labeled list-price egress example — not a fake AWS bill calculator.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-base=".." data-page="guides">
+  <div id="site-header"></div>
+  <main id="main">
+    <header class="article-hero wrap">
+      <div class="kicker">Guides</div>
+      <h1>When cloud repatriation is a finance decision, not an engineering slogan</h1>
+      <p class="dek">Steady-state workloads need a unit cost, not a burst story. Run the comparison with egress, people, and the feature you will not get — or keep arguing about the invoice.</p>
+      <div class="byline-row">
+        <span>By <strong>Emilio Santos</strong></span>
+        <span>Updated September 4, 2026</span>
+        <span>10 min read</span>
+      </div>
+    </header>
+    <div class="wrap guide-layout">
+      <article class="prose">
+        <aside class="who-for">
+          <h2>Who this is for</h2>
+          <p>The U.S. mid-market CFO who wants the bill to mean something, and the operator who will have to staff “home” if finance says the word repatriation.</p>
+        </aside>
+        <nav class="guide-toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#drivers">Cost drivers that actually move the bill</a></li>
+            <li><a href="#finops">FinOps questions before anyone buys a rack</a></li>
+            <li><a href="#stay">When staying versus leaving makes sense</a></li>
+            <li><a href="#example">Labeled list-price example</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ol>
+        </nav>
+        <p class="lead-graf">The cloud argument of the 2010s was elasticity. The cloud argument of the mid-2020s is the invoice. Workloads that run every hour of the quarter do not need a burst story. They need a unit cost. When that unit cost is higher than a colo row plus a small platform team, finance starts using the word “repatriation.” That is a matching problem, not a morality play.</p>
+        <p>Some products still belong on the public cloud: spiky demand, a global edge, a managed store you do not want to staff. Others were lifted and shifted in a hurry and never earned their keep. This page is how a mid-market shop decides which is which without inventing a calculator that pretends to know your discount.</p>
+
+        <h2 id="drivers">Cost drivers that actually move the bill</h2>
+        <p>Compute and storage are the lines everyone can see. The damage usually sits next to them.</p>
+        <ul>
+          <li><strong>Egress and data gravity.</strong> Getting data in is cheap. Getting it out is a toll. AWS’s published on-demand transfer table still prices the first 10 TB per month of internet egress from EC2 at $0.09 per GB after a small free tier, then steps down. That is list, not your EDP.</li>
+          <li><strong>Cross-AZ and cross-region chatter.</strong> A chatty database that copies itself for “high availability” can look cheap until you price the copies as a product.</li>
+          <li><strong>Managed-service multipliers.</strong> RDS, warehouse, and similar services buy you staffing you do not have. They also hide a premium you only see when you compare to a box you would have to run.</li>
+          <li><strong>Commitments you cannot unwind.</strong> Reserved instances and savings plans that outrun actual use are a tax you already signed. Moving a workload does not erase the commit.</li>
+          <li><strong>People.</strong> A company that outsourced operations cannot “bring it home” without hiring. Hiring is slower than a board slide.</li>
+        </ul>
+        <p>If you cannot attach the top twenty lines to a service, a team, and a product, you are not ready to move anything. You are ready to argue.</p>
+
+        <h2 id="finops">FinOps questions before anyone buys a rack</h2>
+        <p>FinOps that only produces dashboards is theater. FinOps that can attach a cost to a SKU can choose.</p>
+        <ol>
+          <li>Which workloads run above a high, steady utilization most hours of the quarter — and which only look expensive because they are on-demand by habit?</li>
+          <li>What share of the bill is untagged, and who is allowed to launch an untagged resource?</li>
+          <li>What is the fully loaded twelve-month cloud number: list minus real discounts, plus support, plus the commit you will still pay if you leave?</li>
+          <li>What is the fully loaded “home” number: colo or owned row, hardware, power, software, and the platform people you do not have yet?</li>
+          <li>What feature disappears if you leave — global backbone, managed failover, a region you cannot staff — and is that a product risk or a rounding error?</li>
+          <li>If two people resign in the first year, does the savings still exist?</li>
+        </ol>
+        <blockquote>Repatriation without an ownership model is just a more expensive outage.</blockquote>
+        <aside id="ad-guide-mid" class="ad-slot ad-slot--guide" data-slot="guideMid" hidden></aside>
+
+        <h2 id="stay">When staying versus leaving makes sense</h2>
+        <table class="rate-table">
+          <thead>
+            <tr>
+              <th>Signal</th>
+              <th>Lean stay</th>
+              <th>Lean leave (or hybrid)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Demand</td>
+              <td>Spiky, global, unknown</td>
+              <td>Steady, local, known for four quarters</td>
+            </tr>
+            <tr>
+              <td>Data</td>
+              <td>Small, or already at the edge</td>
+              <td>Heavy gravity, clumsy egress, batch that never bursts</td>
+            </tr>
+            <tr>
+              <td>Staff</td>
+              <td>No platform team, and no plan to hire one</td>
+              <td>Named owners who have run a row before</td>
+            </tr>
+            <tr>
+              <td>Commit</td>
+              <td>Leaving would strand a savings plan you still owe</td>
+              <td>The commit is already a bad fit and the workload is separable</td>
+            </tr>
+            <tr>
+              <td>Product risk</td>
+              <td>You need a region or failover you will not build</td>
+              <td>The missing managed feature is a nice-to-have</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>The usual candidates to come home are batch analytics, predictable inference, and stateful systems that were never elastic. Customer-facing apps with a global edge usually stay. Hybrid is the real destination for most mid-market shops: reserved cloud for the bursty surface, owned or colo capacity for the furnace.</p>
+        <p>Staff the platform team first. Migrate a boring workload second. Only then hold a quote. If the savings only appear if nobody leaves the company, the savings are fictional.</p>
+
+        <h2 id="example">Labeled list-price example</h2>
+        <p><strong>This is not your bill.</strong> It is a published list-price illustration so egress is not a vibe.</p>
+        <p>AWS’s public on-demand table (U.S. regions, internet egress from EC2, after the small monthly free tier) still lists $0.09 per GB for the first 10 TB in a month. Ten terabytes is 10,240 GB. 10,240 × $0.09 is $921.60 at list, before NAT gateways, cross-AZ traffic, CloudFront, or any discount you actually have.</p>
+        <p>Use that only as a scale check: if your architecture ships terabytes out every month, the toll is a product decision. Pull your own invoice lines. Do not run a spreadsheet that pretends a blog’s $900 is your number.</p>
+
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://aws.amazon.com/ec2/pricing/on-demand/" rel="noopener">AWS EC2 on-demand pricing, data transfer</a> (list prices; not a quote)</li>
+        </ul>
+        <aside id="ad-guide-end" class="ad-slot ad-slot--guide" data-slot="guideEnd" hidden></aside>
+        <section class="guide-faq" aria-labelledby="faq">
+          <h2 id="faq">FAQ</h2>
+          <h3>Should we leave the cloud?</h3>
+          <p>Not as a slogan. Leave the workload whose fully loaded twelve-month cost, after people and egress, is higher than a row you can actually staff — and whose missing managed features you can live with.</p>
+          <h3>Can we use a public calculator as the decision?</h3>
+          <p>No. List prices are a scale check. Your discounts, commits, NAT, and cross-AZ lines are the decision. This page does not invent a bill for you.</p>
+          <h3>What if we have no platform team?</h3>
+          <p>Then “home” is a hiring plan, not a migration. Hire first or stay.</p>
+          <h3>Is hybrid a cop-out?</h3>
+          <p>It is the usual honest answer. Burst at the edge. Own the furnace. Pretending every workload wants the same home is how you get a second invoice.</p>
+        </section>
+        <section class="guide-related" aria-labelledby="related-briefing">
+          <h2 id="related-briefing">Related briefing</h2>
+          <ul>
+            <li><a href="../articles/cloud-repatriation.html">Cloud repatriation: when the bill becomes the strategy</a></li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/config.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="../js/ads.js"></script>
+</body>
+</html>
