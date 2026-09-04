@@ -54,6 +54,7 @@
             <span>
               <div class="brand__name">Circuit <span>&amp;</span> Capital</div>
               <div class="brand__tag">Business and technology briefing</div>
+              ${page === "home" ? `<div class="brand__note">For operators, investors, and builders. Not gym circuits.</div>` : ""}
             </span>
           </a>
           <div class="masthead__actions">
@@ -109,13 +110,13 @@
           <div>Circuit &amp; Capital is a business and technology publication. It is not a fitness brand.</div>
         </div>
       </footer>
-      <div class="ad-sticky" aria-label="Advertisement">
+      ${page === "home" ? "" : `<div class="ad-sticky" aria-label="Advertisement">
         <button type="button" data-close-sticky aria-label="Close ad">×</button>
         <div class="ad-slot" data-slot="mobileSticky" data-ad-slot="">
           <span class="ad-slot__label">Advertisement</span>
-          <div class="ad-slot__box">320 × 50</div>
+          <div class="ad-slot__box"></div>
         </div>
-      </div>
+      </div>`}
       <div class="cookie" id="cookie">
         <p>We use cookies and similar tech for analytics and advertising. See our <a href="${asset("privacy.html")}">privacy policy</a>.</p>
         <div class="cookie__row">

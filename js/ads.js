@@ -1,4 +1,9 @@
 (function () {
+  if (document.body.getAttribute("data-page") === "home") {
+    document.querySelector(".ad-sticky")?.remove();
+    return;
+  }
+
   const ads = (window.CC_CONFIG && window.CC_CONFIG.ads) || {};
   const client = String(ads.adsenseClient || "").trim();
   const live =
