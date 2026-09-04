@@ -615,6 +615,24 @@ nav.nav {
 .cat-list .latest-row:first-child { padding-top: 0; }
 .legal { max-width: 760px; padding-bottom: 3rem; }
 .legal h2 { font-family: var(--display); margin-top: 2rem; }
+.staff {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+.staff li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-2);
+}
+.staff strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
 .rate-table {
   width: 100%;
   border-collapse: collapse;
