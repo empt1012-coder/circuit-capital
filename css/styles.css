@@ -245,6 +245,7 @@ nav.nav {
 .search-bar input:focus { outline: 1px solid var(--copper); }
 
 /* Ads */
+.ad-slot[hidden] { display: none; }
 .ad-slot {
   background: var(--ad);
   border: 1px dashed #c9bfae;

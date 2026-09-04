@@ -118,7 +118,7 @@
         </div>
       </div>`}
       <div class="cookie" id="cookie">
-        <p>We use cookies and similar tech for analytics and advertising. See our <a href="${asset("privacy.html")}">privacy policy</a>.</p>
+        <p>We use a cookie to remember this choice. If you accept, we may load analytics and advertising cookies. See our <a href="${asset("privacy.html")}">privacy policy</a>.</p>
         <div class="cookie__row">
           <button class="btn btn--copper" type="button" data-cookie="accept">Accept</button>
           <button class="btn btn--ghost" type="button" data-cookie="reject" style="border-color:#5a6570">Necessary only</button>

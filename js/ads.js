@@ -44,8 +44,20 @@
     window.adsbygoogle.push({});
   }
 
-  if (page === "home") {
+  function hideIdleSlots() {
     document.querySelector(".ad-sticky")?.remove();
+    document.querySelectorAll(".ad-slot").forEach((el) => {
+      el.hidden = true;
+    });
+  }
+
+  if (page === "home") {
+    hideIdleSlots();
+    return;
+  }
+
+  if (!live) {
+    hideIdleSlots();
     return;
   }
 
@@ -55,20 +67,13 @@
     ["ad-guide-mid", "ad-guide-end"].forEach((id) => {
       const el = document.getElementById(id);
       if (!el) return;
-      if (!enabled) {
-        el.remove();
-        return;
-      }
       el.hidden = false;
       const key = el.getAttribute("data-slot");
       const unit = ads.slots && ads.slots[key];
       if (unit) el.setAttribute("data-ad-slot", unit);
+      fillSlot(el);
     });
-    if (live) {
-      loadAdsense();
-      fillSlot(document.getElementById("ad-guide-mid"));
-      fillSlot(document.getElementById("ad-guide-end"));
-    }
+    loadAdsense();
     return;
   }
 
@@ -77,15 +82,11 @@
   });
 
   document.querySelectorAll(".ad-slot").forEach((slot) => {
+    slot.hidden = false;
     const key = slot.getAttribute("data-slot");
     const unit = ads.slots && ads.slots[key];
     if (unit) slot.setAttribute("data-ad-slot", unit);
   });
-
-  if (!live) {
-    document.querySelector(".ad-sticky")?.remove();
-    return;
-  }
 
   loadAdsense();
   document.querySelectorAll(".ad-slot").forEach((slot) => fillSlot(slot));
