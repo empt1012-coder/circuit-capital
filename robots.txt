@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /guides/_template.html
 
 Sitemap: https://circuits.fit/sitemap.xml

@@ -6,6 +6,7 @@
   <title>What a Cyber Insurer Will Still Ask — Circuit &amp; Capital</title>
   <meta name="description" content="MFA, EDR, backups, and a named retainer: the controls that still show up on cyber applications even when rates are falling.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
@@ -20,18 +21,27 @@
       <p class="dek">Rates can fall. The application still wants to know if MFA is on, if someone watches EDR, and if restores have been tested.</p>
       <div class="byline-row">
         <span>By <strong>Emilio Santos</strong></span>
-        <span>September 2, 2026</span>
-        <span>7 min read</span>
+        <span>Updated September 2, 2026</span>
+        <span>8 min read</span>
       </div>
     </header>
-    <figure class="article-cover wrap">
-      <img src="../assets/images/datacenter.jpg" alt="Server aisle">
-      <figcaption>The questionnaire is the floor, not the strategy. Photo: Circuit &amp; Capital</figcaption>
-    </figure>
-    <div class="wrap article-layout">
+    <div class="wrap guide-layout">
       <article class="prose">
+        <aside class="who-for">
+          <h2>Who this is for</h2>
+          <p>The CISO who fills the form, the CFO who shops the premium, and the operator who has to prove the control is real.</p>
+        </aside>
+        <nav class="guide-toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#stall">The five lines that stall a binder</a></li>
+            <li><a href="#soft-market">How to use a soft market</a></li>
+            <li><a href="#checklist">Control checklist</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ol>
+        </nav>
         <p class="lead-graf">Swiss Re’s 2026 cyber view, as reported September 2, still has global premium growing even as rates fall for a fourth year (about −5% in 2026 after −13% in 2025). AM Best, via <em>Insurance Journal</em>, had U.S. prices still cutting in the first quarter and a 2025 loss ratio of 53. Cheap paper does not mean a thin application. Underwriters lag the threat. They do not stop asking the same five things.</p>
-        <h2>The five lines that stall a binder</h2>
+        <h2 id="stall">The five lines that stall a binder</h2>
         <ol>
           <li><strong>MFA everywhere that matters</strong> — email, VPN, admin, cloud consoles. “Rolling out” is not yes.</li>
           <li><strong>EDR that is watched</strong> — installed is not monitored. Who gets the 2 a.m. alert?</li>
@@ -40,40 +50,72 @@
           <li><strong>A named incident retainer</strong> — counsel and a forensics shop you can call without a procurement cycle.</li>
         </ol>
         <blockquote>If you cannot answer those in a staff meeting, you do not have a control program. You have hope.</blockquote>
-        <aside class="ad-slot ad-slot--inarticle" data-slot="inarticle" aria-label="Advertisement">
-          <span class="ad-slot__label">Advertisement</span>
-          <div class="ad-slot__box"></div>
-        </aside>
-        <h2>How to use a soft market</h2>
+        <h2 id="soft-market">How to use a soft market</h2>
         <p>Shop limits if a payments or cloud outage would take a quarter. Put finance and IT in the same room in month nine, not month twelve. Do not skip hygiene to “save” on a premium that already assumes you have it. A cheaper policy written on controls you do not run is a denial at claim time.</p>
         <p>Swiss Re also notes many AI-related incidents may already sit inside existing “computer system” wordings, with claims of that flavor still limited. Read the form. Do not assume a model leak into an unlisted vendor is covered because the market is soft.</p>
+        <aside id="ad-guide-mid" class="ad-slot ad-slot--guide" data-slot="guideMid" hidden></aside>
+        <h2 id="checklist">Control checklist</h2>
+        <table class="rate-table">
+          <thead>
+            <tr>
+              <th>Control</th>
+              <th>What they ask</th>
+              <th>What fails</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MFA</td>
+              <td>On for email, VPN, admin, cloud</td>
+              <td>“Rolling out”</td>
+            </tr>
+            <tr>
+              <td>EDR</td>
+              <td>Installed and watched</td>
+              <td>No named on-call</td>
+            </tr>
+            <tr>
+              <td>Backups</td>
+              <td>Immutable or offline, restore tested</td>
+              <td>A screenshot of a job</td>
+            </tr>
+            <tr>
+              <td>Privilege</td>
+              <td>Who can disable EDR, and is it logged</td>
+              <td>Shared admin</td>
+            </tr>
+            <tr>
+              <td>Retainer</td>
+              <td>Named counsel and forensics</td>
+              <td>A vendor list with no contract</td>
+            </tr>
+          </tbody>
+        </table>
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://riskandinsurance.com/cyber-insurance-at-a-crossroads-ai-reshapes-risk-as-market-growth-stays-steady/" rel="noopener">Risk &amp; Insurance / Swiss Re, Sept. 2, 2026</a></li>
           <li><a href="https://www.insurancejournal.com/magazines/mag-features/2026/07/27/878813.htm" rel="noopener">Insurance Journal / AM Best, July 27, 2026</a></li>
         </ul>
-        <div class="author-box">
-          <div class="avatar">ES</div>
-          <div>
-            <strong>Emilio Santos</strong> edits Circuit &amp; Capital.
-            <div class="meta"><a href="mailto:circuit50capital@circuits.fit">circuit50capital@circuits.fit</a></div>
-          </div>
-        </div>
-      </article>
-      <aside class="sidebar">
-        <aside class="ad-slot ad-slot--rect" data-slot="sidebar" aria-label="Advertisement">
-          <span class="ad-slot__label">Advertisement</span>
-          <div class="ad-slot__box"></div>
-        </aside>
-        <div class="section-head"><h2>Related</h2></div>
-        <div class="popular">
-          <ol>
-            <li><a href="../articles/cyber-got-cheaper-the-questionnaire-did-not.html">Cyber insurance got cheaper</a></li>
-            <li><a href="how-to-read-a-saas-renewal.html">How to read a SaaS renewal</a></li>
+        <aside id="ad-guide-end" class="ad-slot ad-slot--guide" data-slot="guideEnd" hidden></aside>
+        <section class="guide-faq" aria-labelledby="faq">
+          <h2 id="faq">FAQ</h2>
+          <h3>Does a cheaper premium mean a lighter application?</h3>
+          <p>No. Rates can fall while the questionnaire stays mean. Underwriters lag the threat. They do not stop asking the same five things.</p>
+          <h3>What does “EDR that is watched” mean?</h3>
+          <p>Someone is named, after hours, to the alert. Installed agents with nobody on call are a no.</p>
+          <h3>Do we need a retainer if we have an internal IR team?</h3>
+          <p>You still want counsel and a forensics shop on paper. Internal teams do not replace a call you can make at 2 a.m. without procurement.</p>
+          <h3>Can we skip a control because the market is soft?</h3>
+          <p>Not if you want the claim paid. A cheaper policy written on controls you do not run is a denial later.</p>
+        </section>
+        <section class="guide-related" aria-labelledby="related-briefing">
+          <h2 id="related-briefing">Related briefing</h2>
+          <ul>
+            <li><a href="../articles/cyber-got-cheaper-the-questionnaire-did-not.html">Cyber insurance got cheaper. The questionnaire did not.</a></li>
             <li><a href="../articles/cyber-insurance-it-budgets.html">Cyber insurance is rewriting the IT budget</a></li>
-          </ol>
-        </div>
-      </aside>
+          </ul>
+        </section>
+      </article>
     </div>
   </main>
   <div id="site-footer"></div>

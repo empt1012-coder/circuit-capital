@@ -601,6 +601,53 @@ nav.nav {
   gap: 1.1rem;
 }
 
+.guide-layout {
+  max-width: 760px;
+  padding-bottom: 3rem;
+}
+.who-for {
+  border: 1px solid var(--ink);
+  padding: 1.1rem 1.2rem;
+  margin: 0 0 1.6rem;
+}
+.who-for h2,
+.guide-toc h2 {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 0.55rem;
+}
+.who-for p { margin: 0; }
+.guide-toc {
+  border-bottom: 1px solid var(--rule);
+  margin: 0 0 1.6rem;
+  padding: 0 0 1.1rem;
+}
+.guide-toc ol {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.guide-toc a { text-decoration: none; }
+.guide-toc a:hover { color: var(--copper-dark); }
+.guide-faq h3 {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  margin: 1.35rem 0 0.4rem;
+}
+.guide-related {
+  margin: 2rem 0 0;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+}
+.guide-related ul { padding-left: 1.2rem; }
+.ad-slot--guide[hidden] { display: none; }
+.ad-slot--guide:not([hidden]) {
+  min-height: 0;
+}
+.ad-slot--guide:empty { display: none; }
+.ad-slot--guide:not(:empty) { display: block; }
+
 /* Category + legal */
 .page-head {
   padding: 1.8rem 0 0.4rem;

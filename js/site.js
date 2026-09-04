@@ -6,7 +6,7 @@
   const navItems = [
     ["Home", "index.html"],
     ["Briefing", "briefing.html"],
-    ["Guides", "categories/guides.html"],
+    ["Guides", "guides/"],
     ["Markets", "categories/markets.html"],
     ["Technology", "categories/technology.html"],
     ["Policy", "categories/policy.html"],
@@ -305,6 +305,32 @@
     try {
       const articles = await loadArticles();
       const list = articles.filter((a) => a.category.toLowerCase() === cat.toLowerCase());
+      root.innerHTML = list
+        .map(
+          (a) => `<article class="latest-row">
+            <a href="${itemHref(a)}"><img src="${asset(a.image)}" alt=""></a>
+            <div>
+              <div class="kicker">${a.category}</div>
+              <h3><a href="${itemHref(a)}">${a.title}</a></h3>
+              <p>${a.dek}</p>
+              <div class="meta">${a.author} · ${a.date} · ${a.readTime} min read</div>
+            </div>
+          </article>`
+        )
+        .join("");
+    } catch {
+      root.innerHTML = "<p>This section could not be loaded. Refresh and try again.</p>";
+    }
+  });
+
+  document.querySelectorAll("[data-guides-list]").forEach(async (root) => {
+    try {
+      const articles = await loadArticles();
+      const list = articles.filter((a) => a.type === "guide");
+      if (!list.length) {
+        root.innerHTML = "<p>Guides for operators — checklists and buying pages.</p>";
+        return;
+      }
       root.innerHTML = list
         .map(
           (a) => `<article class="latest-row">

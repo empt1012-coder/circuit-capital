@@ -15,7 +15,9 @@
       sidebar: "",
       inarticle: "",
       native: "",
-      mobileSticky: ""
+      mobileSticky: "",
+      guideMid: "",
+      guideEnd: ""
     }
   }
 };
