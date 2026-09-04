@@ -9,8 +9,14 @@
     ["Markets", "categories/markets.html"],
     ["Startups", "categories/startups.html"],
     ["Policy", "categories/policy.html"],
+    ["Guides", "categories/guides.html"],
     ["Opinion", "categories/opinion.html"]
   ];
+
+  function itemHref(a) {
+    const folder = a.type === "guide" ? "guides/" : "articles/";
+    return asset(folder + a.slug + ".html");
+  }
 
   const today = new Date().toLocaleDateString("en-US", {
     weekday: "long",
@@ -100,7 +106,7 @@
         </div>
         <div class="wrap foot-bottom">
           <div>© ${new Date().getFullYear()} Circuit &amp; Capital. All rights reserved.</div>
-          <div>Placeholder ads until a live ad network is connected in js/config.js</div>
+          <div>Independent briefing on business and technology.</div>
         </div>
       </footer>
       <div class="ad-sticky" aria-label="Advertisement">
@@ -257,7 +263,7 @@
             .map(
               (a) => `<article class="search-hit">
                 <div class="kicker">${a.category}</div>
-                <h2><a href="${asset("articles/" + a.slug + ".html")}">${a.title}</a></h2>
+                <h2><a href="${itemHref(a)}">${a.title}</a></h2>
                 <p>${a.dek}</p>
                 <div class="meta">${a.author} · ${a.date} · ${a.readTime} min</div>
               </article>`
@@ -277,10 +283,10 @@
       root.innerHTML = list
         .map(
           (a) => `<article class="latest-row">
-            <a href="${asset("articles/" + a.slug + ".html")}"><img src="${asset(a.image)}" alt=""></a>
+            <a href="${itemHref(a)}"><img src="${asset(a.image)}" alt=""></a>
             <div>
               <div class="kicker">${a.category}</div>
-              <h3><a href="${asset("articles/" + a.slug + ".html")}">${a.title}</a></h3>
+              <h3><a href="${itemHref(a)}">${a.title}</a></h3>
               <p>${a.dek}</p>
               <div class="meta">${a.author} · ${a.date} · ${a.readTime} min read</div>
             </div>

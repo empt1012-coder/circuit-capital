@@ -6,14 +6,14 @@
   adsEmail: "circuit50capital@circuits.fit",
   analyticsId: "",
   ads: {
-    /* Set provider to "adsense" and fill in your publisher IDs after approval. */
     enabled: true,
-    provider: "placeholder",
-    adsenseClient: "ca-pub-XXXXXXXXXXXXXXXX",
+    provider: "off",
+    adsenseClient: "",
     slots: {
       leaderboard: "",
       sidebar: "",
       inarticle: "",
+      native: "",
       mobileSticky: ""
     }
   }
