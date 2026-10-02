@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://circuits.fit/articles/ciso-five-moves-before-2027.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/eu-ai-act-what-still-applies.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/sbom-now-covers-the-suite.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/the-sec-clock-starts-at-material.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/ai-sbom-extra-questions.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/limit-what-an-agent-can-touch.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/stop-using-a-voice-as-approval.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/what-article-50-asks-a-buyer.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/cloud-shared-responsibility-checklist.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/what-belongs-in-a-processor-clause.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/before-the-sec-eight-k.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/one-page-ai-use-rule.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/postquantum-pilot-questions.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
     <loc>https://circuits.fit/articles/gartner-revised-the-ai-bill.html</loc>
     <lastmod>2026-10-01</lastmod>
   </url>

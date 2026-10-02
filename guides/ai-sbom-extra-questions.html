@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Extra Questions for an AI Bill of Materials — Circuit &amp; Capital</title>
+  <meta name="description" content="CISA’s May 2026 AI SBOM guide is supplemental. Ask for the model, the data, and the application around them, on top of the general minimum elements.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-base=".." data-page="guides">
+  <div id="site-header"></div>
+  <main id="main">
+    <header class="article-hero wrap">
+      <div class="kicker">Guides</div>
+      <h1>Extra questions for an AI bill of materials</h1>
+      <p class="dek">The May 12, 2026 G7 and CISA note is an add-on, not a replacement. A model name with no components is not an ingredients list.</p>
+      <div class="byline-row">
+        <span>By <strong>Emilio Santos</strong></span>
+        <span>October 1, 2026</span>
+        <span>8 min read</span>
+      </div>
+    </header>
+    <div class="wrap guide-layout">
+      <article class="prose">
+        <aside class="who-for">
+          <h2>Who this is for</h2>
+          <p>The operator buying an AI feature inside a product, and the security reviewer who has to describe what that feature contains.</p>
+        </aside>
+        <nav class="guide-toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#add">What the AI note adds</a></li>
+            <li><a href="#ask">Questions</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ol>
+        </nav>
+        <p class="lead-graf">On May 12, 2026, CISA and G7 partners published minimum elements for a software bill of materials for AI. CISA says AI systems are software systems, so the AI list sits on top of the general SBOM elements. The guide is not exhaustive and not, by itself, a mandate. It is still the public list to point at.</p>
+        <h2 id="add">What the AI note adds</h2>
+        <p>Use it when the product is a model, a copilot, or an agent, not only when the vendor’s engineers compiled a binary. Ask which pieces are the model, which are data or adapters, and which are ordinary application code. If the vendor cannot separate those, you cannot tell whether a later incident is in the model, the data, or the wrapper.</p>
+        <aside id="ad-guide-mid" class="ad-slot ad-slot--guide" data-slot="guideMid" hidden></aside>
+        <h2 id="ask">Questions</h2>
+        <ul>
+          <li>Will you provide the general 2026 SBOM and the AI supplement, as two labeled files or one file that clearly includes both?</li>
+          <li>What is the model’s name and version, and who provides it if it is not yours?</li>
+          <li>Which components can change without a new SBOM, and which cannot?</li>
+          <li>Does the file include enough license information to show a component you are not allowed to ship to a customer?</li>
+          <li>If you only embed a third-party model, whose SBOM covers the model, and whose covers your application?</li>
+        </ul>
+        <section class="guide-faq" aria-labelledby="faq">
+          <h2 id="faq">FAQ</h2>
+          <h3>Is a model card the same as an AI SBOM?</h3>
+          <p>No. A model card describes behavior and limits. An SBOM lists components. Ask for the document CISA describes, and keep the model card if you want it for a different question.</p>
+          <h3>What if the vendor says the model is a trade secret?</h3>
+          <p>Trade secret is a reason to negotiate scope. It is not a reason to accept a blank page. Ask what can be shared: name, version, supplier, license, hash algorithm, generation date.</p>
+        </section>
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://www.cisa.gov/resources-tools/resources/software-bill-materials-ai-minimum-elements" rel="noopener">CISA, Software Bill of Materials for AI — Minimum Elements, May 12, 2026</a></li>
+          <li><a href="https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom" rel="noopener">CISA, 2026 general SBOM minimum elements</a></li>
+        </ul>
+        <aside id="ad-guide-end" class="ad-slot ad-slot--guide" data-slot="guideEnd" hidden></aside>
+        <section class="guide-related" aria-labelledby="related-briefing">
+          <h2 id="related-briefing">Related</h2>
+          <ul>
+            <li><a href="../articles/sbom-now-covers-the-suite.html">The software ingredients list now covers the suite</a></li>
+            <li><a href="ask-a-vendor-for-an-sbom.html">Ask a vendor for an SBOM</a></li>
+          </ul>
+        </section>
+        <div class="author-box">
+          <div class="avatar">ES</div>
+          <div>
+            <strong>Emilio Santos</strong> writes and edits every piece on Circuit &amp; Capital.
+            <div class="meta"><a href="mailto:circuit50capital@circuits.fit">circuit50capital@circuits.fit</a></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/config.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="../js/ads.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ask a Vendor for an SBOM — Circuit &amp; Capital</title>
+  <meta name="description" content="The fields CISA’s July 2026 minimum elements say an SBOM should carry, including for SaaS, and the reply that does not count.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-base=".." data-page="guides">
+  <div id="site-header"></div>
+  <main id="main">
+    <header class="article-hero wrap">
+      <div class="kicker">Guides</div>
+      <h1>Ask a vendor for an SBOM</h1>
+      <p class="dek">CISA’s 2026 minimum elements apply to SaaS and AI software. Ask for the fields, the format, and the date. A slide is not a bill of materials.</p>
+      <div class="byline-row">
+        <span>By <strong>Emilio Santos</strong></span>
+        <span>October 1, 2026</span>
+        <span>8 min read</span>
+      </div>
+    </header>
+    <div class="wrap guide-layout">
+      <article class="prose">
+        <aside class="who-for">
+          <h2>Who this is for</h2>
+          <p>The person who signs a software renewal and the person who has to answer a customer security review.</p>
+        </aside>
+        <nav class="guide-toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#fields">The fields</a></li>
+            <li><a href="#ask">The ask</a></li>
+            <li><a href="#fail">What fails</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ol>
+        </nav>
+        <p class="lead-graf">CISA’s July 29, 2026 minimum elements apply to all software, including open source, AI software, and SaaS. They update the 2021 NTIA baseline. Use them as a procurement list, not as a claim that every vendor is legally required to send you one tomorrow.</p>
+        <h2 id="fields">The fields</h2>
+        <p>CISA’s release names four additions on top of the older baseline: component hash algorithm, component license, the name of the tool that generated the SBOM, and the context in which it was generated. Ask for those by name. Also ask for the component names and versions the document is built to carry. If a field is missing, the reply is incomplete against the 2026 list, even if the PDF looks thick.</p>
+        <aside id="ad-guide-mid" class="ad-slot ad-slot--guide" data-slot="guideMid" hidden></aside>
+        <h2 id="ask">The ask</h2>
+        <ul>
+          <li>Machine-readable, not only a PDF. Say CycloneDX or SPDX if you already consume one of those. If you do not, still refuse a screenshot.</li>
+          <li>The generation date, and how often a new file is produced. A file from the year the product launched is a souvenir.</li>
+          <li>Whether hosted software is in scope. CISA says SaaS is in scope for the minimum elements. “We are a cloud app” is not an answer.</li>
+          <li>Who will send an updated file after a critical component changes, and on what clock.</li>
+        </ul>
+        <h2 id="fail">What fails</h2>
+        <table class="rate-table">
+          <thead><tr><th>Reply</th><th>Treat it as</th></tr></thead>
+          <tbody>
+            <tr><td>“We are SOC 2”</td><td>A different document</td></tr>
+            <tr><td>A logo slide of “trusted components”</td><td>Not an SBOM</td></tr>
+            <tr><td>A list with no license and no hash algorithm</td><td>Short of the 2026 elements</td></tr>
+            <tr><td>“Legal will not share our ingredients”</td><td>A commercial position you can price</td></tr>
+          </tbody>
+        </table>
+        <section class="guide-faq" aria-labelledby="faq">
+          <h2 id="faq">FAQ</h2>
+          <h3>Does CISA require my vendor to send this?</h3>
+          <p>The July 2026 document is guidance on minimum elements. Your leverage is the contract. If the order does not ask for the file, you will not get the file.</p>
+          <h3>Is an SBOM a vulnerability report?</h3>
+          <p>No. It is an ingredient list. You still need a way to compare those ingredients to the vulnerabilities you care about.</p>
+          <h3>What about AI features?</h3>
+          <p>Ask for this general SBOM and for the May 12, 2026 AI supplement. They are not substitutes.</p>
+        </section>
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom" rel="noopener">CISA, 2026 Minimum Elements for an SBOM</a></li>
+          <li><a href="https://www.cisa.gov/news-events/news/cisa-and-partners-unveil-updated-software-bill-materials-resource-improves-transparency-security-and" rel="noopener">CISA news release, July 29, 2026</a></li>
+          <li><a href="https://www.cisa.gov/sbom" rel="noopener">CISA SBOM overview</a></li>
+        </ul>
+        <aside id="ad-guide-end" class="ad-slot ad-slot--guide" data-slot="guideEnd" hidden></aside>
+        <section class="guide-related" aria-labelledby="related-briefing">
+          <h2 id="related-briefing">Related</h2>
+          <ul>
+            <li><a href="../articles/sbom-now-covers-the-suite.html">The software ingredients list now covers the suite</a></li>
+            <li><a href="ai-sbom-extra-questions.html">Extra questions for an AI bill of materials</a></li>
+          </ul>
+        </section>
+        <div class="author-box">
+          <div class="avatar">ES</div>
+          <div>
+            <strong>Emilio Santos</strong> writes and edits every piece on Circuit &amp; Capital.
+            <div class="meta"><a href="mailto:circuit50capital@circuits.fit">circuit50capital@circuits.fit</a></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/config.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="../js/ads.js"></script>
+</body>
+</html>

@@ -1,5 +1,15 @@
 https://circuits.fit/briefing.html
 https://circuits.fit/guides/
+https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html
+https://circuits.fit/guides/ai-sbom-extra-questions.html
+https://circuits.fit/guides/limit-what-an-agent-can-touch.html
+https://circuits.fit/guides/stop-using-a-voice-as-approval.html
+https://circuits.fit/guides/what-article-50-asks-a-buyer.html
+https://circuits.fit/guides/cloud-shared-responsibility-checklist.html
+https://circuits.fit/guides/what-belongs-in-a-processor-clause.html
+https://circuits.fit/guides/before-the-sec-eight-k.html
+https://circuits.fit/guides/one-page-ai-use-rule.html
+https://circuits.fit/guides/postquantum-pilot-questions.html
 https://circuits.fit/guides/how-to-read-a-saas-renewal.html
 https://circuits.fit/guides/cyber-insurance-controls-checklist.html
 https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html
@@ -7,6 +17,10 @@ https://circuits.fit/guides/cyber-insurance-checklist-2026.html
 https://circuits.fit/guides/cloud-repatriation-cost.html
 https://circuits.fit/guides/ai-spend-vs-return.html
 https://circuits.fit/guides/software-buying-operating-skill.html
+https://circuits.fit/articles/ciso-five-moves-before-2027.html
+https://circuits.fit/articles/eu-ai-act-what-still-applies.html
+https://circuits.fit/articles/sbom-now-covers-the-suite.html
+https://circuits.fit/articles/the-sec-clock-starts-at-material.html
 https://circuits.fit/articles/gartner-revised-the-ai-bill.html
 https://circuits.fit/articles/ai-spend-is-not-the-same-as-ai-return.html
 https://circuits.fit/articles/chip-licenses-keep-moving.html

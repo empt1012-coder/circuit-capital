@@ -1,6 +1,126 @@
 {
   "articles": [
     {
+      "slug": "ask-a-vendor-for-an-sbom",
+      "type": "guide",
+      "title": "Ask a Vendor for an SBOM",
+      "dek": "CISA’s 2026 minimum elements apply to SaaS and AI software. Ask for the fields, the format, and the date. A slide is not a bill of materials.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/workshop.jpg",
+      "body": "SBOM CISA SaaS license hash procurement"
+    },
+    {
+      "slug": "ai-sbom-extra-questions",
+      "type": "guide",
+      "title": "Extra Questions for an AI Bill of Materials",
+      "dek": "The May 12, 2026 G7 and CISA note is an add-on, not a replacement. A model name with no components is not an ingredients list.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/chips.jpg",
+      "body": "AI SBOM CISA G7 model data application"
+    },
+    {
+      "slug": "limit-what-an-agent-can-touch",
+      "type": "guide",
+      "title": "Limit What an Agent Can Touch",
+      "dek": "Gartner’s second-quarter survey of 297 security leaders: 54% have no defined limit on agent access, or they reuse human access. The fix is a privilege list.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/nightdesk.jpg",
+      "body": "AI agent access Gartner 54 percent insider"
+    },
+    {
+      "slug": "stop-using-a-voice-as-approval",
+      "type": "guide",
+      "title": "Stop Using a Voice as Approval",
+      "dek": "Gartner’s September 30 note: do not authorize a decision because someone recognized a face or a voice. Pair detection with another authenticator and a provenance check.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/boardroom.jpg",
+      "body": "deepfake identity approval Gartner"
+    },
+    {
+      "slug": "what-article-50-asks-a-buyer",
+      "type": "guide",
+      "title": "What Article 50 Asks a Buyer",
+      "dek": "Transparency has applied since August 2, 2026. The December 2, 2026 date is a marking transition for systems already shipping, not a delay of the whole Act.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/folders.jpg",
+      "body": "EU AI Act Article 50 transparency December 2026 buyer"
+    },
+    {
+      "slug": "cloud-shared-responsibility-checklist",
+      "type": "guide",
+      "title": "The Cloud Shared-Responsibility Checklist",
+      "dek": "AWS’s model is security of the cloud versus security in the cloud. A managed database does not move your backup duty. An EC2 instance does not move the patch duty.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/colo.jpg",
+      "body": "AWS shared responsibility EC2 security of the cloud"
+    },
+    {
+      "slug": "what-belongs-in-a-processor-clause",
+      "type": "guide",
+      "title": "What Belongs in a Processor Clause",
+      "dek": "The Commission adopted two different sets of standard clauses on June 4, 2021. One governs a processor inside the EEA. The other governs a transfer out. Do not sign the wrong PDF.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/finance.jpg",
+      "body": "GDPR Article 28 standard contractual clauses processor"
+    },
+    {
+      "slug": "before-the-sec-eight-k",
+      "type": "guide",
+      "title": "Before the Form 8-K Clock",
+      "dek": "The SEC’s clock is four business days from the materiality determination. Write down who can make that call, and what a private vendor must be able to say.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/questionnaire.jpg",
+      "body": "SEC 8-K Item 1.05 materiality cyber incident"
+    },
+    {
+      "slug": "one-page-ai-use-rule",
+      "type": "guide",
+      "title": "A One-Page AI Use Rule",
+      "dek": "NIST’s AI RMF 1.0 is voluntary and organized as Govern, Map, Measure, and Manage. Use those four lines. Cite the version. A revision is in progress.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/office.jpg",
+      "body": "NIST AI RMF Govern Map Measure Manage use policy"
+    },
+    {
+      "slug": "postquantum-pilot-questions",
+      "type": "guide",
+      "title": "Questions Before a Post-Quantum Pilot",
+      "dek": "Gartner’s September 30 note: start a pilot, or expect at least double the migration cost after 2027. Fifty-one percent of surveyed CISOs had not started.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/datacenter.jpg",
+      "body": "post-quantum cryptography Gartner pilot 2027"
+    },
+    {
       "slug": "cyber-insurance-checklist-2026",
       "type": "guide",
       "title": "Cyber Insurance Checklist for Mid-Market IT Budgets (2026)",
@@ -83,6 +203,50 @@
       "readTime": 8,
       "image": "assets/images/nightdesk.jpg",
       "body": "AI workflow tokens review cycle time"
+    },
+    {
+      "slug": "ciso-five-moves-before-2027",
+      "title": "Five Moves Gartner Wants from CISOs Before 2027",
+      "dek": "A September 30 note treats agents as insiders, a familiar voice as a weak approval, and post-quantum work as something that gets expensive if it waits.",
+      "category": "Technology",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/toolroom.jpg",
+      "body": "Gartner CISO agents deepfake postquantum 54 percent"
+    },
+    {
+      "slug": "eu-ai-act-what-still-applies",
+      "title": "The EU AI Act Did Not Slip. The High-Risk Part Did.",
+      "dek": "Article 50 transparency has been in force since August 2. Stand-alone high-risk duties move to December 2, 2027. A US buyer still has to ask which date the vendor is selling.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/folders.jpg",
+      "body": "EU AI Act Article 50 high-risk December 2027 transparency"
+    },
+    {
+      "slug": "sbom-now-covers-the-suite",
+      "title": "The Software Ingredients List Now Covers the Suite",
+      "dek": "CISA’s July 29 revision of the SBOM minimum elements applies to SaaS and AI software, not only to code you compile. The new fields are the ones to ask for.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/workshop.jpg",
+      "body": "CISA SBOM 2026 SaaS AI license hash"
+    },
+    {
+      "slug": "the-sec-clock-starts-at-material",
+      "title": "The SEC Clock Starts When You Decide It Matters",
+      "dek": "Public companies disclose a material cyber incident on Form 8-K within four business days of the materiality call. The annual report still has to describe who watches the risk.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/questionnaire.jpg",
+      "body": "SEC Form 8-K Item 1.05 material cybersecurity four business days"
     },
     {
       "slug": "gartner-revised-the-ai-bill",

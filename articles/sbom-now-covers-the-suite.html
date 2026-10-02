@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Software Ingredients List Now Covers the Suite — Circuit &amp; Capital</title>
+  <meta name="description" content="CISA’s July 29, 2026 SBOM minimum elements apply to open source, AI software, and SaaS, and add license, hash, tool, and context fields.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-base=".." data-page="policy">
+  <div id="site-header"></div>
+  <main id="main">
+    <header class="article-hero wrap">
+      <div class="kicker">Policy</div>
+      <h1>The software ingredients list now covers the suite</h1>
+      <p class="dek">CISA’s July 29 revision of the SBOM minimum elements applies to SaaS and AI software, not only to code you compile. The new fields are the ones to ask for.</p>
+      <div class="byline-row">
+        <span>By <strong>Emilio Santos</strong></span>
+        <span>October 1, 2026</span>
+        <span>8 min read</span>
+      </div>
+    </header>
+    <figure class="article-cover wrap">
+      <img src="../assets/images/workshop.jpg" alt="A workshop bench">
+      <figcaption>An ingredients list is a procurement document. Photo: Circuit &amp; Capital</figcaption>
+    </figure>
+    <div class="wrap article-layout">
+      <article class="prose">
+        <p class="lead-graf">On July 29, 2026, the Cybersecurity and Infrastructure Security Agency, with the National Security Agency, the FBI, and international partners, published the 2026 Minimum Elements for a Software Bill of Materials. CISA says the revision updates and replaces the minimum elements the National Telecommunications and Information Administration published in 2021. The line that changes a renewal: the minimum elements apply to all software, including open source, AI software, and software-as-a-service.</p>
+        <p>An SBOM is the ingredients list. CISA’s own description is that it lets a buyer see components and make a risk decision. It is not a vulnerability scan, and it is not a promise that the vendor is safe. It is the document you can ask for before you sign.</p>
+        <h2>What was added</h2>
+        <p>CISA’s release names new minimum elements that were not in the 2021 baseline: component hash algorithm, component license, the name of the tool that produced the SBOM, and SBOM generation context. The agency also says some software types, including AI and SaaS, may need elements beyond that baseline. A separate May 12, 2026 guide, written with G7 partners, is the supplemental list for AI systems. CISA is explicit that the AI list is in addition to the general minimum elements, and that it is guidance, not a statute that by itself obliges every vendor.</p>
+        <p>That distinction matters in a negotiation. You can require the document in a contract even where no regulator has yet required your vendor to hand it over. If you do not write it into the order, “we follow CISA” is a sentence, not a file.</p>
+        <blockquote>A SaaS bill of materials that arrives as a PDF of marketing claims is not an SBOM. The 2026 elements are fields, not a brochure.</blockquote>
+        <aside class="ad-slot ad-slot--inarticle" data-slot="inarticle" aria-label="Advertisement">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </aside>
+        <h2>What to ask before the quarter closes</h2>
+        <p>For each product you will renew, ask for an SBOM that includes the new fields, in a machine-readable format, and ask how often it is regenerated. For anything the vendor calls AI, ask for the general SBOM and the AI supplement, and ask which components are the model, the data, and the application around them. If the vendor sells only a hosted service, do not accept “SaaS does not have an SBOM.” CISA’s July revision says the minimum elements apply to SaaS.</p>
+        <p>Keep the ask tied to a decision. You want the list so you can see a license you cannot accept, a component you already banned, or a generation date older than the last incident. A list nobody reads is a folder.</p>
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://www.cisa.gov/news-events/news/cisa-and-partners-unveil-updated-software-bill-materials-resource-improves-transparency-security-and" rel="noopener">CISA, release on the 2026 Minimum Elements for an SBOM, July 29, 2026</a></li>
+          <li><a href="https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom" rel="noopener">CISA, 2026 Minimum Elements for a Software Bill of Materials</a></li>
+          <li><a href="https://www.cisa.gov/resources-tools/resources/software-bill-materials-ai-minimum-elements" rel="noopener">CISA, Software Bill of Materials for AI — Minimum Elements, May 12, 2026</a></li>
+        </ul>
+        <p>Operator pages: <a href="../guides/ask-a-vendor-for-an-sbom.html">Ask a vendor for an SBOM</a> and <a href="../guides/ai-sbom-extra-questions.html">Extra questions for an AI bill of materials</a>.</p>
+
+        <div class="author-box">
+          <div class="avatar">ES</div>
+          <div>
+            <strong>Emilio Santos</strong> writes and edits every piece on Circuit &amp; Capital.
+            <div class="meta"><a href="mailto:circuit50capital@circuits.fit">circuit50capital@circuits.fit</a></div>
+          </div>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <aside class="ad-slot ad-slot--rect" data-slot="sidebar" aria-label="Advertisement">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </aside>
+        <div class="section-head"><h2>Related</h2></div>
+        <div class="popular">
+          <ol>
+            <li><a href="../guides/ask-a-vendor-for-an-sbom.html">Ask a vendor for an SBOM</a></li>
+            <li><a href="../guides/ai-sbom-extra-questions.html">Extra questions for an AI bill of materials</a></li>
+            <li><a href="chip-export-controls.html">Chip export controls and the suppliers caught in between</a></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/config.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="../js/ads.js"></script>
+</body>
+</html>
