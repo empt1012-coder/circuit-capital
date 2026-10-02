@@ -1,6 +1,6 @@
 # Circuit & Capital
 
-Independent business and technology briefing at [https://circuits.fit](https://circuits.fit). Static HTML.
+Sourced business and technology briefing at [https://circuits.fit](https://circuits.fit). Static HTML. Written by Emilio Santos.
 
 Circuit & Capital is a business and technology publication. It is not a fitness brand.
 

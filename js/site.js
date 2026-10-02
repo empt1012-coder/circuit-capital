@@ -38,7 +38,7 @@
       <a class="skip" href="#main">Skip to content</a>
       <div class="topbar">
         <div class="wrap">
-          <div>Independent briefing · Est. 2026</div>
+          <div>Sourced briefing · Est. 2026</div>
           <div class="topbar__links">
             <a href="${asset("about.html")}">About</a>
             <a href="${asset("advertise.html")}">Advertise</a>
@@ -60,8 +60,8 @@
             </svg>
             <span>
               <div class="brand__name">Circuit <span>&amp;</span> Capital</div>
-              <div class="brand__tag">Business and technology briefing</div>
-              ${page === "home" ? `<div class="brand__note">For operators, investors, and builders. Not gym circuits.</div>` : ""}
+              <div class="brand__tag">Sourced business and technology briefing</div>
+              ${page === "home" ? `<div class="brand__note">For operators. Not gym circuits.</div>` : ""}
             </span>
           </a>
           <div class="masthead__actions">
@@ -165,7 +165,7 @@
     el.setAttribute("content", val);
   }
   const siteName = cfg.siteName || "Circuit & Capital";
-  const tagline = cfg.tagline || "Business and technology briefing";
+  const tagline = cfg.tagline || "Sourced business and technology briefing";
   const fallbackDesc = cfg.defaultDescription || "Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Cited to the post and the official page. Written by Emilio Santos.";
   const descEl = document.querySelector('meta[name="description"]');
   const description = (descEl && descEl.getAttribute("content")) || fallbackDesc;
