@@ -28,7 +28,7 @@
       "slug": "limit-what-an-agent-can-touch",
       "type": "guide",
       "title": "Limit What an Agent Can Touch",
-      "dek": "Gartner’s second-quarter survey of 297 security leaders: 54% have no defined limit on agent access, or they reuse human access. The fix is a privilege list.",
+      "dek": "In Gartner’s second-quarter survey of 297 security leaders, 54% have no defined limit on agent access, or they reuse a person’s access.",
       "category": "Guides",
       "author": "Emilio Santos",
       "date": "October 1, 2026",

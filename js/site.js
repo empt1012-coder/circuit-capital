@@ -50,7 +50,14 @@
         <div class="wrap masthead__row">
           <div class="masthead__date" id="masthead-date">${today}</div>
           <a class="brand" href="${asset("index.html")}">
-            <img class="brand__mark" src="${asset("assets/images/mark.jpg")}" alt="">
+            <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
+              <rect width="64" height="64" fill="#f4efe6"/>
+              <path fill="#c45c26" d="M12 48V14h9v26h13v8H12z"/>
+              <path class="trace" fill="none" stroke="#9a4318" stroke-width="1.6" stroke-linecap="square" d="M16 20h8v5H20v5h7"/>
+              <circle class="node" cx="24" cy="20" r="1.6" fill="#f4efe6"/>
+              <circle class="node node-2" cx="27" cy="30" r="1.6" fill="#f4efe6"/>
+              <path fill="#12151a" d="M36 18h16v2.6H39v4.4h12v2.6H39v4.4h14v2.6H36z"/>
+            </svg>
             <span>
               <div class="brand__name">Circuit <span>&amp;</span> Capital</div>
               <div class="brand__tag">Business and technology briefing</div>

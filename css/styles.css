@@ -108,10 +108,32 @@ button, input { font-family: var(--sans); }
 .brand__mark {
   width: 46px;
   height: 46px;
+  flex-shrink: 0;
+  display: block;
   border: 1px solid #c9a27a;
   background: #f4efe6;
-  object-fit: cover;
-  object-position: 55% 42%;
+}
+.brand__mark .trace {
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: cc-draw 1.5s ease forwards;
+}
+.brand__mark .node {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: cc-pulse 2.8s ease-in-out 1.5s infinite;
+}
+.brand__mark .node-2 { animation-delay: 2.1s; }
+@keyframes cc-draw { to { stroke-dashoffset: 0; } }
+@keyframes cc-pulse {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand__mark .trace,
+  .brand__mark .node { animation: none; }
+  .brand__mark .trace { stroke-dashoffset: 0; }
+  .brand__mark .node { opacity: 1; }
 }
 .brand__name {
   font-family: var(--display);
@@ -815,6 +837,7 @@ footer.site-foot {
   }
   .masthead__date { display: none; }
   .brand { justify-self: start; min-width: 0; }
+  .brand > span { min-width: 0; }
   .brand__name { font-size: 1.35rem; }
   .brand__mark { width: 36px; height: 36px; flex-shrink: 0; }
   .ad-slot--skyscraper { display: none; }
