@@ -85,6 +85,17 @@
       "body": "AI workflow tokens review cycle time"
     },
     {
+      "slug": "gartner-revised-the-ai-bill",
+      "title": "Gartner Revised the AI Bill. Most of It Is Not Your Budget.",
+      "dek": "The September forecast is $2.7 trillion, up 49.5%. About 56% of the table is infrastructure. The check a company signs is the feature inside software it already owns.",
+      "category": "Technology",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 8,
+      "image": "assets/images/datacenter.jpg",
+      "body": "Gartner September 16 2.7 trillion infrastructure software renewal"
+    },
+    {
       "slug": "ai-spend-is-not-the-same-as-ai-return",
       "title": "AI Spend Is Not the Same as AI Return",
       "dek": "Gartner sees $2.59 trillion in AI spending this year. McKinsey still finds only a minority of firms attributing EBIT to it.",
