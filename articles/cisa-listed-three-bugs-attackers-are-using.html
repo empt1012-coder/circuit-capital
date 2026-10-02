@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CISA Listed Three Bugs Attackers Are Already Using — Circuit &amp; Capital</title>
+  <meta name="description" content="Between September 25 and September 30, 2026, CISA’s account posted three additions to the known-exploited catalog: WordPress, Apple, and Cisco SD-WAN Manager. The catalog is the spec.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-base=".." data-page="policy">
+  <div id="site-header"></div>
+  <main id="main">
+    <header class="article-hero wrap">
+      <div class="kicker">Policy</div>
+      <h1>CISA listed three bugs attackers are already using</h1>
+      <p class="dek">WordPress on September 25, Apple on September 29, Cisco Catalyst SD-WAN Manager on September 30. The posts are the alerts. The catalog holds the due dates.</p>
+      <div class="byline-row">
+        <span>By <strong>Emilio Santos</strong></span>
+        <span>October 1, 2026</span>
+        <span>12 min read</span>
+      </div>
+    </header>
+    <figure class="article-cover wrap">
+      <img src="../assets/images/colo.jpg" alt="Cabinets in a colocation room">
+      <figcaption>The catalog does not care which team owns the box. Photo: Circuit &amp; Capital</figcaption>
+    </figure>
+    <div class="wrap article-layout">
+      <article class="prose">
+        <p class="lead-graf">For five days at the end of September, the Cybersecurity and Infrastructure Security Agency’s account on X did the thing it does when a bug is no longer theoretical. It posted an addition to the Known Exploited Vulnerabilities catalog, and it pointed at the same short link each time. Friday, September 25: WordPress Core, remote file inclusion, CVE-2026-87902. Tuesday, September 29: an Apple out-of-bounds write, CVE-2026-86950. Wednesday, September 30: Cisco Catalyst SD-WAN Manager, a hex-encoding issue, CVE-2026-76504. Each post is an alert. The catalog entry is the specification: what CISA says the bug can do, the date it was added, the date a federal civilian agency is supposed to be done, and the vendor page CISA considers the remediation.</p>
+        <p>This is an operator note, not a description of how to use the bugs. If you run the product, the job is to confirm that, apply the vendor’s fix, and write down the date. If you do not run it, write that down too, so the next person does not reopen the thread.</p>
+        <h2>What the catalog is, and who it binds</h2>
+        <p>CISA describes the catalog as the authoritative list of vulnerabilities that have been exploited in the wild. Binding Operational Directive 22-01 is the document that requires Federal Civilian Executive Branch agencies to remediate a listed vulnerability by the due date on the entry. CISA’s own program page says the directive does not bind everyone else. It also says CISA wants state and local governments, and private companies, to treat the list as the queue that goes first.</p>
+        <p>The entries added in this stretch carry a second instruction on the catalog page itself. For each of the three, CISA marks forensic triage under BOD 26-04 as required, and the stated action is to apply the vendor’s mitigations in line with that directive, or to stop using the product if no mitigation exists. This briefing does not restate BOD 26-04. The point for a private company is narrower. A due date with your agency’s name on it is a federal clock. The same row is still evidence that someone is already using the bug against organizations that have no federal clock at all.</p>
+        <p>Ransomware use, on all three entries, is marked unknown. Unknown is not a clean bill. It means CISA has not published that link. Do not brief a board that “this is not ransomware” off that field.</p>
+        <h2>The three posts, and the three rows</h2>
+        <p><strong>WordPress Core, CVE-2026-87902.</strong> Added September 25. Due September 28. CISA’s row calls it a remote file inclusion in WordPress Core: an unauthenticated attacker could make page-template resolution include a chosen readable local PHP file outside the active theme directories, leading to remote code execution. The catalog points at the WordPress security advisory as the vendor instruction. The federal due date had already passed by the time this briefing was published. If a marketing site, a customer portal, or a blog on a box you still patch is on a vulnerable release, the lateness is the fact. Confirm the version against that advisory, update, and keep the record. A host that “manages WordPress for you” is still your outage if the core was not moved.</p>
+        <p><strong>Apple, CVE-2026-86950.</strong> Added September 29. Due October 2. CISA says iOS, macOS, and iPadOS contain an out-of-bounds write in CoreGraphics that may lead to arbitrary code execution. The catalog points at three Apple support pages as the vendor instructions. The federal due date is the day after this briefing. Phones and laptops are a different queue from a data-center patch, which is why this one gets missed. Ask who can see whether managed devices are on the fixed release, and what happens to a device that has not checked in.</p>
+        <p><strong>Cisco Catalyst SD-WAN Manager, CVE-2026-76504.</strong> Added September 30. Due October 3. CISA’s description is a hex-encoding vulnerability: an unauthenticated, remote attacker could reach an affected system with the privileges of the admin user because of improper handling of URI encoding in an HTTP request. The catalog links Cisco’s advisory. That is the page that says which releases are affected and which builds are fixed. A management plane that can push configuration to branches is not a low-value target just because the hostname is unfamiliar to the finance team. If the manager is reachable, it is on the list. If a Cisco-operated cloud is in the path, confirm with Cisco what they already patched and what you still run yourself. Do not assume the two are the same box.</p>
+        <blockquote>The post tells you the name. The catalog tells you the date. The vendor page tells you the fix. Skip one of the three and you are guessing.</blockquote>
+        <aside class="ad-slot ad-slot--inarticle" data-slot="inarticle" aria-label="Advertisement">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </aside>
+        <h2>The catalog had more than the three posts</h2>
+        <p>The account’s posts were the loud three. The catalog page, read on October 1, shows the week was busier than that, and those other rows are just as much “known exploited” as the ones that fit in a social post.</p>
+        <p>On September 27 CISA added two Citrix NetScaler issues, CVE-2026-88771 and CVE-2026-88772, both due September 30. The first is an improper input validation bug that CISA says could let an unauthenticated attacker run arbitrary commands on NetScaler ADC and NetScaler Gateway. The second is a memory-handling bug that CISA says could allow remote code execution or a denial of service. Those federal due dates have passed. A remote-access gateway is the sort of system a company forgets it still has until a customer cannot log in.</p>
+        <p>On October 1 the catalog added Fortinet FortiMail, CVE-2026-104286, due October 4. CISA describes a path-traversal issue that may let an unauthenticated attacker write arbitrary files via crafted HTTP or HTTPS requests. This desk is not treating a single day’s catalog as a complete history. It is treating the row as the official add, the way the three posts were the official alerts.</p>
+        <p>None of this is a vulnerability-management program. It is the week’s evidence that “we will look at it in the monthly window” is a choice to stay exposed to bugs CISA has already called exploited. The monthly window can still exist. These rows do not wait for it.</p>
+        <h2>What to do on Thursday</h2>
+        <p>Make a list of five product names: WordPress, Apple devices, Catalyst SD-WAN Manager, NetScaler, FortiMail. Next to each, write yes, no, or “owned by the host.” For every yes, write the version you are on, the version the vendor page says is fixed, the person who can change it, and the date you will check again. For a federal contractor, also write the catalog due date, because your customer may ask why you missed it even when BOD 22-01 does not name you.</p>
+        <p>Do not turn the list into a claim that you were or were not compromised. CISA’s action line for these entries includes forensic triage for agencies under BOD 26-04. A private company can still decide, with its own counsel and its own logs, whether a bug that was exploited in the wild deserves a look backward as well as a patch forward. That decision is not this article.</p>
+        <p>If the same week produces a customer question from a public company, the patch date and the materiality date are different clocks. Item 1.05 of Form 8-K runs from the materiality determination, not from the morning a CVE is posted. A known-exploited bug is not automatically a material incident. It is a fact your customer’s counsel may ask you to explain quickly. The note on that clock is <a href="the-sec-clock-starts-at-material.html">the SEC piece</a>. The way you learn whether a library or a core you did not think you ran is actually in the stack is the ingredients list in <a href="sbom-now-covers-the-suite.html">the SBOM piece</a>.</p>
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://x.com/CISACyber/status/2103568824733667774" rel="noopener">CISA on X, WordPress Core CVE-2026-87902 added to the catalog, September 25, 2026</a></li>
+          <li><a href="https://x.com/CISACyber/status/2105018745106079807" rel="noopener">CISA on X, Apple CVE-2026-86950, September 29, 2026</a></li>
+          <li><a href="https://x.com/CISACyber/status/2105375718808957053" rel="noopener">CISA on X, Cisco Catalyst SD-WAN Manager CVE-2026-76504, September 30, 2026</a></li>
+          <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87902" rel="noopener">CISA catalog entry, CVE-2026-87902</a> (added September 25, due September 28)</li>
+          <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76504" rel="noopener">CISA catalog, CVE-2026-86950 and CVE-2026-76504, plus the Citrix and FortiMail rows read October 1, 2026</a></li>
+          <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities" rel="noopener">CISA, Reducing the Significant Risk of Known Exploited Vulnerabilities</a> (BOD 22-01 binds FCEB agencies; CISA urges every other organization to prioritize the catalog)</li>
+          <li><a href="https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp" rel="noopener">WordPress security advisory linked from the CVE-2026-87902 catalog entry</a></li>
+          <li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU" rel="noopener">Cisco advisory linked from the CVE-2026-76504 catalog entry</a></li>
+          <li><a href="https://support.apple.com/en-us/149226" rel="noopener">Apple support pages linked from the CVE-2026-86950 catalog entry</a> (<a href="https://support.apple.com/en-us/149228" rel="noopener">149228</a>, <a href="https://support.apple.com/en-us/149229" rel="noopener">149229</a>)</li>
+        </ul>
+        <p>Related: <a href="the-sec-clock-starts-at-material.html">The SEC clock starts when you decide it matters</a> and <a href="sbom-now-covers-the-suite.html">The software ingredients list now covers the suite</a>.</p>
+        <div class="author-box">
+          <div class="avatar">ES</div>
+          <div>
+            <strong>Emilio Santos</strong> writes and edits every piece on Circuit &amp; Capital.
+            <div class="meta"><a href="mailto:circuit50capital@circuits.fit">circuit50capital@circuits.fit</a></div>
+          </div>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <aside class="ad-slot ad-slot--rect" data-slot="sidebar" aria-label="Advertisement">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </aside>
+        <div class="section-head"><h2>Related</h2></div>
+        <div class="popular">
+          <ol>
+            <li><a href="the-sec-clock-starts-at-material.html">The SEC clock starts when you decide it matters</a></li>
+            <li><a href="sbom-now-covers-the-suite.html">The software ingredients list now covers the suite</a></li>
+            <li><a href="../guides/before-the-sec-eight-k.html">Before the Form 8-K clock</a></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/config.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="../js/ads.js"></script>
+</body>
+</html>

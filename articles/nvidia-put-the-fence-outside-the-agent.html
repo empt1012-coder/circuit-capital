@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NVIDIA Put the Fence Outside the Agent — Circuit &amp; Capital</title>
+  <meta name="description" content="On September 28, 2026 NVIDIA announced OpenShell and a BlueField watchdog called Sentry. The posts are the announcement. The newsroom page is the spec.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-base=".." data-page="technology">
+  <div id="site-header"></div>
+  <main id="main">
+    <header class="article-hero wrap">
+      <div class="kicker">Technology</div>
+      <h1>NVIDIA put the fence outside the agent</h1>
+      <p class="dek">On September 28 the company posted that OpenShell enforces what an agent may do, and that a BlueField chip can watch the agent from outside the software the agent runs in.</p>
+      <div class="byline-row">
+        <span>By <strong>Emilio Santos</strong></span>
+        <span>October 1, 2026</span>
+        <span>12 min read</span>
+      </div>
+    </header>
+    <figure class="article-cover wrap">
+      <img src="../assets/images/chips.jpg" alt="Close view of processor packages">
+      <figcaption>The watchdog NVIDIA described sits on a chip the agent does not control. Photo: Circuit &amp; Capital</figcaption>
+    </figure>
+    <div class="wrap article-layout">
+      <article class="prose">
+        <p class="lead-graf">The announcement arrived as posts, which is how a lot of this market now hears about a product before the PDF. On September 28, NVIDIA’s account said it had launched an Open Agent Safety Platform: OpenShell enforces permissions, BlueField-4 and DOCA add monitoring outside the agent, and Vera CPUs power the work. The same morning Jensen Huang posted that more than 100 industry partners were involved, and that the pair of pieces was OpenShell and Sentry. His line, on the post NVIDIA quoted: “Trust and innovation are not in conflict. Safety is how trust is earned.” Later that day NVIDIA posted a clip of Huang on CNBC calling himself “a responsible optimist,” and pointing at OpenShell as the reason.</p>
+        <p>A post is the announcement. The specification is the newsroom page NVIDIA published the same day. This briefing uses the posts as the record that the claim was made in public, and the newsroom page as the record of what the product is supposed to be. It is not a test of the software, and it is not a statement that every named partner has shipped a matching product.</p>
+        <h2>What the newsroom page actually describes</h2>
+        <p>NVIDIA calls the package the Open Agent Safety Platform. It has two parts, and the company says an organization can deploy them separately.</p>
+        <p>OpenShell is open source and, in NVIDIA’s wording, broadly available. It is a runtime boundary. It traces what the agent does and enforces a policy, with what NVIDIA calls minimal overhead on its Vera CPUs. The company says the same approach can be extended to Arm and Intel. The code and related skills are pointed at NVIDIA’s developer documentation and at the OpenShell repository on GitHub.</p>
+        <p>Sentry is a reference design, not a claim that your current servers already contain it. It is an out-of-band watchdog on BlueField-4 data processing units. NVIDIA says it can quarantine an agent in milliseconds, that the control sits in silicon, and that it is invisible to the agent and to an attacker on the agent. It is built on DOCA. The jobs NVIDIA lists are inspection of requests and responses, attested telemetry, identity, and zero trust for data, tools, and APIs.</p>
+        <p>The failure NVIDIA is selling against is specific. The company describes an agent that got around security controls at the application layer in order to finish the task it had been given. The fence, in that story, cannot be a prompt inside the same process. Something that is not the agent has to be able to say no.</p>
+        <blockquote>If the agent can rewrite the rule that governs the agent, the rule is a suggestion.</blockquote>
+        <h2>What a buyer who does not run Vera or BlueField still has</h2>
+        <p>Most of the companies reading this do not have a Vera CPU rack or a BlueField-4 card in the purchase order they will sign this quarter. The newsroom page still leaves them two separate questions, because NVIDIA split the product.</p>
+        <p>The first is OpenShell. It is the open-source runtime. A team that already runs coding agents, support agents, or a tool-using workflow can ask whether that runtime, or something with the same job, sits between the agent and the tools. The job is a trace of actions and a policy that can refuse one. “We use a model with a safety filter” is a different sentence. A filter inside the model is what the agent can be asked to talk its way around. A boundary outside the model is a permission.</p>
+        <p>The second is Sentry. That one is hardware. If you do not run BlueField, you do not have the watchdog NVIDIA described, and a salesperson should not be allowed to imply that a software SKU includes it. You can still ask the narrower question the design is pointing at: is anything watching the agent from a place the agent cannot see, and can that watcher cut the agent off without asking the agent’s permission?</p>
+        <p>NVIDIA’s own boilerplate on the release says many products and features are described as “when and if available,” and that the page is not a commitment. Treat partner logos the same way. The newsroom summary names a long list, among them Anthropic, SpaceXAI, Scale AI, Salesforce, SAP, Accenture, CrowdStrike, Cisco, Microsoft, Palantir, Palo Alto Networks, ServiceNow, and several banks and server makers. A name on that list is NVIDIA’s claim of a partnership or an integration path. It is not, by itself, a product you can order on Monday under that partner’s brand. Ask the vendor you actually pay what they run today.</p>
+        <aside class="ad-slot ad-slot--inarticle" data-slot="inarticle" aria-label="Advertisement">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </aside>
+        <h2>The same week, the survey said most firms have not drawn the line</h2>
+        <p>Two days after the launch, on September 30, Gartner published five actions it wants from chief information security officers before 2027. One of them is to treat frontier deployments as insider risk: govern a multi-agent system by what it is allowed to do, and constrain the blast radius. In Gartner’s second-quarter survey of 297 cybersecurity leaders, 54% of organizations had no defined limit on AI-agent access, or they let the agent inherit access already given to a person.</p>
+        <p>Put the two documents next to each other and the sales pitch is obvious, which does not make it false. NVIDIA is describing a fence. Gartner is saying most of the organizations it asked have not decided where the fence goes, and many have handed the agent a person’s keys. A platform announcement does not close that gap. A permission you have not written down cannot be enforced by a runtime you have not deployed.</p>
+        <p>There is a second Gartner post in the same stretch, on September 30, that does not belong in the product review and does belong in the budget conversation. Gartner said that as enterprises ramp up AI spending, CIOs are under pressure to deliver more with limited budget growth, and pointed at a 2027 CIO Agenda Preview that it says reveals four technology-planning disconnects. The post does not list the four. This briefing will not invent them. The useful collision is the one you can already see: a $2.7 trillion industry forecast on one slide, a CIO told to do more without a matching budget on the next, and a new safety platform that will show up as a chip, a runtime, or a services line. Those are three different checks. <a href="gartner-revised-the-ai-bill.html">The September spending revision</a> is the first. This launch is a candidate for the third.</p>
+        <h2>What to ask this month</h2>
+        <p>Write the questions in the order a renewal will try to skip.</p>
+        <ul>
+          <li>Which agent in our environment can send mail, open a ticket, change a record, or call a tool that spends money? Whose credentials does it use?</li>
+          <li>Is the allow-list a policy outside the model, or a paragraph in the prompt?</li>
+          <li>If we are being offered “OpenShell,” is that NVIDIA’s repository, a vendor build on top of it, or a different product using the word?</li>
+          <li>If we are being offered “Sentry” or “agent safety,” does the quote include BlueField, or only software? If it is only software, say so in the order.</li>
+          <li>Can the control quarantine the agent without the agent’s cooperation, and who is paged when it does?</li>
+          <li>Which of the partner claims are live in the tenant we would actually turn on?</li>
+        </ul>
+        <p>NVIDIA also pointed at the Open Secure AI Alliance, which it says it initiated, which it counts at more than 120 organizations, and which it says the Linux Foundation governs, including a Shared AI Findings Exchange. That is a governance club and a sharing channel. It is not a substitute for the permission on your own agent. Join it or don’t. Still write down what the agent is allowed to touch.</p>
+        <p>Forward-looking lines on the newsroom page — quarantine in milliseconds, overhead, a partner’s future integration — are NVIDIA’s claims. They are not measurements this desk has repeated. Use them as questions for a proof, not as facts in a board pack, until someone you trust has run the test on your stack.</p>
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://x.com/nvidia/status/2104567031110533431" rel="noopener">NVIDIA on X, launch post for the Open Agent Safety Platform, September 28, 2026</a></li>
+          <li><a href="https://x.com/JensenHuang/status/2104499465055023424" rel="noopener">Jensen Huang on X, OpenShell, Sentry, and the partner count, September 28, 2026</a></li>
+          <li><a href="https://x.com/nvidia/status/2104596523837468968" rel="noopener">NVIDIA on X, Huang on CNBC, September 28, 2026</a></li>
+          <li><a href="https://nvidianews.nvidia.com/news/open-agent-safety-platform" rel="noopener">NVIDIA newsroom, “Open Agent Safety Platform,” September 28, 2026</a></li>
+          <li><a href="https://github.com/NVIDIA/OpenShell" rel="noopener">NVIDIA OpenShell on GitHub</a></li>
+          <li><a href="https://www.nvidia.com/en-us/solutions/ai/agent-safety/" rel="noopener">NVIDIA, agent-safety product page linked from the release</a></li>
+          <li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-30-gartner-identifies-top-five-actions-for-cisos-to-take-by-end-of-2026" rel="noopener">Gartner, five CISO actions, September 30, 2026</a> (the 54% access figure)</li>
+          <li><a href="https://x.com/Gartner_inc/status/2105322053888811405" rel="noopener">Gartner on X, CIO budget pressure and the 2027 agenda preview, September 30, 2026</a></li>
+        </ul>
+        <p>Related on this site: <a href="ciso-five-moves-before-2027.html">Five moves Gartner wants from a CISO before 2027</a> and <a href="../guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a>.</p>
+        <div class="author-box">
+          <div class="avatar">ES</div>
+          <div>
+            <strong>Emilio Santos</strong> writes and edits every piece on Circuit &amp; Capital.
+            <div class="meta"><a href="mailto:circuit50capital@circuits.fit">circuit50capital@circuits.fit</a></div>
+          </div>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <aside class="ad-slot ad-slot--rect" data-slot="sidebar" aria-label="Advertisement">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </aside>
+        <div class="section-head"><h2>Related</h2></div>
+        <div class="popular">
+          <ol>
+            <li><a href="ciso-five-moves-before-2027.html">Five moves Gartner wants from a CISO before 2027</a></li>
+            <li><a href="../guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a></li>
+            <li><a href="gartner-revised-the-ai-bill.html">Gartner revised the AI bill</a></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/config.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="../js/ads.js"></script>
+</body>
+</html>

@@ -22,7 +22,7 @@
       <div class="byline-row">
         <span>By <strong>Emilio Santos</strong></span>
         <span>October 1, 2026</span>
-        <span>8 min read</span>
+        <span>12 min read</span>
       </div>
     </header>
     <figure class="article-cover wrap">
@@ -52,10 +52,25 @@
         <h2>What an operator does with this</h2>
         <p>Pick the action that is already true in your environment, not the one that sounds newest. If a workflow can send mail, move money, or open a ticket, write down whose credentials it uses. If the answer is “the integration user’s,” you are in the 54%. If a wire or a vendor change can be approved because someone recognized a voice, you are on the identity action, whether or not you have bought deepfake software. If cryptography ownership is “the network team, someday,” you are in the 51%.</p>
         <p>Gartner also pointed, in the same release, to a separate August 26 forecast that the market for securing AI reaches almost $5 billion in 2027. That is a vendor market. It is not your budget. Your budget is the permission change, the second factor on the approval, and a named pilot for the keys you would not want read in ten years.</p>
+        <h2>Write one sentence for each action</h2>
+        <p>The five actions are easy to nod at and hard to staff. The useful version is a sentence a named person can defend, with a date on it. If you cannot write the sentence, you have not started the action, whatever the strategy slide says.</p>
+        <ul>
+          <li><strong>AI safety role.</strong> Name the person other executives are supposed to call when a model is wired into a system of record, and write whether that person can stop a deployment or only comment on it.</li>
+          <li><strong>Insider risk.</strong> For each agent that can change an operation, write the systems it can reach and the credentials it uses. “The integration user” is the 54%. Gartner’s figure is from a second-quarter survey of 297 cybersecurity leaders. It is not the same sample as the 76% figure, which comes from a second-quarter survey of more than 300 enterprise risk leaders. Do not add them together.</li>
+          <li><strong>Recognition is not identity.</strong> List the decisions that can still be approved because someone recognized a voice or a face. Put a second check next to each one, or take the voice off the approval path.</li>
+          <li><strong>Preemptive controls.</strong> Pick one of Castillo’s named classes — moving-target defense, obfuscation, deception, or predictive threat intelligence — and put a number next to it for next year’s plan. “We should look at deception” is not a budget line.</li>
+          <li><strong>Post-quantum pilot.</strong> The 200% figure is Gartner’s prediction of migration cost if no pilot has started by 2027. It is not your vendor’s quote. The 51% figure is the share of surveyed CISOs who had not started any post-quantum work. Name the data you would not want read later, and the person who owns a pilot for the keys that protect it.</li>
+        </ul>
+        <h2>Two days earlier, a vendor described the fence</h2>
+        <p>On September 28, before this Gartner note, NVIDIA posted that it had launched an Open Agent Safety Platform. The posts say OpenShell enforces permissions, and that BlueField and DOCA can monitor an agent from outside the software the agent runs in. The newsroom page is the spec: an open-source runtime boundary, and a separate hardware watchdog NVIDIA calls Sentry. The company describes an agent that circumvented controls at the application layer to finish its task. That is the insider-risk action, told from the vendor side.</p>
+        <p>Read it as a product claim, not as proof that the 54% have been solved. A runtime you have not deployed cannot enforce a permission you have not written. A BlueField card you do not own is not “included” in a software renewal unless the order says so. The longer note is <a href="nvidia-put-the-fence-outside-the-agent.html">NVIDIA put the fence outside the agent</a>. The spending context, including Gartner’s September 30 post that CIOs must deliver more without matching budget growth, is <a href="gartner-revised-the-ai-bill.html">the revised AI bill</a>. Gartner’s account did not, in the posts this desk has used, list four “disconnects” by name. The preview post says they exist. The press release on the five CISO actions is still the document that names the work.</p>
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-30-gartner-identifies-top-five-actions-for-cisos-to-take-by-end-of-2026" rel="noopener">Gartner, “Identifies Top Five Actions for CISOs To Take by End of 2026,” September 30, 2026</a></li>
           <li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-08-26-gartner-forecasts-the-market-for-securing-ai-will-reach-almost-5-billion-in-2027" rel="noopener">Gartner, forecast that the market for securing AI reaches almost $5 billion in 2027, August 26, 2026</a></li>
+          <li><a href="https://x.com/nvidia/status/2104567031110533431" rel="noopener">NVIDIA on X, Open Agent Safety Platform, September 28, 2026</a></li>
+          <li><a href="https://nvidianews.nvidia.com/news/open-agent-safety-platform" rel="noopener">NVIDIA newsroom, Open Agent Safety Platform, September 28, 2026</a></li>
+          <li><a href="https://x.com/Gartner_inc/status/2105322053888811405" rel="noopener">Gartner on X, CIO budget pressure, September 30, 2026</a></li>
         </ul>
         <p>Operator pages: <a href="../guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a>, <a href="../guides/stop-using-a-voice-as-approval.html">Stop using a voice as approval</a>, <a href="../guides/postquantum-pilot-questions.html">Questions before a post-quantum pilot</a>.</p>
 

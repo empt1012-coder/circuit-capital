@@ -22,7 +22,7 @@
       <div class="byline-row">
         <span>By <strong>Emilio Santos</strong></span>
         <span>October 1, 2026</span>
-        <span>8 min read</span>
+        <span>12 min read</span>
       </div>
     </header>
     <figure class="article-cover wrap">
@@ -44,11 +44,25 @@
         <h2>What to ask before the quarter closes</h2>
         <p>For each product you will renew, ask for an SBOM that includes the new fields, in a machine-readable format, and ask how often it is regenerated. For anything the vendor calls AI, ask for the general SBOM and the AI supplement, and ask which components are the model, the data, and the application around them. If the vendor sells only a hosted service, do not accept “SaaS does not have an SBOM.” CISA’s July revision says the minimum elements apply to SaaS.</p>
         <p>Keep the ask tied to a decision. You want the list so you can see a license you cannot accept, a component you already banned, or a generation date older than the last incident. A list nobody reads is a folder.</p>
+        <h2>What each new field is for</h2>
+        <p>CISA named four additions. A renewal that “includes an SBOM” can still omit every one of them. Ask for the field, then ask what decision it supports.</p>
+        <ul>
+          <li><strong>Component hash algorithm.</strong> A hash without the algorithm that produced it is a string you cannot recompute. Ask which algorithm, and ask for the hash, not a screenshot of a hash.</li>
+          <li><strong>Component license.</strong> This is the field that catches the component your counsel already banned. A product description that says “open source” is not a license name.</li>
+          <li><strong>SBOM tool name.</strong> You want to know what generated the file, because two tools can describe the same product differently, and a hand-built spreadsheet will not tell you that it was hand-built unless you ask.</li>
+          <li><strong>Generation context.</strong> Ask what context the file claims, and when it was produced. A generation date older than the release you are about to install is a stale list. CISA does not, on the pages this briefing uses, give you a single required sentence for the field. Do not accept a vendor’s invention of one and call it the minimum element.</li>
+        </ul>
+        <p>AI and SaaS may need more than that baseline. That is CISA’s line, not a hint that SaaS is exempt. The May 12 AI supplement, written with G7 partners, sits on top of the general elements. Ask for both when the product is a model, a dataset, and an application wrapped together and sold as one login.</p>
+        <h2>Why the list showed up in the same season as the exploit catalog</h2>
+        <p>Between September 25 and September 30, CISA’s account posted three additions to the Known Exploited Vulnerabilities catalog: WordPress Core, an Apple bug, and Cisco Catalyst SD-WAN Manager. The catalog, read the next morning, also showed Citrix rows from September 27 and a Fortinet FortiMail row added October 1. The posts are the alerts. The catalog rows are the spec. The write-up is <a href="cisa-listed-three-bugs-attackers-are-using.html">CISA listed three bugs attackers are already using</a>.</p>
+        <p>An ingredients list is how you answer the first question those alerts create, which is not “how does the bug work.” It is “do we run this.” WordPress core, a mail gateway, a remote-access appliance, and an SD-WAN manager do not always appear in the application inventory the security team keeps. They appear, when you are lucky, in a bill of materials, a hosting contract, or a network diagram somebody last updated at renewal. Ask for the SBOM before you need it to identify a component CISA has already said is being used against somebody. Guidance is still not a statute. The contract is what makes the file show up.</p>
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://www.cisa.gov/news-events/news/cisa-and-partners-unveil-updated-software-bill-materials-resource-improves-transparency-security-and" rel="noopener">CISA, release on the 2026 Minimum Elements for an SBOM, July 29, 2026</a></li>
           <li><a href="https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom" rel="noopener">CISA, 2026 Minimum Elements for a Software Bill of Materials</a></li>
           <li><a href="https://www.cisa.gov/resources-tools/resources/software-bill-materials-ai-minimum-elements" rel="noopener">CISA, Software Bill of Materials for AI — Minimum Elements, May 12, 2026</a></li>
+          <li><a href="https://x.com/CISACyber/status/2103568824733667774" rel="noopener">CISA on X, WordPress, Apple, and Cisco catalog posts, September 25–30, 2026</a> (<a href="https://x.com/CISACyber/status/2105018745106079807" rel="noopener">Apple</a>, <a href="https://x.com/CISACyber/status/2105375718808957053" rel="noopener">Cisco</a>)</li>
+          <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76504" rel="noopener">CISA Known Exploited Vulnerabilities catalog, rows read October 1, 2026</a></li>
         </ul>
         <p>Operator pages: <a href="../guides/ask-a-vendor-for-an-sbom.html">Ask a vendor for an SBOM</a> and <a href="../guides/ai-sbom-extra-questions.html">Extra questions for an AI bill of materials</a>.</p>
 

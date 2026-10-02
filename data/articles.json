@@ -205,13 +205,35 @@
       "body": "AI workflow tokens review cycle time"
     },
     {
+      "slug": "nvidia-put-the-fence-outside-the-agent",
+      "title": "NVIDIA Put the Fence Outside the Agent",
+      "dek": "On September 28 NVIDIA posted that OpenShell enforces what an agent may do, and that a BlueField chip can watch from outside the software the agent runs in.",
+      "category": "Technology",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 12,
+      "image": "assets/images/chips.jpg",
+      "body": "NVIDIA OpenShell Sentry BlueField agent safety September 28"
+    },
+    {
+      "slug": "cisa-listed-three-bugs-attackers-are-using",
+      "title": "CISA Listed Three Bugs Attackers Are Already Using",
+      "dek": "WordPress on September 25, Apple on September 29, Cisco SD-WAN Manager on September 30. The posts are the alerts. The catalog holds the due dates.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 12,
+      "image": "assets/images/colo.jpg",
+      "body": "CISA KEV WordPress Apple Cisco SD-WAN September 2026"
+    },
+    {
       "slug": "ciso-five-moves-before-2027",
       "title": "Five Moves Gartner Wants from CISOs Before 2027",
       "dek": "A September 30 note treats agents as insiders, a familiar voice as a weak approval, and post-quantum work as something that gets expensive if it waits.",
       "category": "Technology",
       "author": "Emilio Santos",
       "date": "October 1, 2026",
-      "readTime": 8,
+      "readTime": 12,
       "image": "assets/images/toolroom.jpg",
       "body": "Gartner CISO agents deepfake postquantum 54 percent"
     },
@@ -222,7 +244,7 @@
       "category": "Policy",
       "author": "Emilio Santos",
       "date": "October 1, 2026",
-      "readTime": 8,
+      "readTime": 12,
       "image": "assets/images/folders.jpg",
       "body": "EU AI Act Article 50 high-risk December 2027 transparency"
     },
@@ -233,7 +255,7 @@
       "category": "Policy",
       "author": "Emilio Santos",
       "date": "October 1, 2026",
-      "readTime": 8,
+      "readTime": 12,
       "image": "assets/images/workshop.jpg",
       "body": "CISA SBOM 2026 SaaS AI license hash"
     },
@@ -244,7 +266,7 @@
       "category": "Policy",
       "author": "Emilio Santos",
       "date": "October 1, 2026",
-      "readTime": 8,
+      "readTime": 12,
       "image": "assets/images/questionnaire.jpg",
       "body": "SEC Form 8-K Item 1.05 material cybersecurity four business days"
     },
@@ -255,7 +277,7 @@
       "category": "Technology",
       "author": "Emilio Santos",
       "date": "October 1, 2026",
-      "readTime": 8,
+      "readTime": 12,
       "image": "assets/images/datacenter.jpg",
       "body": "Gartner September 16 2.7 trillion infrastructure software renewal"
     },

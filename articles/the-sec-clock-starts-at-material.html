@@ -22,7 +22,7 @@
       <div class="byline-row">
         <span>By <strong>Emilio Santos</strong></span>
         <span>October 1, 2026</span>
-        <span>8 min read</span>
+        <span>12 min read</span>
       </div>
     </header>
     <figure class="article-cover wrap">
@@ -44,11 +44,19 @@
         <h2>What a private company should still write down</h2>
         <p>You may not file an 8-K. Your customer might. Name, before an incident, who can decide that a customer-facing outage or a data theft is something a public customer must hear, and how fast you can say what systems, what data, and what you have turned off. The SEC’s rule does not draft your contract. It explains why the contract’s notice window of “promptly” will feel slow to a registrant whose counsel is counting business days from a materiality call.</p>
         <p>Pair the clock with the insurance questionnaire you already answer. A control that satisfies an underwriter does not decide materiality. A materiality call that nobody has rehearsed will be made by whoever is awake.</p>
+        <h2>A catalog post is not a materiality call</h2>
+        <p>The last week of September gave the calendar a concrete test. CISA’s account posted three known-exploited vulnerabilities: WordPress Core on September 25 (CVE-2026-87902), an Apple bug on September 29 (CVE-2026-86950), and Cisco Catalyst SD-WAN Manager on September 30 (CVE-2026-76504). The catalog, not the post, holds the federal due dates: September 28, October 2, and October 3. Citrix NetScaler rows added September 27 were already due September 30. Fortinet FortiMail was added October 1, due October 4. The piece that walks those rows is <a href="cisa-listed-three-bugs-attackers-are-using.html">CISA listed three bugs attackers are already using</a>.</p>
+        <p>None of those facts is an Item 1.05 filing. The Commission’s clock starts when the company determines the incident is material, and Item 1.05 asks for the material aspects of nature, scope, and timing, plus the material impact or the reasonably likely material impact. A CVE number trending on a given morning does not, by itself, answer any of those. It can be the moment someone should ask the question. It can also be a bug in a product you do not run.</p>
+        <p>Write the two dates on separate lines when a public customer calls. One line is the day you patched, or the day you confirmed you do not run the product. The other line is the day, if it ever comes, that someone with authority decided the incident was material to the registrant. Confusing “CISA posted it” with “we have determined materiality” is how a private vendor blows a customer’s four business days, or invents a disclosure the customer did not need.</p>
+        <p>Rehearse the call with the people who would actually be on it. Who can say which systems were touched. Who can say whether data left. Who is allowed to tell a public customer, and who is allowed only to tell counsel. The annual Item 106 disclosure still has to describe processes, board oversight, and management’s role. It still does not require you to name a director as a cybersecurity expert. A questionnaire that demands that title is asking for something the Commission declined to require.</p>
+        <p>Foreign private issuers remain on Form 6-K when the incident is disclosed, or required to be disclosed, in another channel. A playbook written only for domestic 8-K filers will miss the parent company that asks for the same facts on a different form. This is still not legal advice. It is the reading that keeps the patching queue and the disclosure queue from sharing a single panicked email.</p>
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://www.sec.gov/newsroom/press-releases/2023-139" rel="noopener">SEC, “SEC Adopts Rules on Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure,” July 26, 2023</a></li>
           <li><a href="https://www.sec.gov/resources-small-businesses/small-business-compliance-guides/cybersecurity-risk-management-strategy-governance-incident-disclosure" rel="noopener">SEC small-entity compliance guide, Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure</a></li>
           <li><a href="https://www.sec.gov/rules-regulations/2023/07/s7-09-22" rel="noopener">SEC final rule page, Release 33-11216</a></li>
+          <li><a href="https://x.com/CISACyber/status/2103568824733667774" rel="noopener">CISA on X, the September 25–30 catalog posts</a> (<a href="https://x.com/CISACyber/status/2105018745106079807" rel="noopener">Apple</a>, <a href="https://x.com/CISACyber/status/2105375718808957053" rel="noopener">Cisco</a>)</li>
+          <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76504" rel="noopener">CISA Known Exploited Vulnerabilities catalog, rows read October 1, 2026</a></li>
         </ul>
         <p>Operator page: <a href="../guides/before-the-sec-eight-k.html">Before the Form 8-K clock</a>. Related: <a href="cyber-insurance-it-budgets.html">Cyber insurance is rewriting the IT budget</a>.</p>
 
