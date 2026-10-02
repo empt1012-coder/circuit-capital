@@ -1,7 +1,7 @@
 ﻿window.CC_CONFIG = {
   siteName: "Circuit & Capital",
   tagline: "Business and technology briefing",
-  defaultDescription: "Independent briefing on how companies buy software, how capital prices it, and how policy changes the map.",
+  defaultDescription: "Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Cited to the post and the official page. Written by Emilio Santos.",
   domain: "https://circuits.fit",
   contactEmail: "circuit50capital@circuits.fit",
   adsEmail: "circuit50capital@circuits.fit",
