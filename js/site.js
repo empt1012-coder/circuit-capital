@@ -80,7 +80,7 @@
         <div class="wrap foot-grid">
           <div>
             <h3>Circuit &amp; Capital</h3>
-            <p>Original reporting and analysis at the intersection of business and technology. Ad-supported. Independent.</p>
+            <p>Briefings and operator guides on business and technology. Written by Emilio Santos.</p>
           </div>
           <div>
             <h3>Sections</h3>
@@ -89,7 +89,7 @@
             </ul>
           </div>
           <div>
-            <h3>Publishers</h3>
+            <h3>Advertising</h3>
             <ul>
               <li><a href="${asset("advertise.html")}">Advertise</a></li>
               <li><a href="${asset("advertise.html")}#specs">Ad specs</a></li>
