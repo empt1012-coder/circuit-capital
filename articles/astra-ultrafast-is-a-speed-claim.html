@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astra Ultrafast Is a Speed Claim. The Bill Is Still Yours. — Circuit &amp; Capital</title>
+  <meta name="description" content="NVIDIA posted on October 1 that GPT-6 Astra Ultrafast runs on Blackwell and is up to 8x faster than Astra Standard. The blog is the spec. The 8x is their number.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-base=".." data-page="technology">
+  <div id="site-header"></div>
+  <main id="main">
+    <header class="article-hero wrap">
+      <div class="kicker">Technology</div>
+      <h1>Astra Ultrafast is a speed claim. The bill is still yours.</h1>
+      <p class="dek">NVIDIA’s October 1 post says GPT-6 Astra Ultrafast runs on its GPUs, up to 8x faster. The blog says that 8x is against Astra Standard, on token generation, for agents that write, call a tool, and try again.</p>
+      <div class="byline-row">
+        <span>By <strong>Emilio Santos</strong></span>
+        <span>October 1, 2026</span>
+        <span>11 min read</span>
+      </div>
+    </header>
+    <figure class="article-cover wrap">
+      <img src="../assets/images/datacenter.jpg" alt="Rows of equipment in a data center">
+      <figcaption>Faster tokens are still a line on somebody’s invoice. Photo: Circuit &amp; Capital</figcaption>
+    </figure>
+    <div class="wrap article-layout">
+      <article class="prose">
+        <p class="lead-graf">NVIDIA’s account posted it on October 1: up to 8x faster, and GPT-6 Astra Ultrafast runs on NVIDIA. The post points at a company blog. The blog, by Dion Harris and dated the same day, is the specification. It says Ultrafast is available now in the OpenAI API and to eligible ChatGPT Work and Codex users. It runs on Blackwell GPUs. OpenAI’s inference optimizations use that architecture. Against Astra Standard mode, NVIDIA says Ultrafast offers up to 8x faster token generation.</p>
+        <p>Read the “up to.” It is NVIDIA’s comparison, on NVIDIA’s page, against one other mode of the same model family. It is not a measurement this desk has repeated, and it is not a promise that your coding agent will finish a workday eight times sooner. Faster token generation matters in a loop. It does not retire the loop.</p>
+        <h2>Where they say the speed shows up</h2>
+        <p>The blog names three places: code generation, tool use, and interactive applications. The operator sentence is the next one. A faster response matters most when it is repeated. An agent writes code, uses a tool, checks the result, and decides what to do next. Ultrafast is pitched as Astra inside that cycle: shorter edit-test-debug runs, less time between tool calls, applications that feel more responsive.</p>
+        <p>Philippe Tillet, identified as inference lead at OpenAI, is quoted saying NVIDIA’s tooling let OpenAI’s models get “exceptionally good at programming Blackwell and Rubin GPUs,” and that Astra can turn that into kernels across latency, throughput, and cost. The product described as available is Ultrafast on Blackwell. Rubin is in the quote as hardware the model can program. Do not brief a board that Ultrafast “runs on Rubin” off that sentence.</p>
+        <p>Uday Ruddarraju, identified as chief technology officer of compute at OpenAI, says OpenAI used its internal models to optimize inference on NVIDIA GPUs, and that NVIDIA’s programmability helped deliver the acceleration. A later section says the gains do not stop at deployment. OpenAI is using its own models to keep refining the inference software, and a programmable platform is supposed to let the same machines move across training, inference, and reinforcement learning so teams are not overbuilding for one workload.</p>
+        <blockquote>An agent that finishes the wrong tool call faster has not saved the afternoon. It has spent it sooner.</blockquote>
+        <aside class="ad-slot ad-slot--inarticle" data-slot="inarticle" aria-label="Advertisement">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </aside>
+        <h2>What the post does not settle</h2>
+        <p>Price is not in the blog post this briefing uses. The page sends developers to OpenAI’s Ultrafast guide for access, pricing, and implementation. That guide is the page that answers “what does a token cost,” and it can change without NVIDIA editing the blog. Quote the guide you opened, with the date you opened it. Do not quote the 8x as a discount.</p>
+        <p>Eligibility is also narrower than “ChatGPT.” The blog says the API, and eligible ChatGPT Work and Codex users. If the people who would use this are on a different plan, the announcement does not include them until that guide says so.</p>
+        <p>Gartner posted on September 24 that managing AI cost is becoming as important as deploying AI, and pointed at pricing that shifts from seats and consumption toward coding agents. The same house’s September 16 forecast still puts most of the industry bill in infrastructure, not in the seat a company renews. Ultrafast is a candidate for both lines. The chip owner hears a utilization story. The buyer of the API hears a faster agent and an unknown invoice. Put them in different cells. The forecast note is <a href="gartner-revised-the-ai-bill.html">Gartner revised the AI bill</a>. The worksheet is <a href="../guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a>.</p>
+        <h2>The same month already asked who may touch the tools</h2>
+        <p>Three days before this speed post, NVIDIA launched the Open Agent Safety Platform. OpenShell is the open-source runtime that is supposed to enforce permissions. Sentry is the BlueField watchdog. The failure they described was an agent getting around application-layer controls to finish its task. Ultrafast is aimed at the same shape of work: an agent, a tool, another step. A faster loop makes a missing permission more expensive, not less. The write-up is <a href="nvidia-put-the-fence-outside-the-agent.html">NVIDIA put the fence outside the agent</a>. The question list is <a href="../guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a>.</p>
+        <p>Ask four things before anyone turns the mode on for a team. Which workflow repeats often enough that token time is actually the wait. Whether those calls can spend money, send mail, or change a record. What the Ultrafast guide says the price is on the day you switch. And who can turn it off if the loop gets quicker and worse. The 8x stays NVIDIA’s claim until someone you trust times your own workflow.</p>
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://x.com/nvidia/status/2105809442365423918" rel="noopener">NVIDIA on X, GPT-6 Astra Ultrafast, October 1, 2026</a></li>
+          <li><a href="https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast/" rel="noopener">NVIDIA blog, Dion Harris, “How NVIDIA GPUs Help Accelerate OpenAI’s GPT-6 Astra Ultrafast,” October 1, 2026</a></li>
+          <li><a href="https://developers.openai.com/api/docs/guides/ultrafast-mode" rel="noopener">OpenAI, Ultrafast guide, linked from the NVIDIA blog for access, pricing, and implementation</a></li>
+          <li><a href="https://x.com/Gartner_inc/status/2103170129525604515" rel="noopener">Gartner on X, AI cost and coding-agent pricing, September 24, 2026</a></li>
+          <li><a href="https://x.com/nvidia/status/2104567031110533431" rel="noopener">NVIDIA on X, Open Agent Safety Platform, September 28, 2026</a></li>
+        </ul>
+        <p>Related: <a href="nvidia-put-the-fence-outside-the-agent.html">NVIDIA put the fence outside the agent</a> and <a href="../guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a>.</p>
+        <div class="author-box">
+          <div class="avatar">ES</div>
+          <div>
+            <strong>Emilio Santos</strong> writes and edits every piece on Circuit &amp; Capital.
+            <div class="meta"><a href="mailto:circuit50capital@circuits.fit">circuit50capital@circuits.fit</a></div>
+          </div>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <aside class="ad-slot ad-slot--rect" data-slot="sidebar" aria-label="Advertisement">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </aside>
+        <div class="section-head"><h2>Related</h2></div>
+        <div class="popular">
+          <ol>
+            <li><a href="nvidia-put-the-fence-outside-the-agent.html">NVIDIA put the fence outside the agent</a></li>
+            <li><a href="../guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a></li>
+            <li><a href="gartner-revised-the-ai-bill.html">Gartner revised the AI bill</a></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/config.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="../js/ads.js"></script>
+</body>
+</html>

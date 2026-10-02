@@ -205,6 +205,28 @@
       "body": "AI workflow tokens review cycle time"
     },
     {
+      "slug": "sec-proposed-a-crypto-custody-path",
+      "title": "The SEC Proposed a Path for Crypto Custody",
+      "dek": "On October 1 the Commission proposed custody rules for crypto assets held by advisers and regulated funds. The posts are the alert. Comments run from the Federal Register.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 11,
+      "image": "assets/images/finance.jpg",
+      "body": "SEC crypto custody advisers funds Atkins October 1 2026"
+    },
+    {
+      "slug": "astra-ultrafast-is-a-speed-claim",
+      "title": "Astra Ultrafast Is a Speed Claim. The Bill Is Still Yours.",
+      "dek": "NVIDIA says GPT-6 Astra Ultrafast is up to 8x faster than Astra Standard on token generation. That number is theirs. The invoice is yours.",
+      "category": "Technology",
+      "author": "Emilio Santos",
+      "date": "October 1, 2026",
+      "readTime": 11,
+      "image": "assets/images/datacenter.jpg",
+      "body": "NVIDIA OpenAI GPT-6 Astra Ultrafast Blackwell 8x October 1"
+    },
+    {
       "slug": "nvidia-put-the-fence-outside-the-agent",
       "title": "NVIDIA Put the Fence Outside the Agent",
       "dek": "On September 28 NVIDIA posted that OpenShell enforces what an agent may do, and that a BlueField chip can watch from outside the software the agent runs in.",
