@@ -80,6 +80,7 @@
         return;
       }
       el.hidden = false;
+      el.classList.add("is-live");
       el.setAttribute("data-ad-slot", unit);
       fillSlot(el);
     });
@@ -97,6 +98,7 @@
       return;
     }
     slot.hidden = false;
+    slot.classList.add("is-live");
     slot.setAttribute("data-ad-slot", unit);
     fillSlot(slot);
   });

@@ -269,6 +269,7 @@ nav.nav {
 /* Ads */
 .ad-slot[hidden] { display: none; }
 .ad-slot {
+  display: none;
   background: var(--ad);
   border: 1px dashed #c9bfae;
   color: var(--muted);
@@ -674,7 +675,7 @@ nav.nav {
   min-height: 0;
 }
 .ad-slot--guide:empty { display: none; }
-.ad-slot--guide:not(:empty) { display: block; }
+.ad-slot.is-live { display: block; }
 
 /* Category + legal */
 .page-head {
@@ -840,7 +841,7 @@ footer.site-foot {
   .brand > span { min-width: 0; }
   .brand__name { font-size: 1.35rem; }
   .brand__mark { width: 36px; height: 36px; flex-shrink: 0; }
-  .ad-slot--skyscraper { display: none; }
+  .ad-slot.ad-slot--skyscraper { display: none; }
   .ad-slot--leaderboard .ad-slot__box,
   .ad-slot--inarticle .ad-slot__box { min-height: 70px; }
   .ad-slot--rect .ad-slot__box { min-height: 160px; }
