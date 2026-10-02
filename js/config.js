@@ -8,8 +8,8 @@
   analyticsId: "",
   ads: {
     enabled: true,
-    provider: "off",
-    adsenseClient: "",
+    provider: "adsense",
+    adsenseClient: "ca-pub-3634982565972955",
     slots: {
       leaderboard: "",
       sidebar: "",

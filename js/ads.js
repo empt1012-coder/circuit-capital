@@ -51,14 +51,21 @@
     });
   }
 
+  if (!live) {
+    hideIdleSlots();
+    return;
+  }
+
+  loadAdsense();
+
   if (page === "home") {
     hideIdleSlots();
     return;
   }
 
-  if (!live) {
-    hideIdleSlots();
-    return;
+  function unitFor(slot) {
+    const key = slot.getAttribute("data-slot");
+    return (slot.getAttribute("data-ad-slot") || (ads.slots && ads.slots[key]) || "").trim();
   }
 
   if (page === "guides") {
@@ -67,13 +74,15 @@
     ["ad-guide-mid", "ad-guide-end"].forEach((id) => {
       const el = document.getElementById(id);
       if (!el) return;
+      const unit = unitFor(el);
+      if (!unit) {
+        el.hidden = true;
+        return;
+      }
       el.hidden = false;
-      const key = el.getAttribute("data-slot");
-      const unit = ads.slots && ads.slots[key];
-      if (unit) el.setAttribute("data-ad-slot", unit);
+      el.setAttribute("data-ad-slot", unit);
       fillSlot(el);
     });
-    loadAdsense();
     return;
   }
 
@@ -82,17 +91,23 @@
   });
 
   document.querySelectorAll(".ad-slot").forEach((slot) => {
+    const unit = unitFor(slot);
+    if (!unit) {
+      slot.hidden = true;
+      return;
+    }
     slot.hidden = false;
-    const key = slot.getAttribute("data-slot");
-    const unit = ads.slots && ads.slots[key];
-    if (unit) slot.setAttribute("data-ad-slot", unit);
+    slot.setAttribute("data-ad-slot", unit);
+    fillSlot(slot);
   });
 
-  loadAdsense();
-  document.querySelectorAll(".ad-slot").forEach((slot) => fillSlot(slot));
-
   const sticky = document.querySelector(".ad-sticky");
-  if (sticky) document.body.classList.add("has-live-ads");
+  const stickySlot = sticky && sticky.querySelector(".ad-slot");
+  if (!stickySlot || stickySlot.hidden) {
+    sticky?.remove();
+  } else if (sticky) {
+    document.body.classList.add("has-live-ads");
+  }
   document.querySelector("[data-close-sticky]")?.addEventListener("click", () => {
     sticky?.remove();
     document.body.classList.remove("has-live-ads");

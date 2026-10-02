@@ -1,3 +1,1 @@
-# Authorized digital sellers for circuits.fit
-# Add the Google line after AdSense approval, using the real publisher ID:
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-3634982565972955, DIRECT, f08c47fec0942fa0
