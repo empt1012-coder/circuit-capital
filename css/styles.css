@@ -152,16 +152,7 @@ button, input { font-family: var(--sans); }
   color: #b7ae9f;
   margin-top: 0.28rem;
 }
-.brand__note {
-  font-family: var(--sans);
-  font-size: 12px;
-  line-height: 1.4;
-  letter-spacing: 0.01em;
-  text-transform: none;
-  color: #c9c2b6;
-  margin-top: 0.4rem;
-  max-width: 22rem;
-}
+
 .masthead__date {
   font-family: var(--sans);
   font-size: 12px;
@@ -906,7 +897,6 @@ footer.site-foot {
   .topbar .wrap { min-height: 32px; }
   .topbar__links { gap: 0.75rem; }
   .brand__tag { display: none; }
-  .brand__note { font-size: 11px; max-width: 16rem; }
   .btn--ghost:not(.btn--icon) { display: none; }
   .btn--icon { font-size: 11px; padding: 0.45rem 0.55rem; }
   .masthead__actions { gap: 0.35rem; }

@@ -61,7 +61,6 @@
             <span>
               <div class="brand__name">Circuit <span>&amp;</span> Capital</div>
               <div class="brand__tag">Sourced business and technology briefing</div>
-              ${page === "home" ? `<div class="brand__note">For operators. Not gym circuits.</div>` : ""}
             </span>
           </a>
           <div class="masthead__actions">
