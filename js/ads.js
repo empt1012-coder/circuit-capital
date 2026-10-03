@@ -9,7 +9,7 @@
     /^ca-pub-\d+$/.test(client);
 
   function loadAdsense() {
-    if (document.querySelector("script[data-cc-adsense]")) return;
+    if (document.querySelector('script[src*="adsbygoogle.js"]')) return;
     const script = document.createElement("script");
     script.async = true;
     script.dataset.ccAdsense = "1";

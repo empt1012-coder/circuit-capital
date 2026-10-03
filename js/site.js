@@ -4,7 +4,7 @@
   const asset = (path) => base.replace(/\/$/, "") + "/" + path.replace(/^\//, "");
 
   const navItems = [
-    ["Home", "index.html"],
+    ["Home", ""],
     ["Briefing", "briefing.html"],
     ["Guides", "guides/"],
     ["Markets", "categories/markets.html"],
@@ -136,8 +136,10 @@
 
   const headerMount = document.getElementById("site-header");
   const footerMount = document.getElementById("site-footer");
-  if (headerMount) headerMount.innerHTML = headerHTML();
-  if (footerMount) footerMount.innerHTML = footerHTML();
+  if (headerMount && !headerMount.querySelector(".masthead")) headerMount.innerHTML = headerHTML();
+  if (footerMount && !footerMount.querySelector(".site-foot")) footerMount.innerHTML = footerHTML();
+  const dateEl = document.getElementById("masthead-date");
+  if (dateEl) dateEl.textContent = today;
 
   const viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
@@ -146,15 +148,15 @@
 
   const cfg = window.CC_CONFIG || {};
   const origin = String(cfg.domain || "https://circuits.fit").replace(/\/$/, "");
-  const path = location.pathname.replace(/index\.html$/, "") || "/";
-  const canonicalHref = origin + path;
   let canon = document.querySelector('link[rel="canonical"]');
   if (!canon) {
     canon = document.createElement("link");
     canon.rel = "canonical";
+    const path = location.pathname.replace(/index\.html$/, "") || "/";
+    canon.href = origin + path;
     document.head.appendChild(canon);
   }
-  canon.href = canonicalHref;
+  const canonicalHref = canon.href;
   function setMeta(attr, key, val) {
     let el = document.querySelector("meta[" + attr + '="' + key + '"]');
     if (!el) {
@@ -308,6 +310,7 @@
   }
 
   document.querySelectorAll("[data-category-list]").forEach(async (root) => {
+    if (root.querySelector(".latest-row")) return;
     const cat = root.getAttribute("data-category-list");
     try {
       const articles = await loadArticles();
@@ -331,6 +334,7 @@
   });
 
   document.querySelectorAll("[data-guides-list]").forEach(async (root) => {
+    if (root.querySelector(".latest-row")) return;
     try {
       const articles = await loadArticles();
       const list = articles.filter((a) => a.type === "guide");
@@ -357,6 +361,7 @@
   });
 
   document.querySelectorAll("[data-briefing-list]").forEach(async (root) => {
+    if (root.querySelector(".latest-row")) return;
     try {
       const articles = await loadArticles();
       const list = articles.filter((a) => a.type !== "guide");

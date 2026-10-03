@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://circuits.fit/articles/sec-proposed-a-crypto-custody-path.html</loc>
+    <loc>https://circuits.fit/about.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/advertise.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/briefing.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/contact.html</loc>
+    <lastmod>2026-09-03</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/privacy.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/subscribe.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/terms.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/ai-native-unit-economics.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/ai-productivity-paradox.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/ai-spend-is-not-the-same-as-ai-return.html</loc>
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
@@ -9,7 +49,15 @@
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
-    <loc>https://circuits.fit/articles/nvidia-put-the-fence-outside-the-agent.html</loc>
+    <loc>https://circuits.fit/articles/board-questions-generative-ai.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/chip-export-controls.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/chip-licenses-keep-moving.html</loc>
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
@@ -21,7 +69,35 @@
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
+    <loc>https://circuits.fit/articles/cloud-repatriation.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/cyber-got-cheaper-the-questionnaire-did-not.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/cyber-insurance-it-budgets.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
     <loc>https://circuits.fit/articles/eu-ai-act-what-still-applies.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/gartner-revised-the-ai-bill.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/nvidia-put-the-fence-outside-the-agent.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/private-credit-software.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/retail-media-networks.html</loc>
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
@@ -29,11 +105,43 @@
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
+    <loc>https://circuits.fit/articles/sec-proposed-a-crypto-custody-path.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/software-buying-is-an-operating-skill.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
     <loc>https://circuits.fit/articles/the-sec-clock-starts-at-material.html</loc>
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
-    <loc>https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html</loc>
+    <loc>https://circuits.fit/articles/when-compliance-is-the-product.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/categories/business.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/categories/markets.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/categories/opinion.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/categories/policy.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/categories/startups.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/categories/technology.html</loc>
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
@@ -41,15 +149,19 @@
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
-    <loc>https://circuits.fit/guides/limit-what-an-agent-can-touch.html</loc>
+    <loc>https://circuits.fit/guides/ai-spend-vs-return.html</loc>
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
-    <loc>https://circuits.fit/guides/stop-using-a-voice-as-approval.html</loc>
+    <loc>https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html</loc>
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
-    <loc>https://circuits.fit/guides/what-article-50-asks-a-buyer.html</loc>
+    <loc>https://circuits.fit/guides/before-the-sec-eight-k.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/cloud-repatriation-cost.html</loc>
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
@@ -57,11 +169,23 @@
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
-    <loc>https://circuits.fit/guides/what-belongs-in-a-processor-clause.html</loc>
+    <loc>https://circuits.fit/guides/cyber-insurance-checklist-2026.html</loc>
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
-    <loc>https://circuits.fit/guides/before-the-sec-eight-k.html</loc>
+    <loc>https://circuits.fit/guides/cyber-insurance-controls-checklist.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/how-to-read-a-saas-renewal.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/limit-what-an-agent-can-touch.html</loc>
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
@@ -73,151 +197,23 @@
     <lastmod>2026-10-01</lastmod>
   </url>
   <url>
-    <loc>https://circuits.fit/articles/gartner-revised-the-ai-bill.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/articles/ai-spend-is-not-the-same-as-ai-return.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/articles/chip-licenses-keep-moving.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/articles/cyber-got-cheaper-the-questionnaire-did-not.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/about.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/advertise.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/contact.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/terms.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/search.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/subscribe.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/categories/business.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/categories/technology.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/categories/markets.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/categories/startups.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/categories/policy.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/categories/opinion.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/articles/software-buying-is-an-operating-skill.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/articles/when-compliance-is-the-product.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/articles/ai-productivity-paradox.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/articles/private-credit-software.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/articles/chip-export-controls.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/articles/cyber-insurance-it-budgets.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/articles/ai-native-unit-economics.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/articles/cloud-repatriation.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/articles/board-questions-generative-ai.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/articles/retail-media-networks.html</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/guides/</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/guides/how-to-read-a-saas-renewal.html</loc>
-    <lastmod>2026-09-03</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/guides/cyber-insurance-controls-checklist.html</loc>
-    <lastmod>2026-09-03</lastmod>
-  </url>
-  <url>
     <loc>https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html</loc>
-    <lastmod>2026-09-03</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/guides/cyber-insurance-checklist-2026.html</loc>
-    <lastmod>2026-09-04</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/guides/cloud-repatriation-cost.html</loc>
-    <lastmod>2026-09-04</lastmod>
-  </url>
-  <url>
-    <loc>https://circuits.fit/guides/ai-spend-vs-return.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-01</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/guides/software-buying-operating-skill.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-01</lastmod>
   </url>
   <url>
-    <loc>https://circuits.fit/briefing.html</loc>
+    <loc>https://circuits.fit/guides/stop-using-a-voice-as-approval.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/what-article-50-asks-a-buyer.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/what-belongs-in-a-processor-clause.html</loc>
     <lastmod>2026-10-01</lastmod>
   </url>
 </urlset>

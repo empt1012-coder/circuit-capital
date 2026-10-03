@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Circuit &amp; Capital</title>
+<link>https://circuits.fit/</link>
+<description>Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Written by Emilio Santos.</description>
+<language>en-us</language>
+<lastBuildDate>Thu, 01 Oct 2026 12:00:00 +0000</lastBuildDate>
+<item>
+<title>Ask a Vendor for an SBOM</title>
+<link>https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html</link>
+<guid>https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>CISA’s 2026 minimum elements apply to SaaS and AI software. Ask for the fields, the format, and the date. A slide is not a bill of materials.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Extra Questions for an AI Bill of Materials</title>
+<link>https://circuits.fit/guides/ai-sbom-extra-questions.html</link>
+<guid>https://circuits.fit/guides/ai-sbom-extra-questions.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>The May 12, 2026 G7 and CISA note is an add-on, not a replacement. A model name with no components is not an ingredients list.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Limit What an Agent Can Touch</title>
+<link>https://circuits.fit/guides/limit-what-an-agent-can-touch.html</link>
+<guid>https://circuits.fit/guides/limit-what-an-agent-can-touch.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>In Gartner’s second-quarter survey of 297 security leaders, 54% have no defined limit on agent access, or they reuse a person’s access.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Stop Using a Voice as Approval</title>
+<link>https://circuits.fit/guides/stop-using-a-voice-as-approval.html</link>
+<guid>https://circuits.fit/guides/stop-using-a-voice-as-approval.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>Gartner’s September 30 note: do not authorize a decision because someone recognized a face or a voice. Pair detection with another authenticator and a provenance check.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>What Article 50 Asks a Buyer</title>
+<link>https://circuits.fit/guides/what-article-50-asks-a-buyer.html</link>
+<guid>https://circuits.fit/guides/what-article-50-asks-a-buyer.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>Transparency has applied since August 2, 2026. The December 2, 2026 date is a marking transition for systems already shipping, not a delay of the whole Act.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>The Cloud Shared-Responsibility Checklist</title>
+<link>https://circuits.fit/guides/cloud-shared-responsibility-checklist.html</link>
+<guid>https://circuits.fit/guides/cloud-shared-responsibility-checklist.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>AWS’s model is security of the cloud versus security in the cloud. A managed database does not move your backup duty. An EC2 instance does not move the patch duty.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>What Belongs in a Processor Clause</title>
+<link>https://circuits.fit/guides/what-belongs-in-a-processor-clause.html</link>
+<guid>https://circuits.fit/guides/what-belongs-in-a-processor-clause.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>The Commission adopted two different sets of standard clauses on June 4, 2021. One governs a processor inside the EEA. The other governs a transfer out. Do not sign the wrong PDF.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Before the Form 8-K Clock</title>
+<link>https://circuits.fit/guides/before-the-sec-eight-k.html</link>
+<guid>https://circuits.fit/guides/before-the-sec-eight-k.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>The SEC’s clock is four business days from the materiality determination. Write down who can make that call, and what a private vendor must be able to say.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>A One-Page AI Use Rule</title>
+<link>https://circuits.fit/guides/one-page-ai-use-rule.html</link>
+<guid>https://circuits.fit/guides/one-page-ai-use-rule.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>NIST’s AI RMF 1.0 is voluntary and organized as Govern, Map, Measure, and Manage. Use those four lines. Cite the version. A revision is in progress.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Questions Before a Post-Quantum Pilot</title>
+<link>https://circuits.fit/guides/postquantum-pilot-questions.html</link>
+<guid>https://circuits.fit/guides/postquantum-pilot-questions.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>Gartner’s September 30 note: start a pilot, or expect at least double the migration cost after 2027. Fifty-one percent of surveyed CISOs had not started.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>The SEC Proposed a Path for Crypto Custody</title>
+<link>https://circuits.fit/articles/sec-proposed-a-crypto-custody-path.html</link>
+<guid>https://circuits.fit/articles/sec-proposed-a-crypto-custody-path.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>On October 1 the Commission proposed custody rules for crypto assets held by advisers and regulated funds. The posts are the alert. Comments run from the Federal Register.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Astra Ultrafast Is a Speed Claim. The Bill Is Still Yours.</title>
+<link>https://circuits.fit/articles/astra-ultrafast-is-a-speed-claim.html</link>
+<guid>https://circuits.fit/articles/astra-ultrafast-is-a-speed-claim.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>NVIDIA says GPT-6 Astra Ultrafast is up to 8x faster than Astra Standard on token generation. That number is theirs. The invoice is yours.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>NVIDIA Put the Fence Outside the Agent</title>
+<link>https://circuits.fit/articles/nvidia-put-the-fence-outside-the-agent.html</link>
+<guid>https://circuits.fit/articles/nvidia-put-the-fence-outside-the-agent.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>On September 28 NVIDIA posted that OpenShell enforces what an agent may do, and that a BlueField chip can watch from outside the software the agent runs in.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>CISA Listed Three Bugs Attackers Are Already Using</title>
+<link>https://circuits.fit/articles/cisa-listed-three-bugs-attackers-are-using.html</link>
+<guid>https://circuits.fit/articles/cisa-listed-three-bugs-attackers-are-using.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>WordPress on September 25, Apple on September 29, Cisco SD-WAN Manager on September 30. The posts are the alerts. The catalog holds the due dates.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Five Moves Gartner Wants from CISOs Before 2027</title>
+<link>https://circuits.fit/articles/ciso-five-moves-before-2027.html</link>
+<guid>https://circuits.fit/articles/ciso-five-moves-before-2027.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>A September 30 note treats agents as insiders, a familiar voice as a weak approval, and post-quantum work as something that gets expensive if it waits.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>The EU AI Act Did Not Slip. The High-Risk Part Did.</title>
+<link>https://circuits.fit/articles/eu-ai-act-what-still-applies.html</link>
+<guid>https://circuits.fit/articles/eu-ai-act-what-still-applies.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>Article 50 transparency has been in force since August 2. Stand-alone high-risk duties move to December 2, 2027. A US buyer still has to ask which date the vendor is selling.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>The Software Ingredients List Now Covers the Suite</title>
+<link>https://circuits.fit/articles/sbom-now-covers-the-suite.html</link>
+<guid>https://circuits.fit/articles/sbom-now-covers-the-suite.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>CISA’s July 29 revision of the SBOM minimum elements applies to SaaS and AI software, not only to code you compile. The new fields are the ones to ask for.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>The SEC Clock Starts When You Decide It Matters</title>
+<link>https://circuits.fit/articles/the-sec-clock-starts-at-material.html</link>
+<guid>https://circuits.fit/articles/the-sec-clock-starts-at-material.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>Public companies disclose a material cyber incident on Form 8-K within four business days of the materiality call. The annual report still has to describe who watches the risk.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Gartner Revised the AI Bill. Most of It Is Not Your Budget.</title>
+<link>https://circuits.fit/articles/gartner-revised-the-ai-bill.html</link>
+<guid>https://circuits.fit/articles/gartner-revised-the-ai-bill.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+<description>The September forecast is $2.7 trillion, up 49.5%. About 56% of the table is infrastructure. The check a company signs is the feature inside software it already owns.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Cyber Insurance Checklist for Mid-Market IT Budgets (2026)</title>
+<link>https://circuits.fit/guides/cyber-insurance-checklist-2026.html</link>
+<guid>https://circuits.fit/guides/cyber-insurance-checklist-2026.html</guid>
+<pubDate>Fri, 04 Sep 2026 12:00:00 +0000</pubDate>
+<description>MFA, EDR, immutable backups, IR retainer, and who owns broker versus IT while rates are still walking down.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>When Cloud Repatriation Is a Finance Decision, Not an Engineering Slogan</title>
+<link>https://circuits.fit/guides/cloud-repatriation-cost.html</link>
+<guid>https://circuits.fit/guides/cloud-repatriation-cost.html</guid>
+<pubDate>Fri, 04 Sep 2026 12:00:00 +0000</pubDate>
+<description>Cost drivers, FinOps questions, and stay-versus-leave — with a labeled list-price egress example, not a fake calculator.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>How to Tell AI Spend from AI Return</title>
+<link>https://circuits.fit/guides/ai-spend-vs-return.html</link>
+<guid>https://circuits.fit/guides/ai-spend-vs-return.html</guid>
+<pubDate>Fri, 04 Sep 2026 12:00:00 +0000</pubDate>
+<description>Seat cost versus token cost, pilot versus production, and questions a board can ask. No guaranteed-return claims.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Software Buying as an Operating Skill</title>
+<link>https://circuits.fit/guides/software-buying-operating-skill.html</link>
+<guid>https://circuits.fit/guides/software-buying-operating-skill.html</guid>
+<pubDate>Fri, 04 Sep 2026 12:00:00 +0000</pubDate>
+<description>RFP basics, seat waste, who signs, and the three SaaS-management jobs. The stack is the company.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>How to Read a SaaS Renewal</title>
+<link>https://circuits.fit/guides/how-to-read-a-saas-renewal.html</link>
+<guid>https://circuits.fit/guides/how-to-read-a-saas-renewal.html</guid>
+<pubDate>Wed, 02 Sep 2026 12:00:00 +0000</pubDate>
+<description>A 90-day pass: seats, overlap, price, and the exit before you answer the increase.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>What a Cyber Insurer Will Still Ask</title>
+<link>https://circuits.fit/guides/cyber-insurance-controls-checklist.html</link>
+<guid>https://circuits.fit/guides/cyber-insurance-controls-checklist.html</guid>
+<pubDate>Wed, 02 Sep 2026 12:00:00 +0000</pubDate>
+<description>MFA, EDR, backups, privilege, retainer — even when rates are falling.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Put an AI Cost on One Workflow</title>
+<link>https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html</link>
+<guid>https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html</guid>
+<pubDate>Wed, 02 Sep 2026 12:00:00 +0000</pubDate>
+<description>Tokens, review time, and rework on a single process with a definition of done.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>AI Spend Is Not the Same as AI Return</title>
+<link>https://circuits.fit/articles/ai-spend-is-not-the-same-as-ai-return.html</link>
+<guid>https://circuits.fit/articles/ai-spend-is-not-the-same-as-ai-return.html</guid>
+<pubDate>Wed, 02 Sep 2026 12:00:00 +0000</pubDate>
+<description>Gartner sees $2.59 trillion in AI spending this year. McKinsey still finds only a minority of firms attributing EBIT to it.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Chip Licenses Keep Moving. The Mid-Tier Still Waits.</title>
+<link>https://circuits.fit/articles/chip-licenses-keep-moving.html</link>
+<guid>https://circuits.fit/articles/chip-licenses-keep-moving.html</guid>
+<pubDate>Wed, 02 Sep 2026 12:00:00 +0000</pubDate>
+<description>BIS opened a case-by-case window for H200-class chips. Korea tightened AI-chip exports on Sept. 1.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Cyber Insurance Got Cheaper. The Questionnaire Did Not.</title>
+<link>https://circuits.fit/articles/cyber-got-cheaper-the-questionnaire-did-not.html</link>
+<guid>https://circuits.fit/articles/cyber-got-cheaper-the-questionnaire-did-not.html</guid>
+<pubDate>Wed, 02 Sep 2026 12:00:00 +0000</pubDate>
+<description>Swiss Re puts 2026 global cyber premium at $16.4 billion with rates still down. The application still wants MFA.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Software Buying Is an Operating Skill</title>
+<link>https://circuits.fit/articles/software-buying-is-an-operating-skill.html</link>
+<guid>https://circuits.fit/articles/software-buying-is-an-operating-skill.html</guid>
+<pubDate>Mon, 31 Aug 2026 12:00:00 +0000</pubDate>
+<description>The stack is no longer an IT catalog. It is how the company actually runs — and most firms still buy it like office supplies.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>When Compliance Is the Product</title>
+<link>https://circuits.fit/articles/when-compliance-is-the-product.html</link>
+<guid>https://circuits.fit/articles/when-compliance-is-the-product.html</guid>
+<pubDate>Mon, 31 Aug 2026 12:00:00 +0000</pubDate>
+<description>Data residency, audit trails, and model clauses are no longer legal footnotes. They are packaging.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>The AI Productivity Paradox at Mid-Market Companies</title>
+<link>https://circuits.fit/articles/ai-productivity-paradox.html</link>
+<guid>https://circuits.fit/articles/ai-productivity-paradox.html</guid>
+<pubDate>Wed, 26 Aug 2026 12:00:00 +0000</pubDate>
+<description>Tools landed in every department. Output did not. The bottleneck is workflow, not the model.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Private Credit Is Quietly Funding the Software Roll-Up</title>
+<link>https://circuits.fit/articles/private-credit-software.html</link>
+<guid>https://circuits.fit/articles/private-credit-software.html</guid>
+<pubDate>Mon, 24 Aug 2026 12:00:00 +0000</pubDate>
+<description>When public markets froze on multiples, direct lenders stepped in — and started acting like operators.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Chip Export Controls and the Suppliers Caught in Between</title>
+<link>https://circuits.fit/articles/chip-export-controls.html</link>
+<guid>https://circuits.fit/articles/chip-export-controls.html</guid>
+<pubDate>Fri, 21 Aug 2026 12:00:00 +0000</pubDate>
+<description>Policy is written in Washington. The P&amp;L lands on toolmakers, packagers, and the mid-tier vendors nobody briefed.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Cyber Insurance Is Rewriting the IT Budget</title>
+<link>https://circuits.fit/articles/cyber-insurance-it-budgets.html</link>
+<guid>https://circuits.fit/articles/cyber-insurance-it-budgets.html</guid>
+<pubDate>Wed, 19 Aug 2026 12:00:00 +0000</pubDate>
+<description>Underwriters now ask better questions than some boards. The answers are showing up as line items.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>The New Unit Economics of AI-Native Startups</title>
+<link>https://circuits.fit/articles/ai-native-unit-economics.html</link>
+<guid>https://circuits.fit/articles/ai-native-unit-economics.html</guid>
+<pubDate>Mon, 17 Aug 2026 12:00:00 +0000</pubDate>
+<description>Gross margin is no longer a software story. Token costs, evals, and human review decide who scales.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Cloud Repatriation: When the Bill Becomes the Strategy</title>
+<link>https://circuits.fit/articles/cloud-repatriation.html</link>
+<guid>https://circuits.fit/articles/cloud-repatriation.html</guid>
+<pubDate>Fri, 14 Aug 2026 12:00:00 +0000</pubDate>
+<description>Finance is pulling workloads home. Engineering is discovering that “home” is a product decision, not a protest.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Six Questions Every Board Should Ask About Generative AI</title>
+<link>https://circuits.fit/articles/board-questions-generative-ai.html</link>
+<guid>https://circuits.fit/articles/board-questions-generative-ai.html</guid>
+<pubDate>Wed, 12 Aug 2026 12:00:00 +0000</pubDate>
+<description>Most decks still sell possibility. Directors need a control framework that survives the next vendor cycle.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Retail Media Networks Are Eating the Digital Ad Market</title>
+<link>https://circuits.fit/articles/retail-media-networks.html</link>
+<guid>https://circuits.fit/articles/retail-media-networks.html</guid>
+<pubDate>Mon, 10 Aug 2026 12:00:00 +0000</pubDate>
+<description>Closed-loop purchase data beat the open web. The next fight is over who owns the aisle.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+</channel>
+</rss>
