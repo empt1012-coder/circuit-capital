@@ -3,9 +3,7 @@ https://www.circuits.fit/* https://circuits.fit/:splat 301!
 /index.html / 301!
 /home / 301!
 /guides/index.html /guides/ 301!
-/guides /guides/ 301!
 /tools/index.html /tools/ 301!
-/tools /tools/ 301!
 /categories/guides.html /guides/ 301!
 /categories/guides /guides/ 301!
 /guides/_template.html /404.html 404!
