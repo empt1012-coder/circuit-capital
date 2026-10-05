@@ -7,6 +7,7 @@
     ["Home", ""],
     ["Briefing", "briefing.html"],
     ["Guides", "guides/"],
+    ["Tools", "tools/"],
     ["Markets", "categories/markets.html"],
     ["Technology", "categories/technology.html"],
     ["Policy", "categories/policy.html"],
@@ -116,7 +117,7 @@
           <div>Circuit &amp; Capital is a business and technology publication. It is not a fitness brand.</div>
         </div>
       </footer>
-      ${page === "home" ? "" : `<div class="ad-sticky" aria-label="Advertisement">
+      ${page === "home" || page === "tools" ? "" : `<div class="ad-sticky" aria-label="Advertisement">
         <button type="button" data-close-sticky aria-label="Close ad">×</button>
         <div class="ad-slot" data-slot="mobileSticky" data-ad-slot="">
           <span class="ad-slot__label">Advertisement</span>

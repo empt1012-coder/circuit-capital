@@ -52,3 +52,9 @@ https://circuits.fit/guides/software-buying-operating-skill.html
 https://circuits.fit/guides/stop-using-a-voice-as-approval.html
 https://circuits.fit/guides/what-article-50-asks-a-buyer.html
 https://circuits.fit/guides/what-belongs-in-a-processor-clause.html
+https://circuits.fit/tools/agent-access-limit.html
+https://circuits.fit/tools/
+https://circuits.fit/tools/sbom-request-pack.html
+https://circuits.fit/tools/software-renewal-scorecard.html
+https://circuits.fit/tools/token-cost-margin.html
+https://circuits.fit/tools/vendor-claim-checker.html

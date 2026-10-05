@@ -51,7 +51,7 @@
     });
   }
 
-  if (!live) {
+  if (!live || page === "tools") {
     hideIdleSlots();
     return;
   }
