@@ -4,7 +4,6 @@ https://circuits.fit/briefing.html
 https://circuits.fit/contact.html
 https://circuits.fit/
 https://circuits.fit/privacy.html
-https://circuits.fit/subscribe.html
 https://circuits.fit/terms.html
 https://circuits.fit/articles/ai-native-unit-economics.html
 https://circuits.fit/articles/ai-productivity-paradox.html

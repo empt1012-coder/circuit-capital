@@ -11,8 +11,7 @@
     ["Markets", "categories/markets.html"],
     ["Technology", "categories/technology.html"],
     ["Policy", "categories/policy.html"],
-    ["About", "about.html"],
-    ["Subscribe", "subscribe.html"]
+    ["About", "about.html"]
   ];
 
   function itemHref(a) {
@@ -244,20 +243,6 @@
 
   const localHost = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
   const desk = window.CC_CONFIG || {};
-
-  document.querySelectorAll("[data-newsletter]").forEach((form) => {
-    form.addEventListener("submit", (e) => {
-      if (!localHost) return;
-      e.preventDefault();
-      const email = form.querySelector("input[type=email]")?.value;
-      if (!email) return;
-      const to = desk.contactEmail || "circuit50capital@circuits.fit";
-      location.href = "mailto:" + encodeURIComponent(to) +
-        "?subject=" + encodeURIComponent("Newsletter signup") +
-        "&body=" + encodeURIComponent("Please add this address to the morning wire: " + email);
-      toast("Opening your email app to finish signup.");
-    });
-  });
 
   document.querySelectorAll("[data-contact]").forEach((form) => {
     form.addEventListener("submit", (e) => {

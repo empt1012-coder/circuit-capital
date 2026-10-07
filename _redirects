@@ -114,11 +114,13 @@ https://www.circuits.fit/* https://circuits.fit/:splat 301!
 /privacy/ /privacy.html 301!
 /search /search.html 301!
 /search/ /search.html 301!
-/subscribe /subscribe.html 301!
-/subscribe/ /subscribe.html 301!
+/subscribe.html / 301!
+/subscribe / 301!
+/subscribe/ / 301!
 /terms /terms.html 301!
 /terms/ /terms.html 301!
 /thanks /thanks.html 301!
 /thanks/ /thanks.html 301!
-/subscribed /subscribed.html 301!
-/subscribed/ /subscribed.html 301!
+/subscribed.html / 301!
+/subscribed / 301!
+/subscribed/ / 301!
