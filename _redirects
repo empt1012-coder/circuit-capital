@@ -120,3 +120,5 @@ https://www.circuits.fit/* https://circuits.fit/:splat 301!
 /terms/ /terms.html 301!
 /thanks /thanks.html 301!
 /thanks/ /thanks.html 301!
+/subscribed /subscribed.html 301!
+/subscribed/ /subscribed.html 301!
