@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tools — Circuit &amp; Capital</title>
-  <meta name="description" content="Nine browser tools for a renewal, an agent limit, an SBOM request, a vendor claim, token cost, finished-task cost, an agent inventory, an 8-K clock, and a risk exception. Inputs stay on the device.">
+  <title>AI model cost per finished task — Circuit &amp; Capital</title>
+  <meta name="description" content="Compare list price with the cost of a task that actually finishes, and the daily volume where self-hosting beats the API.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,18 +14,47 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"></noscript>
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/tools.css">
-  <link rel="canonical" href="https://circuits.fit/tools/">
+  <link rel="canonical" href="https://circuits.fit/tools/ai-cost-per-task.html">
   <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
-  <meta property="og:title" content="Tools — Circuit &amp; Capital">
-  <meta property="og:description" content="Nine browser tools for a renewal, an agent limit, an SBOM request, a vendor claim, token cost, finished-task cost, an agent inventory, an 8-K clock, and a risk exception. Inputs stay on the device.">
-  <meta property="og:url" content="https://circuits.fit/tools/">
+  <meta property="og:title" content="AI model cost per finished task — Circuit &amp; Capital">
+  <meta property="og:description" content="Compare list price with the cost of a task that actually finishes, and the daily volume where self-hosting beats the API.">
+  <meta property="og:url" content="https://circuits.fit/tools/ai-cost-per-task.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Circuit &amp; Capital">
   <meta property="og:image" content="https://circuits.fit/assets/images/mark.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tools — Circuit &amp; Capital">
-  <meta name="twitter:description" content="Nine browser tools for a renewal, an agent limit, an SBOM request, a vendor claim, token cost, finished-task cost, an agent inventory, an 8-K clock, and a risk exception. Inputs stay on the device.">
+  <meta name="twitter:title" content="AI model cost per finished task — Circuit &amp; Capital">
+  <meta name="twitter:description" content="Compare list price with the cost of a task that actually finishes, and the daily volume where self-hosting beats the API.">
   <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
+  <style>
+    .tool-table-wrap { overflow-x: auto; max-width: 100%; overscroll-behavior-x: contain; }
+    .print-record { display: none; margin: 0; white-space: pre-wrap; font-family: var(--sans); font-size: 0.95rem; line-height: 1.45; color: var(--ink); }
+    .tool-table { width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: 14px; }
+    .tool-table th, .tool-table td { border-bottom: 1px solid var(--rule); text-align: left; padding: 0.45rem 0.35rem; vertical-align: top; }
+    .tool-table input, .tool-table select { min-width: 8.5rem; }
+    .tool-chart { width: 100%; height: auto; background: var(--white); border: 1px solid var(--rule); }
+    .tool-page .form textarea.tool-short { min-height: 5.5rem; }
+    .tool-page fieldset { border: 1px solid var(--rule); margin: 0 0 1rem; padding: 0.2rem 0.9rem 0.9rem; }
+    .tool-page legend { font-family: var(--sans); font-size: 0.95rem; padding: 0 0.3rem; }
+    .tool-page input[type="checkbox"] { width: auto; }
+    .tool-page fieldset label { text-transform: none; letter-spacing: 0; font-size: 1rem; display: flex; gap: 0.45rem; align-items: center; }
+    .tool-page .row-remove { color: var(--ink); border-color: var(--ink); background: transparent; }
+    @media (max-width: 700px) {
+      body { overflow-x: clip; }
+      .tool-table-wrap { max-width: calc(100vw - 2rem); }
+    }
+    @media (max-width: 640px) {
+      .tool-page .btn { min-height: 44px; }
+      .tool-page .row-remove { display: inline-flex; }
+      .cookie .btn--ghost { display: inline-flex; color: var(--paper); border-color: #5a6570; }
+    }
+    @media print {
+      .topbar, .masthead, .site-foot, .cookie, .tool-actions, .search-bar, .tool-help, .form, .tool-rule, .tool-out textarea { display: none !important; }
+      .print-record { display: block; }
+      .tool-chart { break-inside: avoid; max-width: 100%; }
+      .tool-page { max-width: none; }
+    }
+  </style>
 </head>
 <body data-base=".." data-page="tools">
   <div id="site-header">
@@ -42,7 +71,7 @@
       </div>
       <header class="masthead">
         <div class="wrap masthead__row">
-          <div class="masthead__date" id="masthead-date">October 5, 2026</div>
+          <div class="masthead__date" id="masthead-date">October 7, 2026</div>
           <a class="brand" href="../">
             <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
               <rect width="64" height="64" fill="#f4efe6"/>
@@ -73,78 +102,76 @@
         </div>
       </header>
     </div>
-  <main id="main" class="wrap tool-index">
+  <main id="main" class="wrap tool-page">
     <header class="page-head">
-      <div class="kicker">Section</div>
-      <h1>Tools</h1>
-      <p class="dek">Nine checklists and calculators. Each one runs in the browser. Nothing is uploaded.</p>
+      <div class="kicker">Tool</div>
+      <h1>AI model cost per finished task</h1>
+      <p class="dek">Compare list price with the cost of a task that actually finishes, and the daily volume where self-hosting beats the API.</p>
     </header>
-    <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay on this device.</p>
-    <div class="cat-list">
-      <article class="latest-row">
+    <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in your browser. Nothing is uploaded.</p>
+    <p class="tool-rule">Attempts per task = 1 + average retries. Token cost uses each attempt. Review cost applies to the share of tasks that fail. Cost per successful task divides that total by the success rate. Listed cost is one attempt, before retries, failures, and review. A month in the break-even chart is 30 days. You type the prices. This page does not call a model.</p>
+    <p class="tool-rule" id="cost-source">Showing the example. Replace it with your prices.</p>
+    <form class="form" id="cost-form">
+      <div id="models"></div>
+      <p><button class="btn btn--ink" type="button" id="add-model">Add a model</button></p>
+      <h2>Self-host break-even</h2>
+      <div class="form-grid">
         <div>
-          <div class="kicker">Tools</div>
-          <h3><a href="software-renewal-scorecard.html">Software renewal scorecard</a></h3>
-          <p>Score a renewal as keep, renegotiate, or replace, and copy a six-line vendor agenda.</p>
+          <label for="host-gpu">Monthly GPU or server cost</label>
+          <input id="host-gpu" inputmode="decimal" autocomplete="off">
         </div>
-      </article>
-      <article class="latest-row">
         <div>
-          <div class="kicker">Tools</div>
-          <h3><a href="agent-access-limit.html">Agent access limit sheet</a></h3>
-          <p>Write the allow list for what an agent may read, write, call, and spend.</p>
+          <label for="host-hours">Ops hours per month</label>
+          <input id="host-hours" inputmode="decimal" autocomplete="off">
         </div>
-      </article>
-      <article class="latest-row">
         <div>
-          <div class="kicker">Tools</div>
-          <h3><a href="sbom-request-pack.html">SBOM request pack</a></h3>
-          <p>Request the 2026 CISA minimum elements and tick what the vendor actually sent.</p>
+          <label for="host-rate">Ops hourly rate</label>
+          <input id="host-rate" inputmode="decimal" autocomplete="off">
         </div>
-      </article>
-      <article class="latest-row">
         <div>
-          <div class="kicker">Tools</div>
-          <h3><a href="vendor-claim-checker.html">Vendor claim checker</a></h3>
-          <p>Separate a speed or savings claim from who measured it and what the bill still is.</p>
+          <label for="host-throughput">Self-host throughput, tokens per day</label>
+          <input id="host-throughput" inputmode="numeric" autocomplete="off">
         </div>
-      </article>
-      <article class="latest-row">
         <div>
-          <div class="kicker">Tools</div>
-          <h3><a href="token-cost-margin.html">Token cost to gross margin</a></h3>
-          <p>Turn token prices and review time into contribution and margin.</p>
+          <label for="host-api">API blended price per 1M tokens</label>
+          <input id="host-api" inputmode="decimal" autocomplete="off">
         </div>
-      </article>
-      <article class="latest-row">
-        <div>
-          <div class="kicker">Tools</div>
-          <h3><a href="ai-cost-per-task.html">AI model cost per finished task</a></h3>
-          <p>Compare list price with the cost of a task that actually finishes, and where self-hosting beats the API.</p>
-        </div>
-      </article>
-      <article class="latest-row">
-        <div>
-          <div class="kicker">Tools</div>
-          <h3><a href="agent-inventory.html">AI agent inventory and access map</a></h3>
-          <p>List each agent, the identity it uses, and what it can change. Flags stale reviews and shared logins.</p>
-        </div>
-      </article>
-      <article class="latest-row">
-        <div>
-          <div class="kicker">Tools</div>
-          <h3><a href="8k-materiality-worksheet.html">SEC 8-K materiality worksheet</a></h3>
-          <p>Record who decided an incident was material, and count four business days to the Item 1.05 date.</p>
-        </div>
-      </article>
-      <article class="latest-row">
-        <div>
-          <div class="kicker">Tools</div>
-          <h3><a href="risk-exception-register.html">Risk exception register</a></h3>
-          <p>Track an exception, its owner, and its expiry. Known-exploited bugs, MFA, backups, and EDR are not waivable.</p>
-        </div>
-      </article>
-    </div>
+      </div>
+      <p class="tool-actions">
+        <button class="btn btn--ink" type="submit">Compare</button>
+        <button class="btn btn--ink" type="button" id="cost-clear">Clear</button>
+      </p>
+    </form>
+    <section class="tool-out" aria-live="polite">
+      <h2>Output</h2>
+      <p class="tool-rule" id="cost-worked">The comparison appears here.</p>
+      <div id="cost-chart"></div>
+      <label for="cost-out">Cost per finished task and break-even</label>
+      <textarea id="cost-out" readonly></textarea>
+      <pre class="print-record" id="cost-printout"></pre>
+      <div class="tool-actions">
+        <button class="btn btn--copper" type="button" id="cost-copy">Copy as text</button>
+        <button class="btn btn--ink" type="button" id="cost-print">Print / Save as PDF</button>
+      </div>
+    </section>
+    <section class="tool-help">
+      <h2>How to use this</h2>
+      <ol>
+        <li>Replace the two example models with the prices and token counts you were quoted. Add a third or fourth if you have them.</li>
+        <li>Use the success rate and retries you actually see. A low list price can lose once failed tasks and review time are in the cost.</li>
+        <li>Fill the self-host lines to see the daily token volume where the server costs less than the API, and whether your throughput reaches it.</li>
+      </ol>
+    </section>
+    <section class="tool-help">
+      <h2>Related</h2>
+      <ul>
+        <li><a href="token-cost-margin.html">Token cost to gross margin</a></li>
+        <li><a href="../guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a></li>
+        <li><a href="../articles/ai-native-unit-economics.html">The new unit economics of AI-native startups</a></li>
+        <li><a href="../articles/ai-productivity-paradox.html">The AI productivity paradox at mid-market companies</a></li>
+      </ul>
+    </section>
+
   </main>
   <div id="site-footer">
       <footer class="site-foot">
@@ -199,5 +226,6 @@
     </div>
   <script src="../js/config.js"></script>
   <script src="../js/site.js"></script>
+  <script src="../js/tool-ai-cost.js"></script>
 </body>
 </html>
