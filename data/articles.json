@@ -238,6 +238,17 @@
       "body": "NVIDIA OpenShell Sentry BlueField agent safety September 28"
     },
     {
+      "slug": "citrix-netscaler-is-on-the-catalog-again",
+      "title": "Citrix NetScaler Is on the Exploited Catalog Again",
+      "dek": "CISA added CVE-2026-88779 on October 4. The catalog due date is October 7, the day of this briefing. The September NetScaler rows are a different pair of bugs.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "October 7, 2026",
+      "readTime": 16,
+      "image": "assets/images/colo.jpg",
+      "body": "CISA KEV Citrix NetScaler CVE-2026-88779 CTX697174 October 7 denial of service"
+    },
+    {
       "slug": "cisa-listed-three-bugs-attackers-are-using",
       "title": "CISA Listed Three Bugs Attackers Are Already Using",
       "dek": "WordPress on September 25, Apple on September 29, Cisco SD-WAN Manager on September 30. The posts are the alerts. The catalog holds the due dates.",

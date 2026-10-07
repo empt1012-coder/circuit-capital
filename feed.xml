@@ -5,7 +5,15 @@
 <link>https://circuits.fit/</link>
 <description>Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Written by Emilio Santos.</description>
 <language>en-us</language>
-<lastBuildDate>Thu, 01 Oct 2026 12:00:00 +0000</lastBuildDate>
+<lastBuildDate>Wed, 07 Oct 2026 12:00:00 +0000</lastBuildDate>
+<item>
+<title>Citrix NetScaler Is on the Exploited Catalog Again</title>
+<link>https://circuits.fit/articles/citrix-netscaler-is-on-the-catalog-again.html</link>
+<guid>https://circuits.fit/articles/citrix-netscaler-is-on-the-catalog-again.html</guid>
+<pubDate>Wed, 07 Oct 2026 12:00:00 +0000</pubDate>
+<description>CISA added CVE-2026-88779 on October 4. The catalog due date is October 7. The September NetScaler rows are a different pair of bugs.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
 <item>
 <title>Ask a Vendor for an SBOM</title>
 <link>https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html</link>

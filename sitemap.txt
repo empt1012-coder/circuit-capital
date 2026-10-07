@@ -13,6 +13,7 @@ https://circuits.fit/articles/board-questions-generative-ai.html
 https://circuits.fit/articles/chip-export-controls.html
 https://circuits.fit/articles/chip-licenses-keep-moving.html
 https://circuits.fit/articles/cisa-listed-three-bugs-attackers-are-using.html
+https://circuits.fit/articles/citrix-netscaler-is-on-the-catalog-again.html
 https://circuits.fit/articles/ciso-five-moves-before-2027.html
 https://circuits.fit/articles/cloud-repatriation.html
 https://circuits.fit/articles/cyber-got-cheaper-the-questionnaire-did-not.html
