@@ -15,6 +15,78 @@
 <author>circuit50capital@circuits.fit (Emilio Santos)</author>
 </item>
 <item>
+<title>Free tool: AI model cost per finished task</title>
+<link>https://circuits.fit/tools/ai-cost-per-task.html</link>
+<guid>https://circuits.fit/tools/ai-cost-per-task.html</guid>
+<pubDate>Wed, 07 Oct 2026 12:00:00 +0000</pubDate>
+<description>Compare list price with the cost of a task that actually finishes, and the daily volume where self-hosting beats the API. Runs in your browser. No sign-in.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Free tool: AI agent inventory and access map</title>
+<link>https://circuits.fit/tools/agent-inventory.html</link>
+<guid>https://circuits.fit/tools/agent-inventory.html</guid>
+<pubDate>Wed, 07 Oct 2026 12:00:00 +0000</pubDate>
+<description>List each agent, the identity it uses, and what it can change. Flags stale reviews and shared logins. Runs in your browser. No sign-in.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Free tool: SEC 8-K materiality worksheet</title>
+<link>https://circuits.fit/tools/8k-materiality-worksheet.html</link>
+<guid>https://circuits.fit/tools/8k-materiality-worksheet.html</guid>
+<pubDate>Wed, 07 Oct 2026 12:00:00 +0000</pubDate>
+<description>Record who decided an incident was material, and count four business days to the Item 1.05 date. Runs in your browser. No sign-in.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Free tool: Risk exception register</title>
+<link>https://circuits.fit/tools/risk-exception-register.html</link>
+<guid>https://circuits.fit/tools/risk-exception-register.html</guid>
+<pubDate>Wed, 07 Oct 2026 12:00:00 +0000</pubDate>
+<description>Track an exception, its owner, and its expiry. Known-exploited bugs, MFA, backups, and EDR are marked not waivable. Runs in your browser. No sign-in.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Free tool: Software renewal scorecard</title>
+<link>https://circuits.fit/tools/software-renewal-scorecard.html</link>
+<guid>https://circuits.fit/tools/software-renewal-scorecard.html</guid>
+<pubDate>Mon, 05 Oct 2026 12:00:00 +0000</pubDate>
+<description>Decide keep, renegotiate, or replace before a renewal call. The points stay on the page. Runs in your browser. No sign-in.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Free tool: Agent access limit sheet</title>
+<link>https://circuits.fit/tools/agent-access-limit.html</link>
+<guid>https://circuits.fit/tools/agent-access-limit.html</guid>
+<pubDate>Mon, 05 Oct 2026 12:00:00 +0000</pubDate>
+<description>Write down what an agent may touch before it is turned on. Runs in your browser. No sign-in.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Free tool: SBOM request pack</title>
+<link>https://circuits.fit/tools/sbom-request-pack.html</link>
+<guid>https://circuits.fit/tools/sbom-request-pack.html</guid>
+<pubDate>Mon, 05 Oct 2026 12:00:00 +0000</pubDate>
+<description>Ask a vendor for an ingredients list, then mark what came back. Runs in your browser. No sign-in.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Free tool: Vendor claim checker</title>
+<link>https://circuits.fit/tools/vendor-claim-checker.html</link>
+<guid>https://circuits.fit/tools/vendor-claim-checker.html</guid>
+<pubDate>Mon, 05 Oct 2026 12:00:00 +0000</pubDate>
+<description>Separate a speed or savings claim from the bill. Runs in your browser. No sign-in.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Free tool: Token cost to gross margin</title>
+<link>https://circuits.fit/tools/token-cost-margin.html</link>
+<guid>https://circuits.fit/tools/token-cost-margin.html</guid>
+<pubDate>Mon, 05 Oct 2026 12:00:00 +0000</pubDate>
+<description>See if an AI-native task still contributes after tokens and human review. Runs in your browser. No sign-in.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
 <title>Ask a Vendor for an SBOM</title>
 <link>https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html</link>
 <guid>https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html</guid>
