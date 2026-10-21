@@ -5,7 +5,23 @@
 <link>https://circuits.fit/</link>
 <description>Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Written by Emilio Santos.</description>
 <language>en-us</language>
-<lastBuildDate>Wed, 07 Oct 2026 12:00:00 +0000</lastBuildDate>
+<lastBuildDate>Wed, 21 Oct 2026 12:00:00 +0000</lastBuildDate>
+<item>
+<title>The BeyondTrust bug was used before the patch. Check the logs.</title>
+<link>https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html</link>
+<guid>https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html</guid>
+<pubDate>Wed, 21 Oct 2026 12:00:00 +0000</pubDate>
+<description>CISA listed BeyondTrust Remote Support CVE-2026-102764 on October 16 with forensic triage required. BeyondTrust says it was exploited as a zero-day on August 29.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>Gartner says the AI build-out may not pay back. Check who runs your compute.</title>
+<link>https://circuits.fit/articles/gartner-ai-infrastructure-impairment-neoclouds.html</link>
+<guid>https://circuits.fit/articles/gartner-ai-infrastructure-impairment-neoclouds.html</guid>
+<pubDate>Wed, 21 Oct 2026 12:00:00 +0000</pubDate>
+<description>Gartner says $3.5 trillion of AI infrastructure could face impairment by 2030 and that over 80% of neoclouds will cease independent operations. For buyers, that is a supplier-risk question.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
 <item>
 <title>Citrix NetScaler Is on the Exploited Catalog Again</title>
 <link>https://circuits.fit/articles/citrix-netscaler-is-on-the-catalog-again.html</link>

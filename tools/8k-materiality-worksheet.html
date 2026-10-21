@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SEC 8-K materiality worksheet — Circuit &amp; Capital</title>
-  <meta name="description" content="Record who decided an incident was material, and count four business days to the Item 1.05 date.">
+  <title>SEC 8-K Item 1.05 materiality worksheet and four-business-day calculator — Circuit &amp; Capital</title>
+  <meta name="description" content="Free SEC Form 8-K Item 1.05 materiality worksheet: record who decided an incident was material and count four business days, skipping weekends and federal holidays. Worked example included.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,14 +17,14 @@
   <link rel="canonical" href="https://circuits.fit/tools/8k-materiality-worksheet.html">
   <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
   <meta property="og:title" content="SEC 8-K materiality worksheet — Circuit &amp; Capital">
-  <meta property="og:description" content="Record who decided an incident was material, and count four business days to the Item 1.05 date.">
+  <meta property="og:description" content="Free SEC Form 8-K Item 1.05 materiality worksheet: record who decided an incident was material and count four business days, skipping weekends and federal holidays. Worked example included.">
   <meta property="og:url" content="https://circuits.fit/tools/8k-materiality-worksheet.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Circuit &amp; Capital">
   <meta property="og:image" content="https://circuits.fit/assets/images/mark.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SEC 8-K materiality worksheet — Circuit &amp; Capital">
-  <meta name="twitter:description" content="Record who decided an incident was material, and count four business days to the Item 1.05 date.">
+  <meta name="twitter:description" content="Free SEC Form 8-K Item 1.05 materiality worksheet: record who decided an incident was material and count four business days, skipping weekends and federal holidays. Worked example included.">
   <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
   <style>
     .tool-table-wrap { overflow-x: auto; max-width: 100%; overscroll-behavior-x: contain; }
@@ -74,7 +74,7 @@
       </div>
       <header class="masthead">
         <div class="wrap masthead__row">
-          <div class="masthead__date" id="masthead-date">October 7, 2026</div>
+          <div class="masthead__date" id="masthead-date"></div>
           <a class="brand" href="../">
             <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
               <rect width="64" height="64" fill="#f4efe6"/>
@@ -110,6 +110,7 @@
       <div class="kicker">Tool</div>
       <h1>SEC 8-K materiality worksheet</h1>
       <p class="dek">Record who decided an incident was material, and count four business days to the Item 1.05 date.</p>
+      <p class="meta">Updated <time datetime="2026-10-21">October 21, 2026</time>: added how-to, worked example, assumptions and FAQ.</p>
     </header>
     <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in your browser. Nothing is uploaded.</p>
     <p class="tool-rule">Not legal advice. The Item 1.05 clock starts when the company determines the incident is material, not when it is discovered. This page counts four business days after that determination. It skips weekends and US federal holidays in the year of the determination and the following year. A holiday on Saturday is taken on Friday. A holiday on Sunday is taken on Monday. The page does not decide whether the incident is material.</p>
@@ -172,13 +173,45 @@
       </ol>
     </section>
     <section class="tool-help">
+      <h2>Why this worksheet exists</h2>
+      <p>Since the SEC adopted its cybersecurity disclosure rules on July 26, 2023, a public company that determines a cybersecurity incident is material must file a Form 8-K under Item 1.05. The SEC’s release says the filing is generally due four business days after the company determines the incident is material, not four days after it is discovered. The release also allows a delay if the US Attorney General determines that immediate disclosure would pose a substantial risk to national security or public safety and notifies the Commission in writing.</p>
+      <p>That design puts weight on one moment: the materiality determination. Auditors, regulators and plaintiffs will later ask who made it, when, on what evidence, and against which thresholds. Most companies keep that record in email threads and meeting notes. This page turns it into one dated record you can print, save as PDF and attach to the incident file.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Worked example</h2>
+      <p>The page loads with an example. An incident is discovered on Thursday, October 1, 2026, at 9:30 AM and escalated at 11:00 AM. The CFO owns the decision. The company checks its financial and customer thresholds, notes that a customer list was exposed for two hours, and relies on a counsel memo dated October 6. The materiality determination is recorded at 4:00 PM on Tuesday, October 6.</p>
+      <p>The count starts the next day. Wednesday, October 7, is day one. Thursday, October 8, is day two. Friday, October 9, is day three. Monday, October 12, is Columbus Day, a US federal holiday, so it is skipped. Tuesday, October 13, 2026, is day four, and that is the date the page prints. The discovery date, five days earlier, does not move it.</p>
+      <p>Two more dates worth testing: a determination on Wednesday, November 25, 2026, counts past Thanksgiving to Wednesday, December 2. A determination on Wednesday, December 23 counts past Christmas Day to Wednesday, December 30.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Assumptions and limits</h2>
+      <ul>
+        <li>Business days exclude Saturdays, Sundays and US federal holidays for the determination year and the next year. A holiday that falls on a Saturday is treated as observed on Friday, and one that falls on a Sunday is observed on Monday.</li>
+        <li>The page does not decide materiality. It records that someone did, and when.</li>
+        <li>It does not model the Attorney General delay, amendments to an earlier 8-K, or foreign private issuer reporting on Form 6-K.</li>
+        <li>Times are recorded as typed. Use the time zone your disclosure committee uses, and say which one in the evidence note.</li>
+        <li>Inputs are saved only in this browser’s local storage. Clear removes them.</li>
+      </ul>
+    </section>
+    <section class="tool-help">
+      <h2>Questions readers ask</h2>
+      <h3>Does a vulnerability on CISA’s known-exploited list start the clock?</h3>
+      <p>No. A catalog listing is a patching signal. The clock starts only when the company determines an incident is material. If triage finds a compromise, the materiality analysis begins then.</p>
+      <h3>Who should own the decision?</h3>
+      <p>That is a governance choice. Many companies assign it to a disclosure committee that includes the CFO, general counsel and CISO. The worksheet asks for one name so the record is never “the team.”</p>
+      <h3>Can we wait to be sure?</h3>
+      <p>The SEC expects the materiality determination to be made without unreasonable delay after discovery. Record the evidence you were waiting for and why.</p>
+    </section>
+    <section class="tool-help">
       <h2>Related</h2>
       <ul>
         <li><a href="../articles/the-sec-clock-starts-at-material.html">The SEC clock starts when you decide it matters</a></li>
         <li><a href="../guides/before-the-sec-eight-k.html">Before the Form 8-K clock</a></li>
+        <li><a href="../articles/beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch</a>, a case where forensic triage can turn into a materiality call</li>
+        <li><a href="risk-exception-register.html">Risk exception register</a> and <a href="agent-inventory.html">AI agent inventory</a></li>
+        <li>Primary sources: <a href="https://www.sec.gov/newsroom/press-releases/2023-139" rel="noopener">SEC press release 2023-139</a>, July 26, 2023, and the <a href="https://www.sec.gov/resources-small-businesses/small-business-compliance-guides/cybersecurity-risk-management-strategy-governance-incident-disclosure" rel="noopener">SEC small entity compliance guide</a> (“without unreasonable delay”)</li>
       </ul>
     </section>
-
   </main>
   <div id="site-footer">
       <footer class="site-foot">
@@ -211,6 +244,7 @@
           <div>
             <h3>Legal</h3>
             <ul>
+              <li><a href="../editorial.html">Editorial standards</a></li>
               <li><a href="../privacy.html">Privacy</a></li>
               <li><a href="../terms.html">Terms</a></li>
               <li><a href="../contact.html">Contact</a></li>

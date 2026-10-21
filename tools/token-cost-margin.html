@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Token cost to gross margin — Circuit &amp; Capital</title>
-  <meta name="description" content="See if an AI-native task still contributes after tokens and human review.">
+  <title>AI token cost to gross margin calculator — Circuit &amp; Capital</title>
+  <meta name="description" content="Free calculator for AI-native unit economics: token cost plus human-review cost against price per task, with margin and monthly contribution. Worked example shows why review time often decides the margin.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,14 +17,14 @@
   <link rel="canonical" href="https://circuits.fit/tools/token-cost-margin.html">
   <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
   <meta property="og:title" content="Token cost to gross margin — Circuit &amp; Capital">
-  <meta property="og:description" content="See if an AI-native task still contributes after tokens and human review.">
+  <meta property="og:description" content="Free calculator for AI-native unit economics: token cost plus human-review cost against price per task, with margin and monthly contribution. Worked example shows why review time often decides the margin.">
   <meta property="og:url" content="https://circuits.fit/tools/token-cost-margin.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Circuit &amp; Capital">
   <meta property="og:image" content="https://circuits.fit/assets/images/mark.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Token cost to gross margin — Circuit &amp; Capital">
-  <meta name="twitter:description" content="See if an AI-native task still contributes after tokens and human review.">
+  <meta name="twitter:description" content="Free calculator for AI-native unit economics: token cost plus human-review cost against price per task, with margin and monthly contribution. Worked example shows why review time often decides the margin.">
   <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "WebApplication", "name": "Token cost to gross margin", "description": "See if an AI-native task still contributes after tokens and human review.", "url": "https://circuits.fit/tools/token-cost-margin.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in the browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "datePublished": "2026-10-05", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}}
@@ -45,7 +45,7 @@
       </div>
       <header class="masthead">
         <div class="wrap masthead__row">
-          <div class="masthead__date" id="masthead-date">October 5, 2026</div>
+          <div class="masthead__date" id="masthead-date"></div>
           <a class="brand" href="../">
             <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
               <rect width="64" height="64" fill="#f4efe6"/>
@@ -81,6 +81,7 @@
       <div class="kicker">Tool</div>
       <h1>Token cost to gross margin</h1>
       <p class="dek">See if an AI-native task still contributes after tokens and human review.</p>
+      <p class="meta">Updated <time datetime="2026-10-21">October 21, 2026</time>: added how-to, worked example, assumptions and FAQ.</p>
     </header>
     <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
     <p class="tool-rule">Token cost = (input tokens / 1,000,000) × price per 1M input tokens + (output tokens / 1,000,000) × price per 1M output tokens. Review cost = (minutes / 60) × loaded cost per hour. Contribution = price charged − token cost − review cost. Margin = contribution / price charged. You type the prices. This page does not call a model.</p>
@@ -128,6 +129,47 @@
       <textarea id="margin-out" readonly></textarea>
       <div class="tool-actions"><button class="btn btn--copper" type="button" id="margin-copy">Copy</button></div>
     </section>
+    <section class="tool-help">
+      <h2>Why tokens are rarely the whole cost</h2>
+      <p>AI-native products are often priced as if the model call were the main cost. In practice, many tasks also need a person to check, correct or approve the output before a customer sees it. That review time is usually priced in dollars per hour, not fractions of a cent per thousand tokens, and it can dominate the unit economics. This tool puts both costs on one line so you can see which one drives the margin.</p>
+    </section>
+    <section class="tool-help">
+      <h2>How to use this</h2>
+      <ol>
+        <li>Enter the price you charge per task and the average input and output tokens one task uses. Your model provider’s usage logs give the token counts.</li>
+        <li>Enter the provider’s price per million input tokens and per million output tokens from its current price list.</li>
+        <li>Enter the average human-review minutes per task and the loaded hourly cost of the reviewer, including benefits and overhead.</li>
+        <li>Optionally, add tasks per month to see the monthly contribution. Select <strong>Work the margin</strong>.</li>
+      </ol>
+    </section>
+    <section class="tool-help">
+      <h2>Worked example</h2>
+      <p>These prices are illustrative, not any vendor’s list price. A company charges $2.00 per task. One task uses 6,000 input tokens and 1,500 output tokens. The model costs $3 per million input tokens and $15 per million output tokens. A reviewer spends three minutes per task at a loaded cost of $60 an hour, and the company runs 20,000 tasks a month.</p>
+      <p>Token cost is (6,000 ÷ 1,000,000) × $3 plus (1,500 ÷ 1,000,000) × $15, which is about $0.04. Review cost is (3 ÷ 60) × $60, or $3.00. Contribution is $2.00 − $0.04 − $3.00, a loss of about $1.04 per task, a margin of −52%, and about −$20,810 a month. Cut review to one minute and the same task contributes about $0.96, a 48% margin, or about $19,190 a month. The model price barely moved the answer. The review minutes decided it, which is why the tool prints “Human review costs more than the tokens” when that is true.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Assumptions and limits</h2>
+      <ul>
+        <li>Contribution here is price minus token cost minus review cost. It leaves out hosting, payment fees, support, retries, failed tasks and sales cost. Use the <a href="ai-cost-per-task.html">AI cost per finished task</a> tool to account for retries and failures.</li>
+        <li>The page does not call a model or look up prices. You type every number, in one currency.</li>
+        <li>Averages hide spread. If a tenth of tasks need twenty minutes of review, run that case separately.</li>
+      </ul>
+    </section>
+    <section class="tool-help">
+      <h2>Questions readers ask</h2>
+      <h3>What if my provider raises prices?</h3>
+      <p>Rerun with the new price. Gartner warned on October 14, 2026 that most neocloud providers may not stay independent through 2030; <a href="../articles/gartner-ai-infrastructure-impairment-neoclouds.html">our briefing</a> explains why that is a pricing risk for buyers. Test a higher token price before you sign a long commitment.</p>
+      <h3>Should review time ever be zero?</h3>
+      <p>Only where a wrong answer is cheap and reversible. For anything a customer relies on, budget some review and measure it.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Related</h2>
+      <ul>
+        <li><a href="../articles/ai-native-unit-economics.html">The new unit economics of AI-native startups</a></li>
+        <li><a href="../articles/gartner-ai-infrastructure-impairment-neoclouds.html">Gartner says the AI build-out may not pay back</a> (October 21, 2026)</li>
+        <li><a href="../guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a></li>
+      </ul>
+    </section>
     <p class="tool-links"><a href="./">Tools</a>. Also: <a href="software-renewal-scorecard.html">Renewal scorecard</a>, <a href="agent-access-limit.html">Agent access</a>, <a href="sbom-request-pack.html">SBOM request</a>, <a href="vendor-claim-checker.html">Vendor claim</a>. New: <a href="ai-cost-per-task.html">Cost per finished task</a>, <a href="agent-inventory.html">Agent inventory</a>, <a href="8k-materiality-worksheet.html">8-K worksheet</a>, <a href="risk-exception-register.html">Risk exceptions</a>.</p>
   </main>
   <div id="site-footer">
@@ -161,6 +203,7 @@
           <div>
             <h3>Legal</h3>
             <ul>
+              <li><a href="../editorial.html">Editorial standards</a></li>
               <li><a href="../privacy.html">Privacy</a></li>
               <li><a href="../terms.html">Terms</a></li>
               <li><a href="../contact.html">Contact</a></li>

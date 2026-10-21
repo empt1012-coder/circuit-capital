@@ -62,3 +62,6 @@ https://circuits.fit/tools/sbom-request-pack.html
 https://circuits.fit/tools/software-renewal-scorecard.html
 https://circuits.fit/tools/token-cost-margin.html
 https://circuits.fit/tools/vendor-claim-checker.html
+https://circuits.fit/editorial.html
+https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html
+https://circuits.fit/articles/gartner-ai-infrastructure-impairment-neoclouds.html

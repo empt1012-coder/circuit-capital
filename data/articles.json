@@ -205,6 +205,28 @@
       "body": "AI workflow tokens review cycle time"
     },
     {
+      "slug": "beyondtrust-remote-support-zero-day",
+      "title": "The BeyondTrust bug was used before the patch. Check the logs.",
+      "dek": "CISA listed BeyondTrust Remote Support CVE-2026-102764 on October 16 with forensic triage required. BeyondTrust says it was exploited as a zero-day on August 29.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "October 21, 2026",
+      "readTime": 6,
+      "image": "assets/images/nightdesk.jpg",
+      "body": "BeyondTrust Remote Support CVE-2026-102764 BT26-05 CISA KEV forensic triage BOD 26-04 Ivanti PAN-OS Fortinet zero-day MSP"
+    },
+    {
+      "slug": "gartner-ai-infrastructure-impairment-neoclouds",
+      "title": "Gartner says the AI build-out may not pay back. Check who runs your compute.",
+      "dek": "Gartner says $3.5 trillion of AI infrastructure could face impairment by 2030 and that over 80% of neoclouds will cease independent operations. For buyers, that is a supplier-risk question.",
+      "category": "Markets",
+      "author": "Emilio Santos",
+      "date": "October 21, 2026",
+      "readTime": 6,
+      "image": "assets/images/datacenter.jpg",
+      "body": "Gartner AI infrastructure impairment write-down neocloud GPU cloud consolidation $3.5 trillion $8.5 trillion ROIC IT spending 2027 memflation compute contract"
+    },
+    {
       "slug": "sec-proposed-a-crypto-custody-path",
       "title": "The SEC Proposed a Path for Crypto Custody",
       "dek": "On October 1 the Commission proposed custody rules for crypto assets held by advisers and regulated funds. The posts are the alert. Comments run from the Federal Register.",

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agent access limit sheet — Circuit &amp; Capital</title>
-  <meta name="description" content="Write down what an agent may touch before it is turned on.">
+  <title>AI agent access limit sheet (allow/deny template) — Circuit &amp; Capital</title>
+  <meta name="description" content="Free AI agent access template: list what an agent may read, write, call and spend, who owns it, and flag when it inherits a person’s access. Based on Gartner’s 54% finding. Worked example.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,17 +17,17 @@
   <link rel="canonical" href="https://circuits.fit/tools/agent-access-limit.html">
   <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
   <meta property="og:title" content="Agent access limit sheet — Circuit &amp; Capital">
-  <meta property="og:description" content="Write down what an agent may touch before it is turned on.">
+  <meta property="og:description" content="Free AI agent access template: list what an agent may read, write, call and spend, who owns it, and flag when it inherits a person’s access. Based on Gartner’s 54% finding. Worked example.">
   <meta property="og:url" content="https://circuits.fit/tools/agent-access-limit.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Circuit &amp; Capital">
   <meta property="og:image" content="https://circuits.fit/assets/images/mark.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Agent access limit sheet — Circuit &amp; Capital">
-  <meta name="twitter:description" content="Write down what an agent may touch before it is turned on.">
+  <meta name="twitter:description" content="Free AI agent access template: list what an agent may read, write, call and spend, who owns it, and flag when it inherits a person’s access. Based on Gartner’s 54% finding. Worked example.">
   <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "WebApplication", "name": "Agent access limit sheet", "description": "Write down what an agent may touch before it is turned on.", "url": "https://circuits.fit/tools/agent-access-limit.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in the browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "datePublished": "2026-10-05", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}}
+  {"@context": "https://schema.org", "@type": "WebApplication", "name": "Agent access limit sheet", "description": "Free AI agent access template: list what an agent may read, write, call and spend, who owns it, and flag when it inherits a person’s access. Based on Gartner’s 54% finding. Worked example.", "url": "https://circuits.fit/tools/agent-access-limit.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in the browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "datePublished": "2026-10-05", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "dateModified": "2026-10-21"}
   </script>
 </head>
 <body data-base=".." data-page="tools">
@@ -45,7 +45,7 @@
       </div>
       <header class="masthead">
         <div class="wrap masthead__row">
-          <div class="masthead__date" id="masthead-date">October 5, 2026</div>
+          <div class="masthead__date" id="masthead-date"></div>
           <a class="brand" href="../">
             <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
               <rect width="64" height="64" fill="#f4efe6"/>
@@ -81,6 +81,7 @@
       <div class="kicker">Tool</div>
       <h1>Agent access limit sheet</h1>
       <p class="dek">Write down what an agent may touch before it is turned on.</p>
+      <p class="meta">Updated <time datetime="2026-10-21">October 21, 2026</time>: added how-to, worked example, assumptions and FAQ.</p>
     </header>
     <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
     <p class="tool-rule">Allow is what you listed. Deny is inherit. If inherit is yes, the gap line stays. Empty read, write, or call lines stay as “not listed.” They are not filled in for you.</p>
@@ -133,6 +134,44 @@
       <div class="tool-actions"><button class="btn btn--copper" type="button" id="agent-copy">Copy</button></div>
       <p class="tool-context">Context, Gartner’s figure, not yours. In Gartner’s second-quarter survey of 297 cybersecurity leaders, 54% have no defined limit on agent access, or they let the agent reuse a person’s access.</p>
     </section>
+    <section class="tool-help">
+      <h2>Why write the limit down first</h2>
+      <p>On September 30, 2026, Gartner reported that 54% of organizations have no defined approach to limiting AI agent access, or rely on predefined human access, based on a second-quarter survey of 297 cybersecurity leaders. Gartner’s advice is to treat frontier AI deployments as insider risks and to govern agents by their action privileges rather than by how capable the model is. An agent that reuses a person’s login can do everything that person can do, at machine speed, and the logs will show the person.</p>
+      <p>This sheet makes the limit explicit before an agent is switched on: what it may read, what it may write, which tools or APIs it may call, how much it may spend per day, who owns it, and whether a person approves writes and spending.</p>
+    </section>
+    <section class="tool-help">
+      <h2>How to use this</h2>
+      <ol>
+        <li>Name the agent and list the systems it may read, the systems it may write and the tools or APIs it may call. Leave a line blank if it gets nothing; the sheet prints “not listed” rather than filling it in.</li>
+        <li>Set a daily spend cap, name an owner, and choose whether a human approves writes and spending and whether logs are retained.</li>
+        <li>Answer the key question: can it inherit the user’s access? If yes, the sheet prints a gap line telling you not to turn it on until that is off or the limit is written down.</li>
+        <li>Copy the sheet into the change ticket or the <a href="agent-inventory.html">agent inventory</a>.</li>
+      </ol>
+    </section>
+    <section class="tool-help">
+      <h2>Worked example</h2>
+      <p>A finance team wants an invoice-matching agent. It may read the accounts-payable mailbox and the ERP vendor table, write only draft match records, and call the ERP’s matching API. The spend cap is 20 dollars a day in model usage, the AP manager owns it, a human approves every write, and logs are kept. Inherit is set to No. The sheet prints an ALLOW block with those lines, a DENY line for inheriting the user’s access, and “Gap: none on inherit.”</p>
+      <p>Change inherit to Yes, as happens when an agent is set up under the AP manager’s own account, and the gap line changes: the agent still inherits a person’s access, so do not turn it on. That single line is the conversation most teams skip.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Assumptions and limits</h2>
+      <ul>
+        <li>The sheet documents intended access. It does not enforce it. Enforcement lives in your identity provider, API gateway or agent platform.</li>
+        <li>“Spend cap” is whatever unit you type: dollars, tokens or calls.</li>
+        <li>Review the sheet when the agent gains a new tool or data source, not only once a year.</li>
+        <li>Nothing you type leaves this browser.</li>
+      </ul>
+    </section>
+    <section class="tool-help">
+      <h2>Related</h2>
+      <ul>
+        <li><a href="../guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a></li>
+        <li><a href="../articles/ciso-five-moves-before-2027.html">Five moves Gartner wants from a CISO before 2027</a></li>
+        <li><a href="../articles/nvidia-put-the-fence-outside-the-agent.html">NVIDIA put the fence outside the agent</a></li>
+        <li><a href="../articles/beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch</a>: what happens when one system brokers everyone’s credentials</li>
+        <li>Primary source: <a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-30-gartner-identifies-top-five-actions-for-cisos-to-take-by-end-of-2026" rel="noopener">Gartner, top five actions for CISOs by end of 2026</a>, September 30, 2026</li>
+      </ul>
+    </section>
     <p class="tool-links"><a href="./">Tools</a>. Also: <a href="software-renewal-scorecard.html">Renewal scorecard</a>, <a href="sbom-request-pack.html">SBOM request</a>, <a href="vendor-claim-checker.html">Vendor claim</a>, <a href="token-cost-margin.html">Token cost</a>. New: <a href="ai-cost-per-task.html">Cost per finished task</a>, <a href="agent-inventory.html">Agent inventory</a>, <a href="8k-materiality-worksheet.html">8-K worksheet</a>, <a href="risk-exception-register.html">Risk exceptions</a>.</p>
   </main>
   <div id="site-footer">
@@ -166,6 +205,7 @@
           <div>
             <h3>Legal</h3>
             <ul>
+              <li><a href="../editorial.html">Editorial standards</a></li>
               <li><a href="../privacy.html">Privacy</a></li>
               <li><a href="../terms.html">Terms</a></li>
               <li><a href="../contact.html">Contact</a></li>

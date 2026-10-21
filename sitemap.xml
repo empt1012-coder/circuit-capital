@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://circuits.fit/about.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/advertise.html</loc>
@@ -10,15 +10,15 @@
   </url>
   <url>
     <loc>https://circuits.fit/briefing.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/contact.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/privacy.html</loc>
@@ -122,23 +122,23 @@
   </url>
   <url>
     <loc>https://circuits.fit/categories/business.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/categories/markets.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/categories/opinion.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/categories/policy.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/categories/startups.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/categories/technology.html</loc>
@@ -218,11 +218,11 @@
   </url>
   <url>
     <loc>https://circuits.fit/tools/8k-materiality-worksheet.html</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/agent-access-limit.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/agent-inventory.html</loc>
@@ -238,11 +238,11 @@
   </url>
   <url>
     <loc>https://circuits.fit/tools/risk-exception-register.html</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/sbom-request-pack.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/software-renewal-scorecard.html</loc>
@@ -250,10 +250,22 @@
   </url>
   <url>
     <loc>https://circuits.fit/tools/token-cost-margin.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/vendor-claim-checker.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/editorial.html</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/gartner-ai-infrastructure-impairment-neoclouds.html</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
 </urlset>

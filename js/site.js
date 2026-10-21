@@ -105,6 +105,7 @@
           <div>
             <h3>Legal</h3>
             <ul>
+              <li><a href="${asset("editorial.html")}">Editorial standards</a></li>
               <li><a href="${asset("privacy.html")}">Privacy</a></li>
               <li><a href="${asset("terms.html")}">Terms</a></li>
               <li><a href="${asset("contact.html")}">Contact</a></li>

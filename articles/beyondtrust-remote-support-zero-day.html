@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BeyondTrust Remote Support CVE-2026-102764: Patch, Then Check the Logs — Circuit &amp; Capital</title>
+  <meta name="description" content="BeyondTrust Remote Support CVE-2026-102764 (BT26-05) is on CISA’s exploited list with forensic triage required. Timeline, what CFOs and CISOs should check, and a this-week checklist.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"></noscript>
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <link rel="canonical" href="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">
+  <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
+  <meta property="og:title" content="The BeyondTrust bug was used before the patch. Check the logs. — Circuit &amp; Capital">
+  <meta property="og:description" content="BeyondTrust Remote Support CVE-2026-102764 (BT26-05) is on CISA’s exploited list with forensic triage required. Timeline, what CFOs and CISOs should check, and a this-week checklist.">
+  <meta property="og:url" content="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Circuit &amp; Capital">
+  <meta property="og:image" content="https://circuits.fit/assets/images/nightdesk.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The BeyondTrust bug was used before the patch. Check the logs. — Circuit &amp; Capital">
+  <meta name="twitter:description" content="BeyondTrust Remote Support CVE-2026-102764 (BT26-05) is on CISA’s exploited list with forensic triage required. Timeline, what CFOs and CISOs should check, and a this-week checklist.">
+  <meta name="twitter:image" content="https://circuits.fit/assets/images/nightdesk.jpg">
+  <meta property="article:published_time" content="2026-10-21">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "The BeyondTrust bug was used before the patch. Check the logs.", "description": "BeyondTrust Remote Support CVE-2026-102764 (BT26-05) is on CISA’s exploited list with forensic triage required. Timeline, what CFOs and CISOs should check, and a this-week checklist.", "image": ["https://circuits.fit/assets/images/nightdesk.jpg"], "datePublished": "2026-10-21", "dateModified": "2026-10-21", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html", "articleSection": "Policy"}
+  </script>
+</head>
+<body data-base=".." data-page="policy">
+  <div id="site-header">
+      <a class="skip" href="#main">Skip to content</a>
+      <div class="topbar">
+        <div class="wrap">
+          <div>Sourced briefing · Est. 2026</div>
+          <div class="topbar__links">
+            <a href="../about.html">About</a>
+            <a href="../advertise.html">Advertise</a>
+            <a class="hide-sm" href="../contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <header class="masthead">
+        <div class="wrap masthead__row">
+          <div class="masthead__date" id="masthead-date"></div>
+          <a class="brand" href="../">
+            <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
+              <rect width="64" height="64" fill="#f4efe6"/>
+              <path fill="#c45c26" d="M12 48V14h9v26h13v8H12z"/>
+              <path class="trace" fill="none" stroke="#9a4318" stroke-width="1.6" stroke-linecap="square" d="M16 20h8v5H20v5h7"/>
+              <circle class="node" cx="24" cy="20" r="1.6" fill="#f4efe6"/>
+              <circle class="node node-2" cx="27" cy="30" r="1.6" fill="#f4efe6"/>
+              <path fill="#12151a" d="M36 18h16v2.6H39v4.4h12v2.6H39v4.4h14v2.6H36z"/>
+            </svg>
+            <span>
+              <div class="brand__name">Circuit <span>&amp;</span> Capital</div>
+              <div class="brand__tag">Sourced business and technology briefing</div>
+              
+            </span>
+          </a>
+          <div class="masthead__actions">
+            <button class="btn btn--icon" type="button" data-toggle-search aria-label="Search">Search</button>
+            <button class="menu-toggle" type="button" data-toggle-nav aria-label="Open menu" aria-expanded="false">☰</button>
+          </div>
+        </div>
+        <nav class="nav" id="site-nav">
+          <ul class="wrap"><li><a href="../">Home</a></li><li><a href="../briefing.html">Briefing</a></li><li><a href="../guides/">Guides</a></li><li><a href="../tools/">Tools</a></li><li><a href="../categories/markets.html">Markets</a></li><li><a href="../categories/technology.html">Technology</a></li><li><a class="is-active" href="../categories/policy.html">Policy</a></li><li><a href="../about.html">About</a></li></ul>
+        </nav>
+        <div class="search-bar" id="search-bar">
+          <form class="wrap" action="../search.html" method="get">
+            <input type="search" name="q" placeholder="Search briefings…" aria-label="Search">
+            <button class="btn btn--copper" type="submit">Go</button>
+          </form>
+        </div>
+      </header>
+    </div>
+  <main id="main">
+    <header class="article-hero wrap">
+      <div class="kicker">Policy</div>
+      <h1>The BeyondTrust bug was used before the patch. Check the logs.</h1>
+      <p class="dek">CISA listed BeyondTrust Remote Support CVE-2026-102764 on October 16 with forensic triage required. BeyondTrust says it was exploited as a zero-day on August 29.</p>
+      <div class="byline-row">
+        <span>By <strong>Emilio Santos</strong></span>
+        <span><time datetime="2026-10-21">October 21, 2026</time></span>
+        <span>6 min read</span>
+      </div>
+    </header>
+    <figure class="article-cover wrap">
+      <picture><source srcset="../assets/images/nightdesk.webp" type="image/webp"><img src="../assets/images/nightdesk.jpg" alt="A desk lit at night in an empty office" width="1280" height="720" decoding="async"></picture>
+      <figcaption>A remote-support box holds the keys to everything it reaches. Photo: Circuit &amp; Capital</figcaption>
+    </figure>
+    <div class="wrap article-layout">
+      <article class="prose">
+        <p class="lead-graf">On Thursday, October 15, 2026, BeyondTrust published security advisory BT26-05 for its Remote Support product. The flaw is CVE-2026-102764, scored 9.3 on CVSS version 4 and rated Critical. BeyondTrust describes it as improper origin validation in an internal messaging component that could let a remote attacker perform file operations on an affected appliance. Every Remote Support version up to and including 26.2.3 is affected. The next day, October 16, the Cybersecurity and Infrastructure Security Agency added the CVE to its Known Exploited Vulnerabilities catalog. The catalog row carries a federal due date of October 19 and marks forensic triage as Yes.</p>
+        <p>The patch is the easy part. BeyondTrust’s own account says the bug was used as a zero-day in late August, nearly seven weeks before the advisory. If you, or a supplier that reaches into your network, run a self-hosted appliance, the question this week is not only “are we patched?” It is “was the box used before we patched, and could we tell?”</p>
+        <h2>What happened, in order</h2>
+        <p>BeyondTrust’s blog post on BT26-05, last updated October 16 at 12:00 p.m. EDT, gives this timeline:</p>
+        <ul>
+          <li><strong>August 29, 2026:</strong> an actor exploited the zero-day against one BeyondTrust-hosted Remote Support instance and one self-hosted Remote Support appliance.</li>
+          <li><strong>September 28:</strong> BeyondTrust’s threat hunting found indications of the event at the hosted customer. The company says it contained the instance within 27 minutes of first detection.</li>
+          <li><strong>September 30:</strong> Mandiant shared findings from the self-hosted customer that matched BeyondTrust’s own.</li>
+          <li><strong>October 8:</strong> BeyondTrust released the BT26-05 patch. Hosted instances of Remote Support and Privileged Remote Access were patched automatically. The advisory itself says the patch had been applied to all Remote Support SaaS customers as of October 9.</li>
+          <li><strong>October 15:</strong> coordinated public disclosure of the CVE, the advisory, the blog and Mandiant’s analysis.</li>
+        </ul>
+        <p>As of the October 16 update, BeyondTrust says it knows of only those two affected customers and has seen no adversary activity since August. It assesses with moderate to high confidence that the actor is the China-nexus cluster Mandiant and Google Threat Intelligence Group track as UNC5221, which Mandiant now calls ARMORY CASTLE. It also warns that this actor tends to use a zero-day selectively and then, once the flaw is public, move to broad exploitation of every instance still unpatched.</p>
+        <p>Two details matter for buyers. Privileged Remote Access shares the affected code; BeyondTrust found no way to exploit it there but released the patch for it anyway. And self-hosted Remote Support customers without automatic updates must patch by hand, after first upgrading if they are older than 24.3.1.</p>
+        <h2>Why the catalog row says forensic triage</h2>
+        <p>The catalog entry links to Binding Operational Directive 26-04, which CISA issued on June 10, 2026. It binds only federal civilian agencies, but it is the clearest public statement of how the government ranks urgency. It asks four questions: is the asset publicly exposed, is the CVE in the catalog, can an attacker automate the exploit, and does the attacker gain partial or total control. For the top tier, an agency must remediate within three days and carry out a forensic triage to check whether the system was already compromised.</p>
+        <p>CISA’s implementation guidance sets recommended, not mandatory, targets: scoping within two hours of the catalog addition, evidence collection and patching within 24 hours, and an escalation decision within 48 to 72 hours. Evidence comes first, because patching can destroy it.</p>
+        <p>BeyondTrust’s account explains why that order is right here. It says the actor planted a web shell, escalated to full administrative control within minutes, installed persistence designed to survive a reboot, read the appliance’s stored secrets, and then deleted logs and its own tools before leaving. Evidence kept only on the appliance “may not survive,” the company writes, and what is there “cannot be implicitly trusted.” Logs forwarded off the box are what count.</p>
+        <h2>The same week on the catalog</h2>
+        <p>BeyondTrust was one of nine additions to the catalog between October 13 and October 16. CISA added Ivanti Connect Secure CVE-2026-104935 and Windows CVE-2026-96951 on October 13; Palo Alto Networks PAN-OS CVE-2026-0322, Cisco Secure Email Gateway CVE-2026-76519 and two AhsayCBS backup-server flaws, CVE-2026-105133 and CVE-2026-105134, on October 14; an Atlassian Data Center file-access flaw, CVE-2026-21589, on October 15; and Fortinet CVE-2025-61624 alongside BeyondTrust on October 16. Six more, four of them Plex Media Server, followed on October 20. Every one of the nine October 13 to 16 rows, apart from AhsayCBS CVE-2026-105133, is marked for forensic triage.</p>
+        <p>As in <a href="cisa-listed-three-bugs-attackers-are-using.html">the October 1 catalog briefing</a> and <a href="citrix-netscaler-is-on-the-catalog-again.html">the NetScaler note</a>, most of the list sits at the network edge: VPNs, firewalls, email gateways, remote access and backup servers.</p>
+        <h2>What it means for CISOs</h2>
+        <p>A remote-support appliance is privileged access by design. BeyondTrust says so plainly: the appliance “stores and brokers privileged credentials across an estate,” which makes it both a credential source and a map of who connects to what. Treat a compromise of one as a compromise of every credential it injected.</p>
+        <p>The second lesson is about your detection stack. BeyondTrust says its sensors fired in real time when the attacker escalated privileges, but the automated triage feature in a third-party detection platform closed those alerts as false positives. The company is now working with that vendor so automated triage cannot close high-severity signals on its own. Ask your managed detection provider, in writing, which high-severity alerts its automation can close without a person.</p>
+        <h2>What it means for CFOs</h2>
+        <p>The exposure is often not your own appliance. Managed service providers, outsourced IT desks and software vendors use remote-support tools to reach their customers. If one of them runs self-hosted Remote Support, your systems sit one hop away from a box that was exploited as a zero-day. That is a third-party risk question with contract consequences: notification clauses, audit rights and who pays for forensic work.</p>
+        <p>Forensic triage costs money even when it finds nothing; budget for it as part of patching. If you carry cyber insurance, check now whether the notice clause is triggered by a suspected incident or only a confirmed one, and whether the insurer requires its own forensics firm. For a public company, a confirmed compromise also raises the Form 8-K question. The four-business-day clock under Item 1.05 starts at the materiality determination, not at the advisory date; <a href="the-sec-clock-starts-at-material.html">the SEC clock briefing</a> and the <a href="../tools/8k-materiality-worksheet.html">8-K materiality worksheet</a> cover how to record that decision.</p>
+        <h2>What to do this week</h2>
+        <ol>
+          <li><strong>Find every instance.</strong> List self-hosted BeyondTrust Remote Support and Privileged Remote Access appliances, their versions, and whether automatic updates are on. Anything at 26.2.3 or below without the BT26-05 patch is exposed. Anything below 24.3.1 needs an upgrade first.</li>
+          <li><strong>Preserve before you patch,</strong> where you still can. Image the appliance and export its logs, then apply the patch.</li>
+          <li><strong>Get logs off the box.</strong> Forward appliance syslog and session events to your SIEM, as BeyondTrust recommends. Look back to at least August 29, the first exploitation date it gives.</li>
+          <li><strong>Hunt for behavior, not indicators.</strong> BeyondTrust’s list: privileged sessions from residential broadband or commercial VPN addresses you cannot tie to a known administrator or ticket; unrecognized script files in web directories; web service accounts spawning shells; unexpected permission changes to Jump Items or Teams; and gaps in log forwarding that start and end within a single session.</li>
+          <li><strong>Rotate if anything looks wrong.</strong> Rotate every credential the appliance stored or injected, review new multi-factor registrations on privileged accounts, and watch those accounts for logins outside managed sessions.</li>
+          <li><strong>Ask your suppliers.</strong> Send each MSP and IT vendor with remote access one question: do you use self-hosted BeyondTrust Remote Support or Privileged Remote Access to reach us, and on what date did you apply BT26-05? Record each answer with the date and the name of the person who gave it, so “we’re patched” is a dated fact rather than an assurance.</li>
+          <li><strong>Do not waive it.</strong> If patching slips, record the owner and expiry in the <a href="../tools/risk-exception-register.html">risk exception register</a>, and confirm owners for the week’s other rows you run.</li>
+        </ol>
+        <h2>What to watch next</h2>
+        <p>BeyondTrust says it is withholding technical details while self-hosted appliances are still being patched. When those details are published, expect wider exploitation of anything left unpatched, which is the pattern the company itself predicts for this actor. Watch the BT26-05 blog and the catalog row for changes. Under BOD 26-04, federal agencies’ Phase III deadline, 180 days from issuance, falls on December 7, 2026 by our count; agency patch reporting will keep edge-device rows in the news through year-end.</p>
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://www.beyondtrust.com/trust-center/security-advisories/bt26-05" rel="noopener">BeyondTrust security advisory BT26-05</a>, issued October 15, 2026 (CVE-2026-102764, CVSSv4 9.3, CWE-290, affected and fixed versions, SaaS patched as of October 9)</li>
+          <li><a href="https://www.beyondtrust.com/blog/entry/bt26-05" rel="noopener">BeyondTrust, “ARMORY CASTLE and BT26-05: What Security Teams Need to Know”</a>, October 15, 2026, updated October 16 (timeline, attribution, hunting and rotation guidance)</li>
+          <li><a href="https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog" rel="noopener">CISA alert, two known-exploited vulnerabilities added, October 16, 2026</a> (BeyondTrust CVE-2026-102764 and Fortinet CVE-2025-61624)</li>
+          <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102764" rel="noopener">CISA catalog entry, CVE-2026-102764</a>, and the <a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">catalog JSON feed</a>, version 2026.10.21 (dates added, due dates and forensic triage fields for every row cited)</li>
+          <li>CISA alerts for <a href="https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog" rel="noopener">October 13</a>, <a href="https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog" rel="noopener">October 14</a> and <a href="https://www.cisa.gov/news-events/alerts/2026/10/15/cisa-adds-one-known-exploited-vulnerability-catalog" rel="noopener">October 15</a>, 2026</li>
+          <li><a href="https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk" rel="noopener">BOD 26-04, Prioritizing Security Updates Based on Risk</a>, June 10, 2026, and <a href="https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk" rel="noopener">its implementation guidance on forensic triage</a>, updated August 25, 2026</li>
+          <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102764" rel="noopener">NVD entry, CVE-2026-102764</a></li>
+        </ul>
+        <p>Related: <a href="citrix-netscaler-is-on-the-catalog-again.html">Citrix NetScaler is on the exploited catalog again</a>, <a href="cisa-listed-three-bugs-attackers-are-using.html">CISA listed three bugs attackers are already using</a>, and the guide <a href="../guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a>, which applies the same least-privilege logic to automated access.</p>
+        <div class="author-box">
+          <div class="avatar">ES</div>
+          <div>
+            <strong>Emilio Santos</strong> edits Circuit &amp; Capital. How we source and correct pieces: <a href="../editorial.html">editorial standards</a>.
+            <div class="meta"><a href="mailto:circuit50capital@circuits.fit">circuit50capital@circuits.fit</a></div>
+          </div>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <aside class="ad-slot ad-slot--rect" data-slot="sidebar" aria-label="Advertisement">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </aside>
+        <div class="section-head"><h2>Related</h2></div>
+        <div class="popular">
+          <ol>
+            <li><a href="citrix-netscaler-is-on-the-catalog-again.html">Citrix NetScaler is on the exploited catalog again</a></li>
+            <li><a href="cisa-listed-three-bugs-attackers-are-using.html">CISA listed three bugs attackers are already using</a></li>
+            <li><a href="../tools/risk-exception-register.html">Risk exception register</a></li>
+            <li><a href="../guides/before-the-sec-eight-k.html">Before the Form 8-K clock</a></li>
+            <li><a href="../tools/8k-materiality-worksheet.html">SEC 8-K materiality worksheet</a></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <div id="site-footer">
+      <footer class="site-foot">
+        <div class="wrap foot-grid">
+          <div>
+            <h3>Circuit &amp; Capital</h3>
+            <p>Sourced briefings and operator guides on AI spend, agents, chips, cyber, and policy. Written by Emilio Santos.</p>
+          </div>
+          <div>
+            <h3>Sections</h3>
+            <ul>
+              <li><a href="../">Home</a></li>
+              <li><a href="../briefing.html">Briefing</a></li>
+              <li><a href="../guides/">Guides</a></li>
+              <li><a href="../tools/">Tools</a></li>
+              <li><a href="../categories/markets.html">Markets</a></li>
+              <li><a href="../categories/technology.html">Technology</a></li>
+              <li><a href="../categories/policy.html">Policy</a></li>
+              <li><a href="../about.html">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Advertising</h3>
+            <ul>
+              <li><a href="../advertise.html">Advertise</a></li>
+              <li><a href="../advertise.html#specs">Ad specs</a></li>
+              <li><a href="../about.html">Masthead</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="../editorial.html">Editorial standards</a></li>
+              <li><a href="../privacy.html">Privacy</a></li>
+              <li><a href="../terms.html">Terms</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="wrap foot-bottom">
+          <div>© 2026 Circuit &amp; Capital. All rights reserved.</div>
+          <div>Circuit &amp; Capital is a business and technology publication. It is not a fitness brand.</div>
+        </div>
+      </footer>
+      <div class="ad-sticky" aria-label="Advertisement">
+        <button type="button" data-close-sticky aria-label="Close ad">×</button>
+        <div class="ad-slot" data-slot="mobileSticky" data-ad-slot="">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </div>
+      </div>
+      <div class="cookie" id="cookie">
+        <p>We use a cookie to remember this choice. Accept may load analytics. Necessary only does not. This banner does not record the ad choice. See our <a href="../privacy.html">privacy policy</a>.</p>
+        <div class="cookie__row">
+          <button class="btn btn--copper" type="button" data-cookie="accept">Accept</button>
+          <button class="btn btn--ghost" type="button" data-cookie="reject" style="border-color:#5a6570">Necessary only</button>
+        </div>
+      </div>
+      <div class="toast" id="toast" role="status"></div>
+    </div>
+  <script src="../js/config.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="../js/ads.js"></script>
+</body>
+</html>

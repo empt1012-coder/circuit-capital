@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SBOM request pack — Circuit &amp; Capital</title>
-  <meta name="description" content="Ask a vendor for an ingredients list, then mark what came back.">
+  <title>SBOM request template for vendors, SaaS and AI software — Circuit &amp; Capital</title>
+  <meta name="description" content="Free SBOM request template: write a vendor email asking for SBOM fields under CISA’s 2026 minimum elements, including SaaS and AI, then track which fields came back. Worked example included.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,14 +17,14 @@
   <link rel="canonical" href="https://circuits.fit/tools/sbom-request-pack.html">
   <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
   <meta property="og:title" content="SBOM request pack — Circuit &amp; Capital">
-  <meta property="og:description" content="Ask a vendor for an ingredients list, then mark what came back.">
+  <meta property="og:description" content="Free SBOM request template: write a vendor email asking for SBOM fields under CISA’s 2026 minimum elements, including SaaS and AI, then track which fields came back. Worked example included.">
   <meta property="og:url" content="https://circuits.fit/tools/sbom-request-pack.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Circuit &amp; Capital">
   <meta property="og:image" content="https://circuits.fit/assets/images/mark.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SBOM request pack — Circuit &amp; Capital">
-  <meta name="twitter:description" content="Ask a vendor for an ingredients list, then mark what came back.">
+  <meta name="twitter:description" content="Free SBOM request template: write a vendor email asking for SBOM fields under CISA’s 2026 minimum elements, including SaaS and AI, then track which fields came back. Worked example included.">
   <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "WebApplication", "name": "SBOM request pack", "description": "Ask a vendor for an ingredients list, then mark what came back.", "url": "https://circuits.fit/tools/sbom-request-pack.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in the browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "datePublished": "2026-10-05", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}}
@@ -45,7 +45,7 @@
       </div>
       <header class="masthead">
         <div class="wrap masthead__row">
-          <div class="masthead__date" id="masthead-date">October 5, 2026</div>
+          <div class="masthead__date" id="masthead-date"></div>
           <a class="brand" href="../">
             <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
               <rect width="64" height="64" fill="#f4efe6"/>
@@ -81,6 +81,7 @@
       <div class="kicker">Tool</div>
       <h1>SBOM request pack</h1>
       <p class="dek">Ask a vendor for an ingredients list, then mark what came back.</p>
+      <p class="meta">Updated <time datetime="2026-10-21">October 21, 2026</time>: added how-to, worked example, assumptions and FAQ.</p>
     </header>
     <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
     <p class="tool-rule">The email asks for the 2026 CISA minimum elements, including for SaaS and AI software, not only code the buyer compiles. The field list below is the ask. Tick Received when a field comes back. Missing rows stay on the page.</p>
@@ -122,6 +123,49 @@
         <tbody id="sbom-rows"></tbody>
       </table>
     </section>
+    <section class="tool-help">
+      <h2>Why ask for an SBOM</h2>
+      <p>A software bill of materials is an ingredients list for software: which components a product contains, who supplies them, which versions are inside, and how they depend on each other. When a component turns up on CISA’s Known Exploited Vulnerabilities catalog, the buyer with an SBOM can answer “are we affected?” in minutes. The buyer without one sends a questionnaire and waits.</p>
+      <p>On July 29, 2026, CISA, the NSA, the FBI and international partners published the <em>2026 Minimum Elements for a Software Bill of Materials</em>. It replaces the minimum elements the National Telecommunications and Information Administration published in 2021. CISA says the minimum elements apply to all software, and that some types, including AI and software as a service, may need additional elements. That matters for buyers: “we are SaaS, so an SBOM does not apply” is no longer the answer the guidance supports.</p>
+    </section>
+    <section class="tool-help">
+      <h2>How to use this</h2>
+      <ol>
+        <li>Enter the vendor, the product and your name, and say whether you are buying SaaS, installed software or an AI feature.</li>
+        <li>Select <strong>Write the request</strong>. The page writes a plain email that asks for each field on the list below. Copy it into your own email or procurement portal.</li>
+        <li>When the vendor replies, tick <strong>Received</strong> for each field that actually came back. Anything left unticked stays marked Missing. Put the missing rows on the renewal agenda.</li>
+      </ol>
+    </section>
+    <section class="tool-help">
+      <h2>Worked example</h2>
+      <p>A finance team is renewing an expense-management SaaS product. The buyer enters the vendor and product, chooses SaaS, and sends the request. Two weeks later the vendor returns a spreadsheet with component names, versions and licenses, plus a note that it “monitors vulnerabilities continuously.” The buyer ticks Component name, Version and License. Supplier name, Unique identifier, Dependency relationship, Author of SBOM data, Timestamp and Known vulnerabilities stay Missing.</p>
+      <p>That result is useful on its own. Without unique identifiers, the list cannot be matched reliably against vulnerability databases. Without a timestamp, nobody knows whether it describes the product running today. Without dependency relationships, an exploited library buried two levels down will not show up. The six missing fields become six lines in the renewal call, and the <a href="software-renewal-scorecard.html">software renewal scorecard</a> scores the SBOM answer alongside price caps and data export.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Assumptions and limits</h2>
+      <ul>
+        <li>The field list is our working list drawn from the minimum-elements guidance. Check the CISA document for the exact element names and definitions before you put them in a contract.</li>
+        <li>The page does not read or validate an SBOM file. It tracks whether each field came back.</li>
+        <li>A received field is only as good as the data in it. A stale SBOM can be worse than none if it gives false comfort, so ask how often it is regenerated.</li>
+        <li>Nothing you type leaves this browser.</li>
+      </ul>
+    </section>
+    <section class="tool-help">
+      <h2>Questions readers ask</h2>
+      <h3>Will a small vendor be able to answer?</h3>
+      <p>Many build tools can generate an SBOM automatically. A vendor that cannot produce one at all is telling you something about how it tracks its own components.</p>
+      <h3>What about AI features?</h3>
+      <p>Ask the AI-specific questions in the guide <a href="../guides/ai-sbom-extra-questions.html">Extra questions for an AI bill of materials</a>, which covers the May 12, 2026 G7 and CISA note.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Related</h2>
+      <ul>
+        <li><a href="../articles/sbom-now-covers-the-suite.html">The software ingredients list now covers the suite</a></li>
+        <li><a href="../guides/ask-a-vendor-for-an-sbom.html">Ask a vendor for an SBOM</a></li>
+        <li><a href="../articles/beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch</a>, a reminder of why component lists matter when a catalog row lands</li>
+        <li>Primary source: <a href="https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom" rel="noopener">CISA, 2026 Minimum Elements for a Software Bill of Materials</a>, July 29, 2026</li>
+      </ul>
+    </section>
     <p class="tool-links"><a href="./">Tools</a>. Also: <a href="software-renewal-scorecard.html">Renewal scorecard</a>, <a href="agent-access-limit.html">Agent access</a>, <a href="vendor-claim-checker.html">Vendor claim</a>, <a href="token-cost-margin.html">Token cost</a>. New: <a href="ai-cost-per-task.html">Cost per finished task</a>, <a href="agent-inventory.html">Agent inventory</a>, <a href="8k-materiality-worksheet.html">8-K worksheet</a>, <a href="risk-exception-register.html">Risk exceptions</a>.</p>
   </main>
   <div id="site-footer">
@@ -155,6 +199,7 @@
           <div>
             <h3>Legal</h3>
             <ul>
+              <li><a href="../editorial.html">Editorial standards</a></li>
               <li><a href="../privacy.html">Privacy</a></li>
               <li><a href="../terms.html">Terms</a></li>
               <li><a href="../contact.html">Contact</a></li>

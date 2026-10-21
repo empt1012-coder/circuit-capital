@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vendor claim checker — Circuit &amp; Capital</title>
-  <meta name="description" content="Separate a speed or savings claim from the bill.">
+  <title>Vendor claim checker for AI speed and cost claims — Circuit &amp; Capital</title>
+  <meta name="description" content="Free vendor claim checker: turn an “up to 8x faster” or “40% cheaper” claim into whose number it is, what was not measured, your bill at your volume, and three questions for the call.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,17 +17,17 @@
   <link rel="canonical" href="https://circuits.fit/tools/vendor-claim-checker.html">
   <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
   <meta property="og:title" content="Vendor claim checker — Circuit &amp; Capital">
-  <meta property="og:description" content="Separate a speed or savings claim from the bill.">
+  <meta property="og:description" content="Free vendor claim checker: turn an “up to 8x faster” or “40% cheaper” claim into whose number it is, what was not measured, your bill at your volume, and three questions for the call.">
   <meta property="og:url" content="https://circuits.fit/tools/vendor-claim-checker.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Circuit &amp; Capital">
   <meta property="og:image" content="https://circuits.fit/assets/images/mark.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Vendor claim checker — Circuit &amp; Capital">
-  <meta name="twitter:description" content="Separate a speed or savings claim from the bill.">
+  <meta name="twitter:description" content="Free vendor claim checker: turn an “up to 8x faster” or “40% cheaper” claim into whose number it is, what was not measured, your bill at your volume, and three questions for the call.">
   <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "WebApplication", "name": "Vendor claim checker", "description": "Separate a speed or savings claim from the bill.", "url": "https://circuits.fit/tools/vendor-claim-checker.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in the browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "datePublished": "2026-10-05", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}}
+  {"@context": "https://schema.org", "@type": "WebApplication", "name": "Vendor claim checker", "description": "Free vendor claim checker: turn an “up to 8x faster” or “40% cheaper” claim into whose number it is, what was not measured, your bill at your volume, and three questions for the call.", "url": "https://circuits.fit/tools/vendor-claim-checker.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in the browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "datePublished": "2026-10-05", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "dateModified": "2026-10-21"}
   </script>
 </head>
 <body data-base=".." data-page="tools">
@@ -45,7 +45,7 @@
       </div>
       <header class="masthead">
         <div class="wrap masthead__row">
-          <div class="masthead__date" id="masthead-date">October 5, 2026</div>
+          <div class="masthead__date" id="masthead-date"></div>
           <a class="brand" href="../">
             <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
               <rect width="64" height="64" fill="#f4efe6"/>
@@ -81,6 +81,7 @@
       <div class="kicker">Tool</div>
       <h1>Vendor claim checker</h1>
       <p class="dek">Separate a speed or savings claim from the bill.</p>
+      <p class="meta">Updated <time datetime="2026-10-21">October 21, 2026</time>: added how-to, worked example, assumptions and FAQ.</p>
     </header>
     <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
     <p class="tool-rule">The pasted claim stays a claim. A vendor comparison is not the fact. If you enter volume and unit price, your cost is your arithmetic. It is printed next to the claim. It does not confirm the claim. If the figure belongs to NVIDIA, Gartner, CISA, or the vendor, the “whose number” line says so.</p>
@@ -147,6 +148,49 @@
       <textarea id="claim-out" readonly></textarea>
       <div class="tool-actions"><button class="btn btn--copper" type="button" id="claim-copy">Copy</button></div>
     </section>
+    <section class="tool-help">
+      <h2>Why check a vendor claim</h2>
+      <p>“Up to 8x faster.” “Cuts costs by 40%.” A vendor benchmark is a useful signal, but it is the vendor’s measurement, on the vendor’s workload, against a baseline the vendor chose. It is not a measurement of your bill. This tool turns a claim into a short note for the buying file: whose number it is, what it did not measure, what the bill is at your volume, and three questions for the next call.</p>
+    </section>
+    <section class="tool-help">
+      <h2>How to use this</h2>
+      <ol>
+        <li>Paste the claim exactly as the vendor wrote it, and name the vendor and product.</li>
+        <li>Say who measured it (vendor, analyst, another customer or unknown) and what the metric is.</li>
+        <li>Say whether the claim names a baseline (faster than what?) and a price source (which meter, at what price?).</li>
+        <li>Optionally enter your own volume and unit price. The page multiplies them so your bill sits next to the claim.</li>
+        <li>Select the button, copy the note, and paste it into the evaluation or renewal record.</li>
+      </ol>
+    </section>
+    <section class="tool-help">
+      <h2>Worked example</h2>
+      <p>A vendor announces a fast mode with “up to 8x faster token generation than our standard mode.” This is the kind of claim covered in <a href="../articles/astra-ultrafast-is-a-speed-claim.html">Astra Ultrafast is a speed claim</a>. You enter: measured by the vendor; metric, tokens per second; baseline named, yes (the standard mode); price source named, no. You expect 30 million tokens a month at a unit price of 12 dollars per million.</p>
+      <p>The note says the number is the vendor’s comparison, not the fact. Under “what was not measured” it lists two gaps: no price source is named, and the comparison was not run on your volume. It prints your arithmetic, 30 × 12 = 360, in the units you typed, and says that does not confirm the claim. The three questions are: walk the baseline (what was held constant?), show where the price is and which meter it covers, and say what the claim does at your volume of 30. That is a better agenda than “is it really 8x?”</p>
+    </section>
+    <section class="tool-help">
+      <h2>Assumptions and limits</h2>
+      <ul>
+        <li>The page does not test the product or look anything up. It structures what you entered.</li>
+        <li>The bill line is volume times unit price in whatever units you type. Keep them consistent.</li>
+        <li>A named baseline and price source do not make a claim true. They make it checkable.</li>
+        <li>Nothing you type leaves this browser.</li>
+      </ul>
+    </section>
+    <section class="tool-help">
+      <h2>Questions readers ask</h2>
+      <h3>What if an analyst published the number?</h3>
+      <p>Choose Analyst. The note says it is the analyst’s number, not a measurement on your workload. Read the analyst’s release for the sample and the date before you rely on it.</p>
+      <h3>Can I use this for security claims?</h3>
+      <p>It is built for performance and cost claims. For a supplier’s security assurances, ask for dated evidence instead: the patch date, the version, and who confirmed it. The <a href="sbom-request-pack.html">SBOM request pack</a> covers component lists.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Related</h2>
+      <ul>
+        <li><a href="../articles/astra-ultrafast-is-a-speed-claim.html">Astra Ultrafast is a speed claim. The bill is still yours.</a></li>
+        <li><a href="../articles/gartner-ai-infrastructure-impairment-neoclouds.html">Gartner says the AI build-out may not pay back</a> (October 21, 2026)</li>
+        <li><a href="token-cost-margin.html">Token cost to gross margin</a> and <a href="software-renewal-scorecard.html">Software renewal scorecard</a></li>
+      </ul>
+    </section>
     <p class="tool-links"><a href="./">Tools</a>. Also: <a href="software-renewal-scorecard.html">Renewal scorecard</a>, <a href="agent-access-limit.html">Agent access</a>, <a href="sbom-request-pack.html">SBOM request</a>, <a href="token-cost-margin.html">Token cost</a>. New: <a href="ai-cost-per-task.html">Cost per finished task</a>, <a href="agent-inventory.html">Agent inventory</a>, <a href="8k-materiality-worksheet.html">8-K worksheet</a>, <a href="risk-exception-register.html">Risk exceptions</a>.</p>
   </main>
   <div id="site-footer">
@@ -180,6 +224,7 @@
           <div>
             <h3>Legal</h3>
             <ul>
+              <li><a href="../editorial.html">Editorial standards</a></li>
               <li><a href="../privacy.html">Privacy</a></li>
               <li><a href="../terms.html">Terms</a></li>
               <li><a href="../contact.html">Contact</a></li>
