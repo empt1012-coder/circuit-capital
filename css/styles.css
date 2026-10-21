@@ -874,3 +874,13 @@ footer.site-foot {
     height: 180px;
   }
 }
+
+/* Section intros and freshness notes (2026-10-21) */
+.section-intro { max-width: 760px; margin: 0 0 2rem; }
+.section-intro h2 { font-family: var(--display); font-size: 1.25rem; margin: 1.5rem 0 0.6rem; }
+.section-intro a, .updated-list a { text-decoration: underline; text-underline-offset: 2px; }
+.prose ol { padding-left: 1.4rem; }
+.prose ol li { margin-bottom: 0.5rem; }
+.updated-list { list-style: none; padding: 0; margin: 0; font-family: var(--sans); font-size: 0.95rem; }
+.updated-list li { padding: 0.55rem 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+.page-head .meta { font-family: var(--sans); font-size: 0.85rem; opacity: 0.8; }

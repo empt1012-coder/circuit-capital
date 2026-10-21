@@ -86,7 +86,7 @@
         <div class="wrap foot-grid">
           <div>
             <h3>Circuit &amp; Capital</h3>
-            <p>Sourced briefings and operator guides on AI spend, agents, chips, cyber, and policy. Written by Emilio Santos.</p>
+            <p>Sourced briefings and operator guides on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</p>
           </div>
           <div>
             <h3>Sections</h3>
@@ -105,6 +105,7 @@
           <div>
             <h3>Legal</h3>
             <ul>
+              <li><a href="${asset("editorial.html")}">Editorial standards</a></li>
               <li><a href="${asset("privacy.html")}">Privacy</a></li>
               <li><a href="${asset("terms.html")}">Terms</a></li>
               <li><a href="${asset("contact.html")}">Contact</a></li>
@@ -167,7 +168,7 @@
   }
   const siteName = cfg.siteName || "Circuit & Capital";
   const tagline = cfg.tagline || "Sourced business and technology briefing";
-  const fallbackDesc = cfg.defaultDescription || "Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Cited to the post and the official page. Written by Emilio Santos.";
+  const fallbackDesc = cfg.defaultDescription || "Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Cited to the post and the official page. Edited by Emilio Santos.";
   const descEl = document.querySelector('meta[name="description"]');
   const description = (descEl && descEl.getAttribute("content")) || fallbackDesc;
   setMeta("property", "og:title", document.title);

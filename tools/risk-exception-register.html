@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Risk exception register — Circuit &amp; Capital</title>
-  <meta name="description" content="Track an exception, its owner, and its expiry. Known-exploited bugs, MFA, backups, and EDR are marked not waivable.">
+  <title>Risk exception register template (free, in-browser) — Circuit &amp; Capital</title>
+  <meta name="description" content="Free security risk exception register: track owner, expiry and funded fix for each exception. CISA KEV, MFA, backups and EDR are flagged not waivable. CSV import and export, worked example.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,14 +17,14 @@
   <link rel="canonical" href="https://circuits.fit/tools/risk-exception-register.html">
   <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
   <meta property="og:title" content="Risk exception register — Circuit &amp; Capital">
-  <meta property="og:description" content="Track an exception, its owner, and its expiry. Known-exploited bugs, MFA, backups, and EDR are marked not waivable.">
+  <meta property="og:description" content="Free security risk exception register: track owner, expiry and funded fix for each exception. CISA KEV, MFA, backups and EDR are flagged not waivable. CSV import and export, worked example.">
   <meta property="og:url" content="https://circuits.fit/tools/risk-exception-register.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Circuit &amp; Capital">
   <meta property="og:image" content="https://circuits.fit/assets/images/mark.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Risk exception register — Circuit &amp; Capital">
-  <meta name="twitter:description" content="Track an exception, its owner, and its expiry. Known-exploited bugs, MFA, backups, and EDR are marked not waivable.">
+  <meta name="twitter:description" content="Free security risk exception register: track owner, expiry and funded fix for each exception. CISA KEV, MFA, backups and EDR are flagged not waivable. CSV import and export, worked example.">
   <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
   <style>
     .tool-table-wrap { overflow-x: auto; max-width: 100%; overscroll-behavior-x: contain; }
@@ -76,7 +76,7 @@
       </div>
       <header class="masthead">
         <div class="wrap masthead__row">
-          <div class="masthead__date" id="masthead-date">October 7, 2026</div>
+          <div class="masthead__date" id="masthead-date"></div>
           <a class="brand" href="../">
             <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
               <rect width="64" height="64" fill="#f4efe6"/>
@@ -112,6 +112,7 @@
       <div class="kicker">Tool</div>
       <h1>Risk exception register</h1>
       <p class="dek">Track an exception, its owner, and its expiry. Known-exploited bugs, MFA, backups, and EDR are marked not waivable.</p>
+      <p class="meta">Updated <time datetime="2026-10-21">October 21, 2026</time>: added how-to, worked example, assumptions and FAQ.</p>
     </header>
     <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in your browser. Nothing is uploaded.</p>
     <p class="tool-rule">Exceptions for a CISA Known Exploited Vulnerability, MFA, backups, or EDR are marked Not waivable. A row is also flagged when it has no owner, no expiry, or no funded fix, and when the expiry is past or inside 30 days. The file import is read in this browser. It is not uploaded.</p>
@@ -168,21 +169,50 @@
       </ol>
     </section>
     <section class="tool-help">
+      <h2>Why a register, and why some rows are not waivable</h2>
+      <p>Every security program carries exceptions: a server that cannot take a patch until a vendor certifies it, a break-glass account without multi-factor sign-in, a laptop group where the endpoint agent conflicts with an old application. Exceptions are normal. Exceptions with no owner, no end date and no money behind the fix are how a temporary gap becomes permanent.</p>
+      <p>This register treats four controls as not waivable: a vulnerability on CISA’s Known Exploited Vulnerabilities catalog, multi-factor authentication, backups and endpoint detection and response. That is an editorial choice, not a legal rule. We chose those four because they are the controls attackers most often find missing, and because cyber insurers routinely ask about them on applications (see <a href="../guides/cyber-insurance-controls-checklist.html">What a cyber insurer will still ask</a>). For federal civilian agencies, CISA’s BOD 26-04 already sets a three-day remediation clock, plus forensic triage, for the highest-risk catalog entries on internet-facing systems. A row in one of those four categories can still be recorded. It is labeled Not waivable so nobody mistakes the record for permission.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Worked example</h2>
+      <p>Say that on October 21, 2026, your team records an exception for an internet-facing edge gateway affected by a known-exploited bug. The platform team owns it. The reason is the next change window. The compensating control is a source-address restriction. No fix is funded, the CIO accepted the risk, and the exception expires on October 31.</p>
+      <p>The register returns: “CISA KEV — Not waivable,” with flags “No funded fix” and “Expires in 10 days.” The summary line counts one not-waivable row and one row with another flag. That is the conversation to have: the change window is not a reason to leave a known-exploited edge device open for ten days, and an exception with no funded fix has no end.</p>
+      <p>A second example: an “Other” row for a vendor cutover with an owner, a funded amount of 12,000, and an expiry 70 days out returns no flags. That is what a healthy exception looks like.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Assumptions and limits</h2>
+      <ul>
+        <li>A row is flagged when the owner is blank, the expiry is blank or not a date, the fix is not marked funded with an amount above zero, or the expiry is past or within 30 days.</li>
+        <li>Amounts are in whatever currency you type. The page does not convert or total them.</li>
+        <li>Dates are compared with this device’s clock.</li>
+        <li>CSV export and import happen in this browser. The file is not uploaded. The CSV columns are control, system, owner, reason, compensating, funded, amount, expiry and accepted.</li>
+        <li>This is a working list, not a governance, risk and compliance system. Keep the authoritative record where your auditors expect it.</li>
+      </ul>
+    </section>
+    <section class="tool-help">
+      <h2>Questions readers ask</h2>
+      <h3>Who should accept the risk?</h3>
+      <p>Someone who owns the budget that would fix it. If the person accepting the risk cannot fund the fix, the exception is a note, not a decision.</p>
+      <h3>How long should an exception last?</h3>
+      <p>As short as the funded fix allows. Set the expiry to the date the fix ships, and review anything inside 30 days at your weekly security meeting.</p>
+    </section>
+    <section class="tool-help">
       <h2>Related</h2>
       <ul>
+        <li><a href="../articles/beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch</a> (October 21, 2026)</li>
         <li><a href="../articles/cisa-listed-three-bugs-attackers-are-using.html">CISA listed three bugs attackers are already using</a></li>
         <li><a href="../articles/citrix-netscaler-is-on-the-catalog-again.html">Citrix NetScaler is on the exploited catalog again</a></li>
         <li><a href="../guides/cyber-insurance-controls-checklist.html">What a cyber insurer will still ask</a></li>
+        <li>Primary sources: <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" rel="noopener">CISA Known Exploited Vulnerabilities catalog</a> and <a href="https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk" rel="noopener">BOD 26-04</a></li>
       </ul>
     </section>
-
   </main>
   <div id="site-footer">
       <footer class="site-foot">
         <div class="wrap foot-grid">
           <div>
             <h3>Circuit &amp; Capital</h3>
-            <p>Sourced briefings and operator guides on AI spend, agents, chips, cyber, and policy. Written by Emilio Santos.</p>
+            <p>Sourced briefings and operator guides on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</p>
           </div>
           <div>
             <h3>Sections</h3>
@@ -208,6 +238,7 @@
           <div>
             <h3>Legal</h3>
             <ul>
+              <li><a href="../editorial.html">Editorial standards</a></li>
               <li><a href="../privacy.html">Privacy</a></li>
               <li><a href="../terms.html">Terms</a></li>
               <li><a href="../contact.html">Contact</a></li>
