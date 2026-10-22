@@ -5,7 +5,15 @@
 <link>https://circuits.fit/</link>
 <description>Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</description>
 <language>en-us</language>
-<lastBuildDate>Wed, 21 Oct 2026 12:00:00 +0000</lastBuildDate>
+<lastBuildDate>Thu, 22 Oct 2026 20:00:00 +0000</lastBuildDate>
+<item>
+<title>PHP2Shell was used before the patch. Start the log review at October 17.</title>
+<link>https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html</link>
+<guid>https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html</guid>
+<pubDate>Thu, 22 Oct 2026 20:00:00 +0000</pubDate>
+<description>PHP fixed two unauthenticated remote code execution bugs on October 21. Amazon saw an exploit attempt on October 17. Most companies run PHP inside software they buy, so the work is a vendor inventory, not only a patch.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
 <item>
 <title>The BeyondTrust bug was used before the patch. Check the logs.</title>
 <link>https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html</link>

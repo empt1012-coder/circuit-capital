@@ -205,6 +205,17 @@
       "body": "AI workflow tokens review cycle time"
     },
     {
+      "slug": "php2shell-php-rce-vendor-inventory",
+      "title": "PHP2Shell was used before the patch. Start the log review at October 17.",
+      "dek": "PHP fixed two unauthenticated remote code execution bugs on October 21. Amazon saw an exploit attempt on October 17. Most companies run PHP inside software they buy, so the work is a vendor inventory, not only a patch.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "October 22, 2026",
+      "readTime": 6,
+      "image": "assets/images/colo.jpg",
+      "body": "PHP2Shell PHP CVE-2026-109618 CVE-2026-109619 remote code execution mod_php PHP-FPM vendor inventory webshell CISA KEV Amazon MadPot Sophos"
+    },
+    {
       "slug": "beyondtrust-remote-support-zero-day",
       "title": "The BeyondTrust bug was used before the patch. Check the logs.",
       "dek": "CISA listed BeyondTrust Remote Support CVE-2026-102764 on October 16 with forensic triage required. BeyondTrust says it was exploited as a zero-day on August 29.",
