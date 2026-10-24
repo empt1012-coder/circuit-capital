@@ -884,3 +884,12 @@ footer.site-foot {
 .updated-list { list-style: none; padding: 0; margin: 0; font-family: var(--sans); font-size: 0.95rem; }
 .updated-list li { padding: 0.55rem 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
 .page-head .meta { font-family: var(--sans); font-size: 0.85rem; opacity: 0.8; }
+
+/* Newsletter sign-up */
+.newsletter {
+  margin: 2.5rem 0;
+  padding: 1.5rem;
+  background: var(--paper-2);
+}
+.newsletter h2 { font-family: var(--display); font-size: 1.25rem; margin: 0 0 0.5rem; }
+.newsletter p { margin: 0 0 1rem; color: var(--ink-2); }
