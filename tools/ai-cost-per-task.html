@@ -56,7 +56,7 @@
     }
   </style>
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "WebApplication", "name": "AI model cost per finished task", "description": "Compare list price with the cost of a task that actually finishes, and the daily volume where self-hosting beats the API.", "url": "https://circuits.fit/tools/ai-cost-per-task.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in the browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "datePublished": "2026-10-07", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}}
+  {"@context": "https://schema.org", "@type": "WebApplication", "name": "AI model cost per finished task", "description": "Compare list price with the cost of a task that actually finishes, and the daily volume where self-hosting beats the API.", "url": "https://circuits.fit/tools/ai-cost-per-task.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in the browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "dateModified": "2026-10-24", "datePublished": "2026-10-07", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}}
   </script>
 </head>
 <body data-base=".." data-page="tools">
@@ -110,6 +110,7 @@
       <div class="kicker">Tool</div>
       <h1>AI model cost per finished task</h1>
       <p class="dek">Compare list price with the cost of a task that actually finishes, and the daily volume where self-hosting beats the API.</p>
+      <p class="meta">Updated <time datetime="2026-10-24">October 24, 2026</time>: added what it does, step-by-step use, a worked example, limitations and FAQ.</p>
     </header>
     <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in your browser. Nothing is uploaded.</p>
     <p class="tool-rule">Attempts per task = 1 + average retries. Token cost uses each attempt. Review cost applies to the share of tasks that fail. Cost per successful task divides that total by the success rate. Listed cost is one attempt, before retries, failures, and review. A month in the break-even chart is 30 days. You type the prices. This page does not call a model.</p>
@@ -166,12 +167,67 @@
       </ol>
     </section>
     <section class="tool-help">
+      <h2>What this calculator does</h2>
+      <p>AI model prices are quoted per million tokens. That number is easy to compare and often misleading. A cheaper model that fails more often needs retries, and failed tasks need a person to fix them. This page converts list prices into the cost of a task that actually finishes, including retries and human review. It also shows the daily token volume at which running your own server would cost less than paying per token through an API.</p>
+    </section>
+    <section class="tool-help">
+      <h2>The math, in plain English</h2>
+      <ul>
+        <li><strong>Cost of one attempt</strong> = input tokens ÷ 1,000,000 × input price + output tokens ÷ 1,000,000 × output price.</li>
+        <li><strong>Attempts per task</strong> = 1 + average retries.</li>
+        <li><strong>Review cost</strong> = share of tasks that fail × review minutes ÷ 60 × hourly rate.</li>
+        <li><strong>Cost per finished task</strong> = (attempt cost × attempts + review cost) ÷ success rate.</li>
+        <li><strong>Self-host monthly cost</strong> = server cost + ops hours × ops hourly rate. Break-even daily tokens = monthly self-host cost ÷ 30 ÷ API price per token.</li>
+      </ul>
+    </section>
+    <section class="tool-help">
+      <h2>Worked example</h2>
+      <p>The page loads with two example models. The prices are example numbers for illustration, not quotes from any provider.</p>
+      <p><strong>Example: low list price.</strong> $0.50 per million input tokens, $2 per million output tokens, 2,000 input and 800 output tokens per attempt. One attempt costs about $0.0026. But it succeeds 60% of the time, averages two retries, and each failure takes 15 minutes of review at $80 an hour. Cost per finished task: about <strong>$13.35</strong>.</p>
+      <p><strong>Example: higher list price.</strong> $3 input and $15 output per million tokens, 1,500 input and 400 output tokens. One attempt costs about $0.01. It succeeds 95% of the time with no retries, and failures take 10 minutes of review. Cost per finished task: about <strong>$0.71</strong>.</p>
+      <p>The model that is roughly four times cheaper per attempt is almost nineteen times more expensive per finished task. Almost all of the difference is human review on failed work, not tokens.</p>
+      <p>For self-hosting, the example uses a $4,000 monthly server, 10 ops hours at $90, and a blended API price of $8 per million tokens. Monthly self-host cost is $4,900. Break-even is about 20.4 million tokens a day. The example server can carry 50 million a day, so above about 20.4 million daily tokens, self-hosting would cost less in this example.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Where to get your inputs</h2>
+      <ol>
+        <li><strong>Prices.</strong> From your provider’s current pricing page or your contract. Providers such as Anthropic publish per-token prices, and they change. Check the date.</li>
+        <li><strong>Token counts.</strong> From your API usage logs, averaged over a real sample of the task, not a demo prompt.</li>
+        <li><strong>Success rate and retries.</strong> From a test set of at least a few dozen real tasks, judged by the person who owns the output.</li>
+        <li><strong>Review minutes.</strong> Time a reviewer fixing failed outputs. Do not guess.</li>
+      </ol>
+    </section>
+    <section class="tool-help">
+      <h2>How to read the result</h2>
+      <p>If review cost dominates, improving quality is worth more than finding a cheaper model. If token cost dominates and quality is equal, list price matters. If your daily volume is far below break-even, self-hosting adds risk without saving money. If it is above break-even but beyond the server’s throughput, you need more hardware and the math changes.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Limitations</h2>
+      <ul>
+        <li>The page does not call any model or fetch prices. You type them.</li>
+        <li>It treats every failure as needing review. Some failures are caught and discarded automatically.</li>
+        <li>The self-host line ignores hardware depreciation schedules, power, and the cost of staff turnover. Treat it as a first screen. The <a href="../articles/cloud-repatriation.html">cloud repatriation note</a> lists the fuller comparison.</li>
+        <li>Batch discounts, cached-input pricing, and committed-use contracts can change the per-token price. Use the price you actually pay.</li>
+      </ul>
+    </section>
+    <section class="tool-help">
+      <h2>FAQ</h2>
+      <h3>Are my numbers saved or sent?</h3>
+      <p>They stay in your browser. Nothing is uploaded.</p>
+      <h3>What success rate should I use?</h3>
+      <p>The rate at which a reviewer would accept the output without edits. Partial credit belongs in review minutes.</p>
+      <h3>How does this connect to gross margin?</h3>
+      <p>Feed the cost per finished task into the <a href="token-cost-margin.html">token cost to gross margin</a> calculator to see what it does to a product’s margin.</p>
+    </section>
+    <section class="tool-help">
       <h2>Related</h2>
       <ul>
         <li><a href="token-cost-margin.html">Token cost to gross margin</a></li>
         <li><a href="../guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a></li>
         <li><a href="../articles/ai-native-unit-economics.html">The new unit economics of AI-native startups</a></li>
         <li><a href="../articles/ai-productivity-paradox.html">The AI productivity paradox at mid-market companies</a></li>
+        <li><a href="../articles/ai-spend-is-not-the-same-as-ai-return.html">AI spend is not the same as AI return</a></li>
+        <li><a href="../articles/gartner-revised-the-ai-bill.html">Gartner revised the AI bill</a></li>
       </ul>
     </section>
 

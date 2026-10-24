@@ -27,7 +27,7 @@
   <meta name="twitter:description" content="Decide keep, renegotiate, or replace before a renewal call. The points stay on the page.">
   <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "WebApplication", "name": "Software renewal scorecard", "description": "Decide keep, renegotiate, or replace before a renewal call. The points stay on the page.", "url": "https://circuits.fit/tools/software-renewal-scorecard.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in the browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "datePublished": "2026-10-05", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}}
+  {"@context": "https://schema.org", "@type": "WebApplication", "name": "Software renewal scorecard", "description": "Decide keep, renegotiate, or replace before a renewal call. The points stay on the page.", "url": "https://circuits.fit/tools/software-renewal-scorecard.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in the browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "dateModified": "2026-10-24", "datePublished": "2026-10-05", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}}
   </script>
 </head>
 <body data-base=".." data-page="tools">
@@ -81,6 +81,7 @@
       <div class="kicker">Tool</div>
       <h1>Software renewal scorecard</h1>
       <p class="dek">Decide keep, renegotiate, or replace before a renewal call.</p>
+      <p class="meta">Updated <time datetime="2026-10-24">October 24, 2026</time>: added what it does, step-by-step use, a worked example, limitations and FAQ.</p>
     </header>
     <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
     <p class="tool-rule">Each gap has a fixed score. Seat use under 60% of paid seats, no price-up cap, notice under 30 days, no full export, no SBOM, and no exit clause score 2. SBOM unknown and opt-out training score 1. A data-return window under 30 days scores 1. Unlisted subprocessors score 2. Blank seat, notice, or data-return fields are not scored. 0 points is Keep. 1 to 7 is Renegotiate. 8 or more is Replace. No full export and no exit clause is Replace even when the total is lower.</p>
@@ -163,6 +164,70 @@
       <label for="renewal-out">Copy this into the vendor email</label>
       <textarea id="renewal-out" readonly></textarea>
       <div class="tool-actions"><button class="btn btn--copper" type="button" id="renewal-copy">Copy</button></div>
+    </section>
+    <section class="tool-help">
+      <h2>What this scorecard does</h2>
+      <p>A software renewal is the one moment each year when the buyer has leverage. Before you sign, the vendor wants the deal. After you sign, the terms are fixed for another term. This scorecard turns the contract and usage facts you already have into a single decision, Keep, Renegotiate, or Replace, and a list of specific requests to send the vendor.</p>
+      <p>It does not judge whether the product is good. It checks whether the commercial and data terms protect you. A well-loved tool can still score Renegotiate if half the seats sit unused or there is no cap on the next price increase.</p>
+    </section>
+    <section class="tool-help">
+      <h2>How to use it, step by step</h2>
+      <ol>
+        <li><strong>Pull usage.</strong> From the vendor’s admin console, export the number of seats you pay for and the number of users active in the last 30 days.</li>
+        <li><strong>Read the order form and master agreement.</strong> Find the renewal price cap, the notice period to cancel or change, the data-return window after termination, and whether there is an exit or termination-for-convenience clause.</li>
+        <li><strong>Check the data terms.</strong> Confirm whether you can export all of your data in a usable format, whether subprocessors are listed, and how the vendor uses your data for AI training.</li>
+        <li><strong>Ask for an SBOM.</strong> If you do not know whether the vendor provides one, select Unknown and send the request. The <a href="sbom-request-pack.html">SBOM request pack</a> drafts that email.</li>
+        <li><strong>Score it.</strong> Press Score the renewal. Copy the output into your vendor email or the renewal ticket.</li>
+      </ol>
+      <p>Start at least 90 days before the renewal date. Many contracts require 30 to 90 days’ notice to change terms, and the scorecard flags notice periods under 30 days because they leave no room to negotiate.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Worked example</h2>
+      <p>These are example numbers, not data from a real vendor. A team pays $48,000 a year for an example CRM with 120 paid seats. Only 66 users were active in the last 30 days. There is no price-up cap in the contract. The notice period is 60 days and the data-return window is 14 days. Full export is available, subprocessors are listed, and there is an exit clause. The vendor has not said whether it provides an SBOM, and AI training on customer data is opt-out.</p>
+      <p>The scorecard returns <strong>Renegotiate with 7 points</strong>:</p>
+      <ul>
+        <li>Seat use is 55%, under the 60% line: 2 points.</li>
+        <li>No price-up cap: 2 points.</li>
+        <li>Data-return window of 14 days, under 30: 1 point.</li>
+        <li>SBOM unknown: 1 point.</li>
+        <li>AI training is opt-out rather than opt-in: 1 point.</li>
+      </ul>
+      <p>The agenda it writes asks the vendor to cut the renewal to active seats, add a price cap, extend the data-return window to at least 30 days, confirm SBOM availability, and move training to opt-in. Cutting to 75 seats at the same per-seat price would bring the example cost from $48,000 to $30,000.</p>
+    </section>
+    <section class="tool-help">
+      <h2>How to read the result</h2>
+      <p><strong>Keep (0 points)</strong> means none of the checks found a gap. Renew, and record the date you checked.</p>
+      <p><strong>Renegotiate (1 to 7 points)</strong> is the most common result. Send the agenda. Most items are standard requests that vendors grant regularly, especially seat true-ups and price caps.</p>
+      <p><strong>Replace (8 or more, or no export and no exit clause)</strong> means the terms leave you with little protection. That does not mean cancel tomorrow. It means start evaluating alternatives now, so you have a real option at the next renewal. A product you cannot export from and cannot exit is the one where the vendor sets the price.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Limitations</h2>
+      <ul>
+        <li>The points are fixed weights chosen by this desk. They are a starting rule, not an industry standard. Adjust your judgment for a tool that is critical to operations.</li>
+        <li>Seat activity in the last 30 days can miss seasonal users, such as staff who only log in at quarter-end. Check a 90-day view before cutting.</li>
+        <li>The scorecard does not read contracts. It relies on what you type. If a field is blank, it is not scored.</li>
+        <li>It is not legal or procurement advice. Have counsel review contract changes.</li>
+      </ul>
+    </section>
+    <section class="tool-help">
+      <h2>FAQ</h2>
+      <h3>Is my data sent anywhere?</h3>
+      <p>No. The scoring runs in your browser. Nothing is uploaded.</p>
+      <h3>Why does opt-out AI training score a point?</h3>
+      <p>Opt-out means your data may be used unless someone remembers to switch it off. Opt-in means it is not used unless you agree. The guide <a href="../guides/what-belongs-in-a-processor-clause.html">What belongs in a processor clause</a> covers the contract side.</p>
+      <h3>Why ask for an SBOM on a SaaS product?</h3>
+      <p>CISA’s 2026 minimum elements for SBOMs say hosted software is in scope. See <a href="../guides/ask-a-vendor-for-an-sbom.html">Ask a vendor for an SBOM</a>.</p>
+      <h3>What if the vendor refuses every request?</h3>
+      <p>Then you know the price of staying. Record it, and use the next term to build an alternative.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Related</h2>
+      <ul>
+        <li><a href="../articles/software-buying-is-an-operating-skill.html">Software buying is an operating skill</a></li>
+        <li><a href="../guides/how-to-read-a-saas-renewal.html">How to read a SaaS renewal</a></li>
+        <li><a href="../guides/software-buying-operating-skill.html">Software buying as an operating skill</a></li>
+        <li><a href="../articles/when-compliance-is-the-product.html">When compliance is the product</a></li>
+      </ul>
     </section>
     <p class="tool-links"><a href="./">Tools</a>. Also: <a href="agent-access-limit.html">Agent access</a>, <a href="sbom-request-pack.html">SBOM request</a>, <a href="vendor-claim-checker.html">Vendor claim</a>, <a href="token-cost-margin.html">Token cost</a>. New: <a href="ai-cost-per-task.html">Cost per finished task</a>, <a href="agent-inventory.html">Agent inventory</a>, <a href="8k-materiality-worksheet.html">8-K worksheet</a>, <a href="risk-exception-register.html">Risk exceptions</a>.</p>
   </main>

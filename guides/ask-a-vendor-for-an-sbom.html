@@ -28,7 +28,7 @@
   <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
   <meta property="article:published_time" content="2026-10-01">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Ask a vendor for an SBOM", "description": "The fields CISA’s July 2026 minimum elements say an SBOM should carry, including for SaaS, and the reply that does not count.", "image": ["https://circuits.fit/assets/images/mark.jpg"], "datePublished": "2026-10-01", "dateModified": "2026-10-01", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Ask a vendor for an SBOM", "description": "The fields CISA’s July 2026 minimum elements say an SBOM should carry, including for SaaS, and the reply that does not count.", "image": ["https://circuits.fit/assets/images/mark.jpg"], "datePublished": "2026-10-01", "dateModified": "2026-10-24", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html"}
   </script>
 </head>
 <body data-base=".." data-page="guides">
@@ -87,6 +87,7 @@
         <span>Edited by <strong>Emilio Santos</strong></span>
         <span>October 1, 2026</span>
         <span>8 min read</span>
+        <span>Updated <time datetime="2026-10-24">October 24, 2026</time></span>
       </div>
     </header>
     <div class="wrap guide-layout">
@@ -101,6 +102,11 @@
             <li><a href="#fields">The fields</a></li>
             <li><a href="#ask">The ask</a></li>
             <li><a href="#fail">What fails</a></li>
+            <li><a href="#why">Why it is worth asking</a></li>
+            <li><a href="#steps">How to make the request, step by step</a></li>
+            <li><a href="#example">A worked example</a></li>
+            <li><a href="#limits">Limits to keep in mind</a></li>
+            <li><a href="#check">Before you sign off</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ol>
         </nav>
@@ -125,6 +131,31 @@
             <tr><td>“Legal will not share our ingredients”</td><td>A commercial position you can price</td></tr>
           </tbody>
         </table>
+        <h2 id="why">Why it is worth asking</h2>
+        <p>An SBOM is a list of the components inside a piece of software. When a serious vulnerability is announced in a common library, the companies that can answer “do we use this, and where?” in an hour are the ones with SBOMs from their vendors. The rest send emails and wait. The NTIA’s 2021 minimum elements set the original baseline: supplier name, component name, version, other unique identifiers, dependency relationships, the author of the SBOM data, and a timestamp. CISA’s 2026 update builds on that list with the four additions above.</p>
+        <p>The SBOM is also a signal. CISA’s Secure by Demand guide, published with the FBI in August 2024, lists the SBOM among the artifacts a customer can collect to judge whether a vendor builds security into its products. A vendor that can produce one quickly usually has its build process under control.</p>
+        <h2 id="steps">How to make the request, step by step</h2>
+        <ol>
+          <li><strong>Pick the products.</strong> Start with software that is internet-facing, handles sensitive data, or runs with high privilege. You do not need SBOMs for everything on day one.</li>
+          <li><strong>Write the ask in the contract or renewal.</strong> Name the 2026 minimum elements, the format (CycloneDX or SPDX), the update frequency, and the time to deliver a new file after a critical component change.</li>
+          <li><strong>Decide who receives it.</strong> A named security contact, not a shared inbox nobody reads.</li>
+          <li><strong>Check the first file.</strong> Open it with a tool or at least a text editor. Confirm it has versions, licenses, a hash algorithm, the generating tool, and a date.</li>
+          <li><strong>Use it once.</strong> The next time a major library vulnerability is announced, search your SBOMs for it. That test tells you whether the files are worth keeping current.</li>
+        </ol>
+        <h2 id="example">A worked example</h2>
+        <p>Illustrative case. Your company renews a document management product. The order form now says: “Supplier will provide a machine-readable SBOM in CycloneDX or SPDX format meeting CISA’s 2026 minimum elements within 30 days of signature, an updated SBOM with each major release, and an updated SBOM within 10 business days of remediating a critical vulnerability in a third-party component.” The vendor agrees to the first two and pushes back on the third. You settle on 15 business days. That is a real improvement over no clause at all, and it is in the contract rather than in a sales email.</p>
+        <p>The <a href="../tools/sbom-request-pack.html">SBOM request pack</a> builds this request, and the <a href="../tools/software-renewal-scorecard.html">software renewal scorecard</a> counts a missing SBOM against the renewal.</p>
+        <h2 id="limits">Limits to keep in mind</h2>
+        <p>An SBOM shows what is inside, not whether each component is exploitable in that product. Pair it with the vendor’s vulnerability disclosure policy and, where available, statements on whether a given vulnerability affects the product. It also does not replace patching. It tells you where to look faster.</p>
+        <h2 id="check">Before you sign off</h2>
+        <ul>
+          <li>The products in scope are listed, starting with internet-facing and high-privilege software.</li>
+          <li>The contract names the 2026 minimum elements, a format, an update frequency, and a delivery clock after a critical fix.</li>
+          <li>A named person receives the files and checks the first one.</li>
+          <li>You have searched the files at least once for a real vulnerability.</li>
+          <li>Refusals are recorded and priced into the renewal.</li>
+        </ul>
+        <p>If the product includes a model or agent, add the questions in <a href="ai-sbom-extra-questions.html">Extra SBOM questions for AI products</a>.</p>
         <section class="guide-faq" aria-labelledby="faq">
           <h2 id="faq">FAQ</h2>
           <h3>Does CISA require my vendor to send this?</h3>
@@ -139,6 +170,10 @@
           <li><a href="https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom" rel="noopener">CISA, 2026 Minimum Elements for an SBOM</a></li>
           <li><a href="https://www.cisa.gov/news-events/news/cisa-and-partners-unveil-updated-software-bill-materials-resource-improves-transparency-security-and" rel="noopener">CISA news release, July 29, 2026</a></li>
           <li><a href="https://www.cisa.gov/sbom" rel="noopener">CISA SBOM overview</a></li>
+          <li><a href="https://www.ntia.gov/report/2021/minimum-elements-software-bill-materials-sbom" rel="noopener">NTIA, The Minimum Elements for a Software Bill of Materials, July 2021</a></li>
+          <li><a href="https://www.cisa.gov/resources-tools/resources/secure-demand-guide" rel="noopener">CISA and FBI, Secure by Demand Guide, August 2024</a></li>
+          <li><a href="https://cyclonedx.org/capabilities/mlbom/" rel="noopener">CycloneDX project</a></li>
+          <li><a href="https://spdx.dev/use/specifications/" rel="noopener">SPDX specifications</a></li>
         </ul>
         <aside id="ad-guide-end" class="ad-slot ad-slot--guide" data-slot="guideEnd" hidden></aside>
         <section class="guide-related" aria-labelledby="related-briefing">
@@ -146,6 +181,7 @@
           <ul>
             <li><a href="../articles/sbom-now-covers-the-suite.html">The software ingredients list now covers the suite</a></li>
             <li><a href="ai-sbom-extra-questions.html">Extra questions for an AI bill of materials</a></li>
+            <li><a href="../articles/software-buying-is-an-operating-skill.html">Software buying is an operating skill</a></li>
           </ul>
         </section>
         <div class="author-box">

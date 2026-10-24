@@ -28,7 +28,7 @@
   <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
   <meta property="article:published_time" content="2026-09-02">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Put an AI cost on one workflow", "description": "A 90-day method to attach token spend and review time to a single process with a definition of done.", "image": ["https://circuits.fit/assets/images/mark.jpg"], "datePublished": "2026-09-02", "dateModified": "2026-09-02", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Put an AI cost on one workflow", "description": "A 90-day method to attach token spend and review time to a single process with a definition of done.", "image": ["https://circuits.fit/assets/images/mark.jpg"], "datePublished": "2026-09-02", "dateModified": "2026-10-24", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html"}
   </script>
 </head>
 <body data-base=".." data-page="guides">
@@ -87,6 +87,7 @@
         <span>Edited by <strong>Emilio Santos</strong></span>
         <span>Updated September 2, 2026</span>
         <span>8 min read</span>
+        <span>Updated <time datetime="2026-10-24">October 24, 2026</time></span>
       </div>
     </header>
     <div class="wrap guide-layout">
@@ -101,6 +102,11 @@
             <li><a href="#workflow">Pick a workflow with a finish line</a></li>
             <li><a href="#costs">Instrument three costs</a></li>
             <li><a href="#ninety">90 days, one owner</a></li>
+            <li><a href="#example">A worked example</a></li>
+            <li><a href="#steps">How to measure, step by step</a></li>
+            <li><a href="#pricing">Reading a price list</a></li>
+            <li><a href="#mistakes">Common mistakes</a></li>
+            <li><a href="#check">Before you sign off</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ol>
         </nav>
@@ -145,11 +151,45 @@
         </table>
         <p>Name a manager whose bonus includes cycle time or error rate for that workflow. Put the date on the calendar now. Gartner said in September that only 22% of organizations had scaled AI across multiple business units. You do not need to be in the 22%. You need one number that moved.</p>
         <p>If nothing moved, cut the overlapping copilots and keep the model on the one path that has an owner. That is not anti-AI. It is how you keep the next Gartner-sized invoice from becoming the strategy.</p>
+        <h2 id="example">A worked example</h2>
+        <p>Example numbers for illustration, not survey data. A finance team writes monthly variance commentary. Today it takes an analyst 6 hours a month at a loaded cost of $80 an hour: $480. The team pilots a model that drafts the commentary.</p>
+        <ul>
+          <li><strong>Token cost.</strong> About 40 drafts a month across business units. At the prices and token counts the team measured, about $0.70 per draft including retries: $28.</li>
+          <li><strong>Review.</strong> The analyst spends 2.5 hours reviewing and editing: $200.</li>
+          <li><strong>Rework.</strong> Twice a month, a draft cites the wrong period or invents a driver. Fixing and checking those takes 1 hour: $80.</li>
+        </ul>
+        <p>New monthly cost: $308, against a $480 baseline. A saving of $172 a month, or about 36%. That is real, and much smaller than the “six hours saved” the demo implied. The <a href="../tools/ai-cost-per-task.html">cost per finished task calculator</a> does the token and review math. The <a href="../tools/token-cost-margin.html">token cost to gross margin</a> tool shows the effect on a product.</p>
+        <h2 id="steps">How to measure, step by step</h2>
+        <ol>
+          <li><strong>Record a baseline for two cycles.</strong> Time and errors before the model. Without it, you cannot show a change.</li>
+          <li><strong>Tag spend to the workflow.</strong> Use a separate API key, project, or cost tag so the tokens for this workflow are not mixed into the company total. The FinOps Foundation’s material on AI costs covers allocation methods.</li>
+          <li><strong>Time review honestly.</strong> Ask the reviewer to log minutes for a few weeks.</li>
+          <li><strong>Count rework.</strong> Keep a simple tally of drafts that needed substantial correction, and why.</li>
+          <li><strong>Compare after 90 days.</strong> Report cost, cycle time, and error rate against the baseline. Decide: expand, adjust, or stop.</li>
+        </ol>
+        <h2 id="pricing">Reading a price list</h2>
+        <p>Model providers publish per-token prices, usually separate prices for input and output tokens, and sometimes discounts for batch processing or cached input. Anthropic’s pricing page is one example. Prices change, so record the date and the price you actually pay. Output tokens often cost several times more than input tokens, so a workflow that writes long drafts costs more than one that classifies short items.</p>
+        <h2 id="mistakes">Common mistakes</h2>
+        <ul>
+          <li>Counting the company-wide license as the workflow’s cost, which makes small pilots look expensive and large rollouts look free.</li>
+          <li>Leaving out review time.</li>
+          <li>Measuring for one week. Month-end and quarter-end workflows need at least two cycles.</li>
+        </ul>
+        <h2 id="check">Before you sign off</h2>
+        <ul>
+          <li>One workflow, one owner, and a finished artifact you can count.</li>
+          <li>A baseline from at least two cycles before the model.</li>
+          <li>Spend tagged to this workflow only.</li>
+          <li>Review minutes and rework tracked, not estimated.</li>
+          <li>A 90-day decision date on the calendar.</li>
+        </ul>
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-19-gartner-forecasts-worldwide-ai-spending-to-grow-47-percent-in-2026" rel="noopener">Gartner AI spending forecast, May 19, 2026</a></li>
           <li><a href="https://www.gartner.com/en/newsroom/press-releases/gartner-survey-finds-only-22-percent-of-organizations-have-successfully-scaled-ai-across-multiple-business-units" rel="noopener">Gartner scaling survey, Sept. 1, 2026</a></li>
           <li><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" rel="noopener">McKinsey State of AI 2026</a></li>
+          <li><a href="https://www.finops.org/wg/finops-for-ai-overview/" rel="noopener">FinOps Foundation, FinOps for AI overview</a></li>
+          <li><a href="https://www.anthropic.com/pricing" rel="noopener">Anthropic, pricing</a>: an example of a published per-token price list</li>
         </ul>
         <aside id="ad-guide-end" class="ad-slot ad-slot--guide" data-slot="guideEnd" hidden></aside>
         <section class="guide-faq" aria-labelledby="faq">
@@ -169,6 +209,7 @@
             <li><a href="../articles/ai-spend-is-not-the-same-as-ai-return.html">AI spend is not the same as AI return</a></li>
             <li><a href="../articles/ai-productivity-paradox.html">The AI productivity paradox at mid-market companies</a></li>
             <li><a href="../tools/ai-cost-per-task.html">AI model cost per finished task</a></li>
+
           </ul>
         </section>
         <div class="author-box">
