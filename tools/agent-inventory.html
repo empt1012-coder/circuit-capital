@@ -58,7 +58,7 @@
     }
   </style>
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "WebApplication", "name": "AI agent inventory and access map", "description": "List each agent, the identity it uses, and what it can change. Flags stale reviews and shared logins.", "url": "https://circuits.fit/tools/agent-inventory.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in the browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "datePublished": "2026-10-07", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}}
+  {"@context": "https://schema.org", "@type": "WebApplication", "name": "AI agent inventory and access map", "description": "List each agent, the identity it uses, and what it can change. Flags stale reviews and shared logins.", "url": "https://circuits.fit/tools/agent-inventory.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in the browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "dateModified": "2026-10-24", "datePublished": "2026-10-07", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}}
   </script>
 </head>
 <body data-base=".." data-page="tools">
@@ -112,6 +112,7 @@
       <div class="kicker">Tool</div>
       <h1>AI agent inventory and access map</h1>
       <p class="dek">List each agent, the identity it uses, and what it can change. Flags stale reviews and shared logins.</p>
+      <p class="meta">Updated <time datetime="2026-10-24">October 24, 2026</time>: added what it does, step-by-step use, a worked example, limitations and FAQ.</p>
     </header>
     <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in your browser. Nothing is uploaded.</p>
     <p class="tool-rule">A row is flagged when the agent uses a person's account or a shared account, when it can write and has no owner, or when the last access review is missing or 90 days old or older. The file import is read in this browser. It is not uploaded.</p>
@@ -170,11 +171,64 @@
       </ol>
     </section>
     <section class="tool-help">
+      <h2>What this inventory does</h2>
+      <p>An AI agent is software that can take actions, not only answer questions. It might reply to a ticket, update a record, send an email, or start a payment. Each of those actions runs under some identity, and that identity decides what the agent can touch. This page is a simple register: one row per agent, the account it uses, what it can read and change, whether it can spend money or send external messages, and when its access was last reviewed.</p>
+      <p>Gartner’s September 30, 2026 note on CISO priorities reported that 54% of organizations in a second-quarter survey of 297 security leaders had no defined approach to limiting agent access, or relied on access defined for a person. The first step out of that position is a list. You cannot limit what you have not written down.</p>
+    </section>
+    <section class="tool-help">
+      <h2>How the flags work</h2>
+      <p>The page flags three conditions on each row:</p>
+      <ul>
+        <li><strong>Person’s or shared account.</strong> If the agent signs in as an employee or a shared login, its actions are hard to tell apart from a human’s, and it usually has more access than its task needs. The OWASP Top 10 for LLM applications calls this kind of problem excessive agency: excessive functionality, permissions, or autonomy.</li>
+        <li><strong>Can write, no owner.</strong> An agent that can change systems needs a named person who answers for it.</li>
+        <li><strong>Stale or missing review.</strong> No access review date, or a review 90 days old or older. Access drifts. A quarterly review is a practical floor.</li>
+      </ul>
+    </section>
+    <section class="tool-help">
+      <h2>Worked example</h2>
+      <p>The page loads with two example rows. They are illustrations, not real systems.</p>
+      <p><strong>Example: invoice drafter.</strong> Owner A. Patel. It drafts invoice notes, runs in the company tenant under its own account, can read billing, cannot write anywhere, cannot spend or send external messages, and was reviewed 10 days ago. No flags.</p>
+      <p><strong>Example: support reply.</strong> No owner. It replies to tickets in the helpdesk, uses a person’s account, can read tickets and write ticket comments, can send external messages, handles customer data, and was last reviewed 120 days ago. It gets three flags: a person’s account, write access with no owner, and a review older than 90 days.</p>
+      <p>The fix list for the second row writes itself: give the agent its own service identity with only ticket-comment rights, name an owner, and schedule a review. Because it sends messages to customers, the owner should also decide which replies need a person to approve them.</p>
+    </section>
+    <section class="tool-help">
+      <h2>Filling in a row</h2>
+      <ol>
+        <li><strong>Name and purpose.</strong> Use the name people actually call it, and one line on what it is for.</li>
+        <li><strong>Where it runs.</strong> The product or platform: a helpdesk, a CRM, a cloud account, a developer tool.</li>
+        <li><strong>Identity.</strong> Check the admin console. If the agent was connected by an employee clicking “authorize,” it probably uses that employee’s access.</li>
+        <li><strong>Can read and can write.</strong> List systems, not vague scopes. “Billing” is better than “finance data.”</li>
+        <li><strong>Spend and external messages.</strong> Mark Yes if it can make any payment, purchase, or refund, or send anything outside the company.</li>
+        <li><strong>Sensitivity and review date.</strong> The most sensitive data it can reach, and the date someone last confirmed its access.</li>
+      </ol>
+    </section>
+    <section class="tool-help">
+      <h2>Limitations</h2>
+      <ul>
+        <li>The list is only as good as discovery. Agents built into SaaS products you already own may not appear in any IT inventory. Ask each application owner.</li>
+        <li>The page does not connect to your systems or verify access. It records what you type.</li>
+        <li>Three flags are a floor, not a full risk assessment. An agent with its own account can still have far too much access.</li>
+      </ul>
+    </section>
+    <section class="tool-help">
+      <h2>FAQ</h2>
+      <h3>Does my data leave the browser?</h3>
+      <p>No. The CSV import is read on this device, and nothing is uploaded.</p>
+      <h3>What counts as an agent?</h3>
+      <p>For this list, anything that can take an action in a system without a person clicking each step. A chatbot that only answers questions is lower priority, but list it if it can read sensitive data.</p>
+      <h3>How often should we review?</h3>
+      <p>The page flags reviews at 90 days. Review sooner when the agent gains a new connection or permission.</p>
+      <h3>What comes after the inventory?</h3>
+      <p>Set limits for each agent with the <a href="agent-access-limit.html">agent access limit sheet</a>, and write a one-page rule for staff with <a href="../guides/one-page-ai-use-rule.html">A one-page AI use rule</a>.</p>
+    </section>
+    <section class="tool-help">
       <h2>Related</h2>
       <ul>
         <li><a href="agent-access-limit.html">Agent access limit sheet</a></li>
         <li><a href="../guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a></li>
         <li><a href="../articles/board-questions-generative-ai.html">Six questions every board should ask about generative AI</a></li>
+        <li><a href="../articles/ciso-five-moves-before-2027.html">Five moves Gartner wants from a CISO before 2027</a></li>
+        <li><a href="../articles/nvidia-put-the-fence-outside-the-agent.html">Nvidia put the fence outside the agent</a></li>
       </ul>
     </section>
 

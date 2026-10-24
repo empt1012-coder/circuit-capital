@@ -10,7 +10,7 @@
       "date": "October 1, 2026",
       "readTime": 8,
       "image": "assets/images/workshop.jpg",
-      "body": "SBOM CISA SaaS license hash procurement"
+      "body": "SBOM CISA SaaS license hash procurement NTIA minimum elements Secure by Demand contract clause"
     },
     {
       "slug": "ai-sbom-extra-questions",
@@ -22,7 +22,7 @@
       "date": "October 1, 2026",
       "readTime": 8,
       "image": "assets/images/chips.jpg",
-      "body": "AI SBOM CISA G7 model data application"
+      "body": "AI SBOM CISA G7 model data application CycloneDX ML-BOM SPDX 3.0 model dataset"
     },
     {
       "slug": "limit-what-an-agent-can-touch",
@@ -34,7 +34,7 @@
       "date": "October 1, 2026",
       "readTime": 8,
       "image": "assets/images/nightdesk.jpg",
-      "body": "AI agent access Gartner 54 percent insider"
+      "body": "AI agent access Gartner 54 percent insider OWASP excessive agency prompt injection service account least privilege"
     },
     {
       "slug": "stop-using-a-voice-as-approval",
@@ -46,7 +46,7 @@
       "date": "October 1, 2026",
       "readTime": 8,
       "image": "assets/images/boardroom.jpg",
-      "body": "deepfake identity approval Gartner"
+      "body": "deepfake identity approval Gartner deepfake vishing FBI IC3 call-back help desk reset"
     },
     {
       "slug": "what-article-50-asks-a-buyer",
@@ -58,7 +58,7 @@
       "date": "October 1, 2026",
       "readTime": 8,
       "image": "assets/images/folders.jpg",
-      "body": "EU AI Act Article 50 transparency December 2026 buyer"
+      "body": "EU AI Act Article 50 transparency December 2026 buyer deployer provider deepfake marking chatbot disclosure"
     },
     {
       "slug": "cloud-shared-responsibility-checklist",
@@ -70,7 +70,7 @@
       "date": "October 1, 2026",
       "readTime": 8,
       "image": "assets/images/colo.jpg",
-      "body": "AWS shared responsibility EC2 security of the cloud"
+      "body": "AWS shared responsibility EC2 security of the cloud Azure Google shared fate IaaS PaaS SaaS"
     },
     {
       "slug": "what-belongs-in-a-processor-clause",
@@ -82,7 +82,7 @@
       "date": "October 1, 2026",
       "readTime": 8,
       "image": "assets/images/finance.jpg",
-      "body": "GDPR Article 28 standard contractual clauses processor"
+      "body": "GDPR Article 28 standard contractual clauses processor Article 28 DPA sub-processor EDPB controller processor"
     },
     {
       "slug": "before-the-sec-eight-k",
@@ -94,7 +94,7 @@
       "date": "October 1, 2026",
       "readTime": 8,
       "image": "assets/images/questionnaire.jpg",
-      "body": "SEC 8-K Item 1.05 materiality cyber incident"
+      "body": "SEC 8-K Item 1.05 materiality cyber incident Item 8.01 Gerding tabletop four business days"
     },
     {
       "slug": "one-page-ai-use-rule",
@@ -106,7 +106,7 @@
       "date": "October 1, 2026",
       "readTime": 8,
       "image": "assets/images/office.jpg",
-      "body": "NIST AI RMF Govern Map Measure Manage use policy"
+      "body": "NIST AI RMF Govern Map Measure Manage use policy template approved tools acceptable use policy"
     },
     {
       "slug": "postquantum-pilot-questions",
@@ -118,7 +118,7 @@
       "date": "October 1, 2026",
       "readTime": 8,
       "image": "assets/images/datacenter.jpg",
-      "body": "post-quantum cryptography Gartner pilot 2027"
+      "body": "post-quantum cryptography Gartner pilot 2027 FIPS 203 204 205 ML-KEM ML-DSA SLH-DSA NIST IR 8547 hybrid"
     },
     {
       "slug": "cyber-insurance-checklist-2026",
@@ -178,7 +178,7 @@
       "date": "September 2, 2026",
       "readTime": 8,
       "image": "assets/images/workshop.jpg",
-      "body": "SaaS renewal seats true-down export clause"
+      "body": "SaaS renewal seats true-down export clause price cap true-down auto-renew notice period"
     },
     {
       "slug": "cyber-insurance-controls-checklist",
@@ -190,7 +190,7 @@
       "date": "September 2, 2026",
       "readTime": 8,
       "image": "assets/images/datacenter.jpg",
-      "body": "MFA EDR backups cyber insurance questionnaire"
+      "body": "MFA EDR backups cyber insurance questionnaire evidence phishing-resistant restore test social engineering"
     },
     {
       "slug": "put-an-ai-cost-on-one-workflow",
@@ -202,7 +202,7 @@
       "date": "September 2, 2026",
       "readTime": 8,
       "image": "assets/images/nightdesk.jpg",
-      "body": "AI workflow tokens review cycle time"
+      "body": "AI workflow tokens review cycle time baseline review rework variance commentary"
     },
     {
       "slug": "php2shell-php-rce-vendor-inventory",
@@ -389,7 +389,7 @@
       "date": "August 31, 2026",
       "readTime": 8,
       "image": "assets/images/boardroom.jpg",
-      "body": "procurement seats renewal workflow owner"
+      "body": "procurement seats renewal workflow owner Secure by Demand seats renewal exit SBOM procurement"
     },
     {
       "slug": "when-compliance-is-the-product",
@@ -400,7 +400,7 @@
       "date": "August 31, 2026",
       "readTime": 7,
       "image": "assets/images/folders.jpg",
-      "body": "residency audit logs subprocessors training"
+      "body": "residency audit logs subprocessors training Data Act switching SOC 2 Article 28 Article 50 data residency"
     },
     {
       "slug": "ai-productivity-paradox",
@@ -444,7 +444,7 @@
       "date": "August 19, 2026",
       "readTime": 7,
       "image": "assets/images/datacenter.jpg",
-      "body": "MFA EDR backups ransomware questionnaire"
+      "body": "MFA EDR backups ransomware questionnaire IC3 business email compromise phishing-resistant MFA backups ransomware"
     },
     {
       "slug": "ai-native-unit-economics",
@@ -466,7 +466,7 @@
       "date": "August 14, 2026",
       "readTime": 8,
       "image": "assets/images/colo.jpg",
-      "body": "egress reserved instances colo FinOps"
+      "body": "egress reserved instances colo FinOps egress exit fees Data Act CMA colo FinOps hybrid"
     },
     {
       "slug": "board-questions-generative-ai",
@@ -488,7 +488,7 @@
       "date": "August 10, 2026",
       "readTime": 8,
       "image": "assets/images/aisle.jpg",
-      "body": "CPG attribution walled garden onsite ads"
+      "body": "CPG attribution walled garden onsite ads IAB MRC measurement guidelines incrementality attribution clean room in-store"
     }
   ]
 }

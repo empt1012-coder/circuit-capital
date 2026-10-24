@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="https://circuits.fit/assets/images/folders.jpg">
   <meta property="article:published_time" content="2026-08-31">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "When compliance is the product", "description": "Data residency, audit trails, and ‘we can’t put that in the model’ are no longer legal footnotes. They are packaging.", "image": ["https://circuits.fit/assets/images/folders.jpg"], "datePublished": "2026-08-31", "dateModified": "2026-10-07", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/when-compliance-is-the-product.html"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "When compliance is the product", "description": "Data residency, audit trails, and ‘we can’t put that in the model’ are no longer legal footnotes. They are packaging.", "image": ["https://circuits.fit/assets/images/folders.jpg"], "datePublished": "2026-08-31", "dateModified": "2026-10-24", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/when-compliance-is-the-product.html"}
   </script>
 </head>
 <body data-base=".." data-page="policy">
@@ -86,6 +86,7 @@
         <span>Edited by <strong>Emilio Santos</strong></span>
         <span>August 31, 2026</span>
         <span>7 min read</span>
+        <span>Updated <time datetime="2026-10-24">October 24, 2026</time></span>
       </div>
     </header>
     <figure class="article-cover wrap">
@@ -109,9 +110,44 @@
         <p>Export rules, privacy law, and sector guidance will keep splitting the market into “good enough for a startup” and “good enough for a bank.” The second market pays more and moves slower. Builders who ignore it will still sell. Builders who fake it will get a lawsuit with a product name on it.</p>
         <p>Treat compliance as packaging only if you can open the box. Otherwise it is a liability with a landing page.</p>
         <p>The pages that open the box are the guides: <a href="../guides/what-article-50-asks-a-buyer.html">What Article 50 asks a buyer</a>, <a href="../guides/what-belongs-in-a-processor-clause.html">What belongs in a processor clause</a>, and <a href="../guides/one-page-ai-use-rule.html">A one-page AI use rule</a>. Gartner’s September 19 post says EU AI Act literacy requirements are now in effect. That is Gartner’s claim. The timeline is the <a href="eu-ai-act-what-still-applies.html">EU briefing</a>.</p>
+        <h2>Updated October 2026: what moved since August</h2>
+        <p>This note first ran on August 31. Three dated items have moved closer, and they are the reason compliance features now show up on order forms rather than in appendices.</p>
+        <ul>
+          <li><strong>EU AI Act transparency.</strong> The European Commission’s AI Act Service Desk timeline says the Article 50 transparency rules started to apply on August 2, 2026. For certain generative systems already on the market before that date, the machine-readable marking duty in Article 50(2) has a transition that ends December 2, 2026. The buyer questions are in <a href="../guides/what-article-50-asks-a-buyer.html">What Article 50 asks a buyer</a>.</li>
+          <li><strong>EU high-risk dates.</strong> The same public timeline records the stand-alone high-risk duties for December 2, 2027 and duties for high-risk systems inside regulated products for August 2, 2028. A vendor that answers a transparency question with a 2027 date is answering a different question. The full timeline is in the <a href="eu-ai-act-what-still-applies.html">EU AI Act briefing</a>.</li>
+          <li><strong>EU Data Act switching.</strong> Regulation (EU) 2023/2854, the Data Act, has applied since September 12, 2025. Its cloud-switching chapter covers “data processing services,” and providers may charge only reduced, cost-based switching charges until January 12, 2027. After that date, switching charges are not allowed. That turns “can we leave” from a negotiation into a contract term worth checking.</li>
+        </ul>
+        <h2>Why it matters, by role</h2>
+        <p><strong>CFO.</strong> Compliance tiers are where list prices climb. Region pinning, customer-managed keys, longer log retention, and a no-training commitment are often sold as an upgrade. If the control is a legal requirement for your business, the upgrade is the real price. Budget for it as the base SKU and stop treating the cheaper tier as the comparison.</p>
+        <p><strong>CISO.</strong> A control you cannot see is a control you cannot attest to. Your auditors and your customers will ask for evidence, not a vendor’s marketing page. A SOC 2 report from the AICPA framework helps, but read its scope and period. A report that covers the hosting layer and not the AI feature you bought does not cover the AI feature.</p>
+        <p><strong>Founder.</strong> If you sell into regulated buyers, these features are not optional extras. They decide whether you get through procurement. Build the export, the log access, and the data-use map before the first bank asks. Faking them costs more later than building them now.</p>
+        <p><strong>Operator.</strong> You inherit whatever the contract says. If the vendor stores logs in a region you cannot use, or deletes them after 30 days, you will find out during an incident. Ask now, while the deal is open.</p>
+        <h2>A checklist for the next renewal</h2>
+        <ol>
+          <li><strong>Log location and retention.</strong> Which region holds the audit log, how long it is kept, and whether you can set the retention yourself.</li>
+          <li><strong>Export without a ticket.</strong> Can you export logs and data in a documented, machine-readable format from the admin console or an API? If export requires professional services, write the cost down.</li>
+          <li><strong>The four-part data-use map.</strong> For customer data and prompts, ask separately about training, evaluation, human review, and subprocessors. Get each answer in writing and tied to the product tier you are buying.</li>
+          <li><strong>Processor terms.</strong> If the GDPR applies to the data, check that the data-processing addendum covers what Article 28 requires: subject matter, duration, nature and purpose of processing, types of data, sub-processor rules, and deletion or return at the end. <a href="../guides/what-belongs-in-a-processor-clause.html">What belongs in a processor clause</a> walks through it.</li>
+          <li><strong>Assurance scope.</strong> Ask for the current SOC 2 report and read which systems and which period it covers. Note anything you bought that sits outside that scope.</li>
+          <li><strong>Exit terms.</strong> For EU data processing services, check how the switching and data-export terms line up with the Data Act dates above. For everything else, write the exit into the contract: format, timeline, and who pays.</li>
+          <li><strong>Price the tier.</strong> If any answer above is “only in Enterprise,” price Enterprise as the real cost and compare vendors on that basis.</li>
+        </ol>
+        <p>The <a href="../tools/software-renewal-scorecard.html">software renewal scorecard</a> scores several of these lines, including export, exit clause, subprocessors, and AI training terms, and writes the agenda for the vendor email.</p>
+        <h2>What to watch next</h2>
+        <ul>
+          <li><strong>December 2, 2026.</strong> The Article 50(2) marking transition ends for covered generative systems already on the market. Ask vendors that generate text, images, audio, or video what mark they apply and from which date.</li>
+          <li><strong>January 12, 2027.</strong> Data Act switching charges end for data processing services. Expect vendor contract updates before then. Read them.</li>
+          <li><strong>Renewal paperwork.</strong> Watch for vendors moving no-training or region commitments from the contract into a policy page they can change. A commitment on a web page is weaker than one in the order form.</li>
+        </ul>
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://x.com/Gartner_inc/status/2101329994534236667" rel="noopener">Gartner on X, September 19, 2026</a>: Gartner says EU AI Act literacy requirements are now in effect.</li>
+          <li><a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act" rel="noopener">European Commission, AI Act Service Desk, implementation timeline</a>: Article 50 from August 2, 2026, the December 2, 2026 marking transition, and the high-risk dates</li>
+          <li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" rel="noopener">Regulation (EU) 2024/1689, the AI Act, on EUR-Lex</a></li>
+          <li><a href="https://eur-lex.europa.eu/eli/reg/2023/2854/oj" rel="noopener">Regulation (EU) 2023/2854, the Data Act, on EUR-Lex</a>: switching rules for data processing services and the January 12, 2027 end of switching charges</li>
+          <li><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" rel="noopener">Regulation (EU) 2016/679, the GDPR, on EUR-Lex</a>: Article 28 processor terms</li>
+          <li><a href="https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-072020-concepts-controller-and-processor-gdpr_en" rel="noopener">EDPB Guidelines 07/2020 on controller and processor</a></li>
+          <li><a href="https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2" rel="noopener">AICPA, SOC 2 overview</a></li>
         </ul>
         <p>The dates this desk uses are in the EU briefing. This note does not add a literacy procedure.</p>
         <div class="author-box">
@@ -139,6 +175,8 @@
             <li><a href="cyber-insurance-it-budgets.html">Cyber insurance is rewriting the IT budget</a></li>
             <li><a href="board-questions-generative-ai.html">Six questions every board should ask</a></li>
             <li><a href="sec-proposed-a-crypto-custody-path.html">The SEC proposed a path for crypto custody</a></li>
+                      <li><a href="eu-ai-act-what-still-applies.html">What the EU AI Act still applies</a></li>
+            <li><a href="../guides/what-article-50-asks-a-buyer.html">What Article 50 asks a buyer</a></li>
           </ol>
         </div>
       </aside>

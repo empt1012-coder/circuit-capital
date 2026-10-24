@@ -28,7 +28,7 @@
   <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
   <meta property="article:published_time" content="2026-10-01">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Questions before a post-quantum pilot", "description": "Gartner says firms that have not piloted post-quantum cryptography by 2027 face at least 200% higher migration cost, and 51% of CISOs had not started.", "image": ["https://circuits.fit/assets/images/mark.jpg"], "datePublished": "2026-10-01", "dateModified": "2026-10-01", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/guides/postquantum-pilot-questions.html"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Questions before a post-quantum pilot", "description": "Gartner says firms that have not piloted post-quantum cryptography by 2027 face at least 200% higher migration cost, and 51% of CISOs had not started.", "image": ["https://circuits.fit/assets/images/mark.jpg"], "datePublished": "2026-10-01", "dateModified": "2026-10-24", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/guides/postquantum-pilot-questions.html"}
   </script>
 </head>
 <body data-base=".." data-page="guides">
@@ -87,6 +87,7 @@
         <span>Edited by <strong>Emilio Santos</strong></span>
         <span>October 1, 2026</span>
         <span>8 min read</span>
+        <span>Updated <time datetime="2026-10-24">October 24, 2026</time></span>
       </div>
     </header>
     <div class="wrap guide-layout">
@@ -100,6 +101,11 @@
           <ol>
             <li><a href="#claim">The claim</a></li>
             <li><a href="#pilot">The pilot</a></li>
+            <li><a href="#standards">The standards are published</a></li>
+            <li><a href="#steps">A 90-day pilot plan</a></li>
+            <li><a href="#example">A worked example of the vendor ask</a></li>
+            <li><a href="#budget">What finance should know</a></li>
+            <li><a href="#check">Before you sign off</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ol>
         </nav>
@@ -114,6 +120,35 @@
           <li>Who owns the inventory, and what does “begun” mean? Gartner’s 51% is “have not begun any PQC-related activities.” A slide titled “quantum” with no system in scope is not a beginning.</li>
           <li>What would the pilot change in ninety days: one protocol, one vendor that already offers a hybrid mode, or a list of products that cannot? Write the change, not the theme.</li>
         </ul>
+        <h2 id="standards">The standards are published</h2>
+        <p>The pilot has a target. On August 13, 2024, NIST released its first three finalized post-quantum cryptography standards:</p>
+        <ul>
+          <li><strong>FIPS 203</strong>, ML-KEM, a key-encapsulation mechanism for establishing shared keys, derived from CRYSTALS-Kyber.</li>
+          <li><strong>FIPS 204</strong>, ML-DSA, a digital signature algorithm derived from CRYSTALS-Dilithium.</li>
+          <li><strong>FIPS 205</strong>, SLH-DSA, a stateless hash-based digital signature algorithm derived from SPHINCS+.</li>
+        </ul>
+        <p>NIST has also published a draft transition report, NIST IR 8547, describing its expected approach to moving from quantum-vulnerable algorithms such as RSA and elliptic-curve cryptography to these standards. The initial public draft proposed deprecating those quantum-vulnerable algorithms after 2030 and disallowing them after 2035. It is a draft, so check the current version before you put a date in a plan. CISA keeps a post-quantum page with resources for organizations planning the move.</p>
+        <h2 id="steps">A 90-day pilot plan</h2>
+        <ol>
+          <li><strong>Weeks 1 to 3: inventory.</strong> List where public-key cryptography is used: TLS certificates, VPNs, SSH, code signing, document signing, and inside vendor products. Start with internet-facing systems.</li>
+          <li><strong>Weeks 3 to 5: rank by data lifetime.</strong> Data that must stay secret for ten years or more, and signatures that must stay trusted for a long time, go first.</li>
+          <li><strong>Weeks 5 to 8: ask vendors.</strong> For your top systems, ask each vendor whether it supports ML-KEM or a hybrid key exchange today, and if not, when.</li>
+          <li><strong>Weeks 8 to 12: test one change.</strong> Turn on a hybrid post-quantum key exchange in one test environment where your software supports it, and measure compatibility and performance.</li>
+          <li><strong>Week 12: report.</strong> What was inventoried, what was tested, what failed, and what it would take to extend.</li>
+        </ol>
+        <h2 id="example">A worked example of the vendor ask</h2>
+        <p>Illustrative email: “We are planning our transition to NIST’s post-quantum standards, FIPS 203, 204, and 205. For [product], please tell us: which cryptographic algorithms the product uses for key exchange and signatures today; whether it supports ML-KEM or a hybrid key exchange now, and in which version; your roadmap date for ML-DSA or SLH-DSA signatures; and whether cryptographic algorithms can be changed by configuration or require an upgrade.” File the answers. A vendor with no roadmap is a risk you can now name.</p>
+        <h2 id="budget">What finance should know</h2>
+        <p>Most of the cost is labor and replacement of products that cannot be upgraded, not new software licenses. The inventory is what turns Gartner’s prediction into your own estimate. Budget the inventory now. Budget the migration once you know what is in it.</p>
+        <h2 id="check">Before you sign off</h2>
+        <ul>
+          <li>An inventory of public-key cryptography exists, starting with internet-facing systems.</li>
+          <li>Systems are ranked by how long their data or signatures must stay safe.</li>
+          <li>Top vendors have been asked about FIPS 203, 204, and 205 support, in writing.</li>
+          <li>One test environment has tried a hybrid key exchange, and the result is written down.</li>
+          <li>Finance has a budget line for the inventory, separate from the migration.</li>
+        </ul>
+        <p>Report progress in the same terms each quarter: systems inventoried, systems ranked, vendors asked, vendors with a dated roadmap, and changes tested. Those five counts tell a board more than a maturity score, and they show whether the program is moving. When NIST finalizes its transition report, update the dates in the plan to match the final text.</p>
         <section class="guide-faq" aria-labelledby="faq">
           <h2 id="faq">FAQ</h2>
           <h3>Do we need a quantum computer to start?</h3>
@@ -124,6 +159,12 @@
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-30-gartner-identifies-top-five-actions-for-cisos-to-take-by-end-of-2026" rel="noopener">Gartner, five actions for CISOs, September 30, 2026</a></li>
+          <li><a href="https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards" rel="noopener">NIST, first three finalized post-quantum encryption standards, August 13, 2024</a></li>
+          <li><a href="https://csrc.nist.gov/pubs/fips/203/final" rel="noopener">NIST FIPS 203, ML-KEM</a></li>
+          <li><a href="https://csrc.nist.gov/pubs/fips/204/final" rel="noopener">NIST FIPS 204, ML-DSA</a></li>
+          <li><a href="https://csrc.nist.gov/pubs/fips/205/final" rel="noopener">NIST FIPS 205, SLH-DSA</a></li>
+          <li><a href="https://csrc.nist.gov/pubs/ir/8547/ipd" rel="noopener">NIST IR 8547 (initial public draft), Transition to Post-Quantum Cryptography Standards</a></li>
+          <li><a href="https://www.cisa.gov/quantum" rel="noopener">CISA, Post-Quantum Cryptography Initiative</a></li>
         </ul>
         <aside id="ad-guide-end" class="ad-slot ad-slot--guide" data-slot="guideEnd" hidden></aside>
         <section class="guide-related" aria-labelledby="related-briefing">

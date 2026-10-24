@@ -28,7 +28,7 @@
   <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
   <meta property="article:published_time" content="2026-10-01">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "The cloud shared-responsibility checklist", "description": "AWS says it secures the cloud. You secure what you put in it. The guest operating system, the application, and the firewall rules stay with the customer on EC2.", "image": ["https://circuits.fit/assets/images/mark.jpg"], "datePublished": "2026-10-01", "dateModified": "2026-10-01", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/guides/cloud-shared-responsibility-checklist.html"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "The cloud shared-responsibility checklist", "description": "AWS says it secures the cloud. You secure what you put in it. The guest operating system, the application, and the firewall rules stay with the customer on EC2.", "image": ["https://circuits.fit/assets/images/mark.jpg"], "datePublished": "2026-10-01", "dateModified": "2026-10-24", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/guides/cloud-shared-responsibility-checklist.html"}
   </script>
 </head>
 <body data-base=".." data-page="guides">
@@ -87,6 +87,7 @@
         <span>Edited by <strong>Emilio Santos</strong></span>
         <span>October 1, 2026</span>
         <span>8 min read</span>
+        <span>Updated <time datetime="2026-10-24">October 24, 2026</time></span>
       </div>
     </header>
     <div class="wrap guide-layout">
@@ -100,6 +101,11 @@
           <ol>
             <li><a href="#split">The split</a></li>
             <li><a href="#lines">The lines</a></li>
+            <li><a href="#others">How Microsoft and Google describe the split</a></li>
+            <li><a href="#steps">How to use this checklist, step by step</a></li>
+            <li><a href="#example">A worked example</a></li>
+            <li><a href="#mistakes">Common mistakes</a></li>
+            <li><a href="#check">Before you sign off</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ol>
         </nav>
@@ -118,6 +124,34 @@
             <tr><td>Which of these would move if you left for a colo?</td><td>The guest, the app, the data, the firewall rules. The building would not.</td></tr>
           </tbody>
         </table>
+        <h2 id="others">How Microsoft and Google describe the split</h2>
+        <p>The lines above use AWS’s wording. Other providers publish their own, and they differ in useful ways.</p>
+        <p><strong>Microsoft Azure.</strong> Microsoft’s shared responsibility page lays out a table by deployment type: software as a service, platform as a service, infrastructure as a service, and on-premises. Physical hosts, network, and datacenter sit with Microsoft for the cloud models. The page also lists responsibilities the customer always retains, regardless of deployment type: data, endpoints, accounts, and access management. That list is a good summary for a board slide. No matter how managed the service is, your data, your devices, and your identities are yours.</p>
+        <p><strong>Google Cloud.</strong> Google describes shared responsibility together with what it calls “shared fate,” where it aims to give customers secure defaults, blueprints, and guidance to help them meet their side. That is a statement of intent and tooling. It does not move your responsibilities to Google.</p>
+        <h2 id="steps">How to use this checklist, step by step</h2>
+        <ol>
+          <li><strong>List your top services.</strong> Start with the services that make up most of the bill or hold the most sensitive data.</li>
+          <li><strong>Classify each one.</strong> Infrastructure (virtual machines), platform (managed databases, containers), or software as a service. Your share of the work shrinks as you move up, but it never reaches zero.</li>
+          <li><strong>Write an owner for each line.</strong> Patching, network rules, backups, keys, identities. A person’s name, not a team alias.</li>
+          <li><strong>Check evidence.</strong> A patch report, a recent restore, a key rotation log. If there is no evidence, the line is a gap.</li>
+          <li><strong>Revisit before any move.</strong> Before repatriation or a provider switch, mark which lines change hands. The <a href="../articles/cloud-repatriation.html">cloud repatriation note</a> has the cost side.</li>
+        </ol>
+        <h2 id="example">A worked example</h2>
+        <p>Illustrative case. A company runs its customer app on virtual machines, a managed database, and object storage. On the VMs, the company patches the operating system and the app, and sets the firewall rules. On the managed database, the provider patches the engine, but the company sets who can connect, turns on encryption options, and tests restores. On object storage, the company sets access policies. A misconfigured public bucket is the customer’s mistake under every provider’s model. If the company moved to a colo, it would also take on the hardware, the facility, and the physical network.</p>
+        <h2 id="mistakes">Common mistakes</h2>
+        <ul>
+          <li>Assuming the provider’s compliance certifications cover your configuration. They cover the provider’s side.</li>
+          <li>Assuming managed services are backed up the way you need. Check retention and test a restore.</li>
+          <li>Forgetting identities. Most cloud incidents start with an account, not a broken data center.</li>
+        </ul>
+        <h2 id="check">Before you sign off</h2>
+        <ul>
+          <li>Each major service is classified as infrastructure, platform, or software as a service.</li>
+          <li>Each line on the checklist has a person’s name.</li>
+          <li>You have evidence for patching, backups, keys, and access rules, not only a policy.</li>
+          <li>You have read the split for every provider you use, in that provider’s own words.</li>
+          <li>Any planned move shows which lines would change hands.</li>
+        </ul>
         <section class="guide-faq" aria-labelledby="faq">
           <h2 id="faq">FAQ</h2>
           <h3>Does this page cover Azure or Google Cloud?</h3>
@@ -128,6 +162,8 @@
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://aws.amazon.com/compliance/shared-responsibility-model/" rel="noopener">AWS, Shared Responsibility Model</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility" rel="noopener">Microsoft Learn, Shared responsibility in the cloud</a>: responsibilities the customer always retains: data, endpoints, accounts, access management</li>
+          <li><a href="https://cloud.google.com/architecture/framework/security/shared-responsibility-shared-fate" rel="noopener">Google Cloud Architecture Framework, shared responsibility and shared fate</a></li>
         </ul>
         <aside id="ad-guide-end" class="ad-slot ad-slot--guide" data-slot="guideEnd" hidden></aside>
         <section class="guide-related" aria-labelledby="related-briefing">
@@ -136,6 +172,7 @@
             <li><a href="../articles/cloud-repatriation.html">Cloud repatriation: when the bill becomes the strategy</a></li>
             <li><a href="cloud-repatriation-cost.html">When cloud repatriation is a finance decision</a></li>
             <li><a href="../tools/risk-exception-register.html">Risk exception register</a></li>
+
           </ul>
         </section>
         <div class="author-box">

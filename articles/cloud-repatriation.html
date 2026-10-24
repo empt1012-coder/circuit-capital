@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="https://circuits.fit/assets/images/colo.jpg">
   <meta property="article:published_time" content="2026-08-14">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Cloud repatriation: when the bill becomes the strategy", "description": "Finance is pulling workloads home. Engineering is discovering that home is a product decision, not a protest.", "image": ["https://circuits.fit/assets/images/colo.jpg"], "datePublished": "2026-08-14", "dateModified": "2026-10-07", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/cloud-repatriation.html"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Cloud repatriation: when the bill becomes the strategy", "description": "Finance is pulling workloads home. Engineering is discovering that home is a product decision, not a protest.", "image": ["https://circuits.fit/assets/images/colo.jpg"], "datePublished": "2026-08-14", "dateModified": "2026-10-24", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/cloud-repatriation.html"}
   </script>
 </head>
 <body data-base=".." data-page="technology">
@@ -86,6 +86,7 @@
         <span>Edited by <strong>Emilio Santos</strong></span>
         <span>August 14, 2026</span>
         <span>8 min read</span>
+        <span>Updated <time datetime="2026-10-24">October 24, 2026</time></span>
       </div>
     </header>
     <figure class="article-cover wrap">
@@ -111,9 +112,47 @@
         <p>Run a twelve-month fully loaded comparison: cloud list minus real discounts, versus colo, hardware, staff, and the cost of being wrong. Include the feature you will not get — managed failover, a global backbone — as a product risk, not a rounding error.</p>
         <p>If the savings only appear if nobody leaves the company, the savings are fictional. If they survive two resignations and a bad disk year, you have a strategy.</p>
         <p>Operator guides: <a href="../guides/cloud-repatriation-cost.html">When cloud repatriation is a finance decision, not an engineering slogan</a> and <a href="../guides/cloud-shared-responsibility-checklist.html">The cloud shared-responsibility checklist</a>. The second one is written from Amazon’s page. Do not paste it onto Azure or Google.</p>
+        <h2>Updated October 2026: leaving got cheaper on paper</h2>
+        <p>This note first ran on August 14. One argument for staying in a public cloud has always been the cost of leaving, especially data transfer fees. Several facts on that point are worth having in front of you before any repatriation discussion.</p>
+        <ul>
+          <li><strong>Provider exit waivers.</strong> In January 2024, Google Cloud announced it would waive data transfer fees for customers migrating off Google Cloud. In March 2024, AWS announced free data transfer out to the internet for customers moving data out of AWS, subject to its process and conditions. Both require you to ask, and both have terms. Read them before you plan.</li>
+          <li><strong>EU Data Act.</strong> Regulation (EU) 2023/2854 has applied since September 12, 2025. For data processing services, providers may charge only reduced, cost-based switching charges until January 12, 2027. After that date, switching charges are not allowed.</li>
+          <li><strong>UK competition review.</strong> The UK Competition and Markets Authority published the final decision of its cloud services market investigation on July 31, 2025. It recommended that the CMA prioritise strategic market status investigations into Microsoft and AWS under its digital markets powers.</li>
+        </ul>
+        <p>None of this makes a move cheap. Migration labor, parallel running, and new hardware cost far more than a one-time transfer for most companies. What has changed is that “we can never leave” is a weaker argument than it was.</p>
+        <h2>Why it matters, by role</h2>
+        <p><strong>CFO.</strong> Repatriation is a capital decision dressed as an engineering one. It trades operating expense for capital expense and staff. Insist on a fully loaded comparison over at least twelve months, and ask what happens to the savings if two key engineers leave.</p>
+        <p><strong>CISO.</strong> Moving out of a public cloud moves security work to you. Under AWS’s shared responsibility model, AWS secures the infrastructure that runs its services, and the customer secures what it puts in the cloud. Leave, and the building, the hardware, and the network become yours too. The <a href="../guides/cloud-shared-responsibility-checklist.html">shared responsibility checklist</a> lists who patches what today.</p>
+        <p><strong>Founder.</strong> Early on, the cloud is almost always the right answer. The question becomes real when a steady workload is large enough that its monthly bill would pay for a small platform team. Until then, spend the effort on cost tagging so you know which product drives the bill.</p>
+        <p><strong>Operator.</strong> You will run the parallel environment during migration. Plan for months of double cost and double on-call, not a weekend cutover.</p>
+        <h2>A twelve-month comparison template</h2>
+        <p>Fill both columns with your own numbers. Do not use a vendor’s savings calculator as the only input.</p>
+        <table class="rate-table">
+          <thead><tr><th>Line</th><th>Stay in cloud</th><th>Move to owned or colo capacity</th></tr></thead>
+          <tbody>
+            <tr><td>Compute and storage</td><td>Current bill after real discounts and commitments</td><td>Hardware, spread over its expected life, plus colo space and power</td></tr>
+            <tr><td>Network and transfer</td><td>Ongoing egress</td><td>Carrier circuits, plus one-time exit transfer if no waiver applies</td></tr>
+            <tr><td>People</td><td>Current cloud operations staff</td><td>Platform team, on-call, hardware support contracts</td></tr>
+            <tr><td>Migration</td><td>None</td><td>Engineering time, parallel running, testing</td></tr>
+            <tr><td>Lost services</td><td>None</td><td>Managed databases, failover, global network you must replace or give up</td></tr>
+            <tr><td>Risk</td><td>Price changes at renewal</td><td>Hardware failure, staff turnover, capacity planning errors</td></tr>
+          </tbody>
+        </table>
+        <p>The FinOps Foundation’s framework is a good reference for building the cloud column honestly: allocate costs to teams and products first, then compare.</p>
+        <h2>What to watch next</h2>
+        <ul>
+          <li><strong>January 12, 2027.</strong> The Data Act’s end of switching charges for EU data processing services. Watch how providers update EU contract terms.</li>
+          <li><strong>CMA follow-up.</strong> Whether the CMA opens strategic market status investigations into the two providers named in its recommendation, and what conduct requirements follow.</li>
+          <li><strong>AI infrastructure.</strong> GPU capacity is the newest version of the same rent-versus-own question. Our <a href="gartner-ai-infrastructure-impairment-neoclouds.html">note on AI infrastructure impairment</a> covers the risk of owning hardware that ages fast.</li>
+        </ul>
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://aws.amazon.com/compliance/shared-responsibility-model/" rel="noopener">AWS, Shared Responsibility Model</a>, the page behind the shared-responsibility checklist</li>
+          <li><a href="https://aws.amazon.com/blogs/aws/free-data-transfer-out-to-internet-when-moving-out-of-aws/" rel="noopener">AWS News Blog, free data transfer out to the internet when moving out of AWS, March 2024</a></li>
+          <li><a href="https://cloud.google.com/blog/products/networking/eliminating-data-transfer-fees-when-migrating-off-google-cloud" rel="noopener">Google Cloud blog, eliminating data transfer fees when migrating off Google Cloud, January 2024</a></li>
+          <li><a href="https://eur-lex.europa.eu/eli/reg/2023/2854/oj" rel="noopener">Regulation (EU) 2023/2854, the Data Act, on EUR-Lex</a>: switching charges reduced until, and banned from, January 12, 2027</li>
+          <li><a href="https://www.gov.uk/cma-cases/cloud-services-market-investigation" rel="noopener">UK CMA, cloud services market investigation</a>: final decision published July 31, 2025</li>
+          <li><a href="https://www.finops.org/framework/" rel="noopener">FinOps Foundation, FinOps Framework</a></li>
         </ul>
         <p>This note does not cite a repatriation survey. The twelve-month comparison is a method, not a published savings figure.</p>
         <div class="author-box">
@@ -140,6 +179,7 @@
             <li><a href="ai-productivity-paradox.html">The AI productivity paradox</a></li>
             <li><a href="ai-native-unit-economics.html">AI-native unit economics</a></li>
             <li><a href="chip-export-controls.html">Chip export controls</a></li>
+                      <li><a href="gartner-ai-infrastructure-impairment-neoclouds.html">AI infrastructure impairment and neoclouds</a></li>
           </ol>
         </div>
       </aside>

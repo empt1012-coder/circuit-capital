@@ -28,7 +28,7 @@
   <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
   <meta property="article:published_time" content="2026-10-01">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "A one-page AI use rule", "description": "NIST’s AI Risk Management Framework is voluntary. Its four functions — Govern, Map, Measure, Manage — are enough for a one-page departmental rule.", "image": ["https://circuits.fit/assets/images/mark.jpg"], "datePublished": "2026-10-01", "dateModified": "2026-10-01", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/guides/one-page-ai-use-rule.html"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "A one-page AI use rule", "description": "NIST’s AI Risk Management Framework is voluntary. Its four functions — Govern, Map, Measure, Manage — are enough for a one-page departmental rule.", "image": ["https://circuits.fit/assets/images/mark.jpg"], "datePublished": "2026-10-01", "dateModified": "2026-10-24", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/guides/one-page-ai-use-rule.html"}
   </script>
 </head>
 <body data-base=".." data-page="guides">
@@ -87,6 +87,7 @@
         <span>Edited by <strong>Emilio Santos</strong></span>
         <span>October 1, 2026</span>
         <span>8 min read</span>
+        <span>Updated <time datetime="2026-10-24">October 24, 2026</time></span>
       </div>
     </header>
     <div class="wrap guide-layout">
@@ -100,6 +101,11 @@
           <ol>
             <li><a href="#four">The four lines</a></li>
             <li><a href="#page">The page</a></li>
+            <li><a href="#sample">A sample one-page rule</a></li>
+            <li><a href="#steps">How to roll it out, step by step</a></li>
+            <li><a href="#mapping">How the page maps to the NIST framework</a></li>
+            <li><a href="#mistakes">Common mistakes</a></li>
+            <li><a href="#check">Before you sign off</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ol>
         </nav>
@@ -114,6 +120,45 @@
         <aside id="ad-guide-mid" class="ad-slot ad-slot--guide" data-slot="guideMid" hidden></aside>
         <h2 id="page">The page</h2>
         <p>Keep it to one page per tool, not one page for “AI.” Name the product, the owner, the data it may see, the decision it may not make alone, and the date you will look again. Link the NIST framework and, if the tool generates text or media, the generative profile, so a later reader can see you did not invent the four words.</p>
+        <h2 id="sample">A sample one-page rule</h2>
+        <p>The example below is a template, not legal advice. Edit it to match your tools and data.</p>
+        <table class="rate-table">
+          <thead><tr><th>Section</th><th>Example wording</th></tr></thead>
+          <tbody>
+            <tr><td>Approved tools</td><td>Staff may use the AI tools on the approved list, signed in with company accounts. Personal accounts are not allowed for company work.</td></tr>
+            <tr><td>Data you may not enter</td><td>Customer personal data, passwords and keys, unreleased financial results, and anything under a confidentiality agreement, unless the tool is approved for that data.</td></tr>
+            <tr><td>Checking output</td><td>A person reviews AI output before it is sent outside the company or used in a decision about a customer, employee, or payment.</td></tr>
+            <tr><td>Actions</td><td>AI tools may not send external messages, move money, or change access without a person approving each action.</td></tr>
+            <tr><td>Disclosure</td><td>Tell people when they are interacting with an AI system where law or contract requires it.</td></tr>
+            <tr><td>Owner and review</td><td>The rule has a named owner and is reviewed every six months. Date of this version: [date].</td></tr>
+          </tbody>
+        </table>
+        <h2 id="steps">How to roll it out, step by step</h2>
+        <ol>
+          <li><strong>List the tools people already use.</strong> Ask, do not guess. Unapproved use is common when no rule exists.</li>
+          <li><strong>Decide the approved list.</strong> Prefer tools with company accounts, admin controls, and clear data-use terms.</li>
+          <li><strong>Write the page.</strong> Use the table above as a start. Keep it to one page so people read it.</li>
+          <li><strong>Train with examples.</strong> Show two or three real cases from your work: what is fine, what is not.</li>
+          <li><strong>Review on a schedule.</strong> Tools and laws change. Put the next review date on the page.</li>
+        </ol>
+        <h2 id="mapping">How the page maps to the NIST framework</h2>
+        <p>The NIST AI Risk Management Framework has four functions. A one-page rule touches each of them lightly. <strong>Govern</strong> is the owner and review date. <strong>Map</strong> is the list of tools and the data each may see. <strong>Measure</strong> is the output check. <strong>Manage</strong> is the action limits and what happens when someone breaks the rule. That is enough to start, and it gives you a structure to grow into. For agents that can take actions, add the controls in <a href="limit-what-an-agent-can-touch.html">Limit what an agent can touch</a>. For EU-facing features, the disclosure line connects to <a href="what-article-50-asks-a-buyer.html">What Article 50 asks a buyer</a>.</p>
+        <h2 id="mistakes">Common mistakes</h2>
+        <ul>
+          <li>Banning everything. People use personal accounts instead, and you lose visibility.</li>
+          <li>Writing a ten-page policy. Nobody reads it, so nobody follows it.</li>
+          <li>Forgetting AI features inside existing software. They count too.</li>
+        </ul>
+        <h2 id="check">Before you sign off</h2>
+        <ul>
+          <li>The approved tool list exists and staff know where it is.</li>
+          <li>The data that must not go into AI tools is named in plain words.</li>
+          <li>Output that leaves the company, or affects a person or a payment, is checked by a person.</li>
+          <li>AI tools cannot take high-impact actions without approval.</li>
+          <li>The page has an owner, a version date, and a next review date.</li>
+          <li>Staff have seen two or three examples from their own work.</li>
+        </ul>
+        <p>A rule is only useful if people can find it when they need it. Link it from the tools themselves where the admin console allows a custom notice, pin it in the main staff channel, and add it to onboarding. When the rule changes, say what changed in one line, so staff do not have to reread the whole page to spot the difference.</p>
         <section class="guide-faq" aria-labelledby="faq">
           <h2 id="faq">FAQ</h2>
           <h3>Is this a full implementation of the AI RMF?</h3>
@@ -127,6 +172,7 @@
           <li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10" rel="noopener">NIST AI 100-1, AI RMF 1.0, January 26, 2023</a></li>
           <li><a href="https://airc.nist.gov/airmf-resources/airmf/" rel="noopener">NIST AI Resource Center, AI RMF, including the note that a revision is in progress</a></li>
           <li><a href="https://doi.org/10.6028/NIST.AI.600-1" rel="noopener">NIST AI 600-1, Generative Artificial Intelligence Profile, July 26, 2024</a></li>
+          <li><a href="https://genai.owasp.org/llmrisk/llm062025-excessive-agency/" rel="noopener">OWASP Top 10 for LLM Applications 2025, LLM06: Excessive Agency</a></li>
         </ul>
         <aside id="ad-guide-end" class="ad-slot ad-slot--guide" data-slot="guideEnd" hidden></aside>
         <section class="guide-related" aria-labelledby="related-briefing">
@@ -135,6 +181,7 @@
             <li><a href="../guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a></li>
             <li><a href="limit-what-an-agent-can-touch.html">Limit what an agent can touch</a></li>
             <li><a href="../tools/agent-inventory.html">AI agent inventory and access map</a></li>
+            <li><a href="../articles/board-questions-generative-ai.html">Six questions every board should ask</a></li>
           </ul>
         </section>
         <div class="author-box">

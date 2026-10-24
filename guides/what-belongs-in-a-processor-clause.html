@@ -28,7 +28,7 @@
   <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
   <meta property="article:published_time" content="2026-10-01">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "What belongs in a processor clause", "description": "The European Commission’s June 2021 clauses for controllers and processors are the public checklist for an Article 28 contract. They are not the international-transfer clauses.", "image": ["https://circuits.fit/assets/images/mark.jpg"], "datePublished": "2026-10-01", "dateModified": "2026-10-01", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/guides/what-belongs-in-a-processor-clause.html"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "What belongs in a processor clause", "description": "The European Commission’s June 2021 clauses for controllers and processors are the public checklist for an Article 28 contract. They are not the international-transfer clauses.", "image": ["https://circuits.fit/assets/images/mark.jpg"], "datePublished": "2026-10-01", "dateModified": "2026-10-24", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/guides/what-belongs-in-a-processor-clause.html"}
   </script>
 </head>
 <body data-base=".." data-page="guides">
@@ -87,6 +87,7 @@
         <span>Edited by <strong>Emilio Santos</strong></span>
         <span>October 1, 2026</span>
         <span>8 min read</span>
+        <span>Updated <time datetime="2026-10-24">October 24, 2026</time></span>
       </div>
     </header>
     <div class="wrap guide-layout">
@@ -100,6 +101,11 @@
           <ol>
             <li><a href="#two">Two documents</a></li>
             <li><a href="#check">What to check</a></li>
+            <li><a href="#list">The Article 28 list, in plain English</a></li>
+            <li><a href="#steps">How to review a DPA, step by step</a></li>
+            <li><a href="#example">A worked example</a></li>
+            <li><a href="#ai">AI features and the processor clause</a></li>
+            <li><a href="#check">Before you sign off</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ol>
         </nav>
@@ -115,6 +121,40 @@
           <li>Deletion or return at the end of the service, in a sentence you can test.</li>
           <li>If any data leaves the EEA, whether the transfer clauses are also attached, and which module.</li>
         </ul>
+        <h2 id="list">The Article 28 list, in plain English</h2>
+        <p>Article 28(3) of the GDPR says the contract between a controller and a processor must set out the subject matter and duration of the processing, its nature and purpose, the type of personal data, the categories of data subjects, and the controller’s obligations and rights. It then requires that the processor:</p>
+        <ol>
+          <li>processes the data only on documented instructions from the controller;</li>
+          <li>ensures the people authorised to process the data are bound by confidentiality;</li>
+          <li>takes the security measures required by Article 32;</li>
+          <li>respects the conditions for engaging another processor, a sub-processor;</li>
+          <li>helps the controller respond to data subjects exercising their rights;</li>
+          <li>helps the controller with security, breach notification, and data protection impact assessments under Articles 32 to 36;</li>
+          <li>deletes or returns all personal data at the end of the services, at the controller’s choice;</li>
+          <li>makes available the information needed to show compliance, and allows for and contributes to audits and inspections.</li>
+        </ol>
+        <p>Article 28(2) adds that a processor may not engage a sub-processor without the controller’s prior specific or general written authorisation, and with general authorisation must inform the controller of changes so it can object.</p>
+        <h2 id="steps">How to review a DPA, step by step</h2>
+        <ol>
+          <li><strong>Check the role.</strong> The EDPB’s Guidelines 07/2020 explain how to tell a controller from a processor. A vendor that decides its own purposes for your data, such as training its own models, may be acting as a controller for that use.</li>
+          <li><strong>Read the annexes first.</strong> Blank or generic descriptions of processing are the most common gap.</li>
+          <li><strong>Walk the eight items.</strong> Tick each one against the text. Note where the vendor’s wording weakens it, for example audits limited to a summary report only.</li>
+          <li><strong>Check sub-processors.</strong> Find the list, how changes are notified, and how long you have to object.</li>
+          <li><strong>Check transfers separately.</strong> If data leaves the EEA, confirm which transfer mechanism and SCC module is used.</li>
+        </ol>
+        <h2 id="example">A worked example</h2>
+        <p>Illustrative case. A vendor’s DPA says it will “process data in accordance with applicable law and its privacy policy.” That is not a documented instruction from you. The fix is a clause that the vendor processes personal data only on your documented instructions, including those in the agreement. The same DPA says sub-processors are listed “on our website.” Ask for notice of changes by email and a defined objection period, for example 30 days. Its deletion clause says data is deleted “in line with our retention schedule.” Ask for deletion or return at your choice within a set number of days after termination. The <a href="../tools/software-renewal-scorecard.html">software renewal scorecard</a> counts unlisted subprocessors and short data-return windows against a renewal.</p>
+        <h2 id="ai">AI features and the processor clause</h2>
+        <p>Many vendors now add AI features to existing products. Check whether the DPA or a new addendum lets the vendor use customer personal data to train or improve models. If it does, that use may need its own analysis of roles and lawful basis. Ask counsel. Do not assume the old DPA covers a new feature.</p>
+        <h2 id="check">Before you sign off</h2>
+        <ul>
+          <li>The vendor’s role is clear for each product and each use of the data.</li>
+          <li>The processing annex is filled in, not generic.</li>
+          <li>All eight Article 28(3) items are present without weakening language.</li>
+          <li>Sub-processor changes come with notice and an objection period.</li>
+          <li>Transfer clauses, if needed, are attached with the right module.</li>
+          <li>Any AI training use of personal data has been reviewed by counsel.</li>
+        </ul>
         <section class="guide-faq" aria-labelledby="faq">
           <h2 id="faq">FAQ</h2>
           <h3>Can we edit the Commission’s text?</h3>
@@ -126,6 +166,9 @@
         <ul class="sources">
           <li><a href="https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/new-standard-contractual-clauses-questions-and-answers-overview_en" rel="noopener">European Commission, questions and answers on the 2021 standard contractual clauses</a></li>
           <li><a href="https://commission.europa.eu/publications/standard-contractual-clauses-controllers-and-processors-eueea_en" rel="noopener">European Commission, clauses for controllers and processors in the EU/EEA</a></li>
+          <li><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" rel="noopener">Regulation (EU) 2016/679, the GDPR, on EUR-Lex</a>: Article 28</li>
+          <li><a href="https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-072020-concepts-controller-and-processor-gdpr_en" rel="noopener">EDPB Guidelines 07/2020 on the concepts of controller and processor</a></li>
+          <li><a href="https://eur-lex.europa.eu/eli/dec_impl/2021/915/oj" rel="noopener">Commission Implementing Decision (EU) 2021/915, controller-processor SCCs</a></li>
         </ul>
         <aside id="ad-guide-end" class="ad-slot ad-slot--guide" data-slot="guideEnd" hidden></aside>
         <section class="guide-related" aria-labelledby="related-briefing">
@@ -133,6 +176,7 @@
           <ul>
             <li><a href="../articles/when-compliance-is-the-product.html">When compliance is the product</a></li>
             <li><a href="what-article-50-asks-a-buyer.html">What Article 50 asks a buyer</a></li>
+
           </ul>
         </section>
         <div class="author-box">

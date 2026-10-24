@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="https://circuits.fit/assets/images/datacenter.jpg">
   <meta property="article:published_time" content="2026-08-19">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Cyber insurance is rewriting the IT budget", "description": "Underwriters now ask better questions than some boards. The answers are showing up as line items.", "image": ["https://circuits.fit/assets/images/datacenter.jpg"], "datePublished": "2026-08-19", "dateModified": "2026-10-07", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/cyber-insurance-it-budgets.html"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Cyber insurance is rewriting the IT budget", "description": "Underwriters now ask better questions than some boards. The answers are showing up as line items.", "image": ["https://circuits.fit/assets/images/datacenter.jpg"], "datePublished": "2026-08-19", "dateModified": "2026-10-24", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/cyber-insurance-it-budgets.html"}
   </script>
 </head>
 <body data-base=".." data-page="business">
@@ -86,6 +86,7 @@
         <span>Edited by <strong>Emilio Santos</strong></span>
         <span>August 19, 2026</span>
         <span>7 min read</span>
+        <span>Updated <time datetime="2026-10-24">October 24, 2026</time></span>
       </div>
     </header>
     <figure class="article-cover wrap">
@@ -111,6 +112,38 @@
         <p>Insurance is not a substitute for security, and a completed questionnaire is not a mature program. Controls that please an underwriter can still fail a determined attacker. Use the form as a floor. Do not confuse it with a strategy.</p>
         <p>Still, as a capital-allocation device, the market is doing something boards failed to do: it is forcing a short list. In a world of infinite tools, a short list is a gift.</p>
         <p>Operator guides: <a href="../guides/cyber-insurance-checklist-2026.html">Cyber insurance checklist for mid-market IT budgets (2026)</a> and <a href="../guides/cyber-insurance-controls-checklist.html">What a cyber insurer will still ask</a>.</p>
+        <h2>Updated October 2026: cheaper policies, same questions</h2>
+        <p>This note first ran on August 19. Since then, the market has kept softening. Our September note, <a href="cyber-got-cheaper-the-questionnaire-did-not.html">Cyber got cheaper. The questionnaire did not.</a>, covers the rate figures and their sources. The short version for budget owners: lower premiums have not removed the control questions. A cheaper policy written on controls you do not actually run can still fail at claim time.</p>
+        <p>The threat side has not eased. The FBI’s Internet Crime Complaint Center (IC3) reported $16.6 billion in losses reported to it in 2024, a 33% increase from 2023. Business email compromise alone accounted for about $2.77 billion of reported losses. In December 2024 the FBI also warned that criminals use generative AI to make fraud more convincing and to run it at larger scale.</p>
+        <h2>Why it matters, by role</h2>
+        <p><strong>CFO.</strong> The insurance application is a short list of controls the market is willing to price. Use it in budget planning. If a control on the form is not in place, the cost shows up somewhere: a higher deductible, an exclusion, a denied claim, or a project you fund in a hurry.</p>
+        <p><strong>CISO.</strong> The form gives you a budget argument that finance already accepts. Map each question to an owner and evidence. “We have MFA” should mean you can show where it is enforced, including email, remote access, admin accounts, and cloud consoles.</p>
+        <p><strong>Founder.</strong> Smaller companies often buy cyber cover because a customer contract requires it. Read what the customer asked for: limit, deductible, and which coverages. Then read the application questions before you answer them. An inaccurate answer is a bigger risk than a higher premium.</p>
+        <p><strong>Operator.</strong> Restores, alert monitoring, and admin account reviews are operations work. If the form says they happen, they need to happen on a schedule, with someone assigned.</p>
+        <h2>The controls that keep coming up</h2>
+        <p>Insurers write their own forms, so wording varies. The controls below line up with public guidance from CISA and NIST, which is a useful way to check that the form is asking for real security and not only paperwork.</p>
+        <ol>
+          <li><strong>Phishing-resistant MFA.</strong> CISA’s fact sheet on implementing phishing-resistant MFA identifies FIDO/WebAuthn authenticators and PKI-based methods as the strongest options. Start with email, remote access, and administrators.</li>
+          <li><strong>Backups you have restored.</strong> CISA’s #StopRansomware guide recommends maintaining offline, encrypted backups and regularly testing them. A backup job that has never been restored is an assumption.</li>
+          <li><strong>Endpoint detection that someone watches.</strong> Write down who receives the alert outside business hours.</li>
+          <li><strong>Privileged access.</strong> List who can disable security tools and whether that action is logged.</li>
+          <li><strong>Incident response plan and contacts.</strong> The #StopRansomware guide recommends a plan that is exercised. Know which counsel and forensics firm you would call, and whether the insurer requires its panel.</li>
+          <li><strong>Payment change verification.</strong> Given the business email compromise numbers above, require a call-back to a number already on file before changing vendor bank details. See <a href="../guides/stop-using-a-voice-as-approval.html">Stop using a voice as approval</a>.</li>
+        </ol>
+        <h2>A planning calendar</h2>
+        <ul>
+          <li><strong>Month 9 of the policy year.</strong> Finance, IT, and the broker review last year’s application. Mark every answer that is not fully true today.</li>
+          <li><strong>Month 10.</strong> Fund or schedule the gaps that are cheap to close. Write down the ones that will stay open and why.</li>
+          <li><strong>Month 11.</strong> Collect evidence: MFA coverage reports, a recent restore test, the alert escalation list.</li>
+          <li><strong>Month 12.</strong> Submit an application you can defend line by line.</li>
+        </ul>
+        <p>The detailed lists are in two guides: the <a href="../guides/cyber-insurance-checklist-2026.html">2026 cyber insurance checklist for IT budgets</a> and <a href="../guides/cyber-insurance-controls-checklist.html">What a cyber insurer will still ask</a>. If a control will not be in place by renewal, record it in the <a href="../tools/risk-exception-register.html">risk exception register</a> with an owner and an expiry date.</p>
+        <h2>What to watch next</h2>
+        <ul>
+          <li><strong>AI-related wording.</strong> Watch for new exclusions or endorsements that mention AI, deepfakes, or social engineering. Read where a voice-cloning fraud would fall.</li>
+          <li><strong>Evidence requests.</strong> Some underwriters ask for scans or reports, not just yes or no answers. Be ready to show proof.</li>
+          <li><strong>Pricing turns.</strong> Soft markets end. Controls you add now will matter more when rates rise again.</li>
+        </ul>
         <h2>Sources</h2>
         <p>This note does not cite a premium, a deductible, or a loss ratio. The measured market note is <a href="cyber-got-cheaper-the-questionnaire-did-not.html">Cyber got cheaper. The questionnaire did not.</a></p>
         <div class="author-box">
@@ -138,6 +171,7 @@
             <li><a href="ai-productivity-paradox.html">The AI productivity paradox</a></li>
             <li><a href="chip-export-controls.html">Chip export controls</a></li>
             <li><a href="../tools/8k-materiality-worksheet.html">SEC 8-K materiality worksheet</a></li>
+                      <li><a href="cyber-got-cheaper-the-questionnaire-did-not.html">Cyber got cheaper. The questionnaire did not.</a></li>
           </ol>
         </div>
       </aside>

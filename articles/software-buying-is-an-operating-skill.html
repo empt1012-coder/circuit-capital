@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="https://circuits.fit/assets/images/boardroom.jpg">
   <meta property="article:published_time" content="2026-08-31">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Software buying is an operating skill", "description": "The stack is no longer an IT catalog. It is how the company actually runs — and most firms still buy it like office supplies.", "image": ["https://circuits.fit/assets/images/boardroom.jpg"], "datePublished": "2026-08-31", "dateModified": "2026-10-07", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/software-buying-is-an-operating-skill.html"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Software buying is an operating skill", "description": "The stack is no longer an IT catalog. It is how the company actually runs — and most firms still buy it like office supplies.", "image": ["https://circuits.fit/assets/images/boardroom.jpg"], "datePublished": "2026-08-31", "dateModified": "2026-10-24", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/software-buying-is-an-operating-skill.html"}
   </script>
 </head>
 <body data-base=".." data-page="business">
@@ -86,6 +86,7 @@
         <span>Edited by <strong>Emilio Santos</strong></span>
         <span>August 31, 2026</span>
         <span>8 min read</span>
+        <span>Updated <time datetime="2026-10-24">October 24, 2026</time></span>
       </div>
     </header>
     <figure class="article-cover wrap">
@@ -109,6 +110,32 @@
         <p>Annual renewals are where vendors hide price. Treat them like a product review: usage, overlapping tools, and whether the original problem still exists. A 8% increase on a tool that replaced two others can be cheap. A 0% increase on a tool nobody opens is still a loss.</p>
         <p>Software buying is now an operating skill because the company <em>is</em> the stack. Hire for that, or keep paying for catalogs.</p>
         <p>The scorecard is the <a href="../tools/software-renewal-scorecard.html">software renewal scorecard</a>. Operator guides: <a href="../guides/software-buying-operating-skill.html">Software buying as an operating skill</a> and <a href="../guides/how-to-read-a-saas-renewal.html">How to read a SaaS renewal</a>. If the renewal now includes an agent, the sheet is the <a href="../tools/agent-access-limit.html">agent access limit sheet</a>, then <a href="../guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a>.</p>
+        <h2>Updated October 2026: why this is a bigger deal now</h2>
+        <p>This note first ran on August 31 as a short operator essay. Since then, two things have made the buying decision heavier. First, more renewals now include AI features or agents that can act inside the product, which changes what you are approving. Our <a href="../guides/limit-what-an-agent-can-touch.html">agent access guide</a> covers that. Second, public guidance on what to ask a software vendor has grown. CISA’s 2026 minimum elements for a software bill of materials, covered in <a href="sbom-now-covers-the-suite.html">SBOM now covers the suite</a>, give buyers a named list to put in a contract.</p>
+        <h2>Why it matters, by role</h2>
+        <p><strong>CFO.</strong> Software is a recurring cost that grows quietly. Seats get added and rarely removed. Price increases arrive at renewal, when switching is hardest. The finance lever is timing: decisions made 90 days before renewal are cheaper than decisions made in the last week. <a href="../guides/how-to-read-a-saas-renewal.html">How to read a SaaS renewal</a> lays out the 90, 60, and 30-day steps.</p>
+        <p><strong>CISO.</strong> Every new tool is a new place for data, a new identity to manage, and a new vendor to monitor. CISA’s Secure by Demand guide, published with the FBI in August 2024, lists questions buyers can ask before purchase: whether the vendor offers single sign-on and logging in the base product, whether it publishes a vulnerability disclosure policy, and whether it can provide an SBOM. Ask those before the contract, not after the incident.</p>
+        <p><strong>Founder.</strong> Early-stage companies tend to buy tools one at a time, each for a good reason. Two years later, three tools do the same job and nobody can turn any of them off. Name an owner for each workflow early. It costs nothing and saves a cleanup project later.</p>
+        <p><strong>Operator.</strong> You live with the tool after the contract is signed. Ask to see the unhappy path in the demo: month-end, a failed sync, an offline site, an exception that does not fit the dropdown. If the vendor cannot show it, plan for the workaround.</p>
+        <h2>A buying checklist that fits on one page</h2>
+        <ol>
+          <li><strong>Name the workflow and the owner.</strong> One person, by name, who can say what the tool is for and when it would be retired.</li>
+          <li><strong>List what it replaces.</strong> If nothing is retired, the new tool is additive cost. Write the retirement date for any overlapping tool.</li>
+          <li><strong>Score the unhappy path.</strong> Pick three hard cases from your real operations and ask the vendor to run them.</li>
+          <li><strong>Ask the security questions.</strong> SSO and MFA in the base tier, security logs you can export, a public vulnerability disclosure policy, and an SBOM on request. These come from CISA’s Secure by Demand guide.</li>
+          <li><strong>Set the seat rule.</strong> Who can add seats, and who reviews unused seats each quarter.</li>
+          <li><strong>Write the exit.</strong> Full data export in a documented format, a data-return window after the contract ends, and a notice period you can meet.</li>
+          <li><strong>Cap the price.</strong> A contractual cap on renewal increases. A blank increase clause is the vendor’s option, not yours.</li>
+        </ol>
+        <h2>A worked example</h2>
+        <p>The numbers below are illustrative, not survey data. Say a team pays for 120 seats of a tool at $400 per seat per year, or $48,000. In the last 30 days, 66 people logged in. That is 55% use. Before renewal, the owner proposes cutting to 75 seats to leave room for growth. At the same per-seat price, the new cost is $30,000, a $18,000 saving, before any price negotiation. If the vendor also proposes an 8% increase, the right comparison is the new price on 75 seats, not the old price on 120.</p>
+        <p>Run those inputs through the <a href="../tools/software-renewal-scorecard.html">software renewal scorecard</a> and it flags the seat gap and any missing price cap, and writes the requests for the vendor email.</p>
+        <h2>What to watch next</h2>
+        <ul>
+          <li><strong>AI features inside renewals.</strong> Watch for new clauses on training, data use, and agent actions added to existing products. They change the risk of a tool you already own.</li>
+          <li><strong>EU cloud switching.</strong> For EU data processing services, the Data Act ends switching charges on January 12, 2027. Check whether your vendors update exit terms. The detail is in <a href="cloud-repatriation.html">the cloud repatriation note</a>.</li>
+          <li><strong>Vendor security artifacts.</strong> More buyers are asking for SBOMs and security logs in the contract. If your vendor cannot provide them, that is information about the vendor.</li>
+        </ul>
         <h2>Sources</h2>
         <p>This is an operator note. It does not cite a buying survey. The 8% and the seven CRMs are illustrations, not a count.</p>
         <div class="author-box">
@@ -135,6 +162,8 @@
             <li><a href="cyber-insurance-it-budgets.html">Cyber insurance is rewriting the IT budget</a></li>
             <li><a href="cloud-repatriation.html">Cloud repatriation</a></li>
             <li><a href="board-questions-generative-ai.html">Six questions every board should ask</a></li>
+                      <li><a href="sbom-now-covers-the-suite.html">SBOM now covers the suite</a></li>
+            <li><a href="../guides/how-to-read-a-saas-renewal.html">How to read a SaaS renewal</a></li>
           </ol>
         </div>
       </aside>
