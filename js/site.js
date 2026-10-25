@@ -254,7 +254,7 @@
       const topic = form.querySelector("[name=topic]")?.value || "";
       const message = form.querySelector("[name=message]")?.value || "";
       const to = topic.toLowerCase().includes("advert") ? (desk.adsEmail || desk.contactEmail) : desk.contactEmail;
-      location.href = "mailto:" + encodeURIComponent(to || "circuit50capital@circuits.fit") +
+      location.href = "mailto:" + encodeURIComponent(to || "circuits50capital@circuits.fit") +
         "?subject=" + encodeURIComponent("Circuit & Capital: " + topic) +
         "&body=" + encodeURIComponent(name + " <" + email + ">\n\n" + message);
       toast("Opening your email app to send the note.");

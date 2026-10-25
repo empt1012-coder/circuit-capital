@@ -3,8 +3,8 @@
   tagline: "Sourced business and technology briefing",
   defaultDescription: "Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Cited to the post and the official page. Edited by Emilio Santos.",
   domain: "https://circuits.fit",
-  contactEmail: "circuit50capital@circuits.fit",
-  adsEmail: "circuit50capital@circuits.fit",
+  contactEmail: "circuits50capital@circuits.fit",
+  adsEmail: "circuits50capital@circuits.fit",
   analyticsId: "",
   ads: {
     enabled: true,
