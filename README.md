@@ -18,4 +18,4 @@ Set emails, domain, analytics, and ads in `js/config.js`. Leave `ads.provider` a
 
 ## Forms
 
-Contact is a Netlify Form on the live site. The newsletter signup is off until there is more traffic. Desk: circuit50capital@circuits.fit.
+Contact is a Netlify Form on the live site. The newsletter signup is off until there is more traffic. Desk: circuits50capital@circuits.fit.
