@@ -369,3 +369,6 @@
     }
   });
 })();
+
+// Pause autoplay videos for users who prefer reduced motion
+(function(){var m=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)');function a(){document.querySelectorAll('.cc-video video').forEach(function(v){if(m&&m.matches){v.removeAttribute('autoplay');v.pause();v.controls=true;}});}if(document.readyState!=='loading')a();else document.addEventListener('DOMContentLoaded',a);if(m&&m.addEventListener)m.addEventListener('change',a);})();
