@@ -29,6 +29,7 @@ https://circuits.fit/articles/software-buying-is-an-operating-skill.html
 https://circuits.fit/articles/the-sec-clock-starts-at-material.html
 https://circuits.fit/articles/when-compliance-is-the-product.html
 https://circuits.fit/categories/business.html
+https://circuits.fit/categories/guides.html
 https://circuits.fit/categories/markets.html
 https://circuits.fit/categories/opinion.html
 https://circuits.fit/categories/policy.html

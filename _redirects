@@ -4,8 +4,8 @@ https://www.circuits.fit/* https://circuits.fit/:splat 301!
 /home / 301!
 /guides/index.html /guides/ 301!
 /tools/index.html /tools/ 301!
-/categories/guides.html /guides/ 301!
-/categories/guides /guides/ 301!
+/categories/guides /categories/guides.html 301!
+/categories/guides/ /categories/guides.html 301!
 /guides/_template.html /404.html 404!
 /guides/_template /404.html 404!
 /404 /404.html 301!
@@ -76,8 +76,6 @@ https://www.circuits.fit/* https://circuits.fit/:splat 301!
 /categories/technology/ /categories/technology.html 301!
 /contact /contact.html 301!
 /contact/ /contact.html 301!
-/guides/_template /guides/_template.html 301!
-/guides/_template/ /guides/_template.html 301!
 /guides/ai-sbom-extra-questions /guides/ai-sbom-extra-questions.html 301!
 /guides/ai-sbom-extra-questions/ /guides/ai-sbom-extra-questions.html 301!
 /guides/ai-spend-vs-return /guides/ai-spend-vs-return.html 301!
