@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Build a Software Renewal Tracker — Circuit &amp; Capital</title>
+  <meta name="description" content="The columns, notice-deadline formulas, scoring and worked example for a software renewal tracker template in Excel or Google Sheets.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"></noscript>
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <link rel="canonical" href="https://circuits.fit/guides/software-renewal-tracker-template.html">
+  <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
+  <meta property="og:title" content="How to Build a Software Renewal Tracker — Circuit &amp; Capital">
+  <meta property="og:description" content="The columns, notice-deadline formulas, scoring and worked example for a software renewal tracker template in Excel or Google Sheets.">
+  <meta property="og:url" content="https://circuits.fit/guides/software-renewal-tracker-template.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Circuit &amp; Capital">
+  <meta property="og:image" content="https://circuits.fit/assets/images/mark.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Build a Software Renewal Tracker — Circuit &amp; Capital">
+  <meta name="twitter:description" content="The columns, notice-deadline formulas, scoring and worked example for a software renewal tracker template in Excel or Google Sheets.">
+  <meta name="twitter:image" content="https://circuits.fit/assets/images/mark.jpg">
+  <meta property="article:published_time" content="2026-10-25">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How to build a software renewal tracker", "description": "The columns, notice-deadline formulas, scoring and worked example for a software renewal tracker template in Excel or Google Sheets.", "image": ["https://circuits.fit/assets/images/mark.jpg"], "datePublished": "2026-10-25", "dateModified": "2026-10-25", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/guides/software-renewal-tracker-template.html"}
+  </script>
+</head>
+<body data-base=".." data-page="guides">
+  <div id="site-header">
+      <a class="skip" href="#main">Skip to content</a>
+      <div class="topbar">
+        <div class="wrap">
+          <div>Sourced briefing · Est. 2026</div>
+          <div class="topbar__links">
+            <a href="../about.html">About</a>
+            <a href="../advertise.html">Advertise</a>
+            <a class="hide-sm" href="../contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <header class="masthead">
+        <div class="wrap masthead__row">
+          <div class="masthead__date" id="masthead-date"></div>
+          <a class="brand" href="../">
+            <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
+              <rect width="64" height="64" fill="#f4efe6"/>
+              <path fill="#c45c26" d="M12 48V14h9v26h13v8H12z"/>
+              <path class="trace" fill="none" stroke="#9a4318" stroke-width="1.6" stroke-linecap="square" d="M16 20h8v5H20v5h7"/>
+              <circle class="node" cx="24" cy="20" r="1.6" fill="#f4efe6"/>
+              <circle class="node node-2" cx="27" cy="30" r="1.6" fill="#f4efe6"/>
+              <path fill="#12151a" d="M36 18h16v2.6H39v4.4h12v2.6H39v4.4h14v2.6H36z"/>
+            </svg>
+            <span>
+              <div class="brand__name">Circuit <span>&amp;</span> Capital</div>
+              <div class="brand__tag">Sourced business and technology briefing</div>
+              
+            </span>
+          </a>
+          <div class="masthead__actions">
+            <button class="btn btn--icon" type="button" data-toggle-search aria-label="Search">Search</button>
+            <button class="menu-toggle" type="button" data-toggle-nav aria-label="Open menu" aria-expanded="false">☰</button>
+          </div>
+        </div>
+        <nav class="nav" id="site-nav">
+          <ul class="wrap"><li><a href="../">Home</a></li><li><a href="../briefing.html">Briefing</a></li><li><a class="is-active" href="../guides/">Guides</a></li><li><a href="../tools/">Tools</a></li><li><a href="../categories/markets.html">Markets</a></li><li><a href="../categories/technology.html">Technology</a></li><li><a href="../categories/policy.html">Policy</a></li><li><a href="../about.html">About</a></li></ul>
+        </nav>
+        <div class="search-bar" id="search-bar">
+          <form class="wrap" action="../search.html" method="get">
+            <input type="search" name="q" placeholder="Search briefings…" aria-label="Search">
+            <button class="btn btn--copper" type="submit">Go</button>
+          </form>
+        </div>
+      </header>
+    </div>
+  <main id="main">
+    <header class="article-hero wrap">
+      <div class="kicker">Guides</div>
+      <h1>How to build a software renewal tracker</h1>
+      <p class="dek">Sort by the last day you can say no, not the renewal date. Columns, formulas, a scoring method and a worked example.</p>
+      <div class="byline-row">
+        <span>Edited by <strong>Emilio Santos</strong></span>
+        <span>Published <time datetime="2026-10-25">October 25, 2026</time></span>
+        <span>10 min read</span>
+      </div>
+    </header>
+    <div class="wrap guide-layout">
+      <article class="prose">
+        <aside class="who-for">
+          <h2>Who this is for</h2>
+          <p>The finance lead, IT manager or operations person who has been asked to "get the software renewals under control" and is about to open a blank spreadsheet.</p>
+        </aside>
+        <nav class="guide-toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#why">What a renewal tracker is for</a></li>
+            <li><a href="#columns">The input columns</a></li>
+            <li><a href="#formulas">The calculated columns</a></li>
+            <li><a href="#scoring">Scoring a contract</a></li>
+            <li><a href="#example">A worked example</a></li>
+            <li><a href="#running">Running it every quarter</a></li>
+            <li><a href="#mistakes">Common mistakes</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ol>
+        </nav>
+        <p class="lead-graf">A software renewal tracker is a list of contracts sorted by the last day you can still say no. Everything else in the sheet exists to help you decide what to say before that day arrives.</p>
+        <p>Most templates you will find are a vendor list with an expiry date column. That is a start, but it sorts by the wrong date and it does not tell you what to do. This guide walks through a tracker that does both: it calculates the notice deadline for each contract, and it scores each one so the quarterly review starts with a recommendation instead of a blank stare. You can build everything here in Excel, LibreOffice Calc or Google Sheets with ordinary formulas.</p>
+
+        <h2 id="why">What a renewal tracker is for</h2>
+        <p>The tracker has three jobs. First, it stops a contract from renewing without a decision. Many software agreements renew automatically unless you give written notice a set number of days before the term ends. Once that notice window closes, the vendor has no reason to negotiate, because you are already committed to another term. Second, it puts evidence next to each decision: how many people use the tool, what it costs per active user, and what the vendor wants to charge next year. Third, it records who decided what, so the next review does not reopen the same question from scratch.</p>
+        <p>If your sheet only does the first job, it is a calendar. That is still worth having. But the second and third jobs are where the money is, because they turn "renew" from a default into a choice.</p>
+        <p>Keep one row per contract, not one row per vendor. A company with two separate order forms from the same vendor, signed a year apart, has two renewal dates and two notice deadlines. Merge them into one row and you will miss one of them.</p>
+
+        <h2 id="columns">The input columns</h2>
+        <p>These are the columns a person types into. Keep them on the left of the sheet and visually distinct from the formulas, for example white cells for inputs and grey for calculations, so nobody types over a formula.</p>
+        <table class="rate-table">
+          <thead>
+            <tr><th>Column</th><th>What to enter</th><th>Where it comes from</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Vendor and product</td><td>The vendor name and the specific product or order form</td><td>The signed order form</td></tr>
+            <tr><td>Category</td><td>CRM, security, collaboration, finance and so on</td><td>Your own list; keep it short</td></tr>
+            <tr><td>Contract owner</td><td>One named person, not a team</td><td>Whoever uses the tool and will defend or drop it</td></tr>
+            <tr><td>Annual cost</td><td>Total cost per year; multiply monthly plans by 12</td><td>The last invoice or the order form</td></tr>
+            <tr><td>Renewal date</td><td>The day the current term ends</td><td>The order form, not the billing portal</td></tr>
+            <tr><td>Notice period (days)</td><td>Days of notice the contract requires to cancel or change; 0 if none</td><td>The terms, usually in a renewal or termination clause</td></tr>
+            <tr><td>Auto-renews?</td><td>Yes or No</td><td>The same clause</td></tr>
+            <tr><td>Licensed seats and active users</td><td>Seats you pay for, and people who actually signed in recently</td><td>The tool's admin console</td></tr>
+            <tr><td>Usage % (if not seat-based)</td><td>Share of a usage commitment actually consumed</td><td>Usage reports, for metered or platform contracts</td></tr>
+            <tr><td>Business criticality</td><td>Low, Medium, High or Critical</td><td>The owner's honest answer to "what stops if this is down for a day"</td></tr>
+            <tr><td>Security items</td><td>SSO, MFA, SOC 2 report, SBOM availability, breach history</td><td>Security review, the vendor's trust page, questionnaire answers</td></tr>
+            <tr><td>Exit difficulty</td><td>Low, Medium or High</td><td>How hard it would be to export data and move</td></tr>
+            <tr><td>Price increase at renewal (%)</td><td>The increase in the renewal quote, or the contractual cap if there is no quote yet</td><td>The quote in writing</td></tr>
+          </tbody>
+        </table>
+        <p>Use drop-down lists (data validation) for every column with a fixed set of answers. A criticality column that contains "High", "high" and "HIGH - ask Sam" cannot be scored.</p>
+        <p>Decide in advance what "active" means. A common rule is a sign-in within the last 90 days. Whatever rule you pick, write it on an instructions tab and apply it the same way to every tool, or the usage numbers will not be comparable.</p>
+
+        <h2 id="formulas">The calculated columns</h2>
+        <p>The notice deadline is the most important formula in the sheet, and it should always be a formula, never a typed date. With the renewal date in column F and the notice period in column G:</p>
+        <pre><code>Notice deadline:            =IF(AND(ISNUMBER(F5),ISNUMBER(G5)),F5-G5,"")
+Days until notice deadline: =IF(U5="","",U5-TODAY())</code></pre>
+        <p>The <code>ISNUMBER</code> check matters. If the notice period is blank, a plain <code>=F5-G5</code> treats it as zero and shows the renewal date as the deadline, which looks safe and is not. A blank should produce a blank deadline and a visible prompt to go and read the contract.</p>
+        <p>If a contract states its notice period in months, use <code>=EDATE(F5,-G5)</code> with months in column G. Calendar months and 30-day blocks do not line up, so match what the contract says.</p>
+        <p>Then group the days remaining into windows that a meeting can work through: notice passed, next 30 days, 31 to 60 days, 61 to 90 days, later. A nested <code>IF</code> does this, and conditional formatting can colour each band.</p>
+        <p>Three money columns make the conversation concrete:</p>
+        <ul>
+          <li><strong>Effective usage %</strong> is active users divided by licensed seats, capped at 100%, or the usage percentage for contracts that are not seat-based.</li>
+          <li><strong>Cost per active user</strong> is annual cost divided by active users. This is the number that surprises people, because a tool with a reasonable list price per seat can be expensive per person who uses it.</li>
+          <li><strong>Estimated waste</strong> is annual cost multiplied by (1 minus effective usage). It is an estimate, not a refund you are owed, but it is the right starting point for a seat true-down.</li>
+        </ul>
+        <p>Add a next-year cost column, annual cost multiplied by (1 plus the price increase), so the meeting sees the real number being approved.</p>
+
+        <aside id="ad-guide-mid" class="ad-slot ad-slot--guide" data-slot="guideMid" hidden></aside>
+
+        <h2 id="scoring">Scoring a contract</h2>
+        <p>A score does not make the decision. It sorts the list so the meeting spends its time on the contracts that need a conversation. A simple, explainable approach scores four things from 0 to 100 and takes a weighted average.</p>
+        <ul>
+          <li><strong>Usage score:</strong> effective usage multiplied by 100. A tool used by 65% of its seats scores 65.</li>
+          <li><strong>Criticality score:</strong> Low 25, Medium 50, High 75, Critical 100.</li>
+          <li><strong>Security score:</strong> the average of points for each security item. For example SSO Yes 100, Partial 50, No 0; MFA Enforced 100, Available 60, No 0; SOC 2 Type II 100, Type I 60, None 0. Treat a blank as Unknown and give it low points (25 is reasonable), so missing answers pull the score down instead of being ignored.</li>
+          <li><strong>Price score:</strong> 100 at no increase, falling in a straight line to 0 at an increase you consider unacceptable, such as 20%. The formula is <code>=MAX(0,MIN(100,100*(1-increase/0.2)))</code>.</li>
+        </ul>
+        <p>Weights are a policy choice. One reasonable starting set is usage 35, criticality 25, security 25 and price 15. Divide by the total of the weights rather than assuming they add up to 100, so anyone can change them without breaking the formula.</p>
+        <p>Then turn the score into a recommendation with rules checked in a fixed order:</p>
+        <ol>
+          <li><strong>Cancel</strong> if usage is below 25% and criticality is Low or Medium.</li>
+          <li><strong>Renew</strong> if the score is at least 70 and the price increase is 5% or less.</li>
+          <li><strong>Replace</strong> if the score is below 45 and exit difficulty is not High.</li>
+          <li><strong>Renegotiate</strong> for everything else.</li>
+        </ol>
+        <p>The order matters. A barely used, low-importance tool should be flagged for cancellation even if its security posture is excellent. And a poor score on a tool that is very hard to leave becomes Renegotiate, not Replace, because replacement is not a realistic plan this quarter.</p>
+        <p>Next to the recommendation, add a short "why" column that says which rule fired. People trust a recommendation they can read.</p>
+
+        <h2 id="example">A worked example</h2>
+        <p>Two invented contracts, scored with the weights and rules above, as of November 2, 2026.</p>
+        <p><strong>Contract 1: a CRM.</strong> Annual cost $48,000. Renewal date March 31, 2027. Notice period 60 days, auto-renews. 120 seats licensed, 78 active. Criticality High. SSO Yes, MFA Enforced, SOC 2 Type II, SBOM Unknown, no known breaches. Exit difficulty High. Renewal quote: 8% increase.</p>
+        <ul>
+          <li>Notice deadline: March 31, 2027 minus 60 days is January 30, 2027, which is 89 days away. It sits in the 61 to 90 day window, so it belongs on this quarter's agenda.</li>
+          <li>Effective usage: 78 / 120 = 65%. Cost per active user: $48,000 / 78 = about $615. Estimated waste: $48,000 × 35% = $16,800. Next-year cost: $51,840.</li>
+          <li>Scores: usage 65, criticality 75, security (100 + 100 + 100 + 25 + 100) / 5 = 85, price 100 × (1 − 0.08 / 0.20) = 60.</li>
+          <li>Weighted score: (65 × 35 + 75 × 25 + 85 × 25 + 60 × 15) / 100 = 71.75.</li>
+          <li>Recommendation: the score clears 70, but the 8% increase is above the 5% limit, so Renew does not apply. Renegotiate.</li>
+        </ul>
+        <p>The evidence for that negotiation is already in the row: 42 unused seats, about $16,800 of estimated waste, and a quote that adds $3,840. A reasonable ask is a true-down toward the active count and a price cap, agreed before January 30.</p>
+        <p><strong>Contract 2: a survey tool.</strong> Annual cost $6,000. 40 seats, 6 active, so usage is 15%. Criticality Low. The Cancel rule fires first, whatever the other scores say. The meeting's only question is whether the six people who use it have somewhere else to go, and who sends the notice.</p>
+
+        <h2 id="running">Running it every quarter</h2>
+        <p>A tracker that is updated once a year is a historical document. A quarterly rhythm is enough for most companies:</p>
+        <ul>
+          <li>A week before, the owner of the sheet refreshes active users from each admin console and asks contract owners for any new quotes.</li>
+          <li>Set a fixed as-of date for the meeting so everyone sees the same day counts, instead of <code>TODAY()</code> shifting while people read.</li>
+          <li>In the meeting, work by deadline first, then by recommendation: anything in the notice-passed or next-30-days window, then Cancel and Replace, then Renegotiate, then a quick confirmation of the Renews.</li>
+          <li>Record the outcome in two input columns, <em>Our decision</em> and <em>Decision owner</em>. Where the decision differs from the recommendation, write one line saying why. That line is what the next review needs.</li>
+          <li>Put a calendar reminder 30 days before every notice deadline in the next 90 days, in the decision owner's calendar, not the spreadsheet owner's.</li>
+        </ul>
+        <p>For the conversation with the vendor itself, the <a href="how-to-read-a-saas-renewal.html">90-day SaaS renewal checklist</a> covers what to pull at each stage, and the free <a href="../tools/software-renewal-scorecard.html">software renewal scorecard</a> scores a single contract in the browser.</p>
+
+        <h2 id="mistakes">Common mistakes</h2>
+        <ul>
+          <li><strong>Sorting by renewal date.</strong> The renewal date is when the money moves. The notice deadline is when the decision is locked. Sort and filter by the deadline.</li>
+          <li><strong>Typing the deadline by hand.</strong> It goes stale the first time someone corrects a renewal date or notice period.</li>
+          <li><strong>Treating a blank notice period as zero.</strong> It hides exactly the contracts nobody has read yet.</li>
+          <li><strong>Using the billing portal's date.</strong> Portals often show the next invoice date, which is not always the term end in the order form.</li>
+          <li><strong>Counting provisioned accounts as users.</strong> An account that has not signed in for a quarter is a cost, not a user.</li>
+          <li><strong>Letting the score decide.</strong> The score sorts the agenda. A person still makes the call and writes it down.</li>
+          <li><strong>A team as owner.</strong> "IT" never sends the cancellation notice. A named person does.</li>
+          <li><strong>One row per vendor.</strong> Separate order forms have separate deadlines.</li>
+        </ul>
+
+        <section class="guide-faq" aria-labelledby="faq">
+          <h2 id="faq">FAQ</h2>
+          <h3>How many contracts does a spreadsheet handle before we need software for this?</h3>
+          <p>A spreadsheet works well into the hundreds of rows if the inputs are disciplined. The limit is usually not size but upkeep: if nobody refreshes usage each quarter, a dedicated tool will not fix that either.</p>
+          <h3>What if a contract has no notice period?</h3>
+          <p>Enter 0, deliberately, so the sheet can tell it apart from a blank. The deadline then equals the renewal date.</p>
+          <h3>Should monthly subscriptions go in the tracker?</h3>
+          <p>Yes, with annualized cost, so they sort by real exposure. They rarely carry notice risk, but they often carry waste.</p>
+          <h3>Who should own the sheet?</h3>
+          <p>Usually finance, because finance sees every invoice. Each row still needs a contract owner outside finance who knows whether the tool is used.</p>
+        </section>
+        <section class="guide-related" aria-labelledby="related-briefing">
+          <h2 id="related-briefing">Related</h2>
+          <ul>
+            <li><a href="how-to-read-a-saas-renewal.html">How to read a SaaS renewal</a></li>
+            <li><a href="software-buying-operating-skill.html">Software buying as an operating skill</a></li>
+            <li><a href="../tools/software-renewal-scorecard.html">Software renewal scorecard (free tool)</a></li>
+            <li><a href="../articles/software-buying-is-an-operating-skill.html">Software buying is an operating skill</a></li>
+          </ul>
+        </section>
+        <aside class="newsletter" aria-labelledby="pack-cta">
+          <h2 id="pack-cta">Want this as a spreadsheet?</h2>
+          <p>The pack includes this tracker as a finished Excel and Google Sheets workbook: notice deadlines, cost per active user, estimated waste, the weighted score and a Renew, Renegotiate, Replace or Cancel recommendation for up to 300 contracts, with a dashboard of the next 10 deadlines and a filled-in sample. It also includes a risk exception register and a one-page guide to running the quarterly review.</p>
+          <p>Renewal &amp; Risk Operator Pack, $29, single-organization license.</p>
+          <a class="btn btn--copper" href="https://emilios-newsletter-7fd333.beehiiv.com/products/renewal-risk-operator-pack">See the pack</a>
+        </aside>
+        <div class="author-box">
+          <div class="avatar">ES</div>
+          <div>
+            <strong>Emilio Santos</strong> is the founder and editor of Circuit &amp; Capital. He reviews and approves every piece.
+            <div class="meta"><a href="mailto:circuit50capital@circuits.fit">circuit50capital@circuits.fit</a></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="site-footer">
+      <footer class="site-foot">
+        <div class="wrap foot-grid">
+          <div>
+            <h3>Circuit &amp; Capital</h3>
+            <p>Sourced briefings and operator guides on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</p>
+          </div>
+          <div>
+            <h3>Sections</h3>
+            <ul>
+              <li><a href="../">Home</a></li>
+              <li><a href="../briefing.html">Briefing</a></li>
+              <li><a href="../guides/">Guides</a></li>
+              <li><a href="../tools/">Tools</a></li>
+              <li><a href="../categories/markets.html">Markets</a></li>
+              <li><a href="../categories/technology.html">Technology</a></li>
+              <li><a href="../categories/policy.html">Policy</a></li>
+              <li><a href="../about.html">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Advertising</h3>
+            <ul>
+              <li><a href="../advertise.html">Advertise</a></li>
+              <li><a href="../advertise.html#specs">Ad specs</a></li>
+              <li><a href="../about.html">Masthead</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="../editorial.html">Editorial standards</a></li>
+              <li><a href="../privacy.html">Privacy</a></li>
+              <li><a href="../terms.html">Terms</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="wrap foot-bottom">
+          <div>© 2026 Circuit &amp; Capital. All rights reserved.</div>
+          <div>Circuit &amp; Capital is a business and technology publication. It is not a fitness brand.</div>
+        </div>
+      </footer>
+      <div class="ad-sticky" aria-label="Advertisement">
+        <button type="button" data-close-sticky aria-label="Close ad">×</button>
+        <div class="ad-slot" data-slot="mobileSticky" data-ad-slot="">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </div>
+      </div>
+      <div class="cookie" id="cookie">
+        <p>We use a cookie to remember this choice. Accept may load analytics. Necessary only does not. This banner does not record the ad choice. See our <a href="../privacy.html">privacy policy</a>.</p>
+        <div class="cookie__row">
+          <button class="btn btn--copper" type="button" data-cookie="accept">Accept</button>
+          <button class="btn btn--ghost" type="button" data-cookie="reject" style="border-color:#5a6570">Necessary only</button>
+        </div>
+      </div>
+      <div class="toast" id="toast" role="status"></div>
+    </div>
+  <script src="../js/config.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="../js/ads.js"></script>
+</body>
+</html>

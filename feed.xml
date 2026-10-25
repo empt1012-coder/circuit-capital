@@ -5,7 +5,31 @@
 <link>https://circuits.fit/</link>
 <description>Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</description>
 <language>en-us</language>
-<lastBuildDate>Thu, 22 Oct 2026 20:00:00 +0000</lastBuildDate>
+<lastBuildDate>Sun, 25 Oct 2026 16:00:00 +0000</lastBuildDate>
+<item>
+<title>How to Build a Software Renewal Tracker</title>
+<link>https://circuits.fit/guides/software-renewal-tracker-template.html</link>
+<guid>https://circuits.fit/guides/software-renewal-tracker-template.html</guid>
+<pubDate>Sun, 25 Oct 2026 16:00:00 +0000</pubDate>
+<description>Sort by the notice deadline, not the renewal date. Columns, formulas, a four-part score and a worked example.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>How to Build a Risk Exception Register</title>
+<link>https://circuits.fit/guides/risk-exception-register-template.html</link>
+<guid>https://circuits.fit/guides/risk-exception-register-template.html</guid>
+<pubDate>Sun, 25 Oct 2026 16:00:00 +0000</pubDate>
+<description>Owner, reason, compensating control and an expiry date that enforces itself. Columns, scoring and a review log.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>How to Build an IT Risk Register in Excel</title>
+<link>https://circuits.fit/guides/it-risk-register-excel.html</link>
+<guid>https://circuits.fit/guides/it-risk-register-excel.html</guid>
+<pubDate>Sun, 25 Oct 2026 16:00:00 +0000</pubDate>
+<description>Write the scales first, then look scores up from a 5 by 5 grid. Formulas, severity bands and review dates.</description>
+<author>circuit50capital@circuits.fit (Emilio Santos)</author>
+</item>
 <item>
 <title>PHP2Shell was used before the patch. Start the log review at October 17.</title>
 <link>https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html</link>

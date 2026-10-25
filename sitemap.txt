@@ -66,3 +66,6 @@ https://circuits.fit/editorial.html
 https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html
 https://circuits.fit/articles/gartner-ai-infrastructure-impairment-neoclouds.html
 https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html
+https://circuits.fit/guides/software-renewal-tracker-template.html
+https://circuits.fit/guides/risk-exception-register-template.html
+https://circuits.fit/guides/it-risk-register-excel.html

@@ -1,6 +1,42 @@
 {
   "articles": [
     {
+      "slug": "software-renewal-tracker-template",
+      "type": "guide",
+      "title": "How to Build a Software Renewal Tracker",
+      "dek": "Sort by the notice deadline, not the renewal date. Columns, formulas, a four-part score and a worked example.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "October 25, 2026",
+      "readTime": 10,
+      "image": "assets/images/workshop.jpg",
+      "body": "software renewal tracker template notice deadline notice period auto-renew seats cost per active user waste scorecard Excel Google Sheets"
+    },
+    {
+      "slug": "risk-exception-register-template",
+      "type": "guide",
+      "title": "How to Build a Risk Exception Register",
+      "dek": "Owner, reason, compensating control and an expiry date that enforces itself. Columns, scoring and a review log.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "October 25, 2026",
+      "readTime": 8,
+      "image": "assets/images/datacenter.jpg",
+      "body": "risk exception register template policy exception log risk acceptance compensating controls expiry residual risk review log"
+    },
+    {
+      "slug": "it-risk-register-excel",
+      "type": "guide",
+      "title": "How to Build an IT Risk Register in Excel",
+      "dek": "Write the scales first, then look scores up from a 5 by 5 grid. Formulas, severity bands and review dates.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "October 25, 2026",
+      "readTime": 7,
+      "image": "assets/images/nightdesk.jpg",
+      "body": "IT risk register Excel 5x5 risk matrix likelihood impact inherent residual severity bands INDEX VLOOKUP review frequency"
+    },
+    {
       "slug": "ask-a-vendor-for-an-sbom",
       "type": "guide",
       "title": "Ask a Vendor for an SBOM",
