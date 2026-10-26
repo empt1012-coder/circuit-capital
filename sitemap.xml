@@ -22,7 +22,11 @@
   </url>
   <url>
     <loc>https://circuits.fit/privacy.html</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/corrections.html</loc>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/terms.html</loc>
@@ -82,7 +86,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/articles/eu-ai-act-what-still-applies.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/gartner-revised-the-ai-bill.html</loc>
@@ -98,7 +102,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/articles/retail-media-networks.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/sbom-now-covers-the-suite.html</loc>
@@ -246,15 +250,15 @@
   </url>
   <url>
     <loc>https://circuits.fit/tools/sbom-request-pack.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/software-renewal-scorecard.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/token-cost-margin.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/vendor-claim-checker.html</loc>
@@ -262,7 +266,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/editorial.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html</loc>
@@ -274,7 +278,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/guides/software-renewal-tracker-template.html</loc>
@@ -290,6 +294,6 @@
   </url>
   <url>
     <loc>https://circuits.fit/services/renewal-audit.html</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
 </urlset>

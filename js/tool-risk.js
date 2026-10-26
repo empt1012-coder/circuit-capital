@@ -159,7 +159,8 @@
         document.getElementById("risk-worked").textContent = "That file had no rows.";
         return;
       }
-      draw(rows, "Showing the imported file. It was read in this browser and not uploaded.");
+      const bad = api.invalidRows(rows);
+      draw(rows, "Showing the imported file. It was read in this browser and not uploaded." + (bad.length ? " Check rows " + bad.join(", ") + ": they have an invalid amount or date, flagged below." : ""));
     };
     reader.readAsText(file);
   });
@@ -172,19 +173,28 @@
   const FIELDS = ["control", "system", "owner", "reason", "compensating", "funded", "amount", "expiry", "accepted"];
   const LOCKED = { "CISA KEV": true, "MFA": true, "Backups": true, "EDR": true };
 
+  function realDate(parts) {
+    const y = Number(parts[1]), m = Number(parts[2]), d = Number(parts[3]);
+    const date = new Date(y, m - 1, d);
+    return date.getFullYear() === y && date.getMonth() === m - 1 && date.getDate() === d ? date : null;
+  }
+
   function flagsFor(row, today) {
     const flags = [];
     const notWaivable = !!LOCKED[row.control];
     if (!(row.owner || "").trim()) flags.push("No owner.");
     if (!(row.expiry || "").trim()) flags.push("No expiry date.");
-    const amount = Number(String(row.amount || "").replace(/,/g, ""));
-    const funded = row.funded === "yes" && Number.isFinite(amount) && amount > 0;
+    const amountText = String(row.amount || "").replace(/[$,\s]/g, "");
+    const amount = Number(amountText);
+    const badAmount = amountText !== "" && (!Number.isFinite(amount) || amount < 0);
+    if (badAmount) flags.push("Funded amount is not a valid amount of 0 or more.");
+    const funded = row.funded === "yes" && !badAmount && Number.isFinite(amount) && amount > 0;
     if (!funded) flags.push("No funded fix.");
     if ((row.expiry || "").trim()) {
       const parts = /^(\d{4})-(\d{2})-(\d{2})$/.exec(row.expiry);
-      if (!parts) flags.push("Expiry is not a date.");
+      const expiry = parts ? realDate(parts) : null;
+      if (!expiry) flags.push("Expiry is not a real date in YYYY-MM-DD form.");
       else {
-        const expiry = new Date(Number(parts[1]), Number(parts[2]) - 1, Number(parts[3]));
         const now = new Date(today.getFullYear(), today.getMonth(), today.getDate());
         const days = Math.round((expiry - now) / 86400000);
         if (days < 0) flags.push("Expired " + Math.abs(days) + " days ago.");
@@ -277,5 +287,14 @@
     });
   }
 
-  return { register: register, toCsv: toCsv, fromCsv: fromCsv };
+  function invalidRows(rows) {
+    const out = [];
+    (rows || []).forEach(function (row, i) {
+      const flags = flagsFor(row, new Date()).flags;
+      if (flags.some(function (f) { return /not a valid amount|not a real date/.test(f); })) out.push(i + 1);
+    });
+    return out;
+  }
+
+  return { register: register, toCsv: toCsv, fromCsv: fromCsv, invalidRows: invalidRows };
 });

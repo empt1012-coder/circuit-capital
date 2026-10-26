@@ -178,6 +178,8 @@
     if ([inPrice, outPrice, inTok, outTok, retries, minutes, hourly].some(function (n) { return n < 0; }) || success < 0 || success > 100) {
       return { error: "Prices, tokens, and retries cannot be negative. Success rate has to be from 0 to 100." };
     }
+    if (!Number.isInteger(retries)) return { error: "Retries has to be a whole number." };
+    if (minutes > 60 * 24) return { error: "Review minutes per task cannot be more than 1,440, one full day." };
     const attempt = (inTok / 1e6) * inPrice + (outTok / 1e6) * outPrice;
     const attempts = 1 + retries;
     const tokenCost = attempts * attempt;

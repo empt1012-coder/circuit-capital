@@ -10,8 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" as="style">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/tools.css">
   <link rel="canonical" href="https://circuits.fit/tools/software-renewal-scorecard.html">
@@ -86,8 +85,8 @@
       <p class="meta">Updated <time datetime="2026-10-24">October 24, 2026</time>: added what it does, step-by-step use, a worked example, limitations and FAQ.</p>
     </header>
     <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
-    <p class="tool-rule">Each gap has a fixed score. Seat use under 60% of paid seats, no price-up cap, notice under 30 days, no full export, no SBOM, and no exit clause score 2. SBOM unknown and opt-out training score 1. A data-return window under 30 days scores 1. Unlisted subprocessors score 2. Blank seat, notice, or data-return fields are not scored. 0 points is Keep. 1 to 7 is Renegotiate. 8 or more is Replace. No full export and no exit clause is Replace even when the total is lower.</p>
-    <form class="form" id="renewal-form">
+    <p class="tool-rule">Each gap has a fixed score. Seat use under 60% of paid seats, no price-up cap or an unknown cap, notice under 30 days, no full export, no SBOM, unknown AI training use, and no exit clause score 2. A named cap, including 0%, scores 0. Unknown export, SBOM, subprocessors or exit clause, and opt-out training, score 1. A data-return window under 30 days scores 1. Unlisted subprocessors score 2. Seats paid, seats active, notice period, data-return window and the cap question are required: if any is blank or invalid, the result is Incomplete, not Keep. 0 points is Keep. 1 to 7 is Renegotiate. 8 or more is Replace. No full export and no exit clause is Replace even when the total is lower.</p>
+    <form class="form" id="renewal-form" novalidate>
       <div class="form-grid">
         <div class="span-2">
           <label for="product">Product name</label>
@@ -99,29 +98,39 @@
         </div>
         <div>
           <label for="paid">Seats paid</label>
-          <input id="paid" name="paid" inputmode="numeric" autocomplete="off">
+          <input id="paid" name="paid" type="number" min="0" step="1" inputmode="numeric" autocomplete="off" required>
         </div>
         <div>
           <label for="active">Seats active in the last 30 days</label>
-          <input id="active" name="active" inputmode="numeric" autocomplete="off">
+          <input id="active" name="active" type="number" min="0" step="1" inputmode="numeric" autocomplete="off" required>
         </div>
         <div>
-          <label for="cap">Price-up cap (%)</label>
-          <input id="cap" name="cap" inputmode="decimal" autocomplete="off">
+          <label for="cap-status">Price-up cap in the contract</label>
+          <select id="cap-status" name="cap-status">
+            <option value="">Select</option>
+            <option value="set">Yes, capped at the % below</option>
+            <option value="none">No cap</option>
+            <option value="unknown">Unknown</option>
+          </select>
+        </div>
+        <div>
+          <label for="cap">Price-up cap (%), 0 means no increase</label>
+          <input id="cap" name="cap" type="number" min="0" max="100" step="any" inputmode="decimal" autocomplete="off">
         </div>
         <div>
           <label for="notice">Notice period (days)</label>
-          <input id="notice" name="notice" inputmode="numeric" autocomplete="off">
+          <input id="notice" name="notice" type="number" min="0" step="1" inputmode="numeric" autocomplete="off" required>
         </div>
         <div>
           <label for="data-return">Data-return window (days)</label>
-          <input id="data-return" name="data-return" inputmode="numeric" autocomplete="off">
+          <input id="data-return" name="data-return" type="number" min="0" step="1" inputmode="numeric" autocomplete="off" required>
         </div>
         <div>
           <label for="export">Can export all data</label>
           <select id="export" name="export">
             <option value="yes">Yes</option>
             <option value="no">No</option>
+            <option value="unknown">Unknown</option>
           </select>
         </div>
         <div>
@@ -146,6 +155,7 @@
           <select id="subprocessors" name="subprocessors">
             <option value="yes">Yes</option>
             <option value="no">No</option>
+            <option value="unknown">Unknown</option>
           </select>
         </div>
         <div>
@@ -153,6 +163,7 @@
           <select id="exit" name="exit">
             <option value="yes">Yes</option>
             <option value="no">No</option>
+            <option value="unknown">Unknown</option>
           </select>
         </div>
       </div>
@@ -207,7 +218,7 @@
       <ul>
         <li>The points are fixed weights chosen by this desk. They are a starting rule, not an industry standard. Adjust your judgment for a tool that is critical to operations.</li>
         <li>Seat activity in the last 30 days can miss seasonal users, such as staff who only log in at quarter-end. Check a 90-day view before cutting.</li>
-        <li>The scorecard does not read contracts. It relies on what you type. If a field is blank, it is not scored.</li>
+        <li>The scorecard does not read contracts. It relies on what you type. If a required field is blank, it returns Incomplete and names the missing field instead of a decision. If you do not know an answer, choose Unknown rather than guessing.</li>
         <li>It is not legal or procurement advice. Have counsel review contract changes.</li>
       </ul>
     </section>
@@ -274,6 +285,7 @@
             <h3>Legal</h3>
             <ul>
               <li><a href="../editorial.html">Editorial standards</a></li>
+              <li><a href="../corrections.html">Corrections</a></li>
               <li><a href="../privacy.html">Privacy</a></li>
               <li><a href="../terms.html">Terms</a></li>
               <li><a href="../contact.html">Contact</a></li>

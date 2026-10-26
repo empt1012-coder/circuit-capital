@@ -148,7 +148,8 @@
         document.getElementById("agent-worked").textContent = "That file had no rows.";
         return;
       }
-      draw(rows, "Showing the imported file. It was read in this browser and not uploaded.");
+      const bad = api.invalidRows(rows);
+      draw(rows, "Showing the imported file. It was read in this browser and not uploaded." + (bad.length ? " Check rows " + bad.join(", ") + ": they have a review date that is not a real date or is in the future, flagged below." : ""));
     };
     reader.readAsText(file);
   });
@@ -168,6 +169,12 @@
     return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
   }
 
+  function realDate(parts) {
+    const y = Number(parts[1]), m = Number(parts[2]), d = Number(parts[3]);
+    const date = new Date(y, m - 1, d);
+    return date.getFullYear() === y && date.getMonth() === m - 1 && date.getDate() === d ? date : null;
+  }
+
   function flagsFor(row, today) {
     const flags = [];
     if (row.identity === "person" || row.identity === "shared") flags.push("Reuses a person's or shared identity.");
@@ -175,12 +182,13 @@
     if (!(row.reviewed || "").trim()) flags.push("No review date.");
     else {
       const parts = /^(\d{4})-(\d{2})-(\d{2})$/.exec(row.reviewed);
-      if (!parts) flags.push("Review date is not a date.");
+      const reviewed = parts ? realDate(parts) : null;
+      if (!reviewed) flags.push("Review date is not a real date in YYYY-MM-DD form.");
       else {
-        const reviewed = new Date(Number(parts[1]), Number(parts[2]) - 1, Number(parts[3]));
         const now = new Date(today.getFullYear(), today.getMonth(), today.getDate());
         const days = Math.round((now - reviewed) / 86400000);
-        if (days >= 90) flags.push("Last review was " + days + " days ago.");
+        if (days < 0) flags.push("Review date is in the future.");
+        else if (days >= 90) flags.push("Last review was " + days + " days ago.");
       }
     }
     return flags;
@@ -267,7 +275,8 @@
       FIELDS.forEach(function (field) { row[field] = (cells[index[field]] || "").trim(); });
       if (row.identity !== "own" && row.identity !== "person" && row.identity !== "shared") {
         const id = row.identity.toLowerCase();
-        row.identity = id.indexOf("person") !== -1 ? "person" : id.indexOf("shared") !== -1 ? "shared" : "own";
+        // Unrecognized identity values are treated as shared (the riskier reading), not silently as its own account.
+        row.identity = id.indexOf("person") !== -1 ? "person" : (id.indexOf("own") !== -1 || id.indexOf("dedicated") !== -1 || id.indexOf("service") !== -1) ? "own" : "shared";
       }
       row.spend = /^y/i.test(row.spend) ? "yes" : "no";
       row.messages = /^y/i.test(row.messages) ? "yes" : "no";
@@ -275,5 +284,13 @@
     });
   }
 
-  return { inventory: inventory, toCsv: toCsv, fromCsv: fromCsv };
+  function invalidRows(rows) {
+    const out = [];
+    (rows || []).forEach(function (row, i) {
+      if (flagsFor(row, new Date()).some(function (f) { return /not a real date|in the future/.test(f); })) out.push(i + 1);
+    });
+    return out;
+  }
+
+  return { inventory: inventory, toCsv: toCsv, fromCsv: fromCsv, invalidRows: invalidRows };
 });
