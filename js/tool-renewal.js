@@ -15,11 +15,19 @@
 
   function render(result) {
     decision.textContent = result.decision;
+    decision.classList.toggle("tool-error", !!result.incomplete);
     total.textContent = result.total + " points. " + result.band;
     table.innerHTML = "<tr><th>Check</th><th>Result</th><th>Points</th></tr>" +
       result.rows.map(function (row) {
-        return "<tr><td>" + row.check + "</td><td>" + row.result + "</td><td>" + row.points + "</td></tr>";
+        return "<tr><td></td><td></td><td></td></tr>";
       }).join("");
+    Array.prototype.forEach.call(table.querySelectorAll("tr"), function (tr, i) {
+      if (i === 0) return;
+      const row = result.rows[i - 1];
+      tr.children[0].textContent = row.check;
+      tr.children[1].textContent = row.result;
+      tr.children[2].textContent = row.points;
+    });
     out.value = result.text;
   }
 
@@ -31,6 +39,7 @@
       paid: val("paid"),
       active: val("active"),
       cap: val("cap"),
+      capStatus: val("cap-status"),
       notice: val("notice"),
       dataReturn: val("data-return"),
       exportAll: val("export"),
@@ -53,8 +62,73 @@
     return Number.isFinite(n) ? n : null;
   }
 
+  function label(id) {
+    return {
+      paid: "seats paid",
+      active: "seats active",
+      cap: "the price-up cap percentage",
+      notice: "notice period days",
+      dataReturn: "data-return window days"
+    }[id];
+  }
+
+  function listJoin(items) {
+    if (items.length <= 1) return items.join("");
+    return items.slice(0, -1).join(", ") + " and " + items[items.length - 1];
+  }
+
+  function validate(input) {
+    const missing = [];
+    const invalid = [];
+    const capStatus = input.capStatus || (input.cap === "" || input.cap == null ? "" : "set");
+    ["paid", "active", "notice", "dataReturn"].forEach(function (id) {
+      const raw = input[id];
+      if (raw === "" || raw == null) { missing.push(label(id)); return; }
+      const n = num(raw);
+      if (n == null) invalid.push(label(id) + " must be a number");
+      else if (n < 0) invalid.push(label(id) + " cannot be negative");
+      else if (id !== "notice" && id !== "dataReturn" && !Number.isInteger(n)) invalid.push(label(id) + " must be a whole number");
+    });
+    const paid = num(input.paid);
+    const active = num(input.active);
+    if (paid === 0) invalid.push("seats paid must be at least 1");
+    if (paid != null && active != null && paid > 0 && active > paid) invalid.push("seats active cannot be more than seats paid");
+    if (!capStatus) missing.push("whether there is a price-up cap");
+    if (capStatus === "set") {
+      if (input.cap === "" || input.cap == null) missing.push(label("cap"));
+      else {
+        const cap = num(input.cap);
+        if (cap == null) invalid.push("the price-up cap must be a number");
+        else if (cap < 0) invalid.push("the price-up cap cannot be negative");
+        else if (cap > 100) invalid.push("the price-up cap cannot be more than 100%");
+      }
+    }
+    if (input.cost !== "" && input.cost != null) {
+      const cost = num(input.cost);
+      if (cost == null) invalid.push("annual cost must be a number");
+      else if (cost < 0) invalid.push("annual cost cannot be negative");
+    }
+    return { missing: missing, invalid: invalid, capStatus: capStatus };
+  }
+
   function score(input) {
     const product = input.product || "This product";
+    const check = validate(input);
+    if (check.missing.length || check.invalid.length) {
+      const parts = [];
+      if (check.missing.length) parts.push("Incomplete: add " + listJoin(check.missing) + ".");
+      if (check.invalid.length) parts.push("Check the inputs: " + listJoin(check.invalid) + ".");
+      const message = parts.join(" ");
+      return {
+        decision: check.missing.length ? "Incomplete: add " + listJoin(check.missing) : "Check the inputs",
+        incomplete: true,
+        total: 0,
+        band: message + " No decision until the required fields are filled in with valid values.",
+        rows: [],
+        reasons: [],
+        text: product + "\n" + message + "\nNo decision until the required fields are filled in with valid values."
+      };
+    }
     const paid = num(input.paid);
     const active = num(input.active);
     const cap = num(input.cap);
@@ -62,46 +136,47 @@
     const dataReturn = num(input.dataReturn);
     const rows = [];
 
-    if (paid == null || paid <= 0 || active == null) {
-      rows.push({ check: "Seat use", result: "Not scored. Enter seats paid and seats active.", points: 0, agenda: "" });
-    } else {
-      const pct = Math.round((active / paid) * 1000) / 10;
-      if (active / paid < 0.6) {
-        rows.push({
-          check: "Seat use",
-          result: pct + "% of paid seats were active. Under 60% scores 2.",
-          points: 2,
-          agenda: "Cut the renewal to seats active in the last 30 days, or price the idle seats out."
-        });
-      } else {
-        rows.push({
-          check: "Seat use",
-          result: pct + "% of paid seats were active. At or above 60% scores 0.",
-          points: 0,
-          agenda: ""
-        });
-      }
-    }
-
-    if (cap == null || cap <= 0) {
+    const pct = Math.round((active / paid) * 1000) / 10;
+    if (active / paid < 0.6) {
       rows.push({
-        check: "Price-up cap",
-        result: "No cap entered. A blank or zero cap scores 2.",
+        check: "Seat use",
+        result: pct + "% of paid seats were active. Under 60% scores 2.",
         points: 2,
-        agenda: "Add a contractual price-up cap. We will not sign a blank increase."
+        agenda: "Cut the renewal to seats active in the last 30 days, or price the idle seats out."
       });
     } else {
       rows.push({
-        check: "Price-up cap",
-        result: "Cap is " + cap + "%. A named cap scores 0.",
+        check: "Seat use",
+        result: pct + "% of paid seats were active. At or above 60% scores 0.",
         points: 0,
         agenda: ""
       });
     }
 
-    if (notice == null) {
-      rows.push({ check: "Notice period", result: "Not scored. Notice days were left blank.", points: 0, agenda: "" });
-    } else if (notice < 30) {
+    if (check.capStatus === "none") {
+      rows.push({
+        check: "Price-up cap",
+        result: "No cap. The price can rise by any amount. Scores 2.",
+        points: 2,
+        agenda: "Add a contractual price-up cap. We will not sign a blank increase."
+      });
+    } else if (check.capStatus === "unknown") {
+      rows.push({
+        check: "Price-up cap",
+        result: "Unknown. Treated as no cap until the contract shows one. Scores 2.",
+        points: 2,
+        agenda: "Show us the price-up cap in the contract, or add one."
+      });
+    } else {
+      rows.push({
+        check: "Price-up cap",
+        result: "Cap is " + cap + "%." + (cap === 0 ? " A 0% cap means no increase, the best case." : "") + " A named cap scores 0.",
+        points: 0,
+        agenda: ""
+      });
+    }
+
+    if (notice < 30) {
       rows.push({
         check: "Notice period",
         result: notice + " days. Under 30 scores 2.",
@@ -117,9 +192,7 @@
       });
     }
 
-    if (dataReturn == null) {
-      rows.push({ check: "Data-return window", result: "Not scored. Days were left blank.", points: 0, agenda: "" });
-    } else if (dataReturn < 30) {
+    if (dataReturn < 30) {
       rows.push({
         check: "Data-return window",
         result: dataReturn + " days. Under 30 scores 1.",
@@ -141,6 +214,13 @@
         result: "Cannot export all data. Scores 2.",
         points: 2,
         agenda: "Confirm we can export all customer data in a usable format before we renew."
+      });
+    } else if (input.exportAll === "unknown") {
+      rows.push({
+        check: "Export",
+        result: "Unknown. Scores 1. A no would score 2.",
+        points: 1,
+        agenda: "Confirm in writing whether we can export all customer data in a usable format."
       });
     } else {
       rows.push({ check: "Export", result: "Full export is available. Scores 0.", points: 0, agenda: "" });
@@ -191,6 +271,13 @@
         points: 2,
         agenda: "List subprocessors before signature."
       });
+    } else if (input.subprocessors === "unknown") {
+      rows.push({
+        check: "Subprocessors",
+        result: "Unknown. Scores 1. A no would score 2.",
+        points: 1,
+        agenda: "Send the current subprocessor list."
+      });
     } else {
       rows.push({ check: "Subprocessors", result: "Subprocessors are listed. Scores 0.", points: 0, agenda: "" });
     }
@@ -201,6 +288,13 @@
         result: "No exit clause. Scores 2.",
         points: 2,
         agenda: "Add an exit clause we can exercise without a new negotiation."
+      });
+    } else if (input.exitClause === "unknown") {
+      rows.push({
+        check: "Exit clause",
+        result: "Unknown. Scores 1. A no would score 2.",
+        points: 1,
+        agenda: "Confirm whether the contract has an exit clause, and quote it."
       });
     } else {
       rows.push({ check: "Exit clause", result: "Exit clause is present. Scores 0.", points: 0, agenda: "" });
@@ -263,5 +357,5 @@
     return { decision: decision, total: total, band: band, rows: rows, reasons: reasons, text: lines.join("\n") };
   }
 
-  return { score: score };
+  return { score: score, validate: validate };
 });

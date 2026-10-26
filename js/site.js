@@ -106,6 +106,7 @@
             <h3>Legal</h3>
             <ul>
               <li><a href="${asset("editorial.html")}">Editorial standards</a></li>
+              <li><a href="${asset("corrections.html")}">Corrections</a></li>
               <li><a href="${asset("privacy.html")}">Privacy</a></li>
               <li><a href="${asset("terms.html")}">Terms</a></li>
               <li><a href="${asset("contact.html")}">Contact</a></li>
@@ -266,32 +267,71 @@
     return (await res.json()).articles;
   }
 
+  async function loadPages() {
+    try {
+      const res = await fetch(asset("data/pages.json"));
+      if (!res.ok) return [];
+      return (await res.json()).pages || [];
+    } catch {
+      return [];
+    }
+  }
+
+  function esc(value) {
+    return String(value == null ? "" : value).replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[ch]);
+  }
+
+  function el(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text != null) node.textContent = text;
+    return node;
+  }
+
   const searchRoot = document.getElementById("search-results");
   if (searchRoot) {
     const params = new URLSearchParams(location.search);
-    const q = (params.get("q") || "").trim().toLowerCase();
+    const rawQ = (params.get("q") || "").trim();
+    const q = rawQ.toLowerCase();
     const input = document.querySelector("#search-page-input");
     if (input) input.value = params.get("q") || "";
-    loadArticles().then((articles) => {
-      const hits = q
-        ? articles.filter((a) =>
-            (a.title + " " + a.dek + " " + a.category + " " + a.body).toLowerCase().includes(q)
-          )
-        : articles;
-      searchRoot.innerHTML = hits.length
-        ? hits
-            .map(
-              (a) => `<article class="search-hit">
-                <div class="kicker">${a.category}</div>
-                <h2><a href="${itemHref(a)}">${a.title}</a></h2>
-                <p>${a.dek}</p>
-                <div class="meta">${a.author} · ${a.date} · ${a.readTime} min</div>
-              </article>`
-            )
-            .join("")
-        : `<p>No briefings matched “${params.get("q") || ""}”.</p>`;
+    Promise.all([loadArticles(), loadPages()]).then(([articles, pages]) => {
+      const items = articles.map((a) => ({
+        href: itemHref(a),
+        kicker: a.category,
+        title: a.title,
+        dek: a.dek,
+        meta: a.author + " · " + a.date + " · " + a.readTime + " min",
+        text: a.title + " " + a.dek + " " + a.category + " " + a.body
+      })).concat(pages.map((p) => ({
+        href: asset(p.path),
+        kicker: p.kind,
+        title: p.title,
+        dek: p.dek,
+        meta: p.kind,
+        text: p.title + " " + p.dek + " " + p.kind + " " + (p.body || "")
+      })));
+      const hits = q ? items.filter((it) => it.text.toLowerCase().includes(q)) : items;
+      searchRoot.textContent = "";
+      if (!hits.length) {
+        searchRoot.appendChild(el("p", "", "No briefings, tools or services matched “" + rawQ + "”."));
+        return;
+      }
+      hits.forEach((it) => {
+        const art = el("article", "search-hit");
+        art.appendChild(el("div", "kicker", it.kicker));
+        const h2 = el("h2");
+        const a = el("a", "", it.title);
+        a.setAttribute("href", it.href);
+        h2.appendChild(a);
+        art.appendChild(h2);
+        art.appendChild(el("p", "", it.dek));
+        art.appendChild(el("div", "meta", it.meta));
+        searchRoot.appendChild(art);
+      });
     }).catch(() => {
-      searchRoot.innerHTML = "<p>The index could not be loaded. Refresh and try again.</p>";
+      searchRoot.textContent = "";
+      searchRoot.appendChild(el("p", "", "The index could not be loaded. Refresh and try again."));
     });
   }
 
@@ -304,12 +344,12 @@
       root.innerHTML = list
         .map(
           (a) => `<article class="latest-row">
-            <a href="${itemHref(a)}"><img src="${asset(a.image)}" alt=""></a>
+            <a href="${esc(itemHref(a))}" aria-label="${esc(a.title)}"><img src="${esc(asset(a.image))}" alt=""></a>
             <div>
-              <div class="kicker">${a.category}</div>
-              <h3><a href="${itemHref(a)}">${a.title}</a></h3>
-              <p>${a.dek}</p>
-              <div class="meta">${a.author} · ${a.date} · ${a.readTime} min read</div>
+              <div class="kicker">${esc(a.category)}</div>
+              <h3><a href="${esc(itemHref(a))}">${esc(a.title)}</a></h3>
+              <p>${esc(a.dek)}</p>
+              <div class="meta">${esc(a.author)} · ${esc(a.date)} · ${esc(a.readTime)} min read</div>
             </div>
           </article>`
         )
@@ -331,12 +371,12 @@
       root.innerHTML = list
         .map(
           (a) => `<article class="latest-row">
-            <a href="${itemHref(a)}"><img src="${asset(a.image)}" alt=""></a>
+            <a href="${esc(itemHref(a))}" aria-label="${esc(a.title)}"><img src="${esc(asset(a.image))}" alt=""></a>
             <div>
-              <div class="kicker">${a.category}</div>
-              <h3><a href="${itemHref(a)}">${a.title}</a></h3>
-              <p>${a.dek}</p>
-              <div class="meta">${a.author} · ${a.date} · ${a.readTime} min read</div>
+              <div class="kicker">${esc(a.category)}</div>
+              <h3><a href="${esc(itemHref(a))}">${esc(a.title)}</a></h3>
+              <p>${esc(a.dek)}</p>
+              <div class="meta">${esc(a.author)} · ${esc(a.date)} · ${esc(a.readTime)} min read</div>
             </div>
           </article>`
         )
@@ -354,12 +394,12 @@
       root.innerHTML = list
         .map(
           (a) => `<article class="latest-row">
-            <a href="${itemHref(a)}"><img src="${asset(a.image)}" alt=""></a>
+            <a href="${esc(itemHref(a))}" aria-label="${esc(a.title)}"><img src="${esc(asset(a.image))}" alt=""></a>
             <div>
-              <div class="kicker">${a.category}</div>
-              <h3><a href="${itemHref(a)}">${a.title}</a></h3>
-              <p>${a.dek}</p>
-              <div class="meta">${a.author} · ${a.date} · ${a.readTime} min read</div>
+              <div class="kicker">${esc(a.category)}</div>
+              <h3><a href="${esc(itemHref(a))}">${esc(a.title)}</a></h3>
+              <p>${esc(a.dek)}</p>
+              <div class="meta">${esc(a.author)} · ${esc(a.date)} · ${esc(a.readTime)} min read</div>
             </div>
           </article>`
         )

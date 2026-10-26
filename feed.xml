@@ -31,7 +31,7 @@
 <author>circuits50capital@circuits.fit (Emilio Santos)</author>
 </item>
 <item>
-<title>PHP2Shell was used before the patch. Start the log review at October 17.</title>
+<title>PHP2Shell was probed before the patch. Start the log review at October 17.</title>
 <link>https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html</link>
 <guid>https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html</guid>
 <pubDate>Thu, 22 Oct 2026 20:00:00 +0000</pubDate>

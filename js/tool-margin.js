@@ -59,6 +59,17 @@
         text: "Incomplete. No cost was invented."
       };
     }
+    const named = { "price charged": price, "input tokens": inputTokens, "output tokens": outputTokens, "input price": inputPrice, "output price": outputPrice, "review minutes": minutes, "hourly rate": hourly };
+    if (tasks != null) named["tasks per month"] = tasks;
+    const negative = Object.keys(named).filter(function (k) { return named[k] < 0; });
+    if (negative.length) {
+      const msg = "Check the inputs: " + negative.join(", ") + " cannot be negative.";
+      return { worked: msg, text: msg + " No result was calculated.", error: msg };
+    }
+    if (minutes > 60 * 24) {
+      const msg = "Check the inputs: review minutes per task cannot be more than 1,440, one full day.";
+      return { worked: msg, text: msg + " No result was calculated.", error: msg };
+    }
 
     const tokenCost = (inputTokens / 1e6) * inputPrice + (outputTokens / 1e6) * outputPrice;
     const reviewCost = (minutes / 60) * hourly;

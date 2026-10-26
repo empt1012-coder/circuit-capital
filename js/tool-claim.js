@@ -56,7 +56,11 @@
     const volume = num(input.volume);
     const unit = num(input.unitPrice);
     let bill;
-    if (volume != null && unit != null) {
+    const badVolume = (input.volume !== "" && input.volume != null && (volume == null || volume < 0));
+    const badUnit = (input.unitPrice !== "" && input.unitPrice != null && (unit == null || unit < 0));
+    if (badVolume || badUnit) {
+      bill = "Check the inputs: volume and unit price must be numbers of 0 or more. No bill was calculated.";
+    } else if (volume != null && unit != null) {
       bill = "At our volume, " + fmt(volume) + " × " + fmt(unit) + " = " + fmt(volume * unit) + ". That is our arithmetic, in the units we typed. It sits next to the claim. It does not confirm the claim.";
     } else {
       bill = "Our volume and unit price are blank. The claim does not price our bill.";
@@ -69,7 +73,7 @@
     questions.push(input.priceSource === "yes"
       ? "Show the price source on one page with the metric. Does it include the meter we will actually pay?"
       : "Where is the price, and which meter does it cover?");
-    questions.push(volume != null
+    questions.push(volume != null && !badVolume
       ? "What does the claim do at our volume of " + fmt(volume) + "?"
       : "What does the claim do at our volume, not the demo volume?");
 

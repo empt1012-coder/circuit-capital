@@ -1,0 +1,88 @@
+{
+  "pages": [
+    {
+      "path": "tools/8k-materiality-worksheet.html",
+      "kind": "Tool",
+      "title": "SEC 8-K Item 1.05 materiality worksheet and four-business-day calculator",
+      "dek": "Free SEC Form 8-K Item 1.05 materiality worksheet: record who decided an incident was material and count four business days, skipping weekends and federal holidays. Worked example included.",
+      "body": ""
+    },
+    {
+      "path": "tools/agent-access-limit.html",
+      "kind": "Tool",
+      "title": "AI agent access limit sheet (allow/deny template)",
+      "dek": "Free AI agent access template: list what an agent may read, write, call and spend, who owns it, and flag when it inherits a person’s access. Based on Gartner’s 54% finding. Worked example.",
+      "body": ""
+    },
+    {
+      "path": "tools/agent-inventory.html",
+      "kind": "Tool",
+      "title": "AI agent inventory and access map",
+      "dek": "List each agent, the identity it uses, and what it can change. Flags stale reviews and shared logins.",
+      "body": ""
+    },
+    {
+      "path": "tools/ai-cost-per-task.html",
+      "kind": "Tool",
+      "title": "AI model cost per finished task",
+      "dek": "Compare list price with the cost of a task that actually finishes, and the daily volume where self-hosting beats the API.",
+      "body": ""
+    },
+    {
+      "path": "tools/index.html",
+      "kind": "Tool",
+      "title": "Tools",
+      "dek": "Nine browser tools for a renewal, an agent limit, an SBOM request, a vendor claim, token cost, finished-task cost, an agent inventory, an 8-K clock, and a risk exception. Inputs stay on the device.",
+      "body": ""
+    },
+    {
+      "path": "tools/risk-exception-register.html",
+      "kind": "Tool",
+      "title": "Risk exception register template (free, in-browser)",
+      "dek": "Free security risk exception register: track owner, expiry and funded fix for each exception. CISA KEV, MFA, backups and EDR are flagged not waivable. CSV import and export, worked example.",
+      "body": ""
+    },
+    {
+      "path": "tools/sbom-request-pack.html",
+      "kind": "Tool",
+      "title": "SBOM request template for vendors, SaaS and AI software",
+      "dek": "Free SBOM request template: write a vendor email asking for SBOM fields under CISA’s 2026 minimum elements, including SaaS and AI, then track which fields came back. Worked example included.",
+      "body": ""
+    },
+    {
+      "path": "tools/software-renewal-scorecard.html",
+      "kind": "Tool",
+      "title": "Software renewal scorecard",
+      "dek": "Decide keep, renegotiate, or replace before a renewal call. The points stay on the page.",
+      "body": ""
+    },
+    {
+      "path": "tools/token-cost-margin.html",
+      "kind": "Tool",
+      "title": "AI token cost to gross margin calculator",
+      "dek": "Free calculator for AI-native unit economics: token cost plus human-review cost against price per task, with margin and monthly contribution. Worked example shows why review time often decides the margin.",
+      "body": ""
+    },
+    {
+      "path": "tools/vendor-claim-checker.html",
+      "kind": "Tool",
+      "title": "Vendor claim checker for AI speed and cost claims",
+      "dek": "Free vendor claim checker: turn an “up to 8x faster” or “40% cheaper” claim into whose number it is, what was not measured, your bill at your volume, and three questions for the call.",
+      "body": ""
+    },
+    {
+      "path": "services/renewal-audit.html",
+      "kind": "Service",
+      "title": "Renewal Audit",
+      "dek": "A fixed-price review of up to 25 software renewals: cut, renegotiate or keep, notice deadlines, negotiation points and a renewal calendar. $199, delivered in 5 business days.",
+      "body": ""
+    },
+    {
+      "path": "corrections.html",
+      "kind": "Page",
+      "title": "Corrections",
+      "dek": "Every correction to a published piece, with the date and what changed.",
+      "body": "corrections log errata PHP2Shell Sophos"
+    }
+  ]
+}

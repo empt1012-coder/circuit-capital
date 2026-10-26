@@ -10,25 +10,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" as="style">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
   <link rel="stylesheet" href="../css/styles.css">
 
   <link rel="canonical" href="https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html">
   <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
-  <meta property="og:title" content="PHP2Shell was used before the patch. Start the log review at October 17. — Circuit &amp; Capital">
+  <meta property="og:title" content="PHP2Shell was probed before the patch. Start the log review at October 17. — Circuit &amp; Capital">
   <meta property="og:description" content="PHP2Shell (CVE-2026-109618, CVE-2026-109619) allows unauthenticated remote code execution in PHP. Amazon saw an attempt October 17, before the October 21 patch. What CISOs and CFOs should check this week.">
   <meta property="og:url" content="https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Circuit &amp; Capital">
   <meta property="og:image" content="https://circuits.fit/assets/images/colo.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PHP2Shell was used before the patch. Start the log review at October 17. — Circuit &amp; Capital">
+  <meta name="twitter:title" content="PHP2Shell was probed before the patch. Start the log review at October 17. — Circuit &amp; Capital">
   <meta name="twitter:description" content="PHP2Shell (CVE-2026-109618, CVE-2026-109619) allows unauthenticated remote code execution in PHP. Amazon saw an attempt October 17, before the October 21 patch. What CISOs and CFOs should check this week.">
   <meta name="twitter:image" content="https://circuits.fit/assets/images/colo.jpg">
   <meta property="article:published_time" content="2026-10-22">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "PHP2Shell was used before the patch. Start the log review at October 17.", "description": "PHP2Shell (CVE-2026-109618, CVE-2026-109619) allows unauthenticated remote code execution in PHP. Amazon saw an attempt October 17, before the October 21 patch. What CISOs and CFOs should check this week.", "image": ["https://circuits.fit/assets/images/colo.jpg"], "datePublished": "2026-10-22", "dateModified": "2026-10-22", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html", "articleSection": "Policy"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "PHP2Shell was probed before the patch. Start the log review at October 17.", "description": "PHP2Shell (CVE-2026-109618, CVE-2026-109619) allows unauthenticated remote code execution in PHP. Amazon saw an attempt October 17, before the October 21 patch. What CISOs and CFOs should check this week.", "image": ["https://circuits.fit/assets/images/colo.jpg"], "datePublished": "2026-10-22", "dateModified": "2026-10-26", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html", "articleSection": "Policy"}
   </script>
   <meta name="google-adsense-account" content="ca-pub-3634982565972955">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3634982565972955" crossorigin="anonymous"></script>
@@ -83,13 +82,16 @@
   <main id="main">
     <header class="article-hero wrap">
       <div class="kicker">Policy</div>
-      <h1>PHP2Shell was used before the patch. Start the log review at October 17.</h1>
+      <h1>PHP2Shell was probed before the patch. Start the log review at October 17.</h1>
       <p class="dek">PHP fixed two unauthenticated remote code execution bugs on October 21. Amazon saw an exploit attempt on October 17. Most companies run PHP inside software they buy, so the work is a vendor inventory, not only a patch.</p>
       <div class="byline-row">
         <span>Edited by <strong>Emilio Santos</strong></span>
         <span><time datetime="2026-10-22">October 22, 2026</time></span>
         <span>6 min read</span>
       </div>
+      <aside class="correction-note" role="note" aria-label="Correction">
+        <p><strong>Correction, October 26, 2026:</strong> An earlier version of this article said Sophos had seen one successful PHP2Shell exploitation and that Amazon described the bugs as broadly exploited. Sophos corrected its report at 21:21 UTC on October 22: its telemetry shows scanning and a small number of failed exploitation attempts, there is no evidence of a successful compromise, and the payload was not delivered. Amazon describes broad exploitation attempts, and says it is unclear whether any would have succeeded on real-world systems. We have revised the headline, introduction, timeline and conclusions. See the <a href="../corrections.html">corrections log</a>.</p>
+      </aside>
     </header>
     <figure class="article-cover wrap">
       <picture><source srcset="../assets/images/colo.webp" type="image/webp"><img src="../assets/images/colo.jpg" alt="Server racks in a colocation hall" width="1280" height="720" decoding="async"></picture>
@@ -98,7 +100,7 @@
     <div class="wrap article-layout">
       <article class="prose">
         <p class="lead-graf">On Wednesday, October 21, 2026, the PHP project released PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35. The releases fix CVE-2026-109618 and CVE-2026-109619, two critical vulnerabilities, both rated 9.2 on CVSS version 4, that the project says “can allow unauthenticated remote code execution.” The pair is now widely called PHP2Shell. The project’s advisory says the people at risk are “all PHP installations serving web requests,” including PHP-FPM, Apache with mod_php, php-cgi, FrankenPHP and LiteSpeed.</p>
-        <p>Amazon’s threat intelligence team says it saw a PHP2Shell exploit attempt against its honeypots on October 17, four days before the fix was public. Sophos says it has seen one successful exploitation. Amazon says the bugs are now “being broadly exploited in the wild.” For most companies, PHP is not something they bought on purpose. It runs under the marketing site, the help desk, the vendor portal and the appliance in the rack. That changes what this week’s work looks like.</p>
+        <p>Amazon’s threat intelligence team says it saw a PHP2Shell exploit attempt against its honeypots on October 17, four days before the fix was public. Sophos and Amazon have both reported exploitation attempts. Neither has confirmed a successful compromise: Sophos says the attempts it saw failed, and Amazon says PHP2Shell is “now seeing broad exploitation attempts in the wild” but that it is unclear whether any would have succeeded on real-world systems. For most companies, PHP is not something they bought on purpose. It runs under the marketing site, the help desk, the vendor portal and the appliance in the rack. That changes what this week’s work looks like.</p>
         <h2>What happened</h2>
         <ul>
           <li><strong>October 20:</strong> the PHP security team gave advance notice of a critical release for October 21 at 14:00 UTC, addressing two vulnerabilities rated CVSS v4.0 9.2. It said it might release earlier if exploitation appeared.</li>
@@ -106,12 +108,14 @@
           <li><strong>October 21, about 02:00 UTC:</strong> Amazon says it found multiple proof-of-concept exploits, the earliest around this time, and further attempts against its sensors through 08:00 UTC from varied infrastructure, which it reads as multiple actors.</li>
           <li><strong>October 21:</strong> PHP published the fixed releases and its advisory. CVE-2026-109618 is code execution through memory corruption when PHP handles an out-of-memory error partway through a request. CVE-2026-109619 is code execution through internal state that survives after its memory is freed and is reused by a later request on the same worker. PHP rates mod_php the highest-risk setup, with “a demonstrated exploit where an unauthenticated request can trigger the attack before any application code runs.”</li>
           <li><strong>October 21:</strong> CISA urged organizations to patch immediately. At publication it said it had not observed exploitation. CERT-EU issued advisory 2026-018 the same day.</li>
-          <li><strong>October 22, 16:18 UTC:</strong> Sophos updated its advisory. Its threat hunters saw multiple exploit attempts and one successful exploitation that delivered what appears to be a Mirai variant. Sophos says it has seen no evidence linking the activity to ransomware, data theft or supply chain compromise, and that whether follow-on code execution succeeds depends on architecture, PHP version and configuration.</li>
+          <li><strong>October 22, 16:18 UTC:</strong> Sophos updated its advisory to report multiple exploit attempts and, at the time, one successful exploitation.</li>
+          <li><strong>October 22, 21:21 UTC:</strong> Sophos corrected that update. Its customer telemetry shows scanning and a small number of failed exploitation attempts, and there is no evidence of a successful compromise. The payload, likely a Mirai variant Sophos calls Potassium, was not delivered because the attempt was blocked. Sophos adds that building a working exploit is “not straightforward,” and that the vulnerabilities remain serious and patching remains the main recommendation.</li>
+          <li><strong>October 23:</strong> PHP published an informational advisory about a further, unlikely remote code execution path (CVE-2026-115560) that needs an unusual combination of configuration and application code. It suggests setting <code>session.upload_progress.enabled=0</code> until the next regular bugfix release, a mitigation already listed for CVE-2026-109619.</li>
         </ul>
         <p>PHP 8.1 and older get no updates from the PHP project. Because of the severity, the security team published minimal source backports for 7.4, 8.0 and 8.1, and some distributions and long-term-support vendors ship their own fixes. PHP 8.2 reaches end of life on December 31, 2026.</p>
         <p>As of this writing on October 22, neither CVE is in CISA’s Known Exploited Vulnerabilities catalog. We checked the catalog JSON feed, version 2026.10.21 with 1,754 entries, this afternoon. NVD lists both records as “Undergoing Analysis.”</p>
         <h2>What it means for CISOs</h2>
-        <p>Two working assumptions break here. The first is that the disclosure date is the start of the risk window. Amazon’s advice is direct: “Start investigations from the earliest known exploitation, not from the disclosure date. For PHP2Shell, investigate from at least starting on October 17.” A system patched on Friday can still have been entered on Saturday the 17th.</p>
+        <p>Two working assumptions break here. The first is that the disclosure date is the start of the risk window. Amazon’s advice is direct: “Start investigations from the earliest known exploitation, not from the disclosure date. For PHP2Shell, investigate from at least starting on October 17.” No successful compromise has been confirmed, but a system patched this week was exposed from at least the 17th, and the log review is how you show it was not entered.</p>
         <p>The second is the patch service level. Amazon’s CISO writes that for critical bugs in internet-facing systems, teams should “measure patch and mitigation timelines in hours,” because “a 7-day or 30-day SLA assumes a delay that no longer exists.” Whether you adopt that is a policy choice with a staffing cost, and it should be made on purpose rather than discovered during the next incident.</p>
         <p>The harder problem is visibility. CISA notes that PHP “is often a component of other software and prevalence may not be directly observable.” CERT-EU makes the same point and points to a list maintained by the Dutch NCSC of third-party products that embed PHP. Your scanner may find the servers you run. It will not tell you which SaaS vendor’s customer portal runs mod_php on 8.1.</p>
         <h2>What it means for CFOs</h2>
@@ -123,21 +127,21 @@
           <li><strong>Ask suppliers for patch status in writing.</strong> One question: do you run PHP in the service we use, on what version, and on what date did you apply the October 21 fixes? Record each answer with the date and the person who gave it. The <a href="../tools/sbom-request-pack.html">SBOM request pack</a> and <a href="../tools/vendor-claim-checker.html">vendor claim checker</a> help with the follow-ups.</li>
           <li><strong>Patch.</strong> Move to 8.5.12, 8.4.27, 8.3.36 or 8.2.35, or your distribution’s fixed package, internet-facing systems first, and restart every worker. PHP lists configuration mitigations for systems that cannot update at once, but says they “do not make an installation safe.”</li>
           <li><strong>Review logs back to October 17.</strong> Amazon suggests looking for POST requests carrying the PHP_SESSION_UPLOAD_PROGRESS string in form uploads, and reviewing web server logs. Check vendor-hosted systems by asking the vendor for the same review.</li>
-          <li><strong>Check for webshells and unexpected processes.</strong> CISA says to watch for PHP worker processes launching shells or downloading tools. Amazon adds unexpected process execution or file modification on web servers. Sophos’s observed case wrote a payload to /tmp/nfs; its post lists the indicators.</li>
+          <li><strong>Check for webshells and unexpected processes.</strong> CISA says to watch for PHP worker processes launching shells or downloading tools. Amazon adds unexpected process execution or file modification on web servers. Sophos’s post lists indicators from the attempts it saw.</li>
           <li><strong>Deal with end-of-life versions.</strong> Anything on 8.1 or older goes offline, behind network-layer authentication, or into the <a href="../tools/risk-exception-register.html">risk exception register</a> with an owner and an expiry date.</li>
         </ol>
         <h2>What to watch next</h2>
-        <p>Watch the KEV catalog. If CISA adds either CVE, the row will carry a federal due date and may mark forensic triage, which would make the October 17 lookback a formal expectation for agencies. Watch Sophos and Amazon for updates on what attackers do after getting in; so far the confirmed payload is a botnet, not ransomware. Watch vendor advisories, which tend to arrive later than the upstream fix. And watch NVD, where analysis of both records is still under way.</p>
+        <p>Watch the KEV catalog. If CISA adds either CVE, the row will carry a federal due date and may mark forensic triage, which would make the October 17 lookback a formal expectation for agencies. Watch Sophos and Amazon for any confirmed successful exploitation; so far both report attempts, and the payload Sophos analyzed, a likely Mirai variant, was blocked before delivery. Watch vendor advisories, which tend to arrive later than the upstream fix. And watch NVD, where analysis of both records is still under way.</p>
         <h2>Sources</h2>
         <ul class="sources">
-          <li><a href="https://www.php.net/archive/2026.php" rel="noopener">PHP news archive, 2026</a>: advance notice of October 20; security advisory and releases 8.5.12, 8.4.27, 8.3.36 and 8.2.35, October 21, 2026 (affected setups, mitigations, backports, 8.2 end of life)</li>
+          <li><a href="https://www.php.net/archive/2026.php" rel="noopener">PHP news archive, 2026</a>: advance notice of October 20; security advisory and releases 8.5.12, 8.4.27, 8.3.36 and 8.2.35, October 21, 2026 (affected setups, mitigations, backports, 8.2 end of life); informational advisory on session upload progress (CVE-2026-115560), October 23, 2026</li>
           <li>GitHub security advisories <a href="https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w" rel="noopener">GHSA-w8hw-w9fx-j79w</a> (CVE-2026-109618) and <a href="https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp" rel="noopener">GHSA-6wmf-4rv5-p3rp</a> (CVE-2026-109619)</li>
           <li>NVD entries <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109618" rel="noopener">CVE-2026-109618</a> and <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109619" rel="noopener">CVE-2026-109619</a>, both published October 21, 2026, status Undergoing Analysis as of October 22</li>
           <li><a href="https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching" rel="noopener">CISA, “Critical Vulnerabilities in PHP Require Immediate Patching,”</a> October 21, 2026</li>
           <li>CISA <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" rel="noopener">Known Exploited Vulnerabilities catalog</a> and <a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">JSON feed</a>, version 2026.10.21, checked October 22, 2026 (neither CVE listed)</li>
           <li><a href="https://cert.europa.eu/publications/security-advisories/2026-018" rel="noopener">CERT-EU security advisory 2026-018, “Critical Vulnerabilities in PHP,”</a> October 21, 2026, and the <a href="https://github.com/NCSC-NL/php2shell" rel="noopener">NCSC-NL list of affected third-party software</a></li>
           <li><a href="https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/" rel="noopener">CJ Moses, “Amazon Threat Intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot,”</a> AWS Security Blog, October 21, 2026</li>
-          <li><a href="https://www.sophos.com/en-us/blog/proof-of-concept-exploit-released-for-php-vulnerabilities-109618-109619" rel="noopener">Sophos Counter Threat Unit, “Proof-of-concept exploit released for PHP vulnerabilities,”</a> updated October 22, 2026, 16:18 UTC</li>
+          <li><a href="https://www.sophos.com/en-us/blog/proof-of-concept-exploit-released-for-php-vulnerabilities-109618-109619" rel="noopener">Sophos Counter Threat Unit, “Proof-of-concept exploit released for PHP vulnerabilities,”</a> updated October 22, 2026, 16:18 UTC, corrected October 22, 2026, 21:21 UTC</li>
         </ul>
         <p>Related: <a href="beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch. Check the logs.</a>, the same lookback logic for a remote-support appliance, and <a href="cisa-listed-three-bugs-attackers-are-using.html">CISA listed three bugs attackers are already using</a>.</p>
         <div class="author-box">
@@ -203,6 +207,7 @@
             <h3>Legal</h3>
             <ul>
               <li><a href="../editorial.html">Editorial standards</a></li>
+              <li><a href="../corrections.html">Corrections</a></li>
               <li><a href="../privacy.html">Privacy</a></li>
               <li><a href="../terms.html">Terms</a></li>
               <li><a href="../contact.html">Contact</a></li>

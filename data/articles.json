@@ -242,7 +242,7 @@
     },
     {
       "slug": "php2shell-php-rce-vendor-inventory",
-      "title": "PHP2Shell was used before the patch. Start the log review at October 17.",
+      "title": "PHP2Shell was probed before the patch. Start the log review at October 17.",
       "dek": "PHP fixed two unauthenticated remote code execution bugs on October 21. Amazon saw an exploit attempt on October 17. Most companies run PHP inside software they buy, so the work is a vendor inventory, not only a patch.",
       "category": "Policy",
       "author": "Emilio Santos",
