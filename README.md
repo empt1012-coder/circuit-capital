@@ -19,3 +19,13 @@ Set emails, domain, analytics, and ads in `js/config.js`. Leave `ads.provider` a
 ## Forms
 
 Contact is a Netlify Form on the live site. The newsletter signup is off until there is more traffic. Desk: circuits50capital@circuits.fit.
+
+## IndexNow
+
+The IndexNow key file `fa0dbeb168f8be4d7b78c8a611a89d05.txt` lives at the publish root (served at https://circuits.fit/fa0dbeb168f8be4d7b78c8a611a89d05.txt). After deploying new content, run:
+
+```
+./scripts/indexnow.sh            # submits every <loc> in sitemap.xml
+```
+
+It POSTs the URLs to https://api.indexnow.org/indexnow; HTTP 200 or 202 means success.
