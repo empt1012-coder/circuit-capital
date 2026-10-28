@@ -1,0 +1,3 @@
+control,system,owner,reason,compensating,funded,amount,expiry,accepted,review_note
+CISA KEV,Internet-facing edge gateway,Platform team,Next change window,Source-address restriction,No,0,2026-10-31,CIO,Not waivable: known-exploited bug
+Other,Legacy file server,IT operations,Vendor cutover in progress,Network segmentation,Yes,12000,2027-01-05,CFO,

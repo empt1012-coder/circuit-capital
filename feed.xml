@@ -5,7 +5,23 @@
 <link>https://circuits.fit/</link>
 <description>Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</description>
 <language>en-us</language>
-<lastBuildDate>Sun, 25 Oct 2026 16:00:00 +0000</lastBuildDate>
+<lastBuildDate>Wed, 28 Oct 2026 15:30:00 +0000</lastBuildDate>
+<item>
+<title>CISA added Magento and a compression library. Ask who owns the patch.</title>
+<link>https://circuits.fit/articles/cisa-kev-magento-brotli-velocloud.html</link>
+<guid>https://circuits.fit/articles/cisa-kev-magento-brotli-velocloud.html</guid>
+<pubDate>Wed, 28 Oct 2026 15:30:00 +0000</pubDate>
+<description>Adobe Commerce CVE-2026-48356 and Google Brotli CVE-2026-111497 joined the exploited catalog on October 27, due November 10. Arista VeloCloud Orchestrator CVE-2026-114625 was added October 23. In each case the fix may sit with someone else.</description>
+<author>circuits50capital@circuits.fit (Emilio Santos)</author>
+</item>
+<item>
+<title>The SEC’s 2027 exam list names deepfakes and vendor oversight</title>
+<link>https://circuits.fit/articles/sec-2027-exam-priorities-deepfakes-vendors.html</link>
+<guid>https://circuits.fit/articles/sec-2027-exam-priorities-deepfakes-vendors.html</guid>
+<pubDate>Wed, 28 Oct 2026 15:30:00 +0000</pubDate>
+<description>The Division of Examinations published its fiscal 2027 priorities on October 23. It now says “super intelligence,” names deepfake voice and video, and checks vendor oversight in three places.</description>
+<author>circuits50capital@circuits.fit (Emilio Santos)</author>
+</item>
 <item>
 <title>How to Build a Software Renewal Tracker</title>
 <link>https://circuits.fit/guides/software-renewal-tracker-template.html</link>

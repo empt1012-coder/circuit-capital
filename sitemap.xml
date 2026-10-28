@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/briefing.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/contact.html</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/privacy.html</loc>
@@ -226,43 +226,43 @@
   </url>
   <url>
     <loc>https://circuits.fit/tools/8k-materiality-worksheet.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/agent-access-limit.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/agent-inventory.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/ai-cost-per-task.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/risk-exception-register.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/sbom-request-pack.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/software-renewal-scorecard.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/token-cost-margin.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/vendor-claim-checker.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/editorial.html</loc>
@@ -295,5 +295,33 @@
   <url>
     <loc>https://circuits.fit/services/renewal-audit.html</loc>
     <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/cisa-kev-magento-brotli-velocloud.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/sec-2027-exam-priorities-deepfakes-vendors.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/topics/</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/topics/renewals-saas-spend.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/topics/security-vulnerabilities.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/topics/ai-costs.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/services/</loc>
+    <lastmod>2026-10-28</lastmod>
   </url>
 </urlset>

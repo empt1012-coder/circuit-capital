@@ -8,6 +8,7 @@
     ["Briefing", "briefing.html"],
     ["Guides", "guides/"],
     ["Tools", "tools/"],
+    ["Topics", "topics/"],
     ["Markets", "categories/markets.html"],
     ["Technology", "categories/technology.html"],
     ["Policy", "categories/policy.html"],
@@ -41,6 +42,7 @@
           <div>Sourced briefing · Est. 2026</div>
           <div class="topbar__links">
             <a href="${asset("about.html")}">About</a>
+            <a class="hide-sm" href="${asset("services/")}">Services</a>
             <a href="${asset("advertise.html")}">Advertise</a>
             <a class="hide-sm" href="${asset("contact.html")}">Contact</a>
           </div>

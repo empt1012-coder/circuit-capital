@@ -241,6 +241,28 @@
       "body": "AI workflow tokens review cycle time baseline review rework variance commentary"
     },
     {
+      "slug": "cisa-kev-magento-brotli-velocloud",
+      "title": "CISA added Magento and a compression library. Ask who owns the patch.",
+      "dek": "Adobe Commerce CVE-2026-48356 and Google Brotli CVE-2026-111497 joined the exploited catalog on October 27, due November 10. Arista VeloCloud Orchestrator CVE-2026-114625 was added October 23. In each case the fix may sit with someone else.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "October 28, 2026",
+      "readTime": 6,
+      "image": "assets/images/colo.jpg",
+      "body": "CISA KEV Known Exploited Vulnerabilities Adobe Commerce Magento APSB26-73 CVE-2026-48356 Google Brotli CVE-2026-111497 Arista VeloCloud Orchestrator VCO SD-WAN CVE-2026-114625 Collabora Nextcloud CVE-2026-110447 BOD 26-04 vendor patch SBOM"
+    },
+    {
+      "slug": "sec-2027-exam-priorities-deepfakes-vendors",
+      "title": "The SEC’s 2027 exam list names deepfakes and vendor oversight",
+      "dek": "The Division of Examinations published its fiscal 2027 priorities on October 23. It now says “super intelligence,” names deepfake voice and video, and checks vendor oversight in three places.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "October 28, 2026",
+      "readTime": 5,
+      "image": "assets/images/finance.jpg",
+      "body": "SEC Division of Examinations fiscal year 2027 examination priorities super intelligence SI deepfake phishing social engineering ransomware Regulation S-P S-ID account takeover vendor oversight third-party service providers Regulation SCI investment advisers broker-dealers"
+    },
+    {
       "slug": "php2shell-php-rce-vendor-inventory",
       "title": "PHP2Shell was probed before the patch. Start the log review at October 17.",
       "dek": "PHP fixed two unauthenticated remote code execution bugs on October 21. Amazon saw an exploit attempt on October 17. Most companies run PHP inside software they buy, so the work is a vendor inventory, not only a patch.",

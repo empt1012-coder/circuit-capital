@@ -1,0 +1,3 @@
+name,owner,purpose,where_it_runs,identity,can_read,can_write,spend_cap,external_messages,data_sensitivity,last_review,flags
+Invoice triage agent,AP manager,Sort inbound invoices,SaaS AP platform,Dedicated service account,AP inbox; vendor master,Draft invoices only,50/day,No,Confidential,2026-10-01,
+Sales email assistant,Sales ops,Draft follow-ups,CRM add-on,Inherits rep's login,CRM contacts,Sends email,None set,Yes,Internal,,Shared/inherited identity; no review date; no spend cap
