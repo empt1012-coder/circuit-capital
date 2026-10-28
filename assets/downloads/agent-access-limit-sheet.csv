@@ -1,0 +1,3 @@
+agent_name,systems_it_can_read,systems_it_can_write,tools_or_apis_it_can_call,spend_cap_per_day,owner_named,can_inherit_user_access,human_approves_write_and_spend,log_retained,decision_allow_or_deny,notes
+Invoice triage agent,AP inbox; vendor master,Draft invoices,OCR API,50,Yes,No,Yes,"Yes, 1 year",Allow,
+Sales email assistant,CRM contacts,Email send,Email API,,No,Yes,No,No,Deny until fixed,Name an owner; give it its own identity; require approval to send

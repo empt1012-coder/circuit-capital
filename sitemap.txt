@@ -72,3 +72,10 @@ https://circuits.fit/guides/software-renewal-tracker-template.html
 https://circuits.fit/guides/risk-exception-register-template.html
 https://circuits.fit/guides/it-risk-register-excel.html
 https://circuits.fit/services/renewal-audit.html
+https://circuits.fit/articles/cisa-kev-magento-brotli-velocloud.html
+https://circuits.fit/articles/sec-2027-exam-priorities-deepfakes-vendors.html
+https://circuits.fit/topics/
+https://circuits.fit/topics/renewals-saas-spend.html
+https://circuits.fit/topics/security-vulnerabilities.html
+https://circuits.fit/topics/ai-costs.html
+https://circuits.fit/services/

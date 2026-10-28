@@ -920,3 +920,8 @@ footer.site-foot {
 .correction-note p { margin: 0; }
 .correction-note a { text-decoration: underline; }
 .tool-error { color: var(--danger); font-family: var(--sans); font-weight: 600; }
+
+/* Topbar: hide secondary links on small screens (also linked from the footer and homepage). */
+@media (max-width: 640px) {
+  .topbar__links .hide-sm { display: none; }
+}

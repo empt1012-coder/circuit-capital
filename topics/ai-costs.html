@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI costs — Circuit &amp; Capital</title>
+  <meta name="description" content="Guides, free calculators and briefings on what AI actually costs: token prices, cost per finished task, review time, gross margin, self-hosting break-even and agent access limits.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <link rel="canonical" href="https://circuits.fit/topics/ai-costs.html">
+  <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
+  <meta property="og:title" content="AI costs — Circuit &amp; Capital">
+  <meta property="og:description" content="Guides, free calculators and briefings on what AI actually costs: token prices, cost per finished task, review time, gross margin, self-hosting break-even and agent access limits.">
+  <meta property="og:url" content="https://circuits.fit/topics/ai-costs.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Circuit &amp; Capital">
+  <meta property="og:image" content="https://circuits.fit/assets/images/datacenter.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI costs — Circuit &amp; Capital">
+  <meta name="twitter:description" content="Guides, free calculators and briefings on what AI actually costs: token prices, cost per finished task, review time, gross margin, self-hosting break-even and agent access limits.">
+  <meta name="twitter:image" content="https://circuits.fit/assets/images/datacenter.jpg">
+  <meta name="google-adsense-account" content="ca-pub-3634982565972955">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3634982565972955" crossorigin="anonymous"></script>
+</head>
+<body data-base=".." data-page="topics">
+  <div id="site-header">
+      <a class="skip" href="#main">Skip to content</a>
+      <div class="topbar">
+        <div class="wrap">
+          <div>Sourced briefing · Est. 2026</div>
+          <div class="topbar__links">
+            <a href="../about.html">About</a>
+            <a class="hide-sm" href="../services/">Services</a>
+            <a href="../advertise.html">Advertise</a>
+            <a class="hide-sm" href="../contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <header class="masthead">
+        <div class="wrap masthead__row">
+          <div class="masthead__date" id="masthead-date"></div>
+          <a class="brand" href="../">
+            <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
+              <rect width="64" height="64" fill="#f4efe6"/>
+              <path fill="#c45c26" d="M12 48V14h9v26h13v8H12z"/>
+              <path class="trace" fill="none" stroke="#9a4318" stroke-width="1.6" stroke-linecap="square" d="M16 20h8v5H20v5h7"/>
+              <circle class="node" cx="24" cy="20" r="1.6" fill="#f4efe6"/>
+              <circle class="node node-2" cx="27" cy="30" r="1.6" fill="#f4efe6"/>
+              <path fill="#12151a" d="M36 18h16v2.6H39v4.4h12v2.6H39v4.4h14v2.6H36z"/>
+            </svg>
+            <span>
+              <div class="brand__name">Circuit <span>&amp;</span> Capital</div>
+              <div class="brand__tag">Sourced business and technology briefing</div>
+              
+            </span>
+          </a>
+          <div class="masthead__actions">
+            <button class="btn btn--icon" type="button" data-toggle-search aria-label="Search">Search</button>
+            <button class="menu-toggle" type="button" data-toggle-nav aria-label="Open menu" aria-expanded="false">☰</button>
+          </div>
+        </div>
+        <nav class="nav" id="site-nav">
+          <ul class="wrap"><li><a href="../">Home</a></li><li><a href="../briefing.html">Briefing</a></li><li><a href="../guides/">Guides</a></li><li><a href="../tools/">Tools</a></li><li><a class="is-active" href="../topics/">Topics</a></li><li><a href="../categories/markets.html">Markets</a></li><li><a href="../categories/technology.html">Technology</a></li><li><a href="../categories/policy.html">Policy</a></li><li><a href="../about.html">About</a></li></ul>
+        </nav>
+        <div class="search-bar" id="search-bar">
+          <form class="wrap" action="../search.html" method="get">
+            <input type="search" name="q" placeholder="Search briefings…" aria-label="Search">
+            <button class="btn btn--copper" type="submit">Go</button>
+          </form>
+        </div>
+      </header>
+    </div>
+  <main id="main">
+    <div class="wrap">
+    <header class="page-head">
+      <div class="kicker">Topic</div>
+      <h1>AI costs</h1>
+      <p class="dek">Guides, free calculators and briefings on what AI actually costs: token prices, cost per finished task, review time, gross margin, self-hosting break-even and agent access limits.</p>
+    </header>
+    <div class="guide-layout">
+      <article class="prose">
+        <p>The price on an AI model’s pricing page is the cost of one attempt. It is not the cost of the work. A cheaper model that fails more often, needs retries or sends more output to a human reviewer can cost more per finished task than a model with a higher list price. Most AI business cases skip that step, which is why so many show savings on paper and a larger bill in practice.</p>
+        <p>This page brings together Circuit &amp; Capital’s coverage of AI costs for the people who approve the spend. The guides explain how to tell AI spend from AI return, how to put a cost on one workflow before scaling it, and how to write a one-page rule for who may use which tools. The briefings look at the market around that spend: Gartner’s forecasts for AI spending and infrastructure impairment, vendor speed claims and whose number they are, and the unit economics of companies built on models they rent.</p>
+        <p>Two free calculators do the arithmetic. AI model cost per finished task compares models on attempt cost, retries, success rate and review time, and finds the daily token volume at which self-hosting costs less than an API. Token cost to gross margin starts from what you charge per task and shows how much token and review cost leave as contribution. Both now come with a free spreadsheet download with the formulas visible, so finance can check the logic and plug in its own numbers.</p>
+        <p>Agents add a second kind of cost: what they can touch. An agent that inherits a person’s access, has no spend cap and no named owner is a liability before it is a saving. The agent inventory and agent access limit sheet record what each agent may read, write, call and spend, and who answers for it. Regulators have noticed. The SEC’s fiscal 2027 examination priorities say examiners will review how registrants monitor the AI tools they use.</p>
+        <p>The rule across all of it is simple. Use your own volumes and prices. Treat a vendor benchmark as the vendor’s claim until you have run the test yourself. And count human review time, because it is often the largest line.</p>
+        <h2>Guides</h2>
+        <ul>
+          <li><a href="../guides/ai-spend-vs-return.html">How to tell AI spend from AI return</a></li>
+          <li><a href="../guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a></li>
+          <li><a href="../guides/one-page-ai-use-rule.html">A one-page AI use rule</a></li>
+          <li><a href="../guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a></li>
+          <li><a href="../guides/ai-sbom-extra-questions.html">Extra questions for an AI bill of materials</a></li>
+          <li><a href="../guides/what-article-50-asks-a-buyer.html">What Article 50 asks a buyer</a></li>
+        </ul>
+        <h2>Tools and free downloads</h2>
+        <ul>
+          <li><a href="../tools/ai-cost-per-task.html">AI model cost per finished task</a> · free Excel calculator</li>
+          <li><a href="../tools/token-cost-margin.html">Token cost to gross margin</a> · free Excel calculator</li>
+          <li><a href="../tools/agent-inventory.html">AI agent inventory and access map</a> · free CSV template</li>
+          <li><a href="../tools/agent-access-limit.html">Agent access limit sheet</a> · free CSV template</li>
+          <li><a href="../tools/vendor-claim-checker.html">Vendor claim checker</a> · free checklist</li>
+        </ul>
+        <h2>Briefings</h2>
+        <ul>
+          <li><a href="../articles/gartner-ai-infrastructure-impairment-neoclouds.html">Gartner says the AI build-out may not pay back</a> · October 21, 2026</li>
+          <li><a href="../articles/gartner-revised-the-ai-bill.html">Gartner revised the AI bill. Most of it is not your budget.</a></li>
+          <li><a href="../articles/astra-ultrafast-is-a-speed-claim.html">Astra Ultrafast is a speed claim. The bill is still yours.</a></li>
+          <li><a href="../articles/ai-spend-is-not-the-same-as-ai-return.html">AI spend is not the same as AI return</a></li>
+          <li><a href="../articles/ai-native-unit-economics.html">The new unit economics of AI-native startups</a></li>
+          <li><a href="../articles/ai-productivity-paradox.html">The AI productivity paradox at mid-market companies</a></li>
+          <li><a href="../articles/nvidia-put-the-fence-outside-the-agent.html">NVIDIA put the fence outside the agent</a></li>
+          <li><a href="../articles/sec-2027-exam-priorities-deepfakes-vendors.html">The SEC’s 2027 exam list names deepfakes and vendor oversight</a></li>
+        </ul>
+        <p>Other topics: <a href="renewals-saas-spend.html">Renewals and SaaS spend</a> · <a href="security-vulnerabilities.html">Security and vulnerabilities</a> · <a href="./">All topics</a></p>
+        <section class="newsletter" aria-labelledby="newsletter-heading">
+          <h2 id="newsletter-heading">Get the weekly Circuit &amp; Capital briefing</h2>
+          <p>One email a week with the latest articles and tools. Free, and you can unsubscribe at any time.</p>
+          <a class="btn btn--copper" href="https://emilios-newsletter-7fd333.beehiiv.com/subscribe" rel="noopener">Subscribe</a>
+        </section>
+      </article>
+    </div>
+    </div>
+  </main>
+  <div id="site-footer">
+      <footer class="site-foot">
+        <div class="wrap foot-grid">
+          <div>
+            <h3>Circuit &amp; Capital</h3>
+            <p>Sourced briefings and operator guides on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</p>
+          </div>
+          <div>
+            <h3>Sections</h3>
+            <ul>
+              <li><a href="../">Home</a></li>
+              <li><a href="../briefing.html">Briefing</a></li>
+              <li><a href="../guides/">Guides</a></li>
+              <li><a href="../tools/">Tools</a></li><li><a href="../topics/">Topics</a></li>
+              <li><a href="../categories/markets.html">Markets</a></li>
+              <li><a href="../categories/technology.html">Technology</a></li>
+              <li><a href="../categories/policy.html">Policy</a></li>
+              <li><a href="../about.html">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Advertising</h3>
+            <ul>
+              <li><a href="../advertise.html">Advertise</a></li>
+              <li><a href="../advertise.html#specs">Ad specs</a></li>
+              <li><a href="../about.html">Masthead</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="../editorial.html">Editorial standards</a></li>
+              <li><a href="../corrections.html">Corrections</a></li>
+              <li><a href="../privacy.html">Privacy</a></li>
+              <li><a href="../terms.html">Terms</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Follow</h3>
+            <ul>
+              <li><a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a></li>
+              <li><a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a></li>
+              <li><a href="https://medium.com/@circuitsfit" rel="noopener">Medium</a></li>
+              <li><a href="https://x.com/weirdwizardview" rel="noopener">X</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="wrap foot-bottom">
+          <div>© 2026 Circuit &amp; Capital. All rights reserved.</div>
+          <div>Circuit &amp; Capital is a business and technology publication. It is not a fitness brand.</div>
+        </div>
+      </footer>
+      <div class="ad-sticky" aria-label="Advertisement">
+        <button type="button" data-close-sticky aria-label="Close ad">×</button>
+        <div class="ad-slot" data-slot="mobileSticky" data-ad-slot="">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </div>
+      </div>
+      <div class="cookie" id="cookie">
+        <p>We use a cookie to remember this choice. Accept may load analytics. Necessary only does not. This banner does not record the ad choice. See our <a href="../privacy.html">privacy policy</a>.</p>
+        <div class="cookie__row">
+          <button class="btn btn--copper" type="button" data-cookie="accept">Accept</button>
+          <button class="btn btn--ghost" type="button" data-cookie="reject" style="border-color:#5a6570">Necessary only</button>
+        </div>
+      </div>
+      <div class="toast" id="toast" role="status"></div>
+    </div>
+  <script src="../js/config.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="../js/ads.js"></script>
+</body>
+</html>
