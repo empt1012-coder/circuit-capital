@@ -338,7 +338,7 @@ nav.nav {
   grid-template-columns: 1.45fr 1fr;
   gap: 1.6rem;
   padding: 0.2rem 0 0.8rem;
-  align-items: center;
+  align-items: start;
 }
 .lead__media {
   position: relative;
