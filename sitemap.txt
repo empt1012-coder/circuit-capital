@@ -79,3 +79,4 @@ https://circuits.fit/topics/renewals-saas-spend.html
 https://circuits.fit/topics/security-vulnerabilities.html
 https://circuits.fit/topics/ai-costs.html
 https://circuits.fit/services/
+https://circuits.fit/start/

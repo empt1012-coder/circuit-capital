@@ -118,6 +118,13 @@
       "title": "Services",
       "dek": "The $199 Renewal Audit, the $29 Renewal & Risk Operator Pack, and a waitlist for new services.",
       "body": "services renewal audit operator pack waitlist"
+    },
+    {
+      "path": "start/index.html",
+      "kind": "Service",
+      "title": "Start here: Renewal & Risk Operator Pack and Renewal Audit",
+      "dek": "A walkthrough of the $29 Renewal & Risk Operator Pack and the $199 Renewal Audit: who they are for, what is included and how to buy.",
+      "body": "start services renewal audit operator pack notice windows auto-renewal vendor risk"
     }
   ]
 }
