@@ -294,7 +294,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/services/renewal-audit.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/cisa-kev-magento-brotli-velocloud.html</loc>
@@ -322,10 +322,34 @@
   </url>
   <url>
     <loc>https://circuits.fit/services/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/start/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/services/quick-answer.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/services/contract-review.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/services/security-policy-set.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/services/ai-use-policy.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/services/security-questionnaire.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/services/custom-quote.html</loc>
+    <lastmod>2026-10-29</lastmod>
   </url>
 </urlset>

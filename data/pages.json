@@ -116,8 +116,8 @@
       "path": "services/index.html",
       "kind": "Service",
       "title": "Services",
-      "dek": "The $199 Renewal Audit, the $29 Renewal & Risk Operator Pack, and a waitlist for new services.",
-      "body": "services renewal audit operator pack waitlist"
+      "dek": "Fixed-price services by email: Quick Answer $49, Contract & Renewal Terms Review $149, Renewal Audit $199, Security Policy Set $99/$199, AI Use Policy + AI Tool Inventory $149, Security Questionnaire Draft $349, and fixed quotes.",
+      "body": "services quick answer contract review renewal audit security policy ai use policy questionnaire operator pack quote"
     },
     {
       "path": "start/index.html",
@@ -125,6 +125,48 @@
       "title": "Start here: Renewal & Risk Operator Pack and Renewal Audit",
       "dek": "A walkthrough of the $29 Renewal & Risk Operator Pack and the $199 Renewal Audit: who they are for, what is included and how to buy.",
       "body": "start services renewal audit operator pack notice windows auto-renewal vendor risk"
+    },
+    {
+      "path": "services/quick-answer.html",
+      "kind": "Service",
+      "title": "Quick Answer",
+      "dek": "Ask one question about IT, security, vendors, AI spend or software spend. Get a written answer of up to about 600 words, with sources, plus one follow-up. $49, within 2 business days.",
+      "body": "services quick answer"
+    },
+    {
+      "path": "services/contract-review.html",
+      "kind": "Service",
+      "title": "Contract & Renewal Terms Review",
+      "dek": "A plain-English review of the business terms in one software agreement up to 20 pages: auto-renewal, notice, price increases, termination, data and SLA, with ranked risks and suggested asks. $149, 3 business days.",
+      "body": "services contract review"
+    },
+    {
+      "path": "services/security-policy-set.html",
+      "kind": "Service",
+      "title": "Security Policy Set",
+      "dek": "Written security policies tailored to an intake form: the core 5 for $99 (4 business days) or a set of 12 for $199 (5 business days), delivered in Word and PDF.",
+      "body": "services security policy set"
+    },
+    {
+      "path": "services/ai-use-policy.html",
+      "kind": "Service",
+      "title": "AI Use Policy + AI Tool Inventory",
+      "dek": "An AI acceptable-use policy written for your company plus a filled inventory of up to 30 AI tools with what data each can reach and who owns it. $149, 4 business days.",
+      "body": "services ai use policy"
+    },
+    {
+      "path": "services/security-questionnaire.html",
+      "kind": "Service",
+      "title": "Security Questionnaire Draft",
+      "dek": "A sourced draft answering a customer security questionnaire of up to 300 questions in the buyer's format, plus a gap list and a reusable answer library. $349, 4 business days.",
+      "body": "services security questionnaire"
+    },
+    {
+      "path": "services/custom-quote.html",
+      "kind": "Service",
+      "title": "Something else? Fixed quote",
+      "dek": "Have an IT, security, vendor or software-spend task that is not on the menu? Email it and get a fixed price, scope and turnaround within 1 business day. No obligation.",
+      "body": "services custom quote"
     }
   ]
 }

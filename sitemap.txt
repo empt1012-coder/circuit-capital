@@ -80,3 +80,9 @@ https://circuits.fit/topics/security-vulnerabilities.html
 https://circuits.fit/topics/ai-costs.html
 https://circuits.fit/services/
 https://circuits.fit/start/
+https://circuits.fit/services/quick-answer.html
+https://circuits.fit/services/contract-review.html
+https://circuits.fit/services/security-policy-set.html
+https://circuits.fit/services/ai-use-policy.html
+https://circuits.fit/services/security-questionnaire.html
+https://circuits.fit/services/custom-quote.html
