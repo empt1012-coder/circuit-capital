@@ -217,6 +217,17 @@
     window.gtag("config", id);
   }
   if (localStorage.getItem("cc-cookie") === "accept") loadAnalytics();
+  document.addEventListener("click", (e) => {
+    if (typeof window.gtag !== "function") return;
+    const a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+    if (!a) return;
+    const href = a.getAttribute("href") || "";
+    if (/^mailto:/i.test(href)) {
+      window.gtag("event", "order_click", { link_url: href, transport_type: "beacon" });
+    } else if (/beehiiv\.com\/products\//i.test(a.href)) {
+      window.gtag("event", "pack_click", { link_url: a.href, transport_type: "beacon" });
+    }
+  }, true);
 
   document.querySelector("[data-toggle-search]")?.addEventListener("click", () => {
     document.getElementById("search-bar")?.classList.toggle("is-open");

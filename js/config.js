@@ -5,7 +5,7 @@
   domain: "https://circuits.fit",
   contactEmail: "circuits50capital@circuits.fit",
   adsEmail: "circuits50capital@circuits.fit",
-  analyticsId: "",
+  analyticsId: "G-3XBX5B0EE6",
   ads: {
     enabled: true,
     provider: "adsense",
