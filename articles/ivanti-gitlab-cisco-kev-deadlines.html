@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Three exploited bugs, three deadlines: Ivanti, GitLab and Cisco VPN — Circuit &amp; Capital</title>
+  <meta name="description" content="CISA KEV added Ivanti Connect Secure CVE-2026-111357 and CVE-2026-118527 on October 30, 2026 (first due November 2), chained with CVE-2026-104935, plus GitLab CVE-2026-97229 and Cisco ASA/FTD CVE-2026-76418, both due November 1. Versions, fixes and recovery steps.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <link rel="canonical" href="https://circuits.fit/articles/ivanti-gitlab-cisco-kev-deadlines.html">
+  <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
+  <meta property="og:title" content="Three exploited bugs, three deadlines: Ivanti, GitLab and Cisco VPN — Circuit &amp; Capital">
+  <meta property="og:description" content="CISA KEV added Ivanti Connect Secure CVE-2026-111357 and CVE-2026-118527 on October 30, 2026 (first due November 2), chained with CVE-2026-104935, plus GitLab CVE-2026-97229 and Cisco ASA/FTD CVE-2026-76418, both due November 1. Versions, fixes and recovery steps.">
+  <meta property="og:url" content="https://circuits.fit/articles/ivanti-gitlab-cisco-kev-deadlines.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Circuit &amp; Capital">
+  <meta property="og:image" content="https://circuits.fit/assets/images/datacenter.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Three exploited bugs, three deadlines: Ivanti, GitLab and Cisco VPN — Circuit &amp; Capital">
+  <meta name="twitter:description" content="CISA KEV added Ivanti Connect Secure CVE-2026-111357 and CVE-2026-118527 on October 30, 2026 (first due November 2), chained with CVE-2026-104935, plus GitLab CVE-2026-97229 and Cisco ASA/FTD CVE-2026-76418, both due November 1. Versions, fixes and recovery steps.">
+  <meta name="twitter:image" content="https://circuits.fit/assets/images/datacenter.jpg">
+  <meta property="article:published_time" content="2026-10-31">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Three exploited bugs, three deadlines: Ivanti, GitLab and Cisco VPN", "description": "CISA KEV added Ivanti Connect Secure CVE-2026-111357 and CVE-2026-118527 on October 30, 2026 (first due November 2), chained with CVE-2026-104935, plus GitLab CVE-2026-97229 and Cisco ASA/FTD CVE-2026-76418, both due November 1. Versions, fixes and recovery steps.", "image": ["https://circuits.fit/assets/images/datacenter.jpg"], "datePublished": "2026-10-31", "dateModified": "2026-10-31", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/ivanti-gitlab-cisco-kev-deadlines.html", "articleSection": "Policy"}
+  </script>
+  <meta name="google-adsense-account" content="ca-pub-3634982565972955">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3634982565972955" crossorigin="anonymous"></script>
+</head>
+<body data-base=".." data-page="policy">
+  <div id="site-header">
+      <a class="skip" href="#main">Skip to content</a>
+      <div class="topbar">
+        <div class="wrap">
+          <div>Sourced briefing · Est. 2026</div>
+          <div class="topbar__links">
+            <a href="../about.html">About</a>
+            <a class="hide-sm" href="../services/">Services</a>
+            <a href="../advertise.html">Advertise</a>
+            <a class="hide-sm" href="../contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <header class="masthead">
+        <div class="wrap masthead__row">
+          <div class="masthead__date" id="masthead-date"></div>
+          <a class="brand" href="../">
+            <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
+              <rect width="64" height="64" fill="#f4efe6"/>
+              <path fill="#c45c26" d="M12 48V14h9v26h13v8H12z"/>
+              <path class="trace" fill="none" stroke="#9a4318" stroke-width="1.6" stroke-linecap="square" d="M16 20h8v5H20v5h7"/>
+              <circle class="node" cx="24" cy="20" r="1.6" fill="#f4efe6"/>
+              <circle class="node node-2" cx="27" cy="30" r="1.6" fill="#f4efe6"/>
+              <path fill="#12151a" d="M36 18h16v2.6H39v4.4h12v2.6H39v4.4h14v2.6H36z"/>
+            </svg>
+            <span>
+              <div class="brand__name">Circuit <span>&amp;</span> Capital</div>
+              <div class="brand__tag">Sourced business and technology briefing</div>
+              
+            </span>
+          </a>
+          <div class="masthead__actions">
+            <button class="btn btn--icon" type="button" data-toggle-search aria-label="Search">Search</button>
+            <button class="menu-toggle" type="button" data-toggle-nav aria-label="Open menu" aria-expanded="false">☰</button>
+          </div>
+        </div>
+        <nav class="nav" id="site-nav">
+          <ul class="wrap"><li><a href="../">Home</a></li><li><a href="../briefing.html">Briefing</a></li><li><a href="../guides/">Guides</a></li><li><a href="../tools/">Tools</a></li><li><a href="../topics/">Topics</a></li><li><a href="../categories/markets.html">Markets</a></li><li><a href="../categories/technology.html">Technology</a></li><li><a class="is-active" href="../categories/policy.html">Policy</a></li><li><a href="../about.html">About</a></li></ul>
+        </nav>
+        <div class="search-bar" id="search-bar">
+          <form class="wrap" action="../search.html" method="get">
+            <input type="search" name="q" placeholder="Search briefings…" aria-label="Search">
+            <button class="btn btn--copper" type="submit">Go</button>
+          </form>
+        </div>
+      </header>
+    </div>
+  <main id="main">
+    <header class="article-hero wrap">
+      <div class="kicker">Policy</div>
+      <h1>Three exploited bugs, three deadlines: Ivanti, GitLab and Cisco VPN</h1>
+      <p class="dek">CISA added two Ivanti Connect Secure bugs on October 30, chained with an October 13 flaw for unauthenticated command execution, one due November 2. GitLab and Cisco VPN bugs listed a day earlier are due November 1.</p>
+      <div class="byline-row">
+        <span>Edited by <strong>Emilio Santos</strong></span>
+        <span><time datetime="2026-10-31">October 31, 2026</time></span>
+        <span>7 min read</span>
+      </div>
+    </header>
+    <figure class="article-cover wrap">
+      <picture><source srcset="../assets/images/datacenter.webp" type="image/webp"><img src="../assets/images/datacenter.jpg" alt="Rows of equipment in a data center" width="1280" height="720" decoding="async"></picture>
+      <figcaption>Two VPN appliances and a code server: three exploited bugs with federal deadlines inside three days. Photo: Circuit &amp; Capital</figcaption>
+    </figure>
+    <div class="wrap article-layout">
+      <article class="prose">
+<p class="lead-graf">On Friday, October 30, 2026, CISA added two more Ivanti Connect Secure bugs to its Known Exploited Vulnerabilities catalog: CVE-2026-111357, a missing authentication flaw that allows privilege escalation, and CVE-2026-118527, a predictable identifier flaw that lets an authenticated attacker upload files to a known location on disk. The federal due date for the first is November 2, three days after listing. The day before, CISA listed a GitLab remote code execution bug, CVE-2026-97229, and a Cisco firewall VPN denial-of-service bug, CVE-2026-76418, both due November 1.</p>
+        <p>Three exploited bugs with deadlines inside three days is unusual. Two of them sit on remote-access VPN appliances, the front door for staff working off site. The third sits on a self-managed code server that often holds deployment credentials. If your organization runs any of the three, this is weekend work, not next-sprint work.</p>
+        <h2>What happened</h2>
+        <ul>
+          <li><strong>October 12, 2026:</strong> GitLab released critical patch versions 19.4.2, 19.3.5 and 19.2.8 for Community and Enterprise Edition. The top fix, CVE-2026-97229, is rated CVSS 10.0. GitLab said GitLab.com was already patched and Dedicated tenants were patched before release.</li>
+          <li><strong>October 13:</strong> CISA added Ivanti Connect Secure CVE-2026-104935, an authentication bypass that allows a remote, unauthenticated attacker to run arbitrary commands, with a due date of October 16.</li>
+          <li><strong>October 23:</strong> The Ruby project released Ruby 4.0.9, 3.4.12 and 3.3.13, which fix the regular expression engine bugs behind the GitLab issue and three related GitLab CVEs.</li>
+          <li><strong>October 28:</strong> Cisco published an advisory for the ASA and FTD SSL VPN bug, rated High with a CVSS base score of 8.6, and said it was aware of active exploitation in October.</li>
+          <li><strong>October 29:</strong> CISA added the GitLab and Cisco bugs, both due November 1.</li>
+          <li><strong>October 30:</strong> CISA added the two new Ivanti bugs in catalog version 2026.10.30 and updated its Ivanti alert to cover all three Connect Secure CVEs and a revised list of affected versions.</li>
+        </ul>
+        <table>
+          <thead><tr><th>CVE</th><th>Product</th><th>Added to KEV</th><th>Federal due date</th><th>Forensic triage</th></tr></thead>
+          <tbody>
+            <tr><td>CVE-2026-111357</td><td>Ivanti Connect Secure</td><td>Oct 30</td><td>Nov 2</td><td>Yes</td></tr>
+            <tr><td>CVE-2026-118527</td><td>Ivanti Connect Secure</td><td>Oct 30</td><td>Nov 13</td><td>No</td></tr>
+            <tr><td>CVE-2026-97229</td><td>GitLab CE/EE</td><td>Oct 29</td><td>Nov 1</td><td>Yes</td></tr>
+            <tr><td>CVE-2026-76418</td><td>Cisco Secure Firewall ASA and FTD</td><td>Oct 29</td><td>Nov 1</td><td>No</td></tr>
+          </tbody>
+        </table>
+        <p>For all four, the catalog lists known ransomware use as “Unknown.”</p>
+        <h2>Ivanti Connect Secure: a chain, not a single bug</h2>
+        <p>CISA’s catalog entries say each of the two new Ivanti bugs “can be chained with” CVE-2026-104935 and the other. CISA’s alert, last revised October 30, says threat actors are exploiting the three together, which “allows remote, unauthenticated execution of arbitrary commands,” to steal credentials and exfiltrate data. Affected versions are Connect Secure 25.1.1.2 and prior, 25.1.2.2 and prior, and 22.8R2.5 and prior. CISA tells organizations to update to the latest version as set out in Ivanti’s security advisory for CVE-2026-104935, and points to Ivanti’s 25.x upgrade and migration compatibility guide.</p>
+        <p>Two details in the alert matter more than the patch itself. First, CISA says Ivanti’s Integrity Checker Tool “may not detect evidence of exploitation of CVE-2026-104935 because threat actor commands execute in memory.” Organizations that want to know whether they were compromised “will need to conduct network and memory forensics.” A clean result from the vendor’s checker is not proof of a clean appliance.</p>
+        <p>Second, if you suspect compromise, CISA recommends Ivanti’s recovery procedure:</p>
+        <ol>
+          <li>Back up the appliance configuration.</li>
+          <li>Factory reset the appliance and upgrade it to the latest version. For cloud and virtual systems, rebuild the instance and upgrade.</li>
+          <li>Restore the configuration from the backup.</li>
+          <li>Reset passwords for all accounts, including domain, administrator and local accounts. Revoke and reissue stored certificates. Reset stored API keys and license server credentials.</li>
+        </ol>
+        <p>CISA also says Connect Secure 22.8 reaches end of life on January 31, 2027, and recommends Volexity’s write-up, “A Series of Unauthenticated Events: Chained Exploitation of Ivanti Connect Secure Zero-Days.” We could not load Ivanti’s own advisory page when checking this piece, so the version and recovery details above are as CISA states them.</p>
+        <h2>GitLab CVE-2026-97229: really a Ruby bug</h2>
+        <p>GitLab’s advisory says the flaw “could have allowed an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration.” Affected versions are 19.2 before 19.2.8, 19.3 before 19.3.5 and 19.4 before 19.4.2. Only self-managed installs are exposed. GitLab published six threat detections for self-managed customers, with names such as “Onigmo native worker crash” and “ci lint workhorse worker crash.”</p>
+        <p>The root cause is in Onigmo, the regular expression engine inside Ruby. The Ruby project’s October 23 post says GitLab compiles user-supplied patterns with <code>Regexp.new</code>, and that crafted patterns “could corrupt memory while Ruby compiles them.” GitLab assigned four CVEs to related bugs: CVE-2026-89078 and CVE-2026-93577 (fixed in GitLab 19.4.1), CVE-2026-97229 (19.4.2) and CVE-2026-110264 (19.5.1). Patching for this one CVE is not enough if you are still below 19.5.1.</p>
+        <p>CISA’s catalog note goes further: “Other products can potentially be affected by the same underlying Ruby/Onigmo Integer Overflow issue.” Ruby says the bugs are reached only when an application compiles a regular expression from attacker-controlled input, through <code>Regexp.new</code>, <code>Regexp.union</code>, <code>Regexp.compile</code> or interpolation into a literal. Ruby also says <code>Regexp.timeout</code> does not protect against them, and neither does limiting pattern length. Ruby 4.0.9, 3.4.12 and 3.3.13 contain all the fixes.</p>
+        <h2>Cisco ASA and FTD: VPN outage risk</h2>
+        <p>Cisco’s advisory describes a bug in the Remote Access SSL VPN service of Secure Firewall ASA and Secure Firewall Threat Defense software. An unauthenticated, remote attacker can send a crafted request while connecting and force the device to reload. Cisco says “a successful VPN login is not required to reach the affected processing path.”</p>
+        <p>The exposure is narrower than the headline suggests. A device is affected only if it runs a vulnerable release, the SSL VPN login is reachable, and secondary authentication is configured at tunnel-group scope, including on the default group, DefaultWEBVPNGroup. Cisco says there are no workarounds, but there is a mitigation: remove secondary authentication, or disable the tunnel group list if the default group does not use it. Both lower your security posture or change how users log in. First fixed releases include ASA 9.18.4.96, 9.20.4.50, 9.22.3.200 and FTD 7.2.13, 7.4.9 and 7.6.7; the full table is in the advisory.</p>
+        <h2>What it means for CFOs and CISOs</h2>
+        <p>For a CISO, the Ivanti entries change the question from “are we patched?” to “were we compromised before we patched?” An appliance that was internet-facing and unpatched after October 13 should be treated as a possible breach, and the recovery steps above are a project: an appliance rebuild, a reset of every account the device touched, and reissued certificates.</p>
+        <p>For a CFO, that project has a cost, in staff time or in an outside forensics bill, and it can land on short notice. The 22.8 end-of-life date of January 31, 2027 is a second cost. If you run 22.8, a migration to 25.x is coming whether or not you were hit, and it belongs in the budget and the renewal tracker now. The GitLab and Ruby item is a supply-chain question: which of your vendors ship Ruby applications that accept user-written patterns?</p>
+        <p>The federal due dates bind federal civilian agencies under BOD 26-04, not private companies. They are still a fair benchmark for a board or an insurer asking how quickly you responded.</p>
+        <h2>What to do this week</h2>
+        <ol>
+          <li><strong>Ivanti.</strong> List every Connect Secure instance and its version. Upgrade per Ivanti’s advisory. If an instance was exposed and unpatched after October 13, run the CISA recovery steps and do not rely on the Integrity Checker Tool alone.</li>
+          <li><strong>GitLab.</strong> Upgrade self-managed GitLab to a fixed release, and to 19.5.1 or later to cover CVE-2026-110264. Check logs against GitLab’s six published detections.</li>
+          <li><strong>Ruby.</strong> Ask your developers and key vendors whether any Ruby application compiles user-supplied patterns, and whether it runs Ruby 4.0.9, 3.4.12, 3.3.13 or later. Log open answers in a <a href="../tools/risk-exception-register.html">risk exception register</a> with an owner and an expiry.</li>
+          <li><strong>Cisco.</strong> Check whether any tunnel group, including DefaultWEBVPNGroup, uses secondary authentication. If it does, upgrade, or apply the mitigation as a stopgap.</li>
+          <li><strong>Calendar.</strong> Put January 31, 2027 for Connect Secure 22.8 in the <a href="../tools/software-renewal-scorecard.html">software renewal scorecard</a>.</li>
+        </ol>
+        <p><strong>End-of-life dates at renewal.</strong> A forced migration is easiest to price before the contract renews. The <a href="../services/renewal-audit.html">Renewal Audit</a> reviews up to 25 software renewals for a fixed $199 and returns a written report in 5 business days. If you would rather run it yourself, the <a href="https://emilios-newsletter-7fd333.beehiiv.com/products/renewal-risk-operator-pack">Renewal &amp; Risk Operator Pack</a> ($29) has spreadsheet versions of the renewal scorecard and the risk exception register. To get KEV additions like these in a weekly digest, the <a href="../grok-bot-pack/">free Grok Bot prompt pack</a> includes a report-only CISA KEV digest routine.</p>
+        <h2>What to watch next</h2>
+        <p>Watch whether CISA or Ivanti publish further indicators for the Connect Secure chain, and whether the ransomware field changes from “Unknown” to “Known.” Watch for vendors outside GitLab naming the Ruby regex fixes in their own advisories. Watch whether Ruby requests its own CVE identifiers; its post says it has not, for now. And watch the November 13 due date for CVE-2026-118527, the last of this group.</p>
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li>CISA <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" rel="noopener">Known Exploited Vulnerabilities catalog</a> and <a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">JSON feed</a>, version 2026.10.30, checked October 31, 2026 (entries for CVE-2026-111357, CVE-2026-118527, CVE-2026-104935, CVE-2026-97229 and CVE-2026-76418: date added, due date, ransomware use, forensic triage)</li>
+          <li><a href="https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure" rel="noopener">CISA, “CISA Urges Patching Newly Exploited Vulnerabilities in Ivanti Connect Secure,”</a> October 13, 2026, last revised October 30, 2026</li>
+          <li><a href="https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US" rel="noopener">Ivanti, Security Advisory Ivanti Connect Secure (CVE-2026-104935)</a></li>
+          <li><a href="https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/" rel="noopener">GitLab Critical Patch Release: 19.4.2, 19.3.5, 19.2.8</a>, October 12, 2026</li>
+          <li><a href="https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves" rel="noopener">Ruby, “Regexp compilation fixes related to GitLab’s CVE-2026-89078, CVE-2026-93577, CVE-2026-97229 and CVE-2026-110264,”</a> October 23, 2026</li>
+          <li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75" rel="noopener">Cisco Security Advisory cisco-sa-asaftd-tunnel-dos-s6mgkb75</a>, October 28, 2026</li>
+          <li>NVD entries <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111357" rel="noopener">CVE-2026-111357</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118527" rel="noopener">CVE-2026-118527</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-97229" rel="noopener">CVE-2026-97229</a> and <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76418" rel="noopener">CVE-2026-76418</a></li>
+          <li><a href="https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk" rel="noopener">CISA BOD 26-04, Prioritizing Security Updates Based on Risk</a></li>
+        </ul>
+        <p>Related: <a href="cisa-kev-magento-brotli-velocloud.html">CISA added Magento and a compression library</a>, the previous catalog roundup, and <a href="../topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
+
+        <div class="author-box">
+          <div class="avatar">ES</div>
+          <div>
+            <strong>Emilio Santos</strong> edits Circuit &amp; Capital. How we source and correct pieces: <a href="../editorial.html">editorial standards</a>.
+            <div class="meta"><a href="mailto:circuits50capital@circuits.fit">circuits50capital@circuits.fit</a></div>
+          </div>
+        </div>
+        <section class="newsletter" aria-labelledby="newsletter-heading">
+          <h2 id="newsletter-heading">Get the weekly Circuit &amp; Capital briefing</h2>
+          <p>One email a week with the latest articles and tools. Unsubscribe at any time.</p>
+          <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="d0ebd95b-cec8-4f1a-b043-2c8b7c8087b9"></script>
+        </section>
+      </article>
+      <aside class="sidebar">
+        <aside class="ad-slot ad-slot--rect" data-slot="sidebar" aria-label="Advertisement">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </aside>
+        <div class="section-head"><h2>Related</h2></div>
+        <div class="popular">
+          <ol>
+            <li><a href="cisa-kev-magento-brotli-velocloud.html">CISA added Magento and a compression library</a></li>
+            <li><a href="cisa-listed-three-bugs-attackers-are-using.html">CISA listed three bugs attackers are already using</a></li>
+            <li><a href="../grok-bot-pack/">Free Grok Bot prompt pack</a></li>
+            <li><a href="../tools/risk-exception-register.html">Risk exception register</a></li>
+            <li><a href="../topics/security-vulnerabilities.html">Security and vulnerabilities hub</a></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <div id="site-footer">
+      <footer class="site-foot">
+        <div class="wrap foot-grid">
+          <div>
+            <h3>Circuit &amp; Capital</h3>
+            <p>Sourced briefings and operator guides on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</p>
+          </div>
+          <div>
+            <h3>Sections</h3>
+            <ul>
+              <li><a href="../">Home</a></li>
+              <li><a href="../briefing.html">Briefing</a></li>
+              <li><a href="../guides/">Guides</a></li>
+              <li><a href="../tools/">Tools</a></li><li><a href="../topics/">Topics</a></li>
+              <li><a href="../categories/markets.html">Markets</a></li>
+              <li><a href="../categories/technology.html">Technology</a></li>
+              <li><a href="../categories/policy.html">Policy</a></li>
+              <li><a href="../about.html">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Advertising</h3>
+            <ul>
+              <li><a href="../advertise.html">Advertise</a></li>
+              <li><a href="../advertise.html#specs">Ad specs</a></li>
+              <li><a href="../about.html">Masthead</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="../editorial.html">Editorial standards</a></li>
+              <li><a href="../corrections.html">Corrections</a></li>
+              <li><a href="../privacy.html">Privacy</a></li>
+              <li><a href="../terms.html">Terms</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Follow</h3>
+            <ul>
+              <li><a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a></li>
+              <li><a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a></li>
+              <li><a href="https://medium.com/@circuitsfit" rel="noopener">Medium</a></li>
+              <li><a href="https://x.com/weirdwizardview" rel="noopener">X</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="wrap foot-bottom">
+          <div>© 2026 Circuit &amp; Capital. All rights reserved.</div>
+          <div>Circuit &amp; Capital is a business and technology publication. It is not a fitness brand.</div>
+        </div>
+      </footer>
+      <div class="ad-sticky" aria-label="Advertisement">
+        <button type="button" data-close-sticky aria-label="Close ad">×</button>
+        <div class="ad-slot" data-slot="mobileSticky" data-ad-slot="">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </div>
+      </div>
+      <div class="cookie" id="cookie">
+        <p>We use a cookie to remember this choice. Accept may load analytics. Necessary only does not. This banner does not record the ad choice. See our <a href="../privacy.html">privacy policy</a>.</p>
+        <div class="cookie__row">
+          <button class="btn btn--copper" type="button" data-cookie="accept">Accept</button>
+          <button class="btn btn--ghost" type="button" data-cookie="reject" style="border-color:#5a6570">Necessary only</button>
+        </div>
+      </div>
+      <div class="toast" id="toast" role="status"></div>
+    </div>
+  <script src="../js/config.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="../js/ads.js"></script>
+</body>
+</html>

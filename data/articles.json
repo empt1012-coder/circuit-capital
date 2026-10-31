@@ -241,6 +241,17 @@
       "body": "AI workflow tokens review cycle time baseline review rework variance commentary"
     },
     {
+      "slug": "ivanti-gitlab-cisco-kev-deadlines",
+      "title": "Three exploited bugs, three deadlines: Ivanti, GitLab and Cisco VPN",
+      "dek": "CISA added two Ivanti Connect Secure bugs on October 30, chained with an October 13 flaw for unauthenticated command execution, one due November 2. GitLab and Cisco VPN bugs listed a day earlier are due November 1.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "October 31, 2026",
+      "readTime": 7,
+      "image": "assets/images/datacenter.jpg",
+      "body": "CISA KEV Known Exploited Vulnerabilities Ivanti Connect Secure CVE-2026-111357 CVE-2026-118527 CVE-2026-104935 Integrity Checker Tool 22.8 end of life GitLab CVE-2026-97229 Ruby Onigmo regex CVE-2026-110264 Cisco ASA FTD SSL VPN CVE-2026-76418 BOD 26-04"
+    },
+    {
       "slug": "cisa-kev-magento-brotli-velocloud",
       "title": "CISA added Magento and a compression library. Ask who owns the patch.",
       "dek": "Adobe Commerce CVE-2026-48356 and Google Brotli CVE-2026-111497 joined the exploited catalog on October 27, due November 10. Arista VeloCloud Orchestrator CVE-2026-114625 was added October 23. In each case the fix may sit with someone else.",
