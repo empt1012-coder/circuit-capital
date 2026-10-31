@@ -322,11 +322,11 @@
   </url>
   <url>
     <loc>https://circuits.fit/services/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/start/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/services/quick-answer.html</loc>
@@ -351,5 +351,13 @@
   <url>
     <loc>https://circuits.fit/services/custom-quote.html</loc>
     <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/grok-bot-pack/</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/services/ai-staff/</loc>
+    <lastmod>2026-10-31</lastmod>
   </url>
 </urlset>
