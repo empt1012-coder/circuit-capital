@@ -24,9 +24,10 @@
   <meta name="twitter:title" content="Six Questions Every Board Should Ask About Generative AI — Circuit &amp; Capital">
   <meta name="twitter:description" content="Most decks still sell possibility. Directors need a control framework that survives the next vendor cycle.">
   <meta name="twitter:image" content="https://circuits.fit/assets/images/boardroom.jpg">
+  <meta property="article:modified_time" content="2026-10-31">
   <meta property="article:published_time" content="2026-08-12">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Six questions every board should ask about generative AI", "description": "Most decks still sell possibility. Directors need a control framework that survives the next vendor cycle.", "image": ["https://circuits.fit/assets/images/boardroom.jpg"], "datePublished": "2026-08-12", "dateModified": "2026-10-07", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/board-questions-generative-ai.html"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Six questions every board should ask about generative AI", "description": "Most decks still sell possibility. Directors need a control framework that survives the next vendor cycle.", "image": ["https://circuits.fit/assets/images/boardroom.jpg"], "datePublished": "2026-08-12", "dateModified": "2026-10-31", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/board-questions-generative-ai.html"}
   </script>
   <meta name="google-adsense-account" content="ca-pub-3634982565972955">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3634982565972955" crossorigin="anonymous"></script>
@@ -96,32 +97,53 @@
     </figure>
     <div class="wrap article-layout">
       <article class="prose">
-        <p class="lead-graf">Boards have been briefed. They have seen the demo. They have approved a budget large enough to be visible and small enough to be deniable. What they often have not done is interrogate the company like owners. Generative AI is not a single project. It is a class of operational risk that happens to look like a product.</p>
-        <p>Here are six questions that fit in a committee packet. If management cannot answer them in plain language, you do not have a program. You have a vendor relationship.</p>
-        <h2>1. Where does customer data go, in fact?</h2>
-        <p>Not the policy PDF. The actual path: which tools, which regions, which logs, which subprocessors, which “improvement” toggles are on by default. If the answer is “we think legal signed off,” keep asking.</p>
-        <h2>2. What decision is the model allowed to finish?</h2>
-        <p>Drafting a memo is not the same as issuing a credit decision, a medical summary, or a support refund. Draw the line in writing. Ambiguity here is how you get a headline.</p>
-        <h2>3. Who is accountable when it is wrong?</h2>
-        <p>A committee is not an owner. Name a role, a review path, and a kill switch. If the only answer is “the vendor’s SLA,” you have outsourced judgment you still own.</p>
-        <blockquote>Possibility is a sales word. Permission is a board word.</blockquote>
-        <h2>4. What is the unit cost at the volume we claim?</h2>
-        <p>See the startup piece in this issue. Seats are not economics. If the plan assumes infinite cheap tokens, the plan is a wish.</p>
-        <aside class="ad-slot ad-slot--inarticle" data-slot="inarticle" aria-label="Advertisement">
+<p class="lead-graf">Boards have been briefed. They have seen the demo. They have approved a budget large enough to be visible and small enough to be deniable. What they often have not done is interrogate the company like owners. Generative AI is not a single project. It is a class of operational risk that happens to look like a product.</p>
+<p>Here are six questions that fit in a committee packet. If management cannot answer them in plain language, you do not have a program. You have a vendor relationship. Each question below comes with what a good answer looks like, so a director can tell the difference between a plan and a slide.</p>
+<h2>1. Where does customer data go, in fact?</h2>
+<p>Not the policy PDF. The actual path: which tools, which regions, which logs, which subprocessors, which “improvement” toggles are on by default. If the answer is “we think legal signed off,” keep asking.</p>
+<p>A good answer is a one-page data-flow diagram per approved tool, with the contract clause that governs retention and training next to each arrow. A weak answer is a list of vendor logos. The OWASP Top 10 for large language model applications, the most widely used public checklist of LLM security failures, lists sensitive information disclosure and system prompt leakage as separate risks. That is a useful prompt for the committee: ask management which of those ten items it has tested, and who ran the test.</p>
+<h2>2. What decision is the model allowed to finish?</h2>
+<p>Drafting a memo is not the same as issuing a credit decision, a medical summary, or a support refund. Draw the line in writing. Ambiguity here is how you get a headline.</p>
+<p>The same OWASP list names “excessive agency” as its own risk: a system that is granted more permissions or autonomy than the task needs. Agents make this concrete. If a tool can send an email, change a record, or move money, the board should know which approvals sit between the model and the action. A good answer names the actions that always need a human, the ones that never do, and the log that proves which happened.</p>
+<h2>3. Who is accountable when it is wrong?</h2>
+<p>A committee is not an owner. Name a role, a review path, and a kill switch. If the only answer is “the vendor’s SLA,” you have outsourced judgment you still own.</p>
+<p>The NIST AI Risk Management Framework, released January 26, 2023, organizes the work into four functions: govern, map, measure and manage. “Govern” comes first for a reason. It covers roles, policies and accountability, and NIST’s Generative AI Profile (NIST AI 600-1, released July 26, 2024) extends the framework to risks specific to generative systems. A board does not need to adopt the framework wholesale. It does need management to say which function each owner covers, and which gaps nobody owns yet.</p>
+<blockquote>Possibility is a sales word. Permission is a board word.</blockquote>
+<h2>4. What is the unit cost at the volume we claim?</h2>
+<p>Seats are not economics. If the plan assumes infinite cheap tokens, the plan is a wish. Ask for the cost of one completed task — one ticket closed, one contract reviewed, one claim triaged — at today’s volume and at the volume in the business case. Then ask what happens to that number if usage triples and the vendor changes its price sheet.</p>
+<p>The OWASP list includes “unbounded consumption” as a security risk, which is a polite way of saying a runaway loop or an abusive user can turn into a bill. A good answer includes a spending cap, an alert, and a named person who gets the alert.</p>
+<aside class="ad-slot ad-slot--inarticle" data-slot="inarticle" aria-label="Advertisement">
           <span class="ad-slot__label">Advertisement</span>
           <div class="ad-slot__box"></div>
         </aside>
-        <h2>5. What do we stop doing?</h2>
-        <p>If nothing is retired — no overlapping copilots, no legacy process, no headcount plan that changes — this is additive spend. Additive spend needs a higher proof than “everyone else is doing it.”</p>
-        <h2>6. How will we know in 90 days?</h2>
-        <p>Pick one or two operating metrics, not a sentiment survey. Cycle time, error rate, cost per ticket, win rate. Put the date on the calendar now. Boards that skip this will still be watching demos next summer.</p>
-        <p>None of this is anti-AI. It is pro-fiduciary. The technology is real. So is the ability of organizations to confuse motion with return.</p>
-        <p>Gartner posted on October 1 that most organizations are not ready to delegate work to an agent. Use that as the board’s opening, then hand them a page: <a href="../guides/one-page-ai-use-rule.html">A one-page AI use rule</a>, the <a href="../tools/agent-access-limit.html">agent access limit sheet</a> and <a href="../guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a>, and <a href="../tools/token-cost-margin.html">token cost to gross margin</a> with <a href="../guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a>.</p>
-        <h2>Sources</h2>
-        <ul class="sources">
-          <li><a href="https://x.com/Gartner_inc/status/2105676140887089286" rel="noopener">Gartner on X, October 1, 2026</a>: most organizations are not yet ready to delegate work to AI agents.</li>
-        </ul>
-        <p>The six questions are the desk’s. That post is the only outside claim in the note.</p>
+<h2>5. What do we stop doing?</h2>
+<p>If nothing is retired — no overlapping copilots, no legacy process, no headcount plan that changes — this is additive spend. Additive spend needs a higher proof than “everyone else is doing it.”</p>
+<p>Ask for the list of tools that overlap. Most companies that have run a year of pilots own more than one assistant, more than one transcription tool and more than one “AI feature” bundled into an existing renewal. A good answer pairs each new line item with a contract that ends, a process that changes, or a metric that should move.</p>
+<h2>6. How will we know in 90 days?</h2>
+<p>Pick one or two operating metrics, not a sentiment survey. Cycle time, error rate, cost per ticket, win rate. Put the date on the calendar now. Boards that skip this will still be watching demos next summer.</p>
+<p>A good answer includes the baseline as of today. Without a baseline, every result after launch looks like an improvement.</p>
+<h2>A note for boards with European exposure</h2>
+<p>The EU Artificial Intelligence Act (Regulation (EU) 2024/1689) is not only a concern for model builders. Its general provisions, including the Article 4 duty on providers and deployers to take measures to ensure a sufficient level of AI literacy among staff who operate AI systems, have applied since February 2, 2025. Other obligations phase in later under the regulation’s own timetable. If the company deploys AI in the EU, the board should ask counsel which obligations already apply, which are coming, and which product lines they touch. Our longer read on that is <a href="eu-ai-act-what-still-applies.html">What the EU AI Act still applies</a>.</p>
+<h2>What to do this quarter</h2>
+<ul>
+<li><strong>Put the six questions on one agenda.</strong> Send them to management two weeks before the meeting and ask for written answers, not a presentation.</li>
+<li><strong>Ask for the tool inventory.</strong> Every approved AI tool, its owner, the data it touches and the contract that governs it. The <a href="../tools/agent-inventory.html">AI agent inventory and access map</a> is a free template.</li>
+<li><strong>Get one unit cost.</strong> Choose one workflow and price it end to end with <a href="../guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a> and the <a href="../tools/token-cost-margin.html">token cost to gross margin</a> calculator.</li>
+<li><strong>Adopt a one-page rule.</strong> A short use policy that staff can actually read beats a long one they cannot. Start from <a href="../guides/one-page-ai-use-rule.html">A one-page AI use rule</a>.</li>
+<li><strong>Limit agent permissions.</strong> Use the <a href="../tools/agent-access-limit.html">agent access limit sheet</a> and <a href="../guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a> before any agent is allowed to act without a human.</li>
+<li><strong>Set the 90-day review date.</strong> Write down the baseline metric and the date it will be checked.</li>
+</ul>
+<p>None of this is anti-AI. It is pro-fiduciary. The technology is real. So is the ability of organizations to confuse motion with return.</p>
+<p>Gartner posted on October 1 that most organizations are not ready to delegate work to an agent. Use that as the board’s opening, then hand them the page.</p>
+<h2>Sources</h2>
+<ul class="sources">
+<li><a href="https://x.com/Gartner_inc/status/2105676140887089286" rel="noopener">Gartner on X, October 1, 2026</a>: most organizations are not yet ready to delegate work to AI agents.</li>
+<li><a href="https://www.nist.gov/itl/ai-risk-management-framework" rel="noopener">NIST, AI Risk Management Framework</a>: released January 26, 2023; the page also records the July 26, 2024 release of the Generative AI Profile.</li>
+<li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf" rel="noopener">NIST AI 600-1, Generative Artificial Intelligence Profile (PDF)</a></li>
+<li><a href="https://genai.owasp.org/llm-top-10/" rel="noopener">OWASP Top 10 for LLM Applications, 2025 edition</a>: includes sensitive information disclosure, excessive agency, system prompt leakage and unbounded consumption.</li>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" rel="noopener">Regulation (EU) 2024/1689, the Artificial Intelligence Act, on EUR-Lex</a></li>
+</ul>
+<p>The six questions and the “good answer” tests are the desk’s. The sources above are cited for the specific facts attributed to them.</p>
         <div class="author-box">
           <div class="avatar">ES</div>
           <div>

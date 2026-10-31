@@ -24,9 +24,10 @@
   <meta name="twitter:title" content="The New Unit Economics of AI-Native Startups — Circuit &amp; Capital">
   <meta name="twitter:description" content="Gross margin is no longer a software story. Token costs, evals, and human review decide who scales.">
   <meta name="twitter:image" content="https://circuits.fit/assets/images/workshop.jpg">
+  <meta property="article:modified_time" content="2026-10-31">
   <meta property="article:published_time" content="2026-08-17">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "The new unit economics of AI-native startups", "description": "Gross margin is no longer a software story. Token costs, evals, and human review decide who scales.", "image": ["https://circuits.fit/assets/images/workshop.jpg"], "datePublished": "2026-08-17", "dateModified": "2026-10-07", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/ai-native-unit-economics.html"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "The new unit economics of AI-native startups", "description": "Gross margin is no longer a software story. Token costs, evals, and human review decide who scales.", "image": ["https://circuits.fit/assets/images/workshop.jpg"], "datePublished": "2026-08-17", "dateModified": "2026-10-31", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/ai-native-unit-economics.html"}
   </script>
   <meta name="google-adsense-account" content="ca-pub-3634982565972955">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3634982565972955" crossorigin="anonymous"></script>
@@ -96,29 +97,49 @@
     </figure>
     <div class="wrap article-layout">
       <article class="prose">
-        <p class="lead-graf">Classic SaaS trained a generation of founders to treat gross margin as a solved problem. Hosting was cheap, support was a ratio, and the 80-point margin was a personality trait. AI-native products broke that habit. The cost of goods sold now moves with every user action, every retry, and every time a human has to catch the model being confidently wrong.</p>
-        <p>Investors still want software multiples. The P&amp;L is starting to look like a hybrid of software and services — except the “service” is a GPU bill that does not sleep, plus a review queue that does.</p>
-        <h2>Three cost lines that matter</h2>
-        <p><strong>Inference.</strong> Caching, smaller models for easy tasks, and not sending the entire history on every turn are the difference between a toy and a business. If your architecture is “always call the biggest model,” you do not have architecture. You have a demo.</p>
-        <p><strong>Evaluation.</strong> Quality is a cost center. Offline evals, production traces, and the people who read the traces. Skip this and you will “save” money until a customer files a ticket that is really a lawsuit.</p>
-        <p><strong>Human review.</strong> The dirty secret of many “autonomous” products is a queue in Manila, Austin, or Eastern Europe. That is fine if it is designed. It is fatal if it is a surprise at 40% of tickets.</p>
-        <blockquote>Price the 95th-percentile conversation, not the median demo.</blockquote>
-        <h2>Pricing has to follow the cost shape</h2>
-        <p>Seat-based pricing on a variable-cost product is how you fund your power users with your idle ones until the power users eat the company. Usage tiers, hard caps, and product design that makes the expensive path rare are not “growth hacks.” They are survival.</p>
-        <p>The winning teams instrument contribution margin per workspace the way 2015 companies instrumented net retention. If a customer is beloved and negative, they are not a logo. They are a leak.</p>
-        <aside class="ad-slot ad-slot--inarticle" data-slot="inarticle" aria-label="Advertisement">
+<p class="lead-graf">Classic SaaS trained a generation of founders to treat gross margin as a solved problem. Hosting was cheap, support was a ratio, and the 80-point margin was a personality trait. AI-native products broke that habit. The cost of goods sold now moves with every user action, every retry, and every time a human has to catch the model being confidently wrong.</p>
+<p>Investors still want software multiples. The P&amp;L is starting to look like a hybrid of software and services — except the “service” is a GPU bill that does not sleep, plus a review queue that does.</p>
+<h2>Three cost lines that matter</h2>
+<p><strong>Inference.</strong> Caching, smaller models for easy tasks, and not sending the entire history on every turn are the difference between a toy and a business. If your architecture is “always call the biggest model,” you do not have architecture. You have a demo.</p>
+<p><strong>Evaluation.</strong> Quality is a cost center. Offline evals, production traces, and the people who read the traces. Skip this and you will “save” money until a customer files a ticket that is really a lawsuit.</p>
+<p><strong>Human review.</strong> The dirty secret of many “autonomous” products is a queue in Manila, Austin, or Eastern Europe. That is fine if it is designed. It is fatal if it is a surprise at 40% of tickets.</p>
+<blockquote>Price the 95th-percentile conversation, not the median demo.</blockquote>
+<h2>The vendors publish the levers. Use them.</h2>
+<p>Model providers now document pricing mechanisms that change unit cost by large factors, and most of them reward architecture rather than negotiation.</p>
+<p><strong>Prompt caching.</strong> Anthropic’s documentation says cache reads are billed at 10 percent of the base input-token price for most models, with lower multipliers for some, while writing to the five-minute cache costs 25 percent more than base input. A product that resends the same long system prompt, policy document or codebase on every call is paying full price for text the provider will discount by an order of magnitude — if the request is structured so the repeated part comes first and stays identical.</p>
+<p><strong>Batch processing.</strong> OpenAI’s Batch API documentation describes a 50 percent cost discount compared with its synchronous APIs, with a 24-hour completion window and separate, higher rate limits. Anything that does not need an answer while the user waits — nightly summarization, document classification, back-filling embeddings, evaluation runs — is a candidate. Half price on a third of your volume is a real margin line.</p>
+<p><strong>Model routing.</strong> Providers publish tiered price sheets in which smaller models cost a fraction of the flagship. Routing easy requests to the cheaper tier and escalating only on low confidence is the inference equivalent of not sending every support ticket to the most senior engineer.</p>
+<p>Prices and multipliers change, so link to the vendor’s live pricing page in your own cost model and re-check it each quarter rather than hard-coding last year’s number.</p>
+<aside class="ad-slot ad-slot--inarticle" data-slot="inarticle" aria-label="Advertisement">
           <span class="ad-slot__label">Advertisement</span>
           <div class="ad-slot__box"></div>
         </aside>
-        <h2>What “good” looks like</h2>
-        <p>A path to 70%+ gross margin after the product has routing, caching, and a review policy — not on day one. A sales team that is not allowed to waive usage caps without finance. A roadmap that treats model spend as a first-class constraint, the way mobile teams treated battery.</p>
-        <p>The companies that fail will look busy. They will ship features. They will have impressive demos. They will not know, to the dollar, what a conversation costs. In this market that is not a rounding error. It is the business.</p>
-        <p>Gartner posted on September 24 that a shift in AI pricing, from seats and consumption toward coding agents, makes cost management as important as deployment. The post is the claim. The calculator is <a href="../tools/token-cost-margin.html">token cost to gross margin</a>. The worksheet is <a href="../guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a>.</p>
-        <h2>Sources</h2>
-        <ul class="sources">
-          <li><a href="https://x.com/Gartner_inc/status/2103170129525604515" rel="noopener">Gartner on X, September 24, 2026</a>: a shift toward coding agents makes cost management as important as deployment.</li>
-        </ul>
-        <p>The margin lines in this note, including the old 80-point habit and the path toward 70%, are desk framing. They are not measurements from that post.</p>
+<h2>Pricing has to follow the cost shape</h2>
+<p>Seat-based pricing on a variable-cost product is how you fund your power users with your idle ones until the power users eat the company. Usage tiers, hard caps, and product design that makes the expensive path rare are not “growth hacks.” They are survival.</p>
+<p>The OWASP Top 10 for LLM applications lists “unbounded consumption” as a security risk: uncontrolled inference that degrades service or runs up cost. That framing is useful for finance teams. A missing rate limit is not only an abuse vector; it is an open-ended cost of goods sold.</p>
+<p>The winning teams instrument contribution margin per workspace the way 2015 companies instrumented net retention. If a customer is beloved and negative, they are not a logo. They are a leak.</p>
+<h2>A simple way to measure it</h2>
+<p>Pick one unit the customer recognizes — a resolved ticket, a reviewed contract, a generated report. For a sample of real ones, add up four numbers: model tokens billed (input, cached input and output separately), retrieval and tool calls, evaluation and logging cost, and minutes of human review at a loaded hourly rate. Divide by the price the customer pays for that unit. Do it for the median case and for the 95th percentile. The gap between those two numbers is usually where the pricing problem lives.</p>
+<h2>What “good” looks like</h2>
+<p>A path to 70%+ gross margin after the product has routing, caching, and a review policy — not on day one. A sales team that is not allowed to waive usage caps without finance. A roadmap that treats model spend as a first-class constraint, the way mobile teams treated battery.</p>
+<p>The companies that fail will look busy. They will ship features. They will have impressive demos. They will not know, to the dollar, what a conversation costs. In this market that is not a rounding error. It is the business.</p>
+<h2>What to do this quarter</h2>
+<ul>
+<li><strong>Price one unit end to end.</strong> Use <a href="../guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a> and the <a href="../tools/ai-cost-per-task.html">AI cost per task</a> tool. Report median and 95th percentile.</li>
+<li><strong>Turn on caching where prompts repeat.</strong> Restructure the longest repeated prefix so it can be cached, then compare the invoice a month later.</li>
+<li><strong>Move non-interactive work to batch.</strong> List every job that does not need a live answer and test it on a batch endpoint.</li>
+<li><strong>Add hard caps.</strong> Per-workspace spend limits and alerts, with a named owner for the alert.</li>
+<li><strong>Put margin per workspace on the dashboard.</strong> Feed it into the <a href="../tools/token-cost-margin.html">token cost to gross margin</a> calculator and review the bottom ten accounts monthly.</li>
+</ul>
+<p>Gartner posted on September 24 that a shift in AI pricing, from seats and consumption toward coding agents, makes cost management as important as deployment. The post is the claim. The worksheets above are the response.</p>
+<h2>Sources</h2>
+<ul class="sources">
+<li><a href="https://x.com/Gartner_inc/status/2103170129525604515" rel="noopener">Gartner on X, September 24, 2026</a>: a shift toward coding agents makes cost management as important as deployment.</li>
+<li><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching" rel="noopener">Anthropic, Prompt caching documentation</a>: cache reads at 10% of base input price for most models; five-minute cache writes at 1.25x.</li>
+<li><a href="https://platform.openai.com/docs/guides/batch" rel="noopener">OpenAI, Batch API guide</a>: 50% cost discount versus synchronous APIs, 24-hour completion window.</li>
+<li><a href="https://genai.owasp.org/llm-top-10/" rel="noopener">OWASP Top 10 for LLM Applications, 2025</a>: LLM10, Unbounded Consumption.</li>
+</ul>
+<p>The margin lines in this note, including the old 80-point habit and the path toward 70%, are desk framing. They are not measurements from these sources.</p>
         <div class="author-box">
           <div class="avatar">ES</div>
           <div>
