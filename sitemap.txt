@@ -86,3 +86,5 @@ https://circuits.fit/services/security-policy-set.html
 https://circuits.fit/services/ai-use-policy.html
 https://circuits.fit/services/security-questionnaire.html
 https://circuits.fit/services/custom-quote.html
+https://circuits.fit/grok-bot-pack/
+https://circuits.fit/services/ai-staff/

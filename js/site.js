@@ -226,6 +226,8 @@
       window.gtag("event", "order_click", { link_url: href, transport_type: "beacon" });
     } else if (/beehiiv\.com\/products\//i.test(a.href)) {
       window.gtag("event", "pack_click", { link_url: a.href, transport_type: "beacon" });
+    } else if (/\/downloads\/[^?#]+\.pdf$/i.test(a.pathname || "")) {
+      window.gtag("event", "free_pack_download", { link_url: a.href, transport_type: "beacon" });
     }
   }, true);
 

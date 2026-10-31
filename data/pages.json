@@ -167,6 +167,20 @@
       "title": "Something else? Fixed quote",
       "dek": "Have an IT, security, vendor or software-spend task that is not on the menu? Email it and get a fixed price, scope and turnaround within 1 business day. No obligation.",
       "body": "services custom quote"
+    },
+    {
+      "path": "services/ai-staff/",
+      "kind": "Service",
+      "title": "AI staff: report-only agents, monthly",
+      "dek": "Report-only agents for renewal watch, security alerts and spend reports. $79 a month for 1 agent, $149 for 3. Cancel anytime.",
+      "body": "services ai staff agents monthly renewal watch security alert spend report kev"
+    },
+    {
+      "path": "grok-bot-pack/",
+      "kind": "Guide",
+      "title": "Free Grok Bot prompt pack for small IT, security and finance teams",
+      "dek": "Six ready-to-paste report-only Grok Bot routine setups: renewal watch, CISA KEV digest, SaaS spend report, vendor security watch, expiry watch and inbox triage.",
+      "body": "free download grok bot prompt pack routines kev renewal spend certificate domain inbox"
     }
   ]
 }
