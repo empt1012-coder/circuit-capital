@@ -925,3 +925,13 @@ footer.site-foot {
 @media (max-width: 640px) {
   .topbar__links .hide-sm { display: none; }
 }
+
+/* Mobile header + cookie overflow fixes (2026-10-31) */
+.masthead__actions { min-width: 0; }
+@media (max-width: 640px) {
+  .masthead__actions { flex-wrap: wrap; justify-content: flex-end; flex-shrink: 1; }
+  .btn--icon { min-width: 0; flex-shrink: 1; white-space: normal; letter-spacing: 0.04em; }
+  .cookie__row { flex-direction: column; }
+  .cookie .btn { width: 100%; flex: none; white-space: normal; }
+}
+.pay-note { font-size: 0.92rem; color: #5a6570; margin-top: -0.4rem; }
