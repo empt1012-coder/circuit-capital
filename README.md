@@ -29,3 +29,7 @@ The IndexNow key file `fa0dbeb168f8be4d7b78c8a611a89d05.txt` lives at the publis
 ```
 
 It POSTs the URLs to https://api.indexnow.org/indexnow; HTTP 200 or 202 means success.
+
+## RSS full content
+
+After adding an item to `feed.xml`, run `python3 scripts/feed-content.py` to (re)generate `<content:encoded>` full-body HTML for every item (idempotent; needs beautifulsoup4).
