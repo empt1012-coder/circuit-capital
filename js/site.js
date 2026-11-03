@@ -224,6 +224,8 @@
     const href = a.getAttribute("href") || "";
     if (/^mailto:/i.test(href)) {
       window.gtag("event", "order_click", { link_url: href, transport_type: "beacon" });
+    } else if (/go\.(nordpass\.io|nordvpn\.net)\//i.test(a.href)) {
+      window.gtag("event", "affiliate_click", { partner: /nordpass/i.test(a.href) ? "nordpass" : "nordvpn", link_url: a.href, transport_type: "beacon" });
     } else if (/beehiiv\.com\/products\//i.test(a.href)) {
       window.gtag("event", "pack_click", { link_url: a.href, transport_type: "beacon" });
     } else if (/\/downloads\/[^?#]+\.pdf$/i.test(a.pathname || "")) {
