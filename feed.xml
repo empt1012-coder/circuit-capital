@@ -5,7 +5,47 @@
 <link>https://circuits.fit/</link>
 <description>Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</description>
 <language>en-us</language>
-<lastBuildDate>Sat, 31 Oct 2026 15:00:00 +0000</lastBuildDate>
+<lastBuildDate>Tue, 03 Nov 2026 21:30:00 +0000</lastBuildDate>
+<item>
+<title>WordPress is on the exploited catalog. Get to 7.1.4 this week.</title>
+<link>https://circuits.fit/articles/wordpress-core-upgrade-race-cisa-kev.html</link>
+<guid>https://circuits.fit/articles/wordpress-core-upgrade-race-cisa-kev.html</guid>
+<pubDate>Tue, 03 Nov 2026 21:30:00 +0000</pubDate>
+<description>CISA added a WordPress Core race condition, CVE-2026-119977, to its exploited catalog on November 3, with a federal due date of November 6. WordPress 7.1.4, released October 28, fixes it. The risk sits in the upgrade itself.</description>
+<author>circuits50capital@circuits.fit (Emilio Santos)</author>
+<content:encoded><![CDATA[<p class="lead-graf">On Tuesday, November 3, 2026, CISA added a WordPress Core flaw, CVE-2026-119977, to its Known Exploited Vulnerabilities catalog. CISA describes it as a time-of-check time-of-use race condition (CWE-367) that could let an unauthenticated attacker execute code on the server during the upgrade window. The federal due date is November 6, three days after listing. The catalog marks known ransomware use as Unknown and forensic triage as Yes.</p>
+<p>The fix has been out since October 28: WordPress 7.1.4. If your website runs on WordPress, the job this week is to confirm it is on 7.1.4, confirm who updates it, and check that nothing was added to it that you did not put there.</p>
+<h2>What happened</h2>
+<ul>
+<li><strong>October 28, 2026:</strong> WordPress released 7.1.4, a security release. Its notes list “a weakness in the WordPress upgrade process which can lead to remote code execution during the upgrade window” among more than a dozen fixes, most of them stored cross-site scripting bugs. WordPress recommends updating immediately.</li>
+<li><strong>October 31:</strong> NVD published the record. It says WordPress Core versions 4.7 through 7.1.3 are affected, because full-package core upgrades use predictable, web-accessible staging paths. The record was submitted by Wordfence.</li>
+<li><strong>November 3:</strong> CISA added the CVE to the catalog (feed version 2026.11.03), due November 6.</li>
+</ul>
+<h2>Why the upgrade window matters</h2>
+<p>Most bugs sit in code that is always running. This one is exposed while WordPress is upgrading itself: files are staged in a location an outsider can predict and reach over the web, and an attacker who wins the race can run code. That means the act of updating an old site is part of the exposure. It is a reason to update quickly and once, to the fixed release, rather than to leave a site unpatched.</p>
+<p>Federal due dates bind only federal civilian agencies under BOD 26-04. For a private business they are a useful signal: CISA lists a bug only when it has evidence of exploitation, and a three-day deadline is the top of its scale.</p>
+<h2>What to do this week</h2>
+<ol>
+<li><strong>Check the version.</strong> In the WordPress dashboard, go to Dashboard, then Updates. If it shows anything below 7.1.4, click Update Now. Do this for every WordPress site you own, including old campaign or landing-page sites.</li>
+<li><strong>Ask whoever runs the site.</strong> If an agency, freelancer or host manages it, ask one question in writing: is the site on WordPress 7.1.4, and on what date was it updated? Record the answer and the name of the person who gave it.</li>
+<li><strong>Check automatic updates.</strong> On the Updates screen, confirm the site is set to install WordPress updates automatically, or that someone owns manual updates with a named backup. Managed hosts often control this; ask them.</li>
+<li><strong>Look for admin users you do not know.</strong> Under Users, filter by Administrator. Remove or lock any account nobody can explain, and reset passwords for the rest.</li>
+<li><strong>Look for files you did not add.</strong> Ask your host or developer to check the site’s files, especially PHP files in the uploads folder and the site root, for anything new or unexplained since late October. A security plugin’s file scan can do the same.</li>
+<li><strong>If something looks wrong, preserve first.</strong> Take a full backup of files and database before cleaning, change all admin and hosting passwords, and ask your host for access logs.</li>
+</ol>
+<p>If you want a second opinion on whether you are exposed and what to do first, our <a href="https://circuits.fit/services/quick-answer.html">Quick Answer</a> service covers exactly that question.</p>
+<h2>What to watch next</h2>
+<p>NVD lists the record as Deferred, so a fuller analysis may not follow. Watch the catalog row and the WordPress security announcements for changes. WordPress says its next major release, 7.2, is planned for December 8.</p>
+<h2>Sources</h2>
+<ul class="sources">
+<li><a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">CISA Known Exploited Vulnerabilities catalog JSON feed</a>, version 2026.11.03 (CVE-2026-119977: added November 3, due November 6, ransomware use Unknown, forensic triage Yes, CWE-367)</li>
+<li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-119977" rel="noopener">CISA catalog entry, CVE-2026-119977</a></li>
+<li><a href="https://wordpress.org/news/2026/10/wordpress-7-1-4/" rel="noopener">WordPress 7.1.4 release announcement</a>, October 28, 2026</li>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119977" rel="noopener">NVD entry, CVE-2026-119977</a> (affected versions 4.7 through 7.1.3)</li>
+<li><a href="https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk" rel="noopener">BOD 26-04, Prioritizing Security Updates Based on Risk</a></li>
+</ul>
+<p>Related: <a href="https://circuits.fit/articles/ivanti-gitlab-cisco-kev-deadlines.html">Three exploited bugs, three deadlines: Ivanti, GitLab and Cisco VPN</a>, the previous catalog briefing, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
+</item>
 <item>
 <title>Three exploited bugs, three deadlines: Ivanti, GitLab and Cisco VPN</title>
 <link>https://circuits.fit/articles/ivanti-gitlab-cisco-kev-deadlines.html</link>
@@ -209,6 +249,7 @@
 <tr><td>Price increase at renewal (%)</td><td>The increase in the renewal quote, or the contractual cap if there is no quote yet</td><td>The quote in writing</td></tr>
 </tbody>
 </table>
+
 <p>Use drop-down lists (data validation) for every column with a fixed set of answers. A criticality column that contains "High", "high" and "HIGH - ask Sam" cannot be scored.</p>
 <p>Decide in advance what "active" means. A common rule is a sign-in within the last 90 days. Whatever rule you pick, write it on an instructions tab and apply it the same way to every tool, or the usage numbers will not be comparable.</p>
 <h2 id="formulas">The calculated columns</h2>
@@ -337,6 +378,7 @@ Days until notice deadline: =IF(U5="","",U5-TODAY())</code></pre>
 <tr><td>Notes</td><td>The fix plan, ticket references, anything a reviewer needs.</td></tr>
 </tbody>
 </table>
+
 <p>Those are the inputs. Everything else in the register should be calculated, so nobody has to remember to update it.</p>
 <h2 id="scoring">Scoring inherent and residual risk</h2>
 <p>Score each exception twice on the same likelihood by impact matrix: once as if nothing compensates, and once with the compensating controls in place. The gap between the two is the value of those controls, and it is what the approver is really being asked to rely on.</p>
@@ -449,6 +491,7 @@ Severity:       =VLOOKUP(Q5,Settings!$B$20:$C$23,2,TRUE)</code></pre>
 <tr><td>Last reviewed</td><td>Date of the most recent review</td></tr>
 </tbody>
 </table>
+
 <p>Calculated columns follow: inherent score and severity, residual score and severity, next review due, and an overdue flag.</p>
 <p>Write risk statements in the form "because of [cause], [event] could happen, leading to [consequence]". "Phishing" is a topic. "Because staff can approve payment changes by email, an attacker impersonating a supplier could redirect a payment, leading to a direct financial loss" is a risk someone can score and treat.</p>
 <h2 id="scales">Write the scales first</h2>
@@ -771,6 +814,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <button class="btn btn--ink" id="cost-print" type="button">Print / Save as PDF</button>
 </div>
 </section>
+
 <section class="tool-help">
 <h2>How to use this</h2>
 <ol>
@@ -867,6 +911,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <button class="btn btn--ink" id="agent-print" type="button">Print / Save as PDF</button>
 </div>
 </section>
+
 <section class="tool-help">
 <h2>How to use this</h2>
 <ol>
@@ -960,6 +1005,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <button class="btn btn--ink" id="k-print" type="button">Print / Save as PDF</button>
 </div>
 </section>
+
 <section class="tool-help">
 <h2>How to use this</h2>
 <ol>
@@ -1032,6 +1078,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <button class="btn btn--ink" id="risk-print" type="button">Print / Save as PDF</button>
 </div>
 </section>
+
 <section class="tool-help">
 <h2>How to use this</h2>
 <ol>
@@ -1099,6 +1146,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <textarea id="renewal-out" readonly=""></textarea>
 <div class="tool-actions"><button class="btn btn--copper" id="renewal-copy" type="button">Copy</button></div>
 </section>
+
 <section class="tool-help">
 <h2>What this scorecard does</h2>
 <p>A software renewal is the one moment each year when the buyer has leverage. Before you sign, the vendor wants the deal. After you sign, the terms are fixed for another term. This scorecard turns the contract and usage facts you already have into a single decision, Keep, Renegotiate, or Replace, and a list of specific requests to send the vendor.</p>
@@ -1185,6 +1233,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <div class="tool-actions"><button class="btn btn--copper" id="agent-copy" type="button">Copy</button></div>
 <p class="tool-context">Context, Gartner’s figure, not yours. In Gartner’s second-quarter survey of 297 cybersecurity leaders, 54% have no defined limit on agent access, or they let the agent reuse a person’s access.</p>
 </section>
+
 <section class="tool-help">
 <h2>Why write the limit down first</h2>
 <p>On September 30, 2026, Gartner reported that 54% of organizations have no defined approach to limiting AI agent access, or rely on predefined human access, based on a second-quarter survey of 297 cybersecurity leaders. Gartner’s advice is to treat frontier AI deployments as insider risks and to govern agents by their action privileges rather than by how capable the model is. An agent that reuses a person’s login can do everything that person can do, at machine speed, and the logs will show the person.</p>
@@ -1248,6 +1297,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <tbody id="sbom-rows"></tbody>
 </table>
 </section>
+
 <section class="tool-help">
 <h2>Why ask for an SBOM</h2>
 <p>A software bill of materials is an ingredients list for software: which components a product contains, who supplies them, which versions are inside, and how they depend on each other. When a component turns up on CISA’s Known Exploited Vulnerabilities catalog, the buyer with an SBOM can answer “are we affected?” in minutes. The buyer without one sends a questionnaire and waits.</p>
@@ -1310,6 +1360,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <textarea id="claim-out" readonly=""></textarea>
 <div class="tool-actions"><button class="btn btn--copper" id="claim-copy" type="button">Copy</button></div>
 </section>
+
 <section class="tool-help">
 <h2>Why check a vendor claim</h2>
 <p>“Up to 8x faster.” “Cuts costs by 40%.” A vendor benchmark is a useful signal, but it is the vendor’s measurement, on the vendor’s workload, against a baseline the vendor chose. It is not a measurement of your bill. This tool turns a claim into a short note for the buying file: whose number it is, what it did not measure, what the bill is at your volume, and three questions for the next call.</p>
@@ -1373,6 +1424,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <textarea id="margin-out" readonly=""></textarea>
 <div class="tool-actions"><button class="btn btn--copper" id="margin-copy" type="button">Copy</button></div>
 </section>
+
 <section class="tool-help">
 <h2>Why tokens are rarely the whole cost</h2>
 <p>AI-native products are often priced as if the model call were the main cost. In practice, many tasks also need a person to check, correct or approve the output before a customer sees it. That review time is usually priced in dollars per hour, not fractions of a cent per thousand tokens, and it can dominate the unit economics. This tool puts both costs on one line so you can see which one drives the margin.</p>
@@ -1811,6 +1863,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <tr><td>Which of these would move if you left for a colo?</td><td>The guest, the app, the data, the firewall rules. The building would not.</td></tr>
 </tbody>
 </table>
+
 <h2 id="others">How Microsoft and Google describe the split</h2>
 <p>The lines above use AWS’s wording. Other providers publish their own, and they differ in useful ways.</p>
 <p><strong>Microsoft Azure.</strong> Microsoft’s shared responsibility page lays out a table by deployment type: software as a service, platform as a service, infrastructure as a service, and on-premises. Physical hosts, network, and datacenter sit with Microsoft for the cloud models. The page also lists responsibilities the customer always retains, regardless of deployment type: data, endpoints, accounts, and access management. That list is a good summary for a board slide. No matter how managed the service is, your data, your devices, and your identities are yours.</p>
@@ -2582,6 +2635,8 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 </tr>
 </tbody>
 </table>
+<p>Shared logins are the easiest line to fix. A team password manager gives each person their own vault entry and lets you revoke access when someone leaves. 1Password, Bitwarden and <a href="https://go.nordpass.io/aff_c?offer_id=754&amp;aff_id=159922" rel="sponsored noopener" target="_blank">NordPass</a> all offer business plans. <small>Affiliate link: we may earn a commission at no cost to you.</small></p>
+
 <h2 id="asked">What operators actually get asked</h2>
 <p>The packet varies by carrier. The repeats do not. Operators in U.S. mid-market shops keep seeing some version of these:</p>
 <ul>
@@ -3056,6 +3111,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 </tr>
 </tbody>
 </table>
+
 <h2 id="evidence">What evidence to have ready</h2>
 <p>A yes on an application is easier to defend when you can show it. For each of the five lines, decide in advance what proof you would hand an underwriter, or a claims adjuster after an incident.</p>
 <ul>
