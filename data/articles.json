@@ -241,6 +241,17 @@
       "body": "AI workflow tokens review cycle time baseline review rework variance commentary"
     },
     {
+      "slug": "wordpress-core-upgrade-race-cisa-kev",
+      "title": "WordPress is on the exploited catalog. Get to 7.1.4 this week.",
+      "dek": "CISA added a WordPress Core race condition, CVE-2026-119977, to its exploited catalog on November 3, with a federal due date of November 6. WordPress 7.1.4, released October 28, fixes it. The risk sits in the upgrade itself.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "November 3, 2026",
+      "readTime": 4,
+      "image": "assets/images/nightdesk.jpg",
+      "body": "CISA KEV Known Exploited Vulnerabilities WordPress Core CVE-2026-119977 7.1.4 TOCTOU race condition upgrade remote code execution BOD 26-04 small business website"
+    },
+    {
       "slug": "ivanti-gitlab-cisco-kev-deadlines",
       "title": "Three exploited bugs, three deadlines: Ivanti, GitLab and Cisco VPN",
       "dek": "CISA added two Ivanti Connect Secure bugs on October 30, chained with an October 13 flaw for unauthenticated command execution, one due November 2. GitLab and Cisco VPN bugs listed a day earlier are due November 1.",
