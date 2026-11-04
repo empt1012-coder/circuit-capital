@@ -1,6 +1,51 @@
 {
   "articles": [
     {
+      "slug": "kev-patch-tuesday-calendar-nov-10-13",
+      "title": "Next week’s patch calendar: four KEV deadlines and a Patch Tuesday",
+      "dek": "Magento and Brotli are due November 10, VMware ESX November 11 and Ivanti Connect Secure November 13. Microsoft and Fortinet both publish on November 10. One page to plan the week.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "November 4, 2026",
+      "readTime": 6,
+      "image": "assets/images/datacenter.jpg",
+      "body": "CISA KEV Patch Tuesday November 10 2026 Adobe Commerce Magento CVE-2026-48356 Brotli CVE-2026-111497 VMware ESX CVE-2026-41709 Ivanti Connect Secure CVE-2026-118527 Fortinet FortiOS calendar"
+    },
+    {
+      "slug": "microsoft-365-renewal-price-increase",
+      "title": "Your Microsoft 365 renewal price, line by line",
+      "dek": "Microsoft’s July 1 list prices reach each customer at its next renewal. Business Basic rises 16%, Business Standard 12%, Premium does not move. The math for 10 and 25 seats.",
+      "category": "Markets",
+      "author": "Emilio Santos",
+      "date": "November 4, 2026",
+      "readTime": 5,
+      "image": "assets/images/finance.jpg",
+      "body": "Microsoft 365 price increase July 1 2026 renewal Business Basic Business Standard Business Premium E3 E5 Apps for business Entra ID license cost small business renewal audit"
+    },
+    {
+      "slug": "staff-ai-use-policy-federal-state",
+      "title": "Write the staff AI policy now. The federal-state fight will not write it for you.",
+      "dek": "A December 2025 executive order pushes for a federal framework that preempts conflicting state AI laws. A small firm’s real exposure is closer to home: client data, accuracy and payment fraud.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "November 4, 2026",
+      "readTime": 5,
+      "image": "assets/images/boardroom.jpg",
+      "body": "AI use policy staff small business executive order 14365 state AI laws preemption FTC impersonation rule November 30 approved AI tools human review"
+    },
+    {
+      "slug": "password-manager-small-business",
+      "type": "guide",
+      "title": "How to choose a password manager for a small business",
+      "dek": "1Password, Bitwarden, NordPass and Keeper compared on sharing, offboarding, sign-in integration and price, checked on each vendor’s page November 4, 2026. Plus a plan for owners and freelancers.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "November 4, 2026",
+      "readTime": 11,
+      "image": "assets/images/office.jpg",
+      "body": "password manager small business 1Password Bitwarden NordPass Business Keeper SSO SCIM offboarding shared vault MFA freelancer pricing 2026"
+    },
+    {
       "slug": "software-renewal-tracker-template",
       "type": "guide",
       "title": "How to Build a Software Renewal Tracker",
