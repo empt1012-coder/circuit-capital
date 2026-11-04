@@ -5,7 +5,356 @@
 <link>https://circuits.fit/</link>
 <description>Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</description>
 <language>en-us</language>
-<lastBuildDate>Tue, 03 Nov 2026 21:30:00 +0000</lastBuildDate>
+<lastBuildDate>Wed, 04 Nov 2026 18:00:00 +0000</lastBuildDate>
+<item>
+<title>Next week’s patch calendar: four KEV deadlines and a Patch Tuesday</title>
+<link>https://circuits.fit/articles/kev-patch-tuesday-calendar-nov-10-13.html</link>
+<guid>https://circuits.fit/articles/kev-patch-tuesday-calendar-nov-10-13.html</guid>
+<pubDate>Wed, 04 Nov 2026 18:00:00 +0000</pubDate>
+<description>Magento and Brotli are due November 10, VMware ESX November 11 and Ivanti Connect Secure November 13. Microsoft and Fortinet both publish on November 10. One page to plan the week.</description>
+<author>circuits50capital@circuits.fit (Emilio Santos)</author>
+<content:encoded><![CDATA[<p class="lead-graf">Next week stacks up. Four federal patch deadlines from CISA’s Known Exploited Vulnerabilities catalog fall between Tuesday, November 10 and Friday, November 13, 2026, and Microsoft and Fortinet both publish on Patch Tuesday, November 10. None of this is new on its own. Together it is a full week of change windows for a small IT team, and it is easier to plan on Wednesday than to discover on Monday.</p>
+<p>This is a calendar, not a fresh alert. We covered the <a href="https://circuits.fit/articles/cisa-kev-magento-brotli-velocloud.html">Magento and Brotli listings</a> and the <a href="https://circuits.fit/articles/ivanti-gitlab-cisco-kev-deadlines.html">Ivanti listing</a> when they were added. What follows puts every date in one place, checked against CISA’s catalog feed version 2026.11.03, released November 3 at 3:00 PM ET.</p>
+<h2>The calendar</h2>
+<p class="tool-scroll-note">Swipe the table sideways to see every column.</p>
+<div class="tool-table-wrap">
+<table>
+<thead><tr><th>Date</th><th>What</th><th>Who should care</th></tr></thead>
+<tbody>
+<tr><td>Tue Nov 10</td><td>KEV due: Adobe Commerce and Magento, CVE-2026-48356 (added Oct 27)</td><td>Anyone running a Magento or Adobe Commerce store, or paying an agency to</td></tr>
+<tr><td>Tue Nov 10</td><td>KEV due: Google Brotli, CVE-2026-111497 (added Oct 27)</td><td>Anyone shipping or hosting software that decompresses Brotli; ask vendors</td></tr>
+<tr><td>Tue Nov 10</td><td>Microsoft November security release (second Tuesday)</td><td>Every Windows and Microsoft 365 shop</td></tr>
+<tr><td>Tue Nov 10</td><td>Fortinet publishes advisories for its October 22 FortiOS, FortiManager and FortiAnalyzer hardening release</td><td>FortiGate and FortiManager owners</td></tr>
+<tr><td>Wed Nov 11</td><td>KEV due: Broadcom VMware ESX, CVE-2026-41709 (added Oct 28)</td><td>Anyone running VMware hosts on premises</td></tr>
+<tr><td>Fri Nov 13</td><td>KEV due: Ivanti Connect Secure, CVE-2026-118527 (added Oct 30)</td><td>Ivanti VPN owners</td></tr>
+</tbody>
+</table>
+</div>
+<p>The catalog marks known ransomware use as Unknown for all five CVEs. Federal due dates bind only federal civilian agencies under BOD 26-04. For a private firm they are a priority signal: CISA lists a flaw only when it has evidence of exploitation.</p>
+<h2>What each listing is</h2>
+<ul>
+<li><strong>Adobe Commerce and Magento, CVE-2026-48356.</strong> CISA describes an unrestricted upload of a file with a dangerous type (CWE-434) that could result in arbitrary code execution. The fix is in Adobe security bulletin APSB26-73.</li>
+<li><strong>Google Brotli, CVE-2026-111497.</strong> An unchecked return value (CWE-252, CWE-787) that lets a remote, unauthenticated attacker corrupt decoder memory with a crafted compressed stream, which can disclose memory, crash the process or potentially run code. Brotli is a library inside many products, so the fix is Brotli 1.2.1 or a vendor update that includes it. CISA’s entry says the flaw “could be used by different products.”</li>
+<li><strong>Broadcom VMware ESX, CVE-2026-41709.</strong> Insufficient logging (CWE-778): an attacker who already has admin access can perform some operations without being logged. It is not an entry point. It is a way to hide. That is why it is on an exploited list.</li>
+<li><strong>Ivanti Connect Secure, CVE-2026-118527.</strong> Generation of predictable identifiers (CWE-340) that lets an authenticated attacker upload attacker-controlled files to a known location. CISA notes it can be chained with CVE-2026-104935 and CVE-2026-111357. The second of those was due November 2.</li>
+</ul>
+<h2>Patch Tuesday, November 10</h2>
+<p>November 10 is the second Tuesday of the month, Microsoft’s regular release day. As of this morning, Microsoft’s security update API lists releases through October (published October 13) and no November release yet, which is normal before the day. We will not guess at its contents.</p>
+<p>Fortinet is the less routine item. In an October 21 post, Fortinet CISO Carl Windsor said a coordinated hardening release for FortiOS, FortiManager and FortiAnalyzer would ship October 22, with fixes for vulnerabilities found through what Fortinet calls its frontier AI-assisted testing program. The post says the fixes include critical and high-severity issues and that public advisories will be published on November 10. The fixed versions are listed now: for example FortiOS 7.4.13, 7.6.8 and 8.0.2 or above.</p>
+<p>That gap matters. Fortinet itself warns that once advisories and patches are public, attackers can diff the fix to find the weakness, and that AI tools can shorten the time from patch to working exploit to “hours or days.” If you have a FortiGate on the internet and it is not on a fixed version, November 10 is the day the details become public, not the day the risk starts.</p>
+<h2>What it means for CFOs and CISOs</h2>
+<ul>
+<li><strong>Plan the week as one change window, not six.</strong> The Microsoft release, the Fortinet upgrade and the VMware and Ivanti fixes touch different systems, but often the same one or two people. Book their time now.</li>
+<li><strong>Edge devices first.</strong> Ivanti Connect Secure and FortiGate sit on the internet by design. They are the systems most often used as an entry point, and both appear on this calendar.</li>
+<li><strong>Third-party code is the harder question.</strong> Brotli is a component, not a product. You will rarely patch it yourself; you will ask your vendors whether their product includes an affected version. An SBOM makes that a lookup instead of an email chain. Our <a href="https://circuits.fit/tools/sbom-request-pack.html">SBOM request pack</a> is built for exactly that ask.</li>
+<li><strong>Agencies and managed providers count.</strong> If an agency hosts your store or an MSP runs your firewall, the deadline is still yours to track. Ask in writing.</li>
+</ul>
+<h2>What to do this week</h2>
+<ol>
+<li><strong>Inventory by Friday.</strong> Answer four yes-or-no questions: do we run Magento or Adobe Commerce, VMware ESX, Ivanti Connect Secure, or any Fortinet device? Write the owner’s name next to each yes.</li>
+<li><strong>Fortinet now.</strong> Check the FortiOS, FortiManager and FortiAnalyzer versions against the fixed versions in Fortinet’s post. Upgrade before November 10. If you cannot, Fortinet’s own interim advice is to restrict admin interfaces to trusted IP addresses and keep FortiManager off the internet.</li>
+<li><strong>Magento by Tuesday.</strong> Apply APSB26-73 or confirm in writing that your agency has. Ask when, and for which store.</li>
+<li><strong>Email your key software vendors about Brotli.</strong> One line: does your product include Google Brotli, and if so, is it on 1.2.1 or otherwise patched for CVE-2026-111497?</li>
+<li><strong>VMware and Ivanti by Wednesday and Friday.</strong> Apply Broadcom’s and Ivanti’s fixes from the advisories CISA links. For Ivanti, confirm the earlier chained fixes are also in.</li>
+<li><strong>Book Patch Tuesday.</strong> Hold a two-hour window on Wednesday, November 11 to read the Microsoft release and push it to a pilot group first.</li>
+<li><strong>Check admin logins.</strong> These flaws reward stolen admin credentials. Confirm MFA is on for every firewall, VPN, hypervisor and store admin account, and that no admin password is shared in a spreadsheet. Our <a href="https://circuits.fit/guides/password-manager-small-business.html">password manager guide</a> covers how to fix that for a small team.</li>
+</ol>
+<h2>What to watch next</h2>
+<ul>
+<li>Microsoft’s November release on November 10, and whether any of its fixes are flagged as already exploited. Those tend to reach the KEV catalog within days.</li>
+<li>Fortinet’s PSIRT advisories on November 10. Watch for CVE numbers, severity scores, and any later note that a flaw is being exploited.</li>
+<li>New KEV additions. CISA’s feed updates as listings are added, and three-day deadlines, as with WordPress last week, are now common.</li>
+</ul>
+<figure class="cc-video cc-video--vertical"><video aria-label="A free weekly roundup of new actively exploited vulnerabilities: what they are, who is affected, and what to patch first." autoplay="" height="1280" loop="" muted="" playsinline="" poster="../assets/video/cc-kev-roundup-9x16.jpg" preload="metadata" width="720"><source src="https://circuits.fit/assets/video/cc-kev-roundup-9x16.mp4" type="video/mp4"/></video><figcaption class="sr-only">A free weekly roundup of new actively exploited vulnerabilities: what they are, who is affected, and what to patch first.</figcaption></figure>
+<p>We publish a free weekly roundup of newly exploited vulnerabilities: what they are, who is affected and what to patch first. <a href="https://emilios-newsletter-7fd333.beehiiv.com/subscribe" rel="noopener">Subscribe free</a> to get it. If you want help deciding what applies to you, our <a href="https://circuits.fit/services/quick-answer.html">Quick Answer</a> service covers that question.</p>
+<h2>Sources</h2>
+<ul class="sources">
+<li><a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">CISA Known Exploited Vulnerabilities catalog JSON feed</a>, version 2026.11.03, 1,767 entries, checked November 4, 2026</li>
+<li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" rel="noopener">CISA Known Exploited Vulnerabilities catalog</a></li>
+<li><a href="https://www.adobe.com/trust/security/products/commerce/apsb26-73.html" rel="noopener">Adobe security bulletin APSB26-73</a></li>
+<li><a href="https://github.com/google/brotli/releases/tag/v1.2.1" rel="noopener">Google Brotli 1.2.1 release</a></li>
+<li><a href="https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017" rel="noopener">Broadcom VMware security advisory</a></li>
+<li><a href="https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US" rel="noopener">Ivanti Connect Secure security advisory</a></li>
+<li><a href="https://api.msrc.microsoft.com/cvrf/v3.0/updates" rel="noopener">Microsoft Security Response Center, security updates API</a>, checked November 4, 2026</li>
+<li><a href="https://www.fortinet.com/blog/ciso-collective/fortinet-releases-security-hardening-release-for-multiple-products" rel="noopener">Fortinet, “Fortinet Releases Security Hardening Release for Multiple Products,”</a> Carl Windsor, October 21, 2026</li>
+<li><a href="https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk" rel="noopener">BOD 26-04, Prioritizing Security Updates Based on Risk</a></li>
+</ul>
+<p>Related: <a href="https://circuits.fit/articles/wordpress-core-upgrade-race-cisa-kev.html">WordPress is on the exploited catalog. Get to 7.1.4 this week.</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
+</item>
+<item>
+<title>Your Microsoft 365 renewal price, line by line</title>
+<link>https://circuits.fit/articles/microsoft-365-renewal-price-increase.html</link>
+<guid>https://circuits.fit/articles/microsoft-365-renewal-price-increase.html</guid>
+<pubDate>Wed, 04 Nov 2026 17:00:00 +0000</pubDate>
+<description>Microsoft’s July 1 list prices reach each customer at its next renewal. Business Basic rises 16%, Business Standard 12%, Premium does not move. The math for 10 and 25 seats.</description>
+<author>circuits50capital@circuits.fit (Emilio Santos)</author>
+<content:encoded><![CDATA[<p class="lead-graf">Microsoft raised list prices on most Microsoft 365 business and enterprise suites on July 1, 2026. Existing customers stay on their current price until renewal, so the increase reaches each firm on its own renewal date. For a business on an annual term, that means renewals landing between now and mid-2027 are when the new price shows up on the invoice.</p>
+<p>Here is what changed, line by line, with the math for a 10-person and a 25-person firm, and what to check before you sign.</p>
+<h2>What Microsoft changed</h2>
+<p>Microsoft announced the update on December 4, 2025. Its Licensing Resources page, dated February 16, 2026 and re-read on November 4, 2026, sets out the details:</p>
+<ul>
+<li>Pricing took effect July 1, 2026.</li>
+<li>Existing customers remain on current pricing until renewal.</li>
+<li>Prices are list prices in U.S. dollars, per user per month, and “may vary by country and currency.”</li>
+<li>Standalone Teams and Copilot SKUs are not included.</li>
+</ul>
+<h3>Business plans (with Teams)</h3>
+<p class="tool-scroll-note">Swipe the table sideways to see every column.</p>
+<div class="tool-table-wrap">
+<table>
+<thead><tr><th>Plan</th><th>Old</th><th>New</th><th>Change</th></tr></thead>
+<tbody>
+<tr><td>Microsoft 365 Business Basic</td><td>$6.00</td><td>$7.00</td><td>16%</td></tr>
+<tr><td>Microsoft 365 Business Standard</td><td>$12.50</td><td>$14.00</td><td>12%</td></tr>
+<tr><td>Microsoft 365 Business Premium</td><td>$22.00</td><td>$22.00</td><td>No change</td></tr>
+<tr><td>Microsoft 365 Apps for business</td><td>$8.25</td><td>$10.00</td><td>21%</td></tr>
+</tbody>
+</table>
+</div>
+<p>The no-Teams versions move the same way: Business Basic $4.40 to $5.40, Business Standard $9.29 to $10.79, Business Premium unchanged at $18.79.</p>
+<h3>Enterprise and add-ons</h3>
+<div class="tool-table-wrap">
+<table>
+<thead><tr><th>Plan</th><th>Old</th><th>New</th></tr></thead>
+<tbody>
+<tr><td>Office 365 E3</td><td>$23.00</td><td>$26.00</td></tr>
+<tr><td>Office 365 E5</td><td>$38.00</td><td>$41.00</td></tr>
+<tr><td>Microsoft 365 E3</td><td>$36.00</td><td>$39.00</td></tr>
+<tr><td>Microsoft 365 E5</td><td>$57.00</td><td>$60.00</td></tr>
+<tr><td>Microsoft 365 Apps (per user)</td><td>$12.00</td><td>$14.00</td></tr>
+<tr><td>Entra ID Plan 1</td><td>$6.00</td><td>$7.00</td></tr>
+<tr><td>Entra ID Plan 2</td><td>$9.00</td><td>$10.00</td></tr>
+<tr><td>Microsoft 365 F3</td><td>$8.00</td><td>$10.00</td></tr>
+</tbody>
+</table>
+</div>
+<p>Microsoft pairs the price change with additions. The Business suites get 50GB more email storage and Copilot Chat enhancements; Business Basic and Standard also get URL time-of-click protection. Microsoft 365 E3 adds Defender for Office 365 Plan 1 and several Intune features. Nonprofit pricing moves with commercial at a fixed 60 to 75% discount, and Business Basic stays free for nonprofits.</p>
+<h2>The math for a small firm</h2>
+<p>Examples computed from Microsoft’s list prices, annual totals. Your price may differ if you buy through a reseller, pay monthly, or are outside the U.S.</p>
+<ul>
+<li><strong>10 seats of Business Standard:</strong> $1,500 a year before, $1,680 after. Up $180.</li>
+<li><strong>25 seats of Business Standard:</strong> $3,750 before, $4,200 after. Up $450.</li>
+<li><strong>25 seats of Business Basic:</strong> $1,800 before, $2,100 after. Up $300.</li>
+<li><strong>10 seats of Apps for business:</strong> $990 before, $1,200 after. Up $210.</li>
+<li><strong>25 seats of Business Premium:</strong> $6,600 before and after. No change.</li>
+<li><strong>A mixed 25-person firm,</strong> 15 Business Standard and 10 Business Basic, plus Entra ID Plan 1 on 5 admins: $2,250 + $720 + $360 = $3,330 before; $2,520 + $840 + $420 = $3,780 after. Up $450, about 14%.</li>
+</ul>
+<p>Those are not large sums. The point is the shape. The gap between Business Standard and Business Premium narrowed from $9.50 to $8.00 per user per month. If you were paying for Standard plus separate security add-ons that Premium already includes, the renewal is the moment to do that comparison again.</p>
+<h2>What it means for CFOs and CISOs</h2>
+<ul>
+<li><strong>The increase lands on your renewal date, not on July 1.</strong> Check the date on your Microsoft 365 admin center billing page or your reseller’s invoice. If it is in the next six months, you have time to act.</li>
+<li><strong>Unused seats now cost more.</strong> A licensed account belonging to someone who left in the spring is a 12 to 16% bigger waste on Basic or Standard after renewal.</li>
+<li><strong>Premium is relatively cheaper.</strong> Business Premium did not move. For firms that need Intune device management or Defender, the case for consolidating onto Premium got slightly better.</li>
+<li><strong>New features may change your stack.</strong> URL time-of-click protection in Basic and Standard may overlap with an email security add-on you already pay for. Overlap is the easiest saving at renewal.</li>
+</ul>
+<h2>What to do this week</h2>
+<ol>
+<li><strong>Find the renewal date and term.</strong> In the Microsoft 365 admin center, go to Billing, then Your products. Note each subscription’s renewal date, seat count and whether it is annual or monthly.</li>
+<li><strong>Export active users.</strong> Pull the sign-in report and list licensed accounts with no sign-in in 90 days. Remove or downgrade them before renewal, not after.</li>
+<li><strong>Price the renewal yourself.</strong> Multiply seats by the new list price for each plan. Compare that to any renewal quote from your reseller.</li>
+<li><strong>Run the Premium comparison.</strong> List every security or device-management add-on you pay for alongside Business Standard. If the total per user is close to $22, price Premium.</li>
+<li><strong>Ask your reseller in writing</strong> for the renewal price per SKU, the term, and whether any promotion or multi-year option is available.</li>
+</ol>
+<p>If you would rather hand this off, our <a href="https://circuits.fit/services/renewal-audit.html">Renewal Audit</a> reviews up to 25 software renewals, Microsoft 365 included, for a fixed $199 and returns a written report in 5 business days. If you want the spreadsheet instead, the <a href="https://emilios-newsletter-7fd333.beehiiv.com/products/renewal-risk-operator-pack">Renewal &amp; Risk Operator Pack</a> ($29) includes a renewal scorecard, and the free <a href="https://circuits.fit/tools/software-renewal-scorecard.html">software renewal scorecard</a> runs in your browser.</p>
+<h2>What to watch next</h2>
+<ul>
+<li><strong>Message Center notices.</strong> Microsoft says tenants get at least 30 days’ notice before packaging changes arrive. Watch for the feature additions that come with your plan.</li>
+<li><strong>Country and currency pricing.</strong> Microsoft’s page says prices may vary outside the U.S. If you pay in another currency, ask your reseller for the local figure.</li>
+<li><strong>Other vendors.</strong> Software renewal increases rarely come alone. Use the same pass on your other large subscriptions this quarter; our guide <a href="https://circuits.fit/guides/how-to-read-a-saas-renewal.html">How to read a SaaS renewal</a> sets out the 90-day timeline.</li>
+</ul>
+<h2>Sources</h2>
+<ul class="sources">
+<li><a href="https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates" rel="noopener">Microsoft Licensing Resources, “Microsoft 365 Pricing and Packaging Updates,”</a> February 16, 2026, checked November 4, 2026</li>
+</ul>
+<p>Related: <a href="https://circuits.fit/guides/software-renewal-tracker-template.html">How to build a software renewal tracker</a> and <a href="https://circuits.fit/articles/software-buying-is-an-operating-skill.html">Software buying is an operating skill</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Write the staff AI policy now. The federal-state fight will not write it for you.</title>
+<link>https://circuits.fit/articles/staff-ai-use-policy-federal-state.html</link>
+<guid>https://circuits.fit/articles/staff-ai-use-policy-federal-state.html</guid>
+<pubDate>Wed, 04 Nov 2026 16:00:00 +0000</pubDate>
+<description>A December 2025 executive order pushes for a federal framework that preempts conflicting state AI laws. A small firm’s real exposure is closer to home: client data, accuracy and payment fraud.</description>
+<author>circuits50capital@circuits.fit (Emilio Santos)</author>
+<content:encoded><![CDATA[<p class="lead-graf">A 20-person firm does not need to predict how the fight between Washington and the states over AI regulation ends. It needs a one- or two-page rule that tells staff what they may put into an AI tool, which tools are approved, and who checks the output before it reaches a client. That rule is useful whichever way federal preemption goes, because almost everything in it is about your own data, contracts and customers.</p>
+<p>Here is where the federal and state picture stands as of November 4, 2026, what we could and could not verify today, and what a small firm should write down now.</p>
+<h2>Where the rules stand</h2>
+<ul>
+<li><strong>December 11, 2025: the White House order.</strong> Executive Order 14365, “Ensuring a National Policy Framework for Artificial Intelligence,” sets a policy of “a minimally burdensome national policy framework for AI.” It directed the Attorney General to set up an AI Litigation Task Force within 30 days to challenge state AI laws it considers inconsistent with that policy, and directed the Secretary of Commerce to publish, within 90 days, an evaluation identifying “onerous” state AI laws. It also called for a legislative recommendation for a federal framework that preempts conflicting state laws, while saying that recommendation should not preempt state laws on child safety, AI data center infrastructure, or state government use of AI.</li>
+<li><strong>The order is not a statute.</strong> It directs federal agencies. It does not itself repeal any state law. A state AI law stays in force unless a court strikes it down or Congress preempts it.</li>
+<li><strong>States keep legislating.</strong> Several states have passed laws on AI disclosures and automated decisions in hiring and other areas. We did not cite any specific state law in this piece because we could not re-check the official text today. If you operate in a state with an AI law, read that state’s official text or ask counsel.</li>
+<li><strong>FTC impersonation rule, comments close November 30.</strong> On October 1, 2026, the Federal Trade Commission published a proposed rule in the Federal Register that would address search engines, social media and other digital platforms that further government and business impersonation scams. It is a proposal, not a compliance date. Comments close November 30, 2026. It is relevant here because AI-generated voices and messages are now a common tool in impersonation fraud.</li>
+</ul>
+<h2>Why a small firm should write a policy anyway</h2>
+<p>The legal fight is about what AI developers and large deployers must disclose or test. The everyday risk at a small firm is simpler and already covered by rules you live with:</p>
+<ul>
+<li><strong>Client confidentiality.</strong> Pasting a client contract into a consumer AI tool may breach your engagement terms or an NDA, regardless of any AI law.</li>
+<li><strong>Personal data.</strong> Existing privacy and sector rules still apply to employee and customer records you put into a tool.</li>
+<li><strong>Accuracy.</strong> If AI drafts a client deliverable, your firm is responsible for what it says.</li>
+<li><strong>Impersonation and fraud.</strong> A cloned voice asking for a wire transfer is a payment-control problem, not an AI-policy problem. Your policy should still say how payment and password requests are confirmed.</li>
+<li><strong>Insurers and clients ask.</strong> Security questionnaires increasingly ask whether you have an AI use policy and a list of approved tools.</li>
+</ul>
+<h2>What it means for CFOs and CISOs</h2>
+<ul>
+<li><strong>Do not wait for preemption.</strong> Even a broad federal standard would leave your contracts, confidentiality duties and existing privacy obligations in place.</li>
+<li><strong>The tool list is the control.</strong> Most AI risk at a small firm comes from unapproved tools on personal accounts. An approved-tools list, with business accounts and the right data settings, does more than a long policy.</li>
+<li><strong>Spending follows the list.</strong> Once you know which AI tools staff use, you can consolidate subscriptions. Duplicate AI seats are now a common line in software renewals.</li>
+<li><strong>State exposure is a hiring question first.</strong> If you use AI to screen candidates or make employment decisions, that is where state laws most often bite. Ask counsel before you use it there.</li>
+</ul>
+<h2>What to put in the policy</h2>
+<p>Keep it to one or two pages. Our <a href="https://circuits.fit/guides/one-page-ai-use-rule.html">one-page AI use rule</a> has a template. At minimum:</p>
+<ol>
+<li><strong>Approved tools.</strong> Name them, with the account type (business, not personal) and the data setting (for example, model training off).</li>
+<li><strong>Data you may not paste.</strong> Client confidential material unless the tool is approved for it, personal data about staff or customers, passwords and keys, and anything under NDA.</li>
+<li><strong>Human review.</strong> Anything that goes to a client, a regulator or the public is read and approved by a named person before it leaves.</li>
+<li><strong>No automated decisions about people</strong> in hiring, pay or discipline without sign-off from the owner and, where required, counsel.</li>
+<li><strong>Payment and password confirmation.</strong> A voice, video or message is never approval for a payment, a bank change or a password reset. Confirm on a second channel using the number already on file. Our guide <a href="https://circuits.fit/guides/stop-using-a-voice-as-approval.html">Stop using a voice as approval</a> covers this.</li>
+<li><strong>Accounts.</strong> AI tools are signed into with business accounts protected by MFA, and those logins are stored in the firm’s password manager, not in a browser or a spreadsheet.</li>
+<li><strong>How to ask.</strong> One named person approves new tools. Give a turnaround time so staff do not route around the rule.</li>
+<li><strong>Review date.</strong> Revisit every six months, or when a law that applies to you changes.</li>
+</ol>
+<h2>What to do this week</h2>
+<ol>
+<li><strong>Inventory.</strong> Send a two-question survey: which AI tools do you use for work, and on which account? Expect more answers than you think.</li>
+<li><strong>Pick the approved list.</strong> Choose one or two tools, move people onto business accounts, and set data and retention settings.</li>
+<li><strong>Write the page</strong> using the eight points above and circulate it for sign-off.</li>
+<li><strong>Fix the payment rule</strong> if it is not already written down. This is the one with direct cash risk.</li>
+<li><strong>Note the FTC comment date,</strong> November 30, if impersonation scams have touched your business and you want to comment.</li>
+</ol>
+<p>If you would rather have it written for you, our <a href="https://circuits.fit/services/ai-use-policy.html">AI Use Policy + AI Tool Inventory</a> service delivers a policy and a tool inventory for $149 in 4 business days.</p>
+<h2>What to watch next</h2>
+<ul>
+<li><strong>Commerce’s evaluation of state AI laws</strong> and any lawsuits filed by the Justice Department’s AI Litigation Task Force. Those would be the first concrete signs of which state laws are under challenge.</li>
+<li><strong>Federal legislation.</strong> The order asks for a legislative recommendation. Only Congress can preempt state law broadly.</li>
+<li><strong>The FTC impersonation proposal</strong> after comments close on November 30.</li>
+<li><strong>Your own state.</strong> Check your state legislature’s official site for AI laws with effective dates in 2026 and 2027.</li>
+</ul>
+<h2>Sources</h2>
+<ul class="sources">
+<li><a href="https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/" rel="noopener">The White House, “Ensuring a National Policy Framework for Artificial Intelligence,”</a> Executive Order 14365, December 11, 2025, checked November 4, 2026</li>
+<li><a href="https://www.federalregister.gov/documents/2026/10/01/2026-20143/rule-on-impersonation-of-government-and-businesses" rel="noopener">Federal Register, Federal Trade Commission, “Rule on Impersonation of Government and Businesses,”</a> proposed rule, October 1, 2026, comments close November 30, 2026</li>
+<li><a href="https://doi.org/10.6028/NIST.AI.600-1" rel="noopener">NIST AI 600-1, Generative AI Profile of the AI Risk Management Framework</a></li>
+</ul>
+<p>Related: <a href="https://circuits.fit/articles/board-questions-generative-ai.html">Board questions on generative AI</a> and <a href="https://circuits.fit/tools/agent-inventory.html">AI agent inventory</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>How to choose a password manager for a small business</title>
+<link>https://circuits.fit/guides/password-manager-small-business.html</link>
+<guid>https://circuits.fit/guides/password-manager-small-business.html</guid>
+<pubDate>Wed, 04 Nov 2026 15:00:00 +0000</pubDate>
+<description>1Password, Bitwarden, NordPass and Keeper compared on sharing, offboarding, sign-in integration and price, checked on each vendor’s page November 4, 2026. Plus a plan for owners and freelancers.</description>
+<author>circuits50capital@circuits.fit (Emilio Santos)</author>
+<content:encoded><![CDATA[<p class="lead-graf">Most small firms already have a password manager. It is a spreadsheet called “logins,” a sticky note on the office manager’s monitor, and the owner’s memory. That works until someone leaves, a vendor account gets taken over, or a cyber insurance application asks how shared credentials are controlled.</p>
+<p>This guide compares the business password managers a small firm is most likely to shortlist, 1Password, Bitwarden, NordPass and Keeper, on the things that matter at 5 to 100 seats: who can see what, how fast you can cut off a leaver, whether it works with the sign-in system you already have, and what it costs. Prices were checked on each vendor’s own pricing page on November 4, 2026. Where a vendor’s page did not show a price we could read, we say so instead of guessing.</p>
+<p class="tool-banner"><strong>Disclosure.</strong> Circuit &amp; Capital is a Nord Security affiliate. Two links on this page, both marked, may earn us a commission at no cost to you. That does not change the comparison: every vendor here is judged on the same list, and the cheapest or most open option is named where it wins.</p>
+<h2 id="why">Why a business vault, not a spreadsheet</h2>
+<p>A shared spreadsheet fails in three predictable ways. Everyone with the file can see every password, so there is no way to give the bookkeeper the bank portal without also giving her the domain registrar. There is no record of who opened what. And when someone leaves, the only safe move is to change every password they could have seen, which nobody does.</p>
+<p>A business password manager fixes those three things. Each person gets their own encrypted vault. Shared items live in shared vaults or folders that you grant by role. The admin console shows who has access, and removing a person removes their access to shared items in one step. The vendors in this guide all describe their products as end-to-end or zero-knowledge encrypted, meaning the vendor stores your data but cannot read it.</p>
+<p>There is also a paperwork reason. Cyber insurance applications and client security questionnaires increasingly ask about shared accounts, MFA and offboarding. Our <a href="https://circuits.fit/guides/cyber-insurance-checklist-2026.html">cyber insurance checklist</a> covers those questions. A password manager with an admin console is the easiest way to answer them with evidence rather than a promise.</p>
+<h2 id="must">What a small business actually needs</h2>
+<p>Ignore the feature grids for a moment. At 5 to 100 people, these are the lines that decide the choice:</p>
+<ul>
+<li><strong>Shared vaults or folders with permissions.</strong> Finance logins for finance, the website login for whoever runs the website. Every product here does this, but the granularity differs by plan.</li>
+<li><strong>Fast offboarding.</strong> Removing a user should end their access to shared items immediately. Ideally it is automatic, driven by your identity provider.</li>
+<li><strong>Works with your sign-in system.</strong> If you run Microsoft 365 (Entra ID) or Google Workspace, check that your plan supports single sign-on (SSO) or automated user provisioning (SCIM) with that system. This is where plan tiers matter most.</li>
+<li><strong>Account recovery.</strong> Someone will forget their master password. An admin needs a way to recover the account without the vendor being able to read it.</li>
+<li><strong>Activity or event logs.</strong> You want to be able to answer “who opened the bank login last week.”</li>
+<li><strong>Breach and password health reports.</strong> Useful, not essential. They flag reused, weak and exposed passwords so you know where to start.</li>
+<li><strong>A security record.</strong> Independent audits and certifications such as SOC 2 Type II and ISO 27001. All four vendors list at least one on their pricing pages.</li>
+</ul>
+
+<h2 id="compare">The main options, compared</h2>
+<p>Annual billing, U.S. dollars, per user per month unless stated, as shown on each vendor’s pricing page on November 4, 2026. Taxes are extra. Plans and promotions change often; confirm on the vendor’s page before you buy.</p>
+<p class="tool-scroll-note">Swipe the table sideways to see every column.</p>
+<div class="tool-table-wrap">
+<table>
+<thead><tr><th>Product</th><th>Small-team plan</th><th>Business plan</th><th>SSO / provisioning</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>1Password</td><td>Teams Starter Pack: $24.95 a month flat for up to 10 members; up to 10 more seats at $4.99 each</td><td>Business: $8.99</td><td>Business: Okta, Entra ID, OneLogin, Duo integrations; provisioning with Entra ID, Google Workspace, Okta and others</td><td>14-day free trial of Business. SOC 2 Type II. Guest accounts: 5 on Starter Pack, 20 on Business.</td></tr>
+<tr><td>Bitwarden</td><td>Teams: $4</td><td>Enterprise: $6</td><td>Teams: directory sync and SCIM. Enterprise: SSO integration, enterprise policies</td><td>Open source. Free plan for individuals. Enterprise can be self-hosted and includes a free Families plan for every user. SOC 2 Type II, ISO 27001.</td></tr>
+<tr><td>NordPass</td><td>Teams: up to 10 users</td><td>Business and Enterprise: 5-user minimum</td><td>Teams: Google Workspace SSO. Enterprise: SSO with Entra ID, MS ADFS and Okta, plus automatic user management via Entra ID and Okta</td><td>Prices load dynamically on NordPass’s page and could not be read by our checker; see the page for the current rate. Trial without a card; 14-day refund window. Lists ISO 27001, SOC 2 Type 2 and a Cure53 audit.</td></tr>
+<tr><td>Keeper</td><td>Business Starter</td><td>Business; Enterprise by quote</td><td>Enterprise: SAML 2.0 SSO, SCIM, Entra ID, Okta, Ping</td><td>Prices also load dynamically on Keeper’s page. Free Family plan for every user. SOC 2, ISO 27001; FedRAMP High on GovCloud.</td></tr>
+</tbody>
+</table>
+</div>
+<p>Two things stand out. First, the line that most often decides the plan is SSO and provisioning. Bitwarden includes directory sync and SCIM on its $4 Teams plan. 1Password puts identity-provider integrations on Business. NordPass and Keeper put Entra ID and Okta SSO on their Enterprise tiers. If you want leavers removed automatically when you disable them in Microsoft 365, check which tier gives you that before comparing prices.</p>
+<p>Second, the “free family plan for every user” perk, offered by Bitwarden Enterprise and Keeper, is more useful than it sounds. Staff who reuse a work password on a personal account are a real risk, and a free personal vault removes the excuse.</p>
+<p>What about the password manager built into Chrome, Edge or Apple devices? For one person it is far better than nothing. For a business it lacks the admin console, shared vault permissions and offboarding that are the reason to buy a business product.</p>
+<h2 id="cost">What 12 people cost per year</h2>
+<p>An example, computed from the list prices above, for a 12-person firm paying annually. It is not a quote.</p>
+<ul>
+<li><strong>1Password Teams Starter Pack:</strong> $24.95 × 12 months = $299.40 for the first 10, plus 2 seats × $4.99 × 12 = $119.76. Total $419.16 a year.</li>
+<li><strong>1Password Business:</strong> 12 × $8.99 × 12 = $1,294.56 a year.</li>
+<li><strong>Bitwarden Teams:</strong> 12 × $4 × 12 = $576 a year.</li>
+<li><strong>Bitwarden Enterprise:</strong> 12 × $6 × 12 = $864 a year.</li>
+<li><strong>NordPass:</strong> Teams caps at 10 users, so a 12-person firm needs Business or Enterprise. Check the current per-user price on NordPass’s page and multiply by 12 seats and 12 months.</li>
+</ul>
+<p>At this size the difference between the cheapest and dearest option is under $1,000 a year. That is less than an hour of incident response. Choose on fit and adoption, then on price.</p>
+<h2 id="team">Choosing for a team</h2>
+<p>A short way to decide:</p>
+<ul>
+<li><strong>You want the lowest cost with SCIM, or you want to self-host:</strong> Bitwarden. Its Teams plan includes provisioning at $4, its code is open source, and Enterprise can run on your own servers if a client requires it.</li>
+<li><strong>You want the most polished apps and expect developers to use it:</strong> 1Password. Business includes SSH key and Git commit signing, a CLI and SDKs, and the Teams Starter Pack is good value for exactly 10 people.</li>
+<li><strong>You want a simple admin console, breach monitoring and a low per-seat price, and you run Google Workspace or plan to move to Enterprise for Entra ID:</strong> NordPass Business. Its Business tier adds password health, data breach monitoring and a Vanta integration, which helps if you are working toward SOC 2. Start a trial here: <a href="https://go.nordpass.io/aff_c?offer_id=754&amp;aff_id=159922" rel="sponsored noopener" target="_blank">NordPass Business</a>. <small>Affiliate link: we may earn a commission at no cost to you.</small></li>
+<li><strong>You need granular admin roles, delegated administration or government cloud:</strong> Keeper, whose Business and Enterprise tiers add delegated admin and policy controls, and which offers FedRAMP High on GovCloud.</li>
+</ul>
+<p>Whichever you pick, run the free trial with three real users, the owner, the office manager and the least technical person in the firm, for one week before you buy seats for everyone. Adoption is the thing that fails, not encryption.</p>
+<h2 id="solo">Owners and solo freelancers: your own accounts</h2>
+<p>If you work alone, or you are the owner whose personal email is the recovery address for half the company’s accounts, a team plan is not the first step. Your own accounts are. The owner’s email, bank, domain registrar and accounting logins are the ones an attacker wants, and they are often the ones protected by a password reused since 2015.</p>
+<p>The job is small:</p>
+<ol>
+<li><strong>Pick a personal password manager.</strong> Bitwarden has a free plan and a $19.80-a-year Premium plan. 1Password and Keeper have individual plans. NordPass has free and paid personal plans: <a href="https://go.nordpass.io/aff_c?offer_id=488&amp;aff_id=159922&amp;url_id=9356" rel="sponsored noopener" target="_blank">NordPass personal plans</a>. <small>Affiliate link: we may earn a commission at no cost to you.</small></li>
+<li><strong>Start with five accounts.</strong> Email, bank, domain registrar, accounting or payroll, and your phone carrier. Give each a new, generated password.</li>
+<li><strong>Turn on MFA for those five,</strong> using an authenticator app or passkey rather than text messages where the site allows it.</li>
+<li><strong>Write down recovery.</strong> Store your recovery codes and the password manager’s own emergency kit somewhere offline that a trusted person could find.</li>
+<li><strong>Separate business from personal.</strong> If a client account or a shared login sits in your personal vault, move it to a business vault once you hire.</li>
+</ol>
+<p>If you often work from hotel, airport or client Wi-Fi, a VPN adds a layer on networks you do not control. It does not replace MFA or a password manager, and most sites already encrypt traffic. If you want one, <a href="https://go.nordvpn.net/aff_c?offer_id=15&amp;aff_id=159922&amp;url_id=902" rel="sponsored noopener" target="_blank">NordVPN</a> is one option. <small>Affiliate link: we may earn a commission at no cost to you.</small></p>
+
+<h2 id="rollout">A 30-day rollout</h2>
+<ul>
+<li><strong>Week 1:</strong> Trial with three users. Build the vault structure: one shared vault per function (finance, operations, marketing, IT admin) and a rule that personal vaults are for personal work logins.</li>
+<li><strong>Week 2:</strong> Import the spreadsheet into the right shared vaults, then delete the spreadsheet and empty the trash. Connect SSO or provisioning if your plan has it.</li>
+<li><strong>Week 3:</strong> Invite everyone. Hold a 20-minute session showing the browser extension and the phone app. Turn on the policy that requires MFA on the vault.</li>
+<li><strong>Week 4:</strong> Run the password health or breach report. Change the reused and exposed passwords on shared accounts first. Write a one-paragraph offboarding rule: when someone leaves, the admin removes them on their last day and rotates any shared password they used.</li>
+</ul>
+<p>Keep the evidence: a screenshot of the admin console user list, the MFA policy setting and the offboarding rule. That is most of what an insurer or client questionnaire will ask for.</p>
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+<li><strong>Buying the tier without SSO and planning to “add it later.”</strong> Moving tiers later is possible, but manual offboarding in the meantime is how leavers keep access.</li>
+<li><strong>One giant shared vault.</strong> It recreates the spreadsheet problem with better encryption.</li>
+<li><strong>No admin recovery.</strong> Set up account recovery before the first person forgets a master password.</li>
+<li><strong>Leaving the old spreadsheet in place.</strong> If it still exists, people will still use it.</li>
+<li><strong>Choosing on price alone.</strong> At small-firm scale, the cheapest and dearest plans differ by a few hundred dollars a year. A tool nobody uses costs more.</li>
+</ul>
+<section aria-labelledby="faq" class="guide-faq">
+<h2 id="faq">FAQ</h2>
+<h3>Is a free password manager good enough for a business?</h3>
+<p>For one person, a free plan such as Bitwarden’s is a real improvement. For a team, you need shared vault permissions, an admin console and offboarding, which come with paid business plans.</p>
+<h3>Is it safe to put every password in one place?</h3>
+<p>It concentrates risk, which is why the master password and MFA on the vault matter. The vendors here encrypt data on your device before it reaches their servers. The alternative, reused passwords and a shared spreadsheet, is the more common cause of trouble.</p>
+<h3>Do we need SSO?</h3>
+<p>Not to start. It becomes worth it when you have enough people that manual offboarding gets missed, or when a client or insurer asks how access is removed.</p>
+<h3>Which one do you use?</h3>
+<p>We do not rank a single winner, because the right answer depends on your sign-in system, team size and budget. The decision list in <a href="#team">Choosing for a team</a> is how we would pick.</p>
+</section>
+
+<h2>Sources</h2>
+<ul class="sources">
+<li><a href="https://1password.com/business-pricing" rel="noopener">1Password, Business and Teams pricing</a>, checked November 4, 2026</li>
+<li><a href="https://bitwarden.com/pricing/business/" rel="noopener">Bitwarden, business pricing</a>, checked November 4, 2026</li>
+<li><a href="https://nordpass.com/plans/business/" rel="noopener">NordPass, business plans</a>, checked November 4, 2026</li>
+<li><a href="https://www.keepersecurity.com/pricing/business-and-enterprise.html" rel="noopener">Keeper, business and enterprise pricing</a>, checked November 4, 2026</li>
+</ul>
+<section aria-labelledby="related-briefing" class="guide-related">
+<h2 id="related-briefing">Related</h2>
+<ul>
+<li><a href="https://circuits.fit/guides/cyber-insurance-checklist-2026.html">Cyber insurance checklist for mid-market IT budgets (2026)</a></li>
+<li><a href="https://circuits.fit/guides/stop-using-a-voice-as-approval.html">Stop using a voice as approval</a></li>
+<li><a href="https://circuits.fit/services/security-policy-set.html">Security Policy Set</a>, including an access and password policy</li>
+</ul>
+</section>
+<p><strong>Rather hand it off?</strong> Password managers are a line item like any other. The <a href="https://circuits.fit/services/renewal-audit.html">Renewal Audit</a> reviews up to 25 software renewals for a fixed $199 and returns a written report in 5 business days.</p>]]></content:encoded>
+</item>
 <item>
 <title>WordPress is on the exploited catalog. Get to 7.1.4 this week.</title>
 <link>https://circuits.fit/articles/wordpress-core-upgrade-race-cisa-kev.html</link>
