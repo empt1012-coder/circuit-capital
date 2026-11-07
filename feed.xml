@@ -5,7 +5,144 @@
 <link>https://circuits.fit/</link>
 <description>Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</description>
 <language>en-us</language>
-<lastBuildDate>Wed, 04 Nov 2026 18:00:00 +0000</lastBuildDate>
+<lastBuildDate>Sat, 07 Nov 2026 22:00:00 +0000</lastBuildDate>
+<item>
+<title>Four AI spending reports in one week. The budget is outrunning the measurement.</title>
+<link>https://circuits.fit/articles/enterprise-ai-spend-four-reports-nov-2026.html</link>
+<guid>https://circuits.fit/articles/enterprise-ai-spend-four-reports-nov-2026.html</guid>
+<pubDate>Sat, 07 Nov 2026 22:00:00 +0000</pubDate>
+<description>Menlo puts enterprise AI spend at $176.8 billion. Only 10% of CFOs in an RGP survey see significant returns. What the four reports agree on, and what to do before FY2027 locks.</description>
+<author>circuits50capital@circuits.fit (Emilio Santos)</author>
+<content:encoded><![CDATA[<p class="lead-graf">Four surveys on enterprise AI spending landed between November 2 and November 5, 2026. Read together, they say the same uncomfortable thing: AI budgets are rising faster than finance teams can measure what the money does. For anyone setting FY2027 numbers this month, that gap is the part worth acting on.</p>
+<p>Here is what each report found, what the sources have at stake, and how to use the numbers at your own budget table and at your next software renewal.</p>
+<h2>The four reports</h2>
+<h3>Menlo Ventures: spending up 5.4 times</h3>
+<p>Menlo Ventures’ 2026 State of Enterprise AI report, released November 3, puts enterprise AI spending at $176.8 billion by September 2026, up from $33 billion in 2025. The share of enterprises paying for AI rose only from 55% to 65%, so most of the growth is existing buyers spending more, not new buyers arriving.</p>
+<p>Two other findings matter for budget owners. New budgets funded 55% of incremental enterprise AI spending and 22% came from existing software budgets, mostly staying with incumbents as they convert licenses, such as Microsoft Office to Copilot. And Anthropic, OpenAI and Google together took 69% of deployment spending, up from 50% in 2025. Menlo says companies budgeted nearly twice what they spent in 2025 and still ended up spending 2.5 times what they budgeted.</p>
+<p>Read it with care. The market-size figures are Menlo’s own estimates from a bottom-up model, and Menlo discloses that it is an investor in Anthropic and OpenRouter, both of which appear in its findings. The survey covered nearly 400 U.S. enterprise decision-makers.</p>
+<h3>West Monroe: 74% now put more than a tenth of IT into AI</h3>
+<p>West Monroe’s The New Rules of Enterprise Software &amp; AI Spend, released November 5, found that the share of buyers putting more than 10% of their IT budget into AI rose from 23% in 2025 to 74% in 2026. The online survey ran in Q3 2026 among 300 U.S. executives; buyers came from organizations with at least $100 million in revenue.</p>
+<p>The useful finding is about pricing. Buyers prefer predictable models: enterprise subscriptions (33%) and usage-based pricing (24%). Yet 36% of sellers think buyers prefer hybrid pricing that includes outcome-based components. Sellers also underestimate how often buyers simply buy: 42% of buyers say they mainly buy AI rather than build it, while only 22% of sellers think so.</p>
+<h3>RGP via CFO.com: 10% see significant returns today</h3>
+<p>CFO.com reported on November 3 that consulting firm RGP surveyed 400 finance chiefs in September at companies with at least $250 million in revenue across North America, Europe and Asia Pacific. Only 10% said they see “significant positive” ROI from AI today; 54% expect it within 24 months. At companies under $1 billion in revenue, just 1% reported significant AI ROI, against 17% at companies of $5 billion or more. RGP’s own framing: “The 24-month AI promise is now on the record, and boards will hold CFOs to it.”</p>
+<h3>CloudZero: raising budgets they cannot justify</h3>
+<p>CloudZero, which sells cloud cost software, published a survey of 252 senior finance leaders on November 2. It is a vendor survey, so treat it as one input. It found 87% are raising their AI budget for FY2027, 45% of those by more than 20%, while 61% already spend more on AI than they can justify with measurable outcomes. Among those who cannot justify current spending, 91% are increasing it anyway. Only 12% can break AI spend down finely enough to act on it within the quarter, and 54% cannot get below a rough category.</p>
+<h2>Where the numbers agree, and where they do not</h2>
+<p>The reports measure different things for different audiences, so do not add them up. Menlo sizes a market; West Monroe and RGP survey large buyers; CloudZero surveys finance leaders on its own subject. What they share is direction. Spending is up sharply, the buyers already paying are paying more, and few can show the return yet.</p>
+<p>The disagreement is commercial. West Monroe’s sellers are moving toward outcome-linked pricing that buyers did not ask for. That is a lever for buyers, not a threat, as long as you know your own usage.</p>
+<h2>What it means for CFOs and CISOs</h2>
+<ul>
+<li><strong>Allocation is the gap.</strong> If only about one in eight finance teams can attribute AI spend within a quarter, most FY2027 AI lines will be set on totals. Totals only ever go up.</li>
+<li><strong>Some of the increase is a renewal.</strong> Menlo’s 22% from existing software budgets is license conversion. Copilot-style upgrades should go through the same renewal review as any other price increase, not a separate AI budget.</li>
+<li><strong>The ROI clock is public.</strong> RGP’s 24-month figure gives boards a date. Write down what “paid off” means now, in cost per task or hours saved, so the checkpoint is not argued after the fact.</li>
+<li><strong>Concentration is a supplier risk.</strong> With 69% of deployment spend going to three labs, a price change at one of them reaches you through every tool built on it. CISOs should know which vendors route data to which model provider.</li>
+<li><strong>Smaller firms should be most careful.</strong> The 1% figure for companies under $1 billion is a reason to start small and measure, not to stop.</li>
+</ul>
+<h2>What to do this week</h2>
+<ol>
+<li><strong>List every AI line</strong> in the FY2027 draft: API usage, AI add-ons on existing suites, standalone tools. Note owner, team and contract end date.</li>
+<li><strong>Require a unit for each line.</strong> Cost per task, per ticket or per team. Our free <a href="https://circuits.fit/tools/ai-cost-per-task.html">AI cost-per-task calculator</a> and <a href="https://circuits.fit/tools/token-cost-margin.html">token cost and margin calculator</a> give a first estimate from vendor prices.</li>
+<li><strong>Treat license conversions as renewals.</strong> Run each one through the <a href="https://circuits.fit/tools/software-renewal-scorecard.html">software renewal scorecard</a> and ask for a predictable subscription cap in writing rather than an open usage or outcome term.</li>
+<li><strong>Set a dated ROI checkpoint.</strong> Pick a date inside 24 months and the metric you will use. Put it in the budget memo.</li>
+<li><strong>Ask vendors which model they use</strong> and whether a change of model provider changes your price or data terms.</li>
+</ol>
+<p>If you want a second pair of eyes on the renewals behind these lines, our <a href="https://circuits.fit/services/renewal-audit.html">Renewal Audit</a> reviews up to 25 software renewals for a fixed $199 and returns a written report in 5 business days. The <a href="https://emilios-newsletter-7fd333.beehiiv.com/products/renewal-risk-operator-pack">Renewal &amp; Risk Operator Pack</a> ($29) has the renewal scorecard and tracker as spreadsheets.</p>
+<h2>What to watch next</h2>
+<ul>
+<li><strong>The full reports.</strong> Menlo and West Monroe have published full reports with methodology; check sample definitions before quoting a figure internally.</li>
+<li><strong>Seller pricing changes at renewal.</strong> If a vendor proposes outcome-based or hybrid pricing, ask for the formula, a cap and a fallback to a fixed subscription.</li>
+<li><strong>Copilot and suite conversions.</strong> Our <a href="https://circuits.fit/articles/microsoft-365-renewal-price-increase.html">Microsoft 365 renewal briefing</a> covers the July 1 list prices that are reaching customers at renewal now.</li>
+<li><strong>Your own quarter-end numbers.</strong> The best data point for your FY2027 AI line is what you spent this quarter, by team.</li>
+</ul>
+<h2>Sources</h2>
+<ul class="sources">
+<li><a href="https://www.globenewswire.com/news-release/2026/11/03/3394279/0/en/menlo-ventures-2026-state-of-enterprise-ai-report-enterprise-ai-spending-hits-177b-up-5-4x-in-one-year-as-agents-take-over.html" rel="noopener">Menlo Ventures, “2026 State of Enterprise AI Report,” press release,</a> November 3, 2026, checked November 7, 2026. <a href="https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/" rel="noopener">Full report</a>.</li>
+<li><a href="https://www.prnewswire.com/news-releases/west-monroe-survey-ai-spending-surges-as-74-of-enterprises-commit-over-10-of-it-budgets-to-ai-302930538.html" rel="noopener">West Monroe, “The New Rules of Enterprise Software &amp; AI Spend,” press release,</a> November 5, 2026, checked November 7, 2026</li>
+<li><a href="https://www.cfo.com/news/cfos-expect-ai-to-pay-off-in-2-years-RGP-survey/873512/" rel="noopener">CFO.com, “CFOs expect AI to pay off in 2 years: survey,”</a> November 3, 2026</li>
+<li><a href="https://www.cloudzero.com/blog/ai-budget-season/" rel="noopener">CloudZero, “AI budget season: 87% are raising it, 61% can’t justify it,”</a> November 2, 2026 (vendor survey)</li>
+</ul>
+<p>Related: <a href="https://circuits.fit/articles/gartner-revised-the-ai-bill.html">Gartner revised the AI bill</a> and <a href="https://circuits.fit/topics/ai-costs.html">all AI cost briefings</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Zyxel GS1900: the June patch did not stop the exploit</title>
+<link>https://circuits.fit/articles/zyxel-gs1900-patched-is-not-fixed.html</link>
+<guid>https://circuits.fit/articles/zyxel-gs1900-patched-is-not-fixed.html</guid>
+<pubDate>Sat, 07 Nov 2026 22:00:00 +0000</pubDate>
+<description>An exploit used against 996 GS1900 switches still worked on firmware patched in June. The fix is 2.90 Patch 3, released October 22. Reopen the ticket you closed.</description>
+<author>circuits50capital@circuits.fit (Emilio Santos)</author>
+<content:encoded><![CDATA[<p class="lead-graf">If your team closed a ticket for Zyxel GS1900 switches after the June patch, reopen it. Zyxel published an advisory on November 3, 2026 for a second flaw in the same switches, CVE-2026-107441, and researchers at Binarly found that the exploit attackers used against nearly 1,000 of these switches still worked on firmware that carried the June fix. The real fix is the 2.90 Patch 3 firmware, which Zyxel posted on October 22 and October 23.</p>
+<p>This is a small-office story. The GS1900 is an inexpensive managed switch that tends to sit in branch closets and under desks, which is exactly where nobody checks firmware twice. It is also a clean example of a lesson that applies to any risk register: a patch installed is not the same as a risk closed.</p>
+<h2>What happened, in order</h2>
+<ul>
+<li><strong>June 16, 2026.</strong> Zyxel released updates for CVE-2026-7273, a pre-authentication stack-based buffer overflow in the GS1900 CGI program. Fixed builds were 2.90 Patch 2, written 2.90(XXXX.2)C0.</li>
+<li><strong>From about August 17.</strong> GreyNoise observed a suspected Chinese-speaking actor it tracks as Kapibala exploiting GS1900 switches. It counted 996 compromised devices in 48 countries. The attackers ran a script that collected device configurations, hashed root credentials and network information. GreyNoise linked the actor to the Red Heron campaign that Acronis had reported earlier.</li>
+<li><strong>September 21.</strong> GreyNoise disclosed the campaign and attributed it to CVE-2026-7273. CISA added CVE-2026-7273 to its Known Exploited Vulnerabilities catalog the same day, with a federal due date of September 24.</li>
+<li><strong>September 28.</strong> Binarly, investigating Red Heron infrastructure, found an exposed archive holding an obfuscated Python exploit for the switches. It confirmed the exploit still achieved unauthenticated command execution on all ten firmware releases that had been patched for CVE-2026-7273. The exploit checked for those patched versions specifically.</li>
+<li><strong>September 29 to October 11.</strong> Binarly reported the finding to Zyxel, which confirmed a new vulnerability and assigned CVE-2026-107441.</li>
+<li><strong>October 22.</strong> Zyxel released 2.90 Patch 3 firmware, which limits parameter sizes and validates the parameter count before copying data into memory.</li>
+<li><strong>November 3.</strong> Zyxel published its advisory. Canada’s Cyber Centre issued alert AV26-1114 the same day and updated it on November 4 to note open-source reporting that CVE-2026-107441 is exploited in the wild.</li>
+</ul>
+<p>It is still unclear whether the exploit was written to bypass the June fix or whether it used a related bug the June fix never covered. For an owner, the answer is the same either way.</p>
+<h2>Which switches, which firmware</h2>
+<p>Zyxel describes the flaw as an out-of-bounds write in the CGI program that could let a LAN-based, unauthenticated attacker execute operating system commands with a crafted HTTP request. Its advisory lists ten models:</p>
+<p class="tool-scroll-note">Swipe the table sideways to see every column.</p>
+<div class="tool-table-wrap">
+<table>
+<thead><tr><th>Model</th><th>Vulnerable</th><th>Fixed</th></tr></thead>
+<tbody>
+<tr><td>GS1900-8</td><td>2.90(AAHH.2)C0 and earlier</td><td>2.90(AAHH.3)C0</td></tr>
+<tr><td>GS1900-8HP</td><td>2.90(AAHI.2)C0 and earlier</td><td>2.90(AAHI.3)C0</td></tr>
+<tr><td>GS1900-10HP</td><td>2.90(AAZI.2)C0 and earlier</td><td>2.90(AAZI.3)C0</td></tr>
+<tr><td>GS1900-16</td><td>2.90(AAHJ.2)C0 and earlier</td><td>2.90(AAHJ.3)C0</td></tr>
+<tr><td>GS1900-24</td><td>2.90(AAHL.2)C0 and earlier</td><td>2.90(AAHL.3)C0</td></tr>
+<tr><td>GS1900-24E</td><td>2.90(AAHK.2)C0 and earlier</td><td>2.90(AAHK.3)C0</td></tr>
+<tr><td>GS1900-24EP</td><td>2.90(ABTO.2)C0 and earlier</td><td>2.90(ABTO.3)C0</td></tr>
+<tr><td>GS1900-24HPv2</td><td>2.90(ABTP.2)C0 and earlier</td><td>2.90(ABTP.3)C0</td></tr>
+<tr><td>GS1900-48</td><td>2.90(AAHN.2)C0 and earlier</td><td>2.90(AAHN.3)C0</td></tr>
+<tr><td>GS1900-48HPv2</td><td>2.90(ABTQ.2)C0 and earlier</td><td>2.90(ABTQ.3)C0</td></tr>
+</tbody>
+</table>
+</div>
+<p>The pattern is simple: a “.2” build is the June fix and is still vulnerable; you want the “.3” build. Zyxel says on-market products not in the table are unaffected and that it patched models still within their vulnerability support period.</p>
+<h2>Where the catalog stands</h2>
+<p>As of CISA’s catalog version 2026.11.06, released November 6, CVE-2026-7273 is listed and CVE-2026-107441 is not. That matters for teams that drive patching from the KEV list. The catalog entry you already handled points at the June fix, and the June fix did not stop the exploit. Do not wait for a second KEV entry to act on this one.</p>
+<h2>What it means for CFOs and CISOs</h2>
+<ul>
+<li><strong>“Patched” was the wrong closing condition.</strong> A ticket that closed when the June firmware was installed recorded the wrong control. The control that matters is “not exploitable by the known exploit,” and the only evidence for that is now the Patch 3 build number.</li>
+<li><strong>Credentials may already be gone.</strong> The attackers took configurations and hashed root credentials. If a switch was exposed during the campaign, assume anything in its config, including SNMP strings, RADIUS or TACACS secrets and reused admin passwords, needs rotating.</li>
+<li><strong>Cheap devices carry real exposure.</strong> A switch that cost a few hundred dollars can hold the same secrets as the firewall next to it. Asset lists that skip unmanaged-looking network gear are where this kind of miss starts.</li>
+<li><strong>Vendor advisories lag exploitation.</strong> Exploitation began around mid-August; the advisory for the real bug arrived November 3. Budget the response time you need on the assumption that the advisory is late, not early.</li>
+</ul>
+<h2>What to do this week</h2>
+<ol>
+<li><strong>Find every GS1900.</strong> Check your asset list, then the switch list in your network management tool, then branch and home-office closets. Note model and firmware build for each.</li>
+<li><strong>Upgrade to the “.3” build</strong> for that model from the table above. Confirm the version on the device after reboot, not just in the change ticket.</li>
+<li><strong>Take the web interface off untrusted networks.</strong> The flaw is in the web management CGI. Limit management access to a dedicated VLAN or admin hosts.</li>
+<li><strong>Rotate secrets.</strong> Change the admin password and any shared secrets stored in the switch configuration. Store the new ones somewhere shared and audited rather than a spreadsheet.</li>
+<li><strong>Look for signs of compromise.</strong> Check for unknown accounts, unexpected configuration changes and outbound connections from switch management addresses since mid-August.</li>
+<li><strong>Reopen the June ticket</strong> and close it again with the Patch 3 build number and the date you verified it.</li>
+</ol>
+<p>For step 4, a business password manager with shared vaults and an access log fits the job. We compared four in our <a href="https://circuits.fit/guides/password-manager-small-business.html">password manager guide</a>; one option is <a href="https://go.nordpass.io/aff_c?offer_id=754&amp;aff_id=159922" rel="sponsored noopener" target="_blank">NordPass Business</a>. <small>Affiliate link: we may earn a commission at no cost to you.</small></p>
+<p>If you track exceptions, log any switch you cannot upgrade this week in the free <a href="https://circuits.fit/tools/risk-exception-register.html">risk exception register</a> with an owner and an expiry date. The <a href="https://emilios-newsletter-7fd333.beehiiv.com/products/renewal-risk-operator-pack">Renewal &amp; Risk Operator Pack</a> ($29) includes a spreadsheet version of that register alongside a renewal scorecard.</p>
+<h2>What to watch next</h2>
+<ul>
+<li><strong>A KEV listing for CVE-2026-107441.</strong> If CISA adds it, the due date will be short. We will update this page with the date.</li>
+<li><strong>Further Binarly or GreyNoise detail.</strong> Indicators of compromise for the newer exploit would make step 5 more concrete.</li>
+<li><strong>Other Zyxel advisories.</strong> The Cyber Centre alert also covers a separate buffer overflow in certain Zyxel access points, FWA7 and security routers. If you run those, read Zyxel’s advisory index.</li>
+<li><strong>The general lesson.</strong> Binarly’s researchers said advisories and version numbers “cannot be blindly trusted.” For your own register, close high-risk items on evidence of the fixed state, not on a change ticket.</li>
+</ul>
+<h2>Sources</h2>
+<ul class="sources">
+<li><a href="https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-out-of-bounds-write-vulnerability-in-gs1900-series-switches-11-03-2026" rel="noopener">Zyxel, “Zyxel security advisory for out-of-bounds write vulnerability in GS1900 series switches,”</a> November 3, 2026, checked November 7, 2026</li>
+<li><a href="https://community.zyxel.com/en/discussion/34420/switch-gs1900-series-v2-90-patch-3-firmware-release" rel="noopener">Zyxel Community, “Switch GS1900 Series V2.90 Patch 3 Firmware Release,”</a> October 23, 2026, edited November 3</li>
+<li><a href="https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-stack-based-buffer-overflow-vulnerability-in-gs1900-series-switches-06-16-2026" rel="noopener">Zyxel advisory for CVE-2026-7273,</a> June 16, 2026</li>
+<li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" rel="noopener">CISA Known Exploited Vulnerabilities catalog,</a> version 2026.11.06, checked November 7, 2026</li>
+<li><a href="https://www.cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-1114" rel="noopener">Canadian Centre for Cyber Security, AV26-1114,</a> November 3, updated November 4, 2026</li>
+<li><a href="https://www.helpnetsecurity.com/2026/11/05/zyxel-cve-2026-107441-exploit/" rel="noopener">Help Net Security, “Patched Zyxel GS1900 switches remained open to in-the-wild exploit,”</a> November 5, 2026</li>
+<li><a href="https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/" rel="noopener">BleepingComputer, “Zyxel fixes zero-day exploited to hack nearly 1,000 network switches,”</a> November 4, 2026</li>
+</ul>
+<p>Related: <a href="https://circuits.fit/articles/kev-patch-tuesday-calendar-nov-10-13.html">Next week’s patch calendar</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">all security briefings</a>.</p>]]></content:encoded>
+</item>
 <item>
 <title>Next week’s patch calendar: four KEV deadlines and a Patch Tuesday</title>
 <link>https://circuits.fit/articles/kev-patch-tuesday-calendar-nov-10-13.html</link>
@@ -2051,6 +2188,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <description>Gartner’s September 30 note: do not authorize a decision because someone recognized a face or a voice. Pair detection with another authenticator and a provenance check.</description>
 <author>circuits50capital@circuits.fit (Emilio Santos)</author>
 <content:encoded><![CDATA[<p class="lead-graf">Gartner’s September 30, 2026 release says deepfake threats are mainstream, and that CISOs should drive a process change: recognition is not an acceptable basis for authorizing a decision or an action. Detection software is one layer. Gartner also names contextual signals, additional authentication, and checks on content provenance.</p>
+<figure class="cc-video cc-video--vertical"><video aria-label="A familiar voice is not approval. Confirm payments, bank changes, and password resets on a second channel, using the number already on file." autoplay="" height="1280" loop="" muted="" playsinline="" poster="../assets/video/cc-voice-approval-9x16.jpg" preload="metadata" width="720"><source src="https://circuits.fit/assets/video/cc-voice-approval-9x16.mp4" type="video/mp4"/></video><figcaption class="sr-only">A familiar voice is not approval. Confirm payments, bank changes, and password resets on a second channel, using the number already on file.</figcaption></figure>
 <h2 id="rule">The rule</h2>
 <p>Write it in one sentence your accounts-payable clerk can repeat. Example: no payment, mailbox rule, or vendor-bank change is approved on a voice, a video, or a familiar writing style alone. A second channel, already on file, has to say yes. If you cannot write the sentence, the current process is “we know our people.”</p>
 
