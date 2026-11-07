@@ -1,6 +1,28 @@
 {
   "articles": [
     {
+      "slug": "zyxel-gs1900-patched-is-not-fixed",
+      "title": "Zyxel GS1900: the June patch did not stop the exploit",
+      "dek": "An exploit used against 996 GS1900 switches still worked on firmware patched in June. The fix is 2.90 Patch 3, released October 22. Reopen the ticket you closed.",
+      "category": "Technology",
+      "author": "Emilio Santos",
+      "date": "November 7, 2026",
+      "readTime": 6,
+      "image": "assets/images/port.jpg",
+      "body": "Zyxel GS1900 CVE-2026-107441 CVE-2026-7273 switch firmware 2.90 Patch 3 Binarly GreyNoise Kapibala Red Heron CISA KEV patched not fixed"
+    },
+    {
+      "slug": "enterprise-ai-spend-four-reports-nov-2026",
+      "title": "Four AI spending reports in one week. The budget is outrunning the measurement.",
+      "dek": "Menlo puts enterprise AI spend at $176.8 billion. Only 10% of CFOs in an RGP survey see significant returns. What the four reports agree on, and what to do before FY2027 locks.",
+      "category": "Markets",
+      "author": "Emilio Santos",
+      "date": "November 7, 2026",
+      "readTime": 6,
+      "image": "assets/images/office.jpg",
+      "body": "enterprise AI spend 2026 Menlo Ventures West Monroe RGP CFO ROI CloudZero FY2027 AI budget Copilot license conversion outcome-based pricing"
+    },
+    {
       "slug": "kev-patch-tuesday-calendar-nov-10-13",
       "title": "Next week’s patch calendar: four KEV deadlines and a Patch Tuesday",
       "dek": "Magento and Brotli are due November 10, VMware ESX November 11 and Ivanti Connect Secure November 13. Microsoft and Fortinet both publish on November 10. One page to plan the week.",

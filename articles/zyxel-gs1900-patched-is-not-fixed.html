@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zyxel GS1900 CVE-2026-107441: why the June patch was not enough</title>
+  <meta name="description" content="Zyxel CVE-2026-107441: the exploit used on 996 GS1900 switches still worked after the June fix. Upgrade to 2.90 Patch 3, rotate secrets, reopen the ticket.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <link rel="canonical" href="https://circuits.fit/articles/zyxel-gs1900-patched-is-not-fixed.html">
+  <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
+  <meta property="og:title" content="Zyxel GS1900 CVE-2026-107441: why the June patch was not enough">
+  <meta property="og:description" content="Zyxel CVE-2026-107441: the exploit used on 996 GS1900 switches still worked after the June fix. Upgrade to 2.90 Patch 3, rotate secrets, reopen the ticket.">
+  <meta property="og:url" content="https://circuits.fit/articles/zyxel-gs1900-patched-is-not-fixed.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Circuit &amp; Capital">
+  <meta property="og:image" content="https://circuits.fit/assets/images/port.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zyxel GS1900 CVE-2026-107441: why the June patch was not enough">
+  <meta name="twitter:description" content="Zyxel CVE-2026-107441: the exploit used on 996 GS1900 switches still worked after the June fix. Upgrade to 2.90 Patch 3, rotate secrets, reopen the ticket.">
+  <meta name="twitter:image" content="https://circuits.fit/assets/images/port.jpg">
+  <meta property="article:published_time" content="2026-11-07">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Zyxel GS1900: the June patch did not stop the exploit", "description": "An exploit used against 996 GS1900 switches still worked on firmware patched in June. The fix is 2.90 Patch 3, released October 22. Reopen the ticket you closed.", "image": ["https://circuits.fit/assets/images/port.jpg"], "datePublished": "2026-11-07", "dateModified": "2026-11-07", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/zyxel-gs1900-patched-is-not-fixed.html", "articleSection": "Technology"}
+  </script>
+  <meta name="google-adsense-account" content="ca-pub-3634982565972955">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3634982565972955" crossorigin="anonymous"></script>
+</head>
+<body data-base=".." data-page="technology">
+  <div id="site-header">
+      <a class="skip" href="#main">Skip to content</a>
+      <div class="topbar">
+        <div class="wrap">
+          <div>Sourced briefing · Est. 2026</div>
+          <div class="topbar__links">
+            <a href="../about.html">About</a>
+            <a class="hide-sm" href="../services/">Services</a>
+            <a href="../advertise.html">Advertise</a>
+            <a class="hide-sm" href="../contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <header class="masthead">
+        <div class="wrap masthead__row">
+          <div class="masthead__date" id="masthead-date"></div>
+          <a class="brand" href="../">
+            <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
+              <rect width="64" height="64" fill="#f4efe6"/>
+              <path fill="#c45c26" d="M12 48V14h9v26h13v8H12z"/>
+              <path class="trace" fill="none" stroke="#9a4318" stroke-width="1.6" stroke-linecap="square" d="M16 20h8v5H20v5h7"/>
+              <circle class="node" cx="24" cy="20" r="1.6" fill="#f4efe6"/>
+              <circle class="node node-2" cx="27" cy="30" r="1.6" fill="#f4efe6"/>
+              <path fill="#12151a" d="M36 18h16v2.6H39v4.4h12v2.6H39v4.4h14v2.6H36z"/>
+            </svg>
+            <span>
+              <div class="brand__name">Circuit <span>&amp;</span> Capital</div>
+              <div class="brand__tag">Sourced business and technology briefing</div>
+              
+            </span>
+          </a>
+          <div class="masthead__actions">
+            <button class="btn btn--icon" type="button" data-toggle-search aria-label="Search">Search</button>
+            <button class="menu-toggle" type="button" data-toggle-nav aria-label="Open menu" aria-expanded="false">☰</button>
+          </div>
+        </div>
+        <nav class="nav" id="site-nav">
+          <ul class="wrap"><li><a href="../">Home</a></li><li><a href="../briefing.html">Briefing</a></li><li><a href="../guides/">Guides</a></li><li><a href="../tools/">Tools</a></li><li><a href="../topics/">Topics</a></li><li><a href="../categories/markets.html">Markets</a></li><li><a class="is-active" href="../categories/technology.html">Technology</a></li><li><a href="../categories/policy.html">Policy</a></li><li><a href="../about.html">About</a></li></ul>
+        </nav>
+        <div class="search-bar" id="search-bar">
+          <form class="wrap" action="../search.html" method="get">
+            <input type="search" name="q" placeholder="Search briefings…" aria-label="Search">
+            <button class="btn btn--copper" type="submit">Go</button>
+          </form>
+        </div>
+      </header>
+    </div>
+  <main id="main">
+    <header class="article-hero wrap">
+      <div class="kicker">Technology</div>
+      <h1>Zyxel GS1900: the June patch did not stop the exploit</h1>
+      <p class="dek">An exploit used against 996 GS1900 switches still worked on firmware patched in June. The fix is 2.90 Patch 3, released October 22. Reopen the ticket you closed.</p>
+      <div class="byline-row">
+        <span>Edited by <strong>Emilio Santos</strong></span>
+        <span><time datetime="2026-11-07">November 7, 2026</time></span>
+        <span>6 min read</span>
+      </div>
+    </header>
+    <figure class="article-cover wrap">
+      <picture><source srcset="../assets/images/port.webp" type="image/webp"><img src="../assets/images/port.jpg" alt="Network switch ports and cables" width="1280" height="720" decoding="async"></picture>
+      <figcaption>A “.2” build is the June fix. You want “.3”. Photo: Circuit &amp; Capital</figcaption>
+    </figure>
+    <div class="wrap article-layout">
+      <article class="prose">
+<p class="lead-graf">If your team closed a ticket for Zyxel GS1900 switches after the June patch, reopen it. Zyxel published an advisory on November 3, 2026 for a second flaw in the same switches, CVE-2026-107441, and researchers at Binarly found that the exploit attackers used against nearly 1,000 of these switches still worked on firmware that carried the June fix. The real fix is the 2.90 Patch 3 firmware, which Zyxel posted on October 22 and October 23.</p>
+<p>This is a small-office story. The GS1900 is an inexpensive managed switch that tends to sit in branch closets and under desks, which is exactly where nobody checks firmware twice. It is also a clean example of a lesson that applies to any risk register: a patch installed is not the same as a risk closed.</p>
+<h2>What happened, in order</h2>
+<ul>
+  <li><strong>June 16, 2026.</strong> Zyxel released updates for CVE-2026-7273, a pre-authentication stack-based buffer overflow in the GS1900 CGI program. Fixed builds were 2.90 Patch 2, written 2.90(XXXX.2)C0.</li>
+  <li><strong>From about August 17.</strong> GreyNoise observed a suspected Chinese-speaking actor it tracks as Kapibala exploiting GS1900 switches. It counted 996 compromised devices in 48 countries. The attackers ran a script that collected device configurations, hashed root credentials and network information. GreyNoise linked the actor to the Red Heron campaign that Acronis had reported earlier.</li>
+  <li><strong>September 21.</strong> GreyNoise disclosed the campaign and attributed it to CVE-2026-7273. CISA added CVE-2026-7273 to its Known Exploited Vulnerabilities catalog the same day, with a federal due date of September 24.</li>
+  <li><strong>September 28.</strong> Binarly, investigating Red Heron infrastructure, found an exposed archive holding an obfuscated Python exploit for the switches. It confirmed the exploit still achieved unauthenticated command execution on all ten firmware releases that had been patched for CVE-2026-7273. The exploit checked for those patched versions specifically.</li>
+  <li><strong>September 29 to October 11.</strong> Binarly reported the finding to Zyxel, which confirmed a new vulnerability and assigned CVE-2026-107441.</li>
+  <li><strong>October 22.</strong> Zyxel released 2.90 Patch 3 firmware, which limits parameter sizes and validates the parameter count before copying data into memory.</li>
+  <li><strong>November 3.</strong> Zyxel published its advisory. Canada’s Cyber Centre issued alert AV26-1114 the same day and updated it on November 4 to note open-source reporting that CVE-2026-107441 is exploited in the wild.</li>
+</ul>
+<p>It is still unclear whether the exploit was written to bypass the June fix or whether it used a related bug the June fix never covered. For an owner, the answer is the same either way.</p>
+<h2>Which switches, which firmware</h2>
+<p>Zyxel describes the flaw as an out-of-bounds write in the CGI program that could let a LAN-based, unauthenticated attacker execute operating system commands with a crafted HTTP request. Its advisory lists ten models:</p>
+<p class="tool-scroll-note">Swipe the table sideways to see every column.</p>
+<div class="tool-table-wrap">
+<table>
+<thead><tr><th>Model</th><th>Vulnerable</th><th>Fixed</th></tr></thead>
+<tbody>
+<tr><td>GS1900-8</td><td>2.90(AAHH.2)C0 and earlier</td><td>2.90(AAHH.3)C0</td></tr>
+<tr><td>GS1900-8HP</td><td>2.90(AAHI.2)C0 and earlier</td><td>2.90(AAHI.3)C0</td></tr>
+<tr><td>GS1900-10HP</td><td>2.90(AAZI.2)C0 and earlier</td><td>2.90(AAZI.3)C0</td></tr>
+<tr><td>GS1900-16</td><td>2.90(AAHJ.2)C0 and earlier</td><td>2.90(AAHJ.3)C0</td></tr>
+<tr><td>GS1900-24</td><td>2.90(AAHL.2)C0 and earlier</td><td>2.90(AAHL.3)C0</td></tr>
+<tr><td>GS1900-24E</td><td>2.90(AAHK.2)C0 and earlier</td><td>2.90(AAHK.3)C0</td></tr>
+<tr><td>GS1900-24EP</td><td>2.90(ABTO.2)C0 and earlier</td><td>2.90(ABTO.3)C0</td></tr>
+<tr><td>GS1900-24HPv2</td><td>2.90(ABTP.2)C0 and earlier</td><td>2.90(ABTP.3)C0</td></tr>
+<tr><td>GS1900-48</td><td>2.90(AAHN.2)C0 and earlier</td><td>2.90(AAHN.3)C0</td></tr>
+<tr><td>GS1900-48HPv2</td><td>2.90(ABTQ.2)C0 and earlier</td><td>2.90(ABTQ.3)C0</td></tr>
+</tbody>
+</table>
+</div>
+<p>The pattern is simple: a “.2” build is the June fix and is still vulnerable; you want the “.3” build. Zyxel says on-market products not in the table are unaffected and that it patched models still within their vulnerability support period.</p>
+<h2>Where the catalog stands</h2>
+<p>As of CISA’s catalog version 2026.11.06, released November 6, CVE-2026-7273 is listed and CVE-2026-107441 is not. That matters for teams that drive patching from the KEV list. The catalog entry you already handled points at the June fix, and the June fix did not stop the exploit. Do not wait for a second KEV entry to act on this one.</p>
+<h2>What it means for CFOs and CISOs</h2>
+<ul>
+  <li><strong>“Patched” was the wrong closing condition.</strong> A ticket that closed when the June firmware was installed recorded the wrong control. The control that matters is “not exploitable by the known exploit,” and the only evidence for that is now the Patch 3 build number.</li>
+  <li><strong>Credentials may already be gone.</strong> The attackers took configurations and hashed root credentials. If a switch was exposed during the campaign, assume anything in its config, including SNMP strings, RADIUS or TACACS secrets and reused admin passwords, needs rotating.</li>
+  <li><strong>Cheap devices carry real exposure.</strong> A switch that cost a few hundred dollars can hold the same secrets as the firewall next to it. Asset lists that skip unmanaged-looking network gear are where this kind of miss starts.</li>
+  <li><strong>Vendor advisories lag exploitation.</strong> Exploitation began around mid-August; the advisory for the real bug arrived November 3. Budget the response time you need on the assumption that the advisory is late, not early.</li>
+</ul>
+<h2>What to do this week</h2>
+<ol>
+  <li><strong>Find every GS1900.</strong> Check your asset list, then the switch list in your network management tool, then branch and home-office closets. Note model and firmware build for each.</li>
+  <li><strong>Upgrade to the “.3” build</strong> for that model from the table above. Confirm the version on the device after reboot, not just in the change ticket.</li>
+  <li><strong>Take the web interface off untrusted networks.</strong> The flaw is in the web management CGI. Limit management access to a dedicated VLAN or admin hosts.</li>
+  <li><strong>Rotate secrets.</strong> Change the admin password and any shared secrets stored in the switch configuration. Store the new ones somewhere shared and audited rather than a spreadsheet.</li>
+  <li><strong>Look for signs of compromise.</strong> Check for unknown accounts, unexpected configuration changes and outbound connections from switch management addresses since mid-August.</li>
+  <li><strong>Reopen the June ticket</strong> and close it again with the Patch 3 build number and the date you verified it.</li>
+</ol>
+<p>For step 4, a business password manager with shared vaults and an access log fits the job. We compared four in our <a href="../guides/password-manager-small-business.html">password manager guide</a>; one option is <a href="https://go.nordpass.io/aff_c?offer_id=754&amp;aff_id=159922" rel="sponsored noopener" target="_blank">NordPass Business</a>. <small>Affiliate link: we may earn a commission at no cost to you.</small></p>
+<p>If you track exceptions, log any switch you cannot upgrade this week in the free <a href="../tools/risk-exception-register.html">risk exception register</a> with an owner and an expiry date. The <a href="https://emilios-newsletter-7fd333.beehiiv.com/products/renewal-risk-operator-pack">Renewal &amp; Risk Operator Pack</a> ($29) includes a spreadsheet version of that register alongside a renewal scorecard.</p>
+<h2>What to watch next</h2>
+<ul>
+  <li><strong>A KEV listing for CVE-2026-107441.</strong> If CISA adds it, the due date will be short. We will update this page with the date.</li>
+  <li><strong>Further Binarly or GreyNoise detail.</strong> Indicators of compromise for the newer exploit would make step 5 more concrete.</li>
+  <li><strong>Other Zyxel advisories.</strong> The Cyber Centre alert also covers a separate buffer overflow in certain Zyxel access points, FWA7 and security routers. If you run those, read Zyxel’s advisory index.</li>
+  <li><strong>The general lesson.</strong> Binarly’s researchers said advisories and version numbers “cannot be blindly trusted.” For your own register, close high-risk items on evidence of the fixed state, not on a change ticket.</li>
+</ul>
+<h2>Sources</h2>
+<ul class="sources">
+  <li><a href="https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-out-of-bounds-write-vulnerability-in-gs1900-series-switches-11-03-2026" rel="noopener">Zyxel, “Zyxel security advisory for out-of-bounds write vulnerability in GS1900 series switches,”</a> November 3, 2026, checked November 7, 2026</li>
+  <li><a href="https://community.zyxel.com/en/discussion/34420/switch-gs1900-series-v2-90-patch-3-firmware-release" rel="noopener">Zyxel Community, “Switch GS1900 Series V2.90 Patch 3 Firmware Release,”</a> October 23, 2026, edited November 3</li>
+  <li><a href="https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-stack-based-buffer-overflow-vulnerability-in-gs1900-series-switches-06-16-2026" rel="noopener">Zyxel advisory for CVE-2026-7273,</a> June 16, 2026</li>
+  <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" rel="noopener">CISA Known Exploited Vulnerabilities catalog,</a> version 2026.11.06, checked November 7, 2026</li>
+  <li><a href="https://www.cyber.gc.ca/en/alerts-advisories/zyxel-security-advisory-av26-1114" rel="noopener">Canadian Centre for Cyber Security, AV26-1114,</a> November 3, updated November 4, 2026</li>
+  <li><a href="https://www.helpnetsecurity.com/2026/11/05/zyxel-cve-2026-107441-exploit/" rel="noopener">Help Net Security, “Patched Zyxel GS1900 switches remained open to in-the-wild exploit,”</a> November 5, 2026</li>
+  <li><a href="https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/" rel="noopener">BleepingComputer, “Zyxel fixes zero-day exploited to hack nearly 1,000 network switches,”</a> November 4, 2026</li>
+</ul>
+<p>Related: <a href="kev-patch-tuesday-calendar-nov-10-13.html">Next week’s patch calendar</a> and <a href="../topics/security-vulnerabilities.html">all security briefings</a>.</p>
+
+        <div class="author-box">
+          <div class="avatar">ES</div>
+          <div>
+            <strong>Emilio Santos</strong> edits Circuit &amp; Capital. How we source and correct pieces: <a href="../editorial.html">editorial standards</a>.
+            <div class="meta"><a href="mailto:circuits50capital@circuits.fit">circuits50capital@circuits.fit</a></div>
+          </div>
+        </div>
+        <section class="newsletter" aria-labelledby="newsletter-heading">
+          <h2 id="newsletter-heading">Get the weekly Circuit &amp; Capital briefing</h2>
+          <p>One email a week with the latest articles and tools. Unsubscribe at any time.</p>
+          <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="d0ebd95b-cec8-4f1a-b043-2c8b7c8087b9"></script>
+        </section>
+      </article>
+      <aside class="sidebar">
+        <aside class="ad-slot ad-slot--rect" data-slot="sidebar" aria-label="Advertisement">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </aside>
+        <div class="section-head"><h2>Related</h2></div>
+        <div class="popular">
+          <ol>
+            <li><a href="../tools/risk-exception-register.html">Risk exception register</a></li>
+            <li><a href="kev-patch-tuesday-calendar-nov-10-13.html">Next week’s patch calendar</a></li>
+            <li><a href="../guides/password-manager-small-business.html">Password manager guide</a></li>
+            <li><a href="../services/renewal-audit.html">Renewal Audit, $199</a></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <div id="site-footer">
+      <footer class="site-foot">
+        <div class="wrap foot-grid">
+          <div>
+            <h3>Circuit &amp; Capital</h3>
+            <p>Sourced briefings and operator guides on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</p>
+          </div>
+          <div>
+            <h3>Sections</h3>
+            <ul>
+              <li><a href="../">Home</a></li>
+              <li><a href="../briefing.html">Briefing</a></li>
+              <li><a href="../guides/">Guides</a></li>
+              <li><a href="../tools/">Tools</a></li><li><a href="../topics/">Topics</a></li>
+              <li><a href="../categories/markets.html">Markets</a></li>
+              <li><a href="../categories/technology.html">Technology</a></li>
+              <li><a href="../categories/policy.html">Policy</a></li>
+              <li><a href="../about.html">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Advertising</h3>
+            <ul>
+              <li><a href="../advertise.html">Advertise</a></li>
+              <li><a href="../advertise.html#specs">Ad specs</a></li>
+              <li><a href="../about.html">Masthead</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="../editorial.html">Editorial standards</a></li>
+              <li><a href="../corrections.html">Corrections</a></li>
+              <li><a href="../privacy.html">Privacy</a></li>
+              <li><a href="../terms.html">Terms</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Follow</h3>
+            <ul>
+              <li><a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a></li>
+              <li><a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a></li>
+              <li><a href="https://medium.com/@circuitsfit" rel="noopener">Medium</a></li>
+              <li><a href="https://dev.to/circuitsfit" rel="noopener">dev.to</a></li>
+              <li><a href="https://circuitsfit.hashnode.dev" rel="noopener">Hashnode</a></li>
+              <li><a href="https://x.com/circuitsfit" rel="noopener">X</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="wrap foot-bottom">
+          <div>© 2026 Circuit &amp; Capital. All rights reserved.</div>
+          <div>Circuit &amp; Capital is a business and technology publication. It is not a fitness brand.</div>
+        </div>
+      </footer>
+      <div class="ad-sticky" aria-label="Advertisement">
+        <button type="button" data-close-sticky aria-label="Close ad">×</button>
+        <div class="ad-slot" data-slot="mobileSticky" data-ad-slot="">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </div>
+      </div>
+      <div class="cookie" id="cookie">
+        <p>We use a cookie to remember this choice. Accept may load analytics. Necessary only does not. This banner does not record the ad choice. See our <a href="../privacy.html">privacy policy</a>.</p>
+        <div class="cookie__row">
+          <button class="btn btn--copper" type="button" data-cookie="accept">Accept</button>
+          <button class="btn btn--ghost" type="button" data-cookie="reject" style="border-color:#5a6570">Necessary only</button>
+        </div>
+      </div>
+      <div class="toast" id="toast" role="status"></div>
+    </div>
+  <script src="../js/config.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="../js/ads.js"></script>
+</body>
+</html>

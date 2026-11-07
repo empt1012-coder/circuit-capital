@@ -94,3 +94,5 @@ https://circuits.fit/guides/password-manager-small-business.html
 https://circuits.fit/articles/kev-patch-tuesday-calendar-nov-10-13.html
 https://circuits.fit/articles/microsoft-365-renewal-price-increase.html
 https://circuits.fit/articles/staff-ai-use-policy-federal-state.html
+https://circuits.fit/articles/zyxel-gs1900-patched-is-not-fixed.html
+https://circuits.fit/articles/enterprise-ai-spend-four-reports-nov-2026.html
