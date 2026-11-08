@@ -83,6 +83,7 @@ https://circuits.fit/topics/ai-costs.html
 https://circuits.fit/services/
 https://circuits.fit/start/
 https://circuits.fit/services/quick-answer.html
+https://circuits.fit/services/microsoft-365-renewal-check.html
 https://circuits.fit/services/contract-review.html
 https://circuits.fit/services/security-policy-set.html
 https://circuits.fit/services/ai-use-policy.html
@@ -96,3 +97,4 @@ https://circuits.fit/articles/microsoft-365-renewal-price-increase.html
 https://circuits.fit/articles/staff-ai-use-policy-federal-state.html
 https://circuits.fit/articles/zyxel-gs1900-patched-is-not-fixed.html
 https://circuits.fit/articles/enterprise-ai-spend-four-reports-nov-2026.html
+https://circuits.fit/services/password-manager-rollout-kit.html
