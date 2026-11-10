@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>N-able N-central offline after Able2Shell flaws published: ask your MSP</title>
-  <meta name="description" content="N-able took hosted N-central offline Nov 9 after 33 unpatched Able2Shell flaws were published. Ask your MSP, keep it off until the hotfix, check logins since Nov 8.">
+  <meta name="description" content="Update Nov 10: N-able released N-central 2026.4 Hotfix 2 (build 2026.4.1.26) for the Able2Shell flaws. Ask your MSP, upgrade before bringing N-central back, then upgrade Agents and Probes.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,18 +16,18 @@
   <link rel="canonical" href="https://circuits.fit/articles/n-able-n-central-offline-able2shell.html">
   <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
   <meta property="og:title" content="N-able N-central offline after Able2Shell flaws published">
-  <meta property="og:description" content="N-able took hosted N-central offline Nov 9 after 33 unpatched Able2Shell flaws were published. Ask your MSP, keep it off until the hotfix, check logins since Nov 8.">
+  <meta property="og:description" content="Update Nov 10: N-able released N-central 2026.4 Hotfix 2 (build 2026.4.1.26). Upgrade the server before bringing it back online, then Agents and Probes.">
   <meta property="og:url" content="https://circuits.fit/articles/n-able-n-central-offline-able2shell.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Circuit &amp; Capital">
   <meta property="og:image" content="https://circuits.fit/assets/images/nightdesk.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="N-able N-central offline after Able2Shell flaws published">
-  <meta name="twitter:description" content="N-able took hosted N-central offline Nov 9 after 33 unpatched Able2Shell flaws were published. Ask your MSP, keep it off until the hotfix, check logins since Nov 8.">
+  <meta name="twitter:description" content="Update Nov 10: N-able released N-central 2026.4 Hotfix 2 (build 2026.4.1.26). Upgrade the server before bringing it back online, then Agents and Probes.">
   <meta name="twitter:image" content="https://circuits.fit/assets/images/nightdesk.jpg">
   <meta property="article:published_time" content="2026-11-10">
     <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "N-able took N-central offline. Ask your MSP if they use it.", "description": "N-able took hosted N-central offline on November 9, 2026, after a researcher published 33 unpatched flaws, with exploit code, in the remote monitoring tool many MSPs use. As of mid-morning November 10, Eastern time, the hotfix had not shipped. Ask your MSP, keep N-central off until it is patched, and check logins and new admin accounts since November 8.", "image": ["https://circuits.fit/assets/images/nightdesk.jpg"], "datePublished": "2026-11-10", "dateModified": "2026-11-10", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/n-able-n-central-offline-able2shell.html", "articleSection": "Policy"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "N-able took N-central offline. Ask your MSP if they use it.", "description": "N-able took hosted N-central offline on November 9, 2026, after a researcher published 33 unpatched flaws, with exploit code, in the remote monitoring tool many MSPs use. On the afternoon of November 10, Eastern time, N-able released N-central 2026.4 Hotfix 2. Ask your MSP, upgrade before bringing N-central back online, and check logins and new admin accounts since November 8.", "image": ["https://circuits.fit/assets/images/nightdesk.jpg"], "datePublished": "2026-11-10", "dateModified": "2026-11-10T16:10:00-05:00", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/n-able-n-central-offline-able2shell.html", "articleSection": "Policy"}
   </script>
   <meta name="google-adsense-account" content="ca-pub-3634982565972955">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3634982565972955" crossorigin="anonymous"></script>
@@ -84,12 +84,15 @@
     <header class="article-hero wrap">
       <div class="kicker">Policy</div>
       <h1>N-able took N-central offline. Ask your MSP if they use it.</h1>
-      <p class="dek">A researcher published 33 unpatched flaws, with exploit code, in the tool many managed service providers use to run client computers. N-able has taken hosted N-central down and told on-premises customers to leave servers off until a hotfix lands.</p>
+      <p class="dek">A researcher published 33 unpatched flaws, with exploit code, in the tool many managed service providers use to run client computers. N-able took hosted N-central down, told on-premises customers to leave servers off, and released its hotfix on the afternoon of November 10.</p>
       <div class="byline-row">
         <span>Edited by <strong>Emilio Santos</strong></span>
         <span><time datetime="2026-11-10">November 10, 2026</time></span>
         <span>4 min read</span>
       </div>
+      <aside class="correction-note" role="note" aria-label="Update">
+        <p><strong>Update, November 10, 2026, 4:10 PM ET:</strong> N-able has released the hotfix. Its <a href="https://status.n-able.com/2026/11/10/n-central-2026-4-hf2-release-notes/" rel="noopener">N-central 2026.4 HF2 release notes</a>, posted at 3:48 PM ET, describe Hotfix 2 (build 2026.4.1.26) as a critical security update and list seven CVEs it fixes. On-premises customers should upgrade the server to 2026.4.1.26 before bringing it back online. N-able upgrades hosted servers itself. Everyone, hosted and on-premises, must also upgrade Agents and Probes, Agents first and then Probes, or Agents can lose contact with an upgraded Probe. N-central’s built-in remote control is temporarily disabled in this build; Take Control still works. As of 4:05 PM ET, N-able’s status incident had not yet been updated to confirm general availability, and N-able still reports no evidence that any customer environment was successfully exploited.</p>
+      </aside>
     </header>
     <figure class="article-cover wrap">
       <picture><source srcset="../assets/images/nightdesk.webp" type="image/webp"><img src="../assets/images/nightdesk.jpg" alt="A desk lit at night in an empty office" width="1280" height="720" decoding="async"></picture>
@@ -106,11 +109,11 @@
         <h2>What to do</h2>
         <ol>
           <li><strong>Ask your provider.</strong> If an MSP or IT firm runs your computers, ask whether they use N-able N-central, hosted or on-premises, and write down the answer.</li>
-          <li><strong>Keep it off until it is patched.</strong> N-able’s direction is to leave N-central offline until it confirms the hotfix is in and the server has been successfully upgraded. Do not bring an on-premises server back early.</li>
+          <li><strong>Upgrade before turning it back on.</strong> An on-premises server should be upgraded to N-central 2026.4 Hotfix 2 (build 2026.4.1.26) before it comes back online; N-able upgrades hosted servers itself. Then upgrade Agents first and Probes second, in both hosted and on-premises setups, as the <a href="https://status.n-able.com/2026/11/10/n-central-2026-4-hf2-release-notes/" rel="noopener">release notes</a> direct.</li>
           <li><strong>Check logins and new admin accounts since November 8.</strong> Ask your provider to review login activity and any new administrator accounts from November 8 onward, and to look for unexpected remote sessions or new scripts, before they turn N-central back on. Huntress recommends that review because earlier N-central incidents saw attackers create admin accounts and push tools into client networks.</li>
-          <li><strong>Watch N-able’s status page for the hotfix.</strong> Guidance will change once the patch is out. The official page is <a href="https://uptime.n-able.com/" rel="noopener">uptime.n-able.com</a>.</li>
+          <li><strong>Watch N-able’s status page for the all-clear.</strong> Hosted N-central comes back when N-able says so. The official page is <a href="https://uptime.n-able.com/" rel="noopener">uptime.n-able.com</a>.</li>
         </ol>
-        <p>No CVE identifiers have been assigned yet, according to SecurityWeek, and the flaws are not on CISA’s Known Exploited Vulnerabilities catalog (feed version 2026.11.09, released November 9). That does not change the advice. Follow N-able’s current direction rather than waiting for a catalog entry.</p>
+        <p>When this piece first ran, no CVE identifiers had been assigned, according to SecurityWeek. N-able’s Hotfix 2 release notes now list seven, including CVE-2026-125882 (code execution through a file repository upload path traversal) and CVE-2026-125878 (OGNL injection). The flaws were not on CISA’s Known Exploited Vulnerabilities catalog as of feed version 2026.11.09. That does not change the advice. Follow N-able’s current direction rather than waiting for a catalog entry.</p>
         <p>If you want a second opinion on what to ask your provider, our $29 <a href="../services/quick-answer.html">Quick Answer</a> service covers that question.</p>
         <h2>Sources</h2>
         <ul class="sources">
@@ -119,7 +122,7 @@
           <li><a href="https://www.huntress.com/blog/n-able-disables-cloud-services-following-disclosure-of-able2shell-exploit-chains" rel="noopener">Huntress, “N-able Disables Cloud Services Following Disclosure of ‘Able2Shell’ Exploit Chains”</a>, November 9, 2026</li>
           <li><a href="https://www.securityweek.com/n-able-takes-n-central-offline-as-researcher-drops-over-30-zero-days/" rel="noopener">SecurityWeek, “N-able Takes N-central Offline as Researcher Drops Over 30 Zero-Days”</a>, November 10, 2026 (no CVE identifiers assigned yet)</li>
           <li><a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">CISA Known Exploited Vulnerabilities catalog JSON feed</a>, version 2026.11.09 (no Able2Shell or new N-central identifiers for this incident)</li>
-          <li><a href="https://status.n-able.com/category/n-central/" rel="noopener">N-able N-central release notes</a> (checked November 10, 2026; no hotfix posted for this incident)</li>
+          <li><a href="https://status.n-able.com/2026/11/10/n-central-2026-4-hf2-release-notes/" rel="noopener">N-able, “N-central 2026.4 HF2 Release Notes”</a>, posted November 10, 2026, 3:48 PM ET (build 2026.4.1.26, upgrade guidance, CVE list, known issues)</li>
         </ul>
         <p>Related: <a href="beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch. Check the logs.</a> and <a href="../topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
         <div class="author-box">
