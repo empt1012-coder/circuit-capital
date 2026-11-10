@@ -5,7 +5,40 @@
 <link>https://circuits.fit/</link>
 <description>Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</description>
 <language>en-us</language>
-<lastBuildDate>Sat, 07 Nov 2026 22:00:00 +0000</lastBuildDate>
+<lastBuildDate>Tue, 10 Nov 2026 13:20:00 +0000</lastBuildDate>
+<item>
+<title>N-able took N-central offline. Ask your MSP if they use it.</title>
+<link>https://circuits.fit/articles/n-able-n-central-offline-able2shell.html</link>
+<guid>https://circuits.fit/articles/n-able-n-central-offline-able2shell.html</guid>
+<pubDate>Tue, 10 Nov 2026 13:20:00 +0000</pubDate>
+<description>A researcher published 33 unpatched flaws, with exploit code, in the tool many managed service providers use to run client computers. N-able has taken hosted N-central down and told on-premises customers to leave servers off until a hotfix lands.</description>
+<author>circuits50capital@circuits.fit (Emilio Santos)</author>
+<content:encoded><![CDATA[<p class="lead-graf">On Monday, November 9, 2026, N-able took its hosted N-central service offline in the Americas, Europe and Asia-Pacific. It also told customers who run N-central on their own servers to shut those servers down and leave them off until N-able says they can come back. The move followed a researcher’s public release of 33 unpatched flaws, with working exploit code, in the remote monitoring tool many managed service providers use to run their clients’ computers.</p>
+<p>If an IT provider manages your office computers, ask them today whether they use N-able N-central.</p>
+<h2>What happened</h2>
+<p>Late Sunday, November 8, security researcher Sean Bales published a set of flaws he called Able2Shell, including proof-of-concept exploits, according to BleepingComputer. Huntress, which reviewed the research, counts 33 flaws that can be chained into four attacks: three that can run code on the N-central server and one that can raise privileges to root. The researcher tested them against N-central Appliance 2026.4.0.31 and said earlier versions are likely affected.</p>
+<p>N-able then announced a critical security incident. In a statement to BleepingComputer it said it took hosted N-central offline on November 9 as a precaution and told on-premises customers to take their servers offline until further notice. At that time it said it had not observed active exploitation.</p>
+<p>As of mid-morning November 10, Eastern time, N-able’s status page still listed the incident as a major outage under investigation, with no end time. Hosted N-central remained offline in all three regions, and the on-premises N-central rows were marked the same way. N-able said it is seeing scanning tied to the published exploit code, but has no evidence that any customer environment has been successfully exploited. It is still working on a hotfix, with a target of midday November 10, Eastern time, and it continues to recommend that N-central stay offline until that hotfix is available and the server has been upgraded. A check of N-able’s N-central release notes found no new hotfix for this incident; the latest security hotfix listed there is still 2026.4 HF1, dated November 2, which addresses a separate issue.</p>
+<h2>What to do</h2>
+<ol>
+<li><strong>Ask your provider.</strong> If an MSP or IT firm runs your computers, ask whether they use N-able N-central, hosted or on-premises, and write down the answer.</li>
+<li><strong>Keep it off until it is patched.</strong> N-able’s direction is to leave N-central offline until it confirms the hotfix is in and the server has been successfully upgraded. Do not bring an on-premises server back early.</li>
+<li><strong>Check logins and new admin accounts since November 8.</strong> Ask your provider to review login activity and any new administrator accounts from November 8 onward, and to look for unexpected remote sessions or new scripts, before they turn N-central back on. Huntress recommends that review because earlier N-central incidents saw attackers create admin accounts and push tools into client networks.</li>
+<li><strong>Watch N-able’s status page for the hotfix.</strong> Guidance will change once the patch is out. The official page is <a href="https://uptime.n-able.com/" rel="noopener">uptime.n-able.com</a>.</li>
+</ol>
+<p>No CVE identifiers have been assigned yet, according to SecurityWeek, and the flaws are not on CISA’s Known Exploited Vulnerabilities catalog (feed version 2026.11.09, released November 9). That does not change the advice. Follow N-able’s current direction rather than waiting for a catalog entry.</p>
+<p>If you want a second opinion on what to ask your provider, our $29 <a href="https://circuits.fit/services/quick-answer.html">Quick Answer</a> service covers that question.</p>
+<h2>Sources</h2>
+<ul class="sources">
+<li><a href="https://uptime.n-able.com/" rel="noopener">N-able status page</a> (official incident 202580, checked mid-morning November 10, 2026, Eastern time: status Investigating, severity Major Outage, hotfix ETA midday November 10 EST, hosted and on-premises N-central still offline; N-able reports scanning tied to the published exploit code and no evidence of successful exploitation in a customer environment)</li>
+<li><a href="https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/" rel="noopener">BleepingComputer, “N-able takes cloud platform offline after 30+ ‘zero-days’ published”</a>, November 9, 2026, including N-able’s statement</li>
+<li><a href="https://www.huntress.com/blog/n-able-disables-cloud-services-following-disclosure-of-able2shell-exploit-chains" rel="noopener">Huntress, “N-able Disables Cloud Services Following Disclosure of ‘Able2Shell’ Exploit Chains”</a>, November 9, 2026</li>
+<li><a href="https://www.securityweek.com/n-able-takes-n-central-offline-as-researcher-drops-over-30-zero-days/" rel="noopener">SecurityWeek, “N-able Takes N-central Offline as Researcher Drops Over 30 Zero-Days”</a>, November 10, 2026 (no CVE identifiers assigned yet)</li>
+<li><a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">CISA Known Exploited Vulnerabilities catalog JSON feed</a>, version 2026.11.09 (no Able2Shell or new N-central identifiers for this incident)</li>
+<li><a href="https://status.n-able.com/category/n-central/" rel="noopener">N-able N-central release notes</a> (checked November 10, 2026; no hotfix posted for this incident)</li>
+</ul>
+<p>Related: <a href="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch. Check the logs.</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
+</item>
 <item>
 <title>Four AI spending reports in one week. The budget is outrunning the measurement.</title>
 <link>https://circuits.fit/articles/enterprise-ai-spend-four-reports-nov-2026.html</link>
@@ -292,6 +325,7 @@
 <li><strong>Run the Premium comparison.</strong> List every security or device-management add-on you pay for alongside Business Standard. If the total per user is close to $22, price Premium.</li>
 <li><strong>Ask your reseller in writing</strong> for the renewal price per SKU, the term, and whether any promotion or multi-year option is available.</li>
 </ol>
+<p>If Microsoft 365 is the renewal in front of you, the <a href="https://circuits.fit/services/microsoft-365-renewal-check.html">Microsoft 365 Renewal Check</a> ($79) reviews your license export for unused seats, over-licensed users, add-ons and Copilot seats, and returns a written next-step list in 2 business days.</p>
 <p>If you would rather hand this off, our <a href="https://circuits.fit/services/renewal-audit.html">Renewal Audit</a> reviews up to 25 software renewals, Microsoft 365 included, for a fixed $199 and returns a written report in 5 business days. If you want the spreadsheet instead, the <a href="https://emilios-newsletter-7fd333.beehiiv.com/products/renewal-risk-operator-pack">Renewal &amp; Risk Operator Pack</a> ($29) includes a renewal scorecard, and the free <a href="https://circuits.fit/tools/software-renewal-scorecard.html">software renewal scorecard</a> runs in your browser.</p>
 <h2>What to watch next</h2>
 <ul>
@@ -463,6 +497,7 @@
 <li><strong>Leaving the old spreadsheet in place.</strong> If it still exists, people will still use it.</li>
 <li><strong>Choosing on price alone.</strong> At small-firm scale, the cheapest and dearest plans differ by a few hundred dollars a year. A tool nobody uses costs more.</li>
 </ul>
+<p class="tool-banner"><strong>Rolling one out?</strong> The <a href="https://circuits.fit/services/password-manager-rollout-kit.html">Password Manager Rollout Kit</a> ($19) has the two-week plan, admin and offboarding checklists, a staff email, a one-page policy and a tracker. It works with whichever product you pick.</p>
 <section aria-labelledby="faq" class="guide-faq">
 <h2 id="faq">FAQ</h2>
 <h3>Is a free password manager good enough for a business?</h3>
@@ -485,6 +520,7 @@
 <section aria-labelledby="related-briefing" class="guide-related">
 <h2 id="related-briefing">Related</h2>
 <ul>
+<li><a href="https://circuits.fit/services/password-manager-rollout-kit.html">Password Manager Rollout Kit</a>, $19: plan, checklists and templates</li>
 <li><a href="https://circuits.fit/guides/cyber-insurance-checklist-2026.html">Cyber insurance checklist for mid-market IT budgets (2026)</a></li>
 <li><a href="https://circuits.fit/guides/stop-using-a-voice-as-approval.html">Stop using a voice as approval</a></li>
 <li><a href="https://circuits.fit/services/security-policy-set.html">Security Policy Set</a>, including an access and password policy</li>

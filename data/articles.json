@@ -1,6 +1,17 @@
 {
   "articles": [
     {
+      "slug": "n-able-n-central-offline-able2shell",
+      "title": "N-able took N-central offline. Ask your MSP if they use it.",
+      "dek": "A researcher published 33 unpatched flaws, with exploit code, in the tool many managed service providers use to run client computers. N-able has taken hosted N-central down and told on-premises customers to leave servers off until a hotfix lands.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "November 10, 2026",
+      "readTime": 4,
+      "image": "assets/images/nightdesk.jpg",
+      "body": "N-able N-central Able2Shell Sean Bales 33 flaws exploit code hosted offline on-premises hotfix MSP login admin accounts November 8 2026 Huntress BleepingComputer"
+    },
+    {
       "slug": "zyxel-gs1900-patched-is-not-fixed",
       "title": "Zyxel GS1900: the June patch did not stop the exploit",
       "dek": "An exploit used against 996 GS1900 switches still worked on firmware patched in June. The fix is 2.90 Patch 3, released October 22. Reopen the ticket you closed.",

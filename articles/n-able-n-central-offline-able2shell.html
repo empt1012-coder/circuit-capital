@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>N-able N-central offline after Able2Shell flaws published: ask your MSP</title>
+  <meta name="description" content="N-able took hosted N-central offline Nov 9 after 33 unpatched Able2Shell flaws were published. Ask your MSP, keep it off until the hotfix, check logins since Nov 8.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <link rel="canonical" href="https://circuits.fit/articles/n-able-n-central-offline-able2shell.html">
+  <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
+  <meta property="og:title" content="N-able N-central offline after Able2Shell flaws published">
+  <meta property="og:description" content="N-able took hosted N-central offline Nov 9 after 33 unpatched Able2Shell flaws were published. Ask your MSP, keep it off until the hotfix, check logins since Nov 8.">
+  <meta property="og:url" content="https://circuits.fit/articles/n-able-n-central-offline-able2shell.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Circuit &amp; Capital">
+  <meta property="og:image" content="https://circuits.fit/assets/images/nightdesk.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="N-able N-central offline after Able2Shell flaws published">
+  <meta name="twitter:description" content="N-able took hosted N-central offline Nov 9 after 33 unpatched Able2Shell flaws were published. Ask your MSP, keep it off until the hotfix, check logins since Nov 8.">
+  <meta name="twitter:image" content="https://circuits.fit/assets/images/nightdesk.jpg">
+  <meta property="article:published_time" content="2026-11-10">
+    <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "N-able took N-central offline. Ask your MSP if they use it.", "description": "N-able took hosted N-central offline on November 9, 2026, after a researcher published 33 unpatched flaws, with exploit code, in the remote monitoring tool many MSPs use. As of mid-morning November 10, Eastern time, the hotfix had not shipped. Ask your MSP, keep N-central off until it is patched, and check logins and new admin accounts since November 8.", "image": ["https://circuits.fit/assets/images/nightdesk.jpg"], "datePublished": "2026-11-10", "dateModified": "2026-11-10", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/n-able-n-central-offline-able2shell.html", "articleSection": "Policy"}
+  </script>
+  <meta name="google-adsense-account" content="ca-pub-3634982565972955">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3634982565972955" crossorigin="anonymous"></script>
+</head>
+<body data-base=".." data-page="policy">
+  <div id="site-header">
+      <a class="skip" href="#main">Skip to content</a>
+      <div class="topbar">
+        <div class="wrap">
+          <div>Sourced briefing · Est. 2026</div>
+          <div class="topbar__links">
+            <a href="../about.html">About</a>
+            <a class="hide-sm" href="../services/">Services</a>
+            <a href="../advertise.html">Advertise</a>
+            <a class="hide-sm" href="../contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <header class="masthead">
+        <div class="wrap masthead__row">
+          <div class="masthead__date" id="masthead-date"></div>
+          <a class="brand" href="../">
+            <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
+              <rect width="64" height="64" fill="#f4efe6"/>
+              <path fill="#c45c26" d="M12 48V14h9v26h13v8H12z"/>
+              <path class="trace" fill="none" stroke="#9a4318" stroke-width="1.6" stroke-linecap="square" d="M16 20h8v5H20v5h7"/>
+              <circle class="node" cx="24" cy="20" r="1.6" fill="#f4efe6"/>
+              <circle class="node node-2" cx="27" cy="30" r="1.6" fill="#f4efe6"/>
+              <path fill="#12151a" d="M36 18h16v2.6H39v4.4h12v2.6H39v4.4h14v2.6H36z"/>
+            </svg>
+            <span>
+              <div class="brand__name">Circuit <span>&amp;</span> Capital</div>
+              <div class="brand__tag">Sourced business and technology briefing</div>
+              
+            </span>
+          </a>
+          <div class="masthead__actions">
+            <button class="btn btn--icon" type="button" data-toggle-search aria-label="Search">Search</button>
+            <button class="menu-toggle" type="button" data-toggle-nav aria-label="Open menu" aria-expanded="false">☰</button>
+          </div>
+        </div>
+        <nav class="nav" id="site-nav">
+          <ul class="wrap"><li><a href="../">Home</a></li><li><a href="../briefing.html">Briefing</a></li><li><a href="../guides/">Guides</a></li><li><a href="../tools/">Tools</a></li><li><a href="../topics/">Topics</a></li><li><a href="../categories/markets.html">Markets</a></li><li><a href="../categories/technology.html">Technology</a></li><li><a class="is-active" href="../categories/policy.html">Policy</a></li><li><a href="../about.html">About</a></li></ul>
+        </nav>
+        <div class="search-bar" id="search-bar">
+          <form class="wrap" action="../search.html" method="get">
+            <input type="search" name="q" placeholder="Search briefings…" aria-label="Search">
+            <button class="btn btn--copper" type="submit">Go</button>
+          </form>
+        </div>
+      </header>
+    </div>
+  <main id="main">
+    <header class="article-hero wrap">
+      <div class="kicker">Policy</div>
+      <h1>N-able took N-central offline. Ask your MSP if they use it.</h1>
+      <p class="dek">A researcher published 33 unpatched flaws, with exploit code, in the tool many managed service providers use to run client computers. N-able has taken hosted N-central down and told on-premises customers to leave servers off until a hotfix lands.</p>
+      <div class="byline-row">
+        <span>Edited by <strong>Emilio Santos</strong></span>
+        <span><time datetime="2026-11-10">November 10, 2026</time></span>
+        <span>4 min read</span>
+      </div>
+    </header>
+    <figure class="article-cover wrap">
+      <picture><source srcset="../assets/images/nightdesk.webp" type="image/webp"><img src="../assets/images/nightdesk.jpg" alt="A desk lit at night in an empty office" width="1280" height="720" decoding="async"></picture>
+      <figcaption>A managed IT console can reach every computer it looks after. Photo: Circuit &amp; Capital</figcaption>
+    </figure>
+    <div class="wrap article-layout">
+      <article class="prose">
+        <p class="lead-graf">On Monday, November 9, 2026, N-able took its hosted N-central service offline in the Americas, Europe and Asia-Pacific. It also told customers who run N-central on their own servers to shut those servers down and leave them off until N-able says they can come back. The move followed a researcher’s public release of 33 unpatched flaws, with working exploit code, in the remote monitoring tool many managed service providers use to run their clients’ computers.</p>
+        <p>If an IT provider manages your office computers, ask them today whether they use N-able N-central.</p>
+        <h2>What happened</h2>
+        <p>Late Sunday, November 8, security researcher Sean Bales published a set of flaws he called Able2Shell, including proof-of-concept exploits, according to BleepingComputer. Huntress, which reviewed the research, counts 33 flaws that can be chained into four attacks: three that can run code on the N-central server and one that can raise privileges to root. The researcher tested them against N-central Appliance 2026.4.0.31 and said earlier versions are likely affected.</p>
+        <p>N-able then announced a critical security incident. In a statement to BleepingComputer it said it took hosted N-central offline on November 9 as a precaution and told on-premises customers to take their servers offline until further notice. At that time it said it had not observed active exploitation.</p>
+        <p>As of mid-morning November 10, Eastern time, N-able’s status page still listed the incident as a major outage under investigation, with no end time. Hosted N-central remained offline in all three regions, and the on-premises N-central rows were marked the same way. N-able said it is seeing scanning tied to the published exploit code, but has no evidence that any customer environment has been successfully exploited. It is still working on a hotfix, with a target of midday November 10, Eastern time, and it continues to recommend that N-central stay offline until that hotfix is available and the server has been upgraded. A check of N-able’s N-central release notes found no new hotfix for this incident; the latest security hotfix listed there is still 2026.4 HF1, dated November 2, which addresses a separate issue.</p>
+        <h2>What to do</h2>
+        <ol>
+          <li><strong>Ask your provider.</strong> If an MSP or IT firm runs your computers, ask whether they use N-able N-central, hosted or on-premises, and write down the answer.</li>
+          <li><strong>Keep it off until it is patched.</strong> N-able’s direction is to leave N-central offline until it confirms the hotfix is in and the server has been successfully upgraded. Do not bring an on-premises server back early.</li>
+          <li><strong>Check logins and new admin accounts since November 8.</strong> Ask your provider to review login activity and any new administrator accounts from November 8 onward, and to look for unexpected remote sessions or new scripts, before they turn N-central back on. Huntress recommends that review because earlier N-central incidents saw attackers create admin accounts and push tools into client networks.</li>
+          <li><strong>Watch N-able’s status page for the hotfix.</strong> Guidance will change once the patch is out. The official page is <a href="https://uptime.n-able.com/" rel="noopener">uptime.n-able.com</a>.</li>
+        </ol>
+        <p>No CVE identifiers have been assigned yet, according to SecurityWeek, and the flaws are not on CISA’s Known Exploited Vulnerabilities catalog (feed version 2026.11.09, released November 9). That does not change the advice. Follow N-able’s current direction rather than waiting for a catalog entry.</p>
+        <p>If you want a second opinion on what to ask your provider, our $29 <a href="../services/quick-answer.html">Quick Answer</a> service covers that question.</p>
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://uptime.n-able.com/" rel="noopener">N-able status page</a> (official incident 202580, checked mid-morning November 10, 2026, Eastern time: status Investigating, severity Major Outage, hotfix ETA midday November 10 EST, hosted and on-premises N-central still offline; N-able reports scanning tied to the published exploit code and no evidence of successful exploitation in a customer environment)</li>
+          <li><a href="https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/" rel="noopener">BleepingComputer, “N-able takes cloud platform offline after 30+ ‘zero-days’ published”</a>, November 9, 2026, including N-able’s statement</li>
+          <li><a href="https://www.huntress.com/blog/n-able-disables-cloud-services-following-disclosure-of-able2shell-exploit-chains" rel="noopener">Huntress, “N-able Disables Cloud Services Following Disclosure of ‘Able2Shell’ Exploit Chains”</a>, November 9, 2026</li>
+          <li><a href="https://www.securityweek.com/n-able-takes-n-central-offline-as-researcher-drops-over-30-zero-days/" rel="noopener">SecurityWeek, “N-able Takes N-central Offline as Researcher Drops Over 30 Zero-Days”</a>, November 10, 2026 (no CVE identifiers assigned yet)</li>
+          <li><a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">CISA Known Exploited Vulnerabilities catalog JSON feed</a>, version 2026.11.09 (no Able2Shell or new N-central identifiers for this incident)</li>
+          <li><a href="https://status.n-able.com/category/n-central/" rel="noopener">N-able N-central release notes</a> (checked November 10, 2026; no hotfix posted for this incident)</li>
+        </ul>
+        <p>Related: <a href="beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch. Check the logs.</a> and <a href="../topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
+        <div class="author-box">
+          <div class="avatar">ES</div>
+          <div>
+            <strong>Emilio Santos</strong> edits Circuit &amp; Capital. How we source and correct pieces: <a href="../editorial.html">editorial standards</a>.
+            <div class="meta"><a href="mailto:circuits50capital@circuits.fit">circuits50capital@circuits.fit</a></div>
+          </div>
+        </div>
+        <section class="newsletter" aria-labelledby="newsletter-heading">
+          <h2 id="newsletter-heading">Get the weekly Circuit &amp; Capital briefing</h2>
+          <p>One email a week with the latest articles and tools. Unsubscribe at any time.</p>
+          <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="d0ebd95b-cec8-4f1a-b043-2c8b7c8087b9"></script>
+        </section>
+      </article>
+      <aside class="sidebar">
+        <aside class="ad-slot ad-slot--rect" data-slot="sidebar" aria-label="Advertisement">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </aside>
+        <div class="section-head"><h2>Related</h2></div>
+        <div class="popular">
+          <ol>
+            <li><a href="beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch</a></li>
+            <li><a href="kev-patch-tuesday-calendar-nov-10-13.html">This week’s patch calendar</a></li>
+            <li><a href="../services/quick-answer.html">Quick Answer, $29</a></li>
+            <li><a href="../tools/risk-exception-register.html">Risk exception register</a></li>
+            <li><a href="../topics/security-vulnerabilities.html">Security and vulnerabilities hub</a></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <div id="site-footer">
+      <footer class="site-foot">
+        <div class="wrap foot-grid">
+          <div>
+            <h3>Circuit &amp; Capital</h3>
+            <p>Sourced briefings and operator guides on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</p>
+          </div>
+          <div>
+            <h3>Sections</h3>
+            <ul>
+              <li><a href="../">Home</a></li>
+              <li><a href="../briefing.html">Briefing</a></li>
+              <li><a href="../guides/">Guides</a></li>
+              <li><a href="../tools/">Tools</a></li><li><a href="../topics/">Topics</a></li>
+              <li><a href="../categories/markets.html">Markets</a></li>
+              <li><a href="../categories/technology.html">Technology</a></li>
+              <li><a href="../categories/policy.html">Policy</a></li>
+              <li><a href="../about.html">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Advertising</h3>
+            <ul>
+              <li><a href="../advertise.html">Advertise</a></li>
+              <li><a href="../advertise.html#specs">Ad specs</a></li>
+              <li><a href="../about.html">Masthead</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="../editorial.html">Editorial standards</a></li>
+              <li><a href="../corrections.html">Corrections</a></li>
+              <li><a href="../privacy.html">Privacy</a></li>
+              <li><a href="../terms.html">Terms</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Follow</h3>
+            <ul>
+              <li><a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a></li>
+              <li><a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a></li>
+              <li><a href="https://medium.com/@circuitsfit" rel="noopener">Medium</a></li>
+              <li><a href="https://dev.to/circuitsfit" rel="noopener">dev.to</a></li>
+              <li><a href="https://circuitsfit.hashnode.dev" rel="noopener">Hashnode</a></li>
+              <li><a href="https://x.com/circuitsfit" rel="noopener">X</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="wrap foot-bottom">
+          <div>© 2026 Circuit &amp; Capital. All rights reserved.</div>
+          <div>Circuit &amp; Capital is a business and technology publication. It is not a fitness brand.</div>
+        </div>
+      </footer>
+      <div class="ad-sticky" aria-label="Advertisement">
+        <button type="button" data-close-sticky aria-label="Close ad">×</button>
+        <div class="ad-slot" data-slot="mobileSticky" data-ad-slot="">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </div>
+      </div>
+      <div class="cookie" id="cookie">
+        <p>We use a cookie to remember this choice. Accept may load analytics. Necessary only does not. This banner does not record the ad choice. See our <a href="../privacy.html">privacy policy</a>.</p>
+        <div class="cookie__row">
+          <button class="btn btn--copper" type="button" data-cookie="accept">Accept</button>
+          <button class="btn btn--ghost" type="button" data-cookie="reject" style="border-color:#5a6570">Necessary only</button>
+        </div>
+      </div>
+      <div class="toast" id="toast" role="status"></div>
+    </div>
+  <script src="../js/config.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="../js/ads.js"></script>
+</body>
+</html>

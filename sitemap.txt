@@ -98,3 +98,4 @@ https://circuits.fit/articles/staff-ai-use-policy-federal-state.html
 https://circuits.fit/articles/zyxel-gs1900-patched-is-not-fixed.html
 https://circuits.fit/articles/enterprise-ai-spend-four-reports-nov-2026.html
 https://circuits.fit/services/password-manager-rollout-kit.html
+https://circuits.fit/articles/n-able-n-central-offline-able2shell.html
