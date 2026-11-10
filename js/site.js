@@ -224,8 +224,10 @@
     const href = a.getAttribute("href") || "";
     if (/^mailto:/i.test(href)) {
       window.gtag("event", "order_click", { link_url: href, transport_type: "beacon" });
-    } else if (/go\.(nordpass\.io|nordvpn\.net)\//i.test(a.href)) {
-      window.gtag("event", "affiliate_click", { partner: /nordpass/i.test(a.href) ? "nordpass" : "nordvpn", link_url: a.href, transport_type: "beacon" });
+    } else if (/go\.(nordpass\.io|nordvpn\.net)\/|rsbrjk4ik\.com\/|idrive\.com\/.*circuitcap|idrivee2\.com\/partner\/|partner\.pcloud\.com\/r\//i.test(a.href)) {
+      const h = a.href;
+      const partner = /nordpass/i.test(h) ? "nordpass" : /nordvpn/i.test(h) ? "nordvpn" : /rsbrjk4ik/i.test(h) ? "roboform" : /idrivee2/i.test(h) ? "idrive_e2" : /from=c2c/i.test(h) ? "idrive_m365" : /idrive/i.test(h) ? "idrive" : "pcloud";
+      window.gtag("event", "affiliate_click", { partner: partner, link_url: h, transport_type: "beacon" });
     } else if (a.closest(".partner") || /(^|\.)pointercreativeworks\.com$/i.test(a.hostname || "")) {
       window.gtag("event", "partner_click", { link_domain: a.hostname, link_url: a.href, transport_type: "beacon" });
     } else if (/beehiiv\.com\/products\//i.test(a.href)) {

@@ -67,6 +67,18 @@
       "body": "AI use policy staff small business executive order 14365 state AI laws preemption FTC impersonation rule November 30 approved AI tools human review"
     },
     {
+      "slug": "password-manager-and-backup-tools-small-teams",
+      "type": "guide",
+      "title": "Password managers and backup tools for small teams (2026)",
+      "dek": "Password managers and backup tools for a 3-50 person team compared on price, SSO and Microsoft 365 backup, with prices checked on each vendor’s page November 10, 2026.",
+      "category": "Guides",
+      "author": "Emilio Santos",
+      "date": "November 10, 2026",
+      "readTime": 8,
+      "image": "assets/images/folders.jpg",
+      "body": "password manager backup small business Bitwarden RoboForm 1Password NordPass Keeper IDrive Microsoft 365 backup Google Workspace Backblaze pCloud ransomware SSO SCIM 2026"
+    },
+    {
       "slug": "password-manager-small-business",
       "type": "guide",
       "title": "How to choose a password manager for a small business",
