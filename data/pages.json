@@ -116,7 +116,7 @@
       "path": "services/index.html",
       "kind": "Service",
       "title": "Services",
-      "dek": "Fixed-price services by email: Quick Answer $49, Contract & Renewal Terms Review $149, Renewal Audit $199, Security Policy Set $99/$199, AI Use Policy + AI Tool Inventory $149, Security Questionnaire Draft $349, and fixed quotes.",
+      "dek": "Fixed-price services by email: Quick Answer $29, Contract & Renewal Terms Review $149, Renewal Audit $199, Security Policy Set $99/$199, AI Use Policy + AI Tool Inventory $149, Security Questionnaire Draft $349, and fixed quotes.",
       "body": "services quick answer contract review renewal audit security policy ai use policy questionnaire operator pack quote"
     },
     {
@@ -130,7 +130,7 @@
       "path": "services/quick-answer.html",
       "kind": "Service",
       "title": "Quick Answer",
-      "dek": "Ask one question about IT, security, vendors, AI spend or software spend. Get a written answer of up to about 600 words, with sources, plus one follow-up. $49, within 2 business days.",
+      "dek": "Ask one question about IT, security, vendors, AI spend or software spend. Get a written answer of up to about 600 words, with sources, plus one follow-up. $29, within 2 business days.",
       "body": "services quick answer"
     },
     {
