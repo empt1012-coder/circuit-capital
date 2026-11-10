@@ -5,7 +5,53 @@
 <link>https://circuits.fit/</link>
 <description>Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</description>
 <language>en-us</language>
-<lastBuildDate>Tue, 10 Nov 2026 13:20:00 +0000</lastBuildDate>
+<lastBuildDate>Tue, 10 Nov 2026 22:15:00 +0000</lastBuildDate>
+<item>
+<title>Barracuda appliances are on CISA’s exploited list. Check firmware this week.</title>
+<link>https://circuits.fit/articles/barracuda-esg-cisa-kev.html</link>
+<guid>https://circuits.fit/articles/barracuda-esg-cisa-kev.html</guid>
+<pubDate>Tue, 10 Nov 2026 22:15:00 +0000</pubDate>
+<description>CISA added two Barracuda flaws to its Known Exploited Vulnerabilities catalog on November 10, with a due date of November 13. Barracuda has identified exploitation activity affecting a small number of organizations. Confirm the latest firmware and patches, keep the admin interface off the internet, and review the device if that page was reachable.</description>
+<author>circuits50capital@circuits.fit (Emilio Santos)</author>
+<content:encoded><![CDATA[
+<p class="lead-graf">On November 10, 2026, the U.S. Cybersecurity and Infrastructure Security Agency added two Barracuda flaws to its Known Exploited Vulnerabilities catalog. The federal due date is November 13. The night before, Barracuda updated its advisory to say it had identified exploitation activity affecting a small number of organizations.</p>
+<p>If your business uses a Barracuda Email Security Gateway, or one of several other Barracuda appliances, treat it as a job for this week: confirm the latest firmware and patches are on, turn automatic patching back on if it was turned off, and keep the administrative interface off the public internet.</p>
+<h2>What happened</h2>
+<p>Barracuda published the advisory on November 2. It describes two vulnerabilities. <strong>CVE-2026-116606</strong> is a pre-authentication authorization bypass in the Email Security Gateway, with a CVSS score of 9.3. <strong>CVE-2026-111560</strong> is a command injection flaw, with a CVSS score of 8.6.</p>
+<p>On November 5, Barracuda clarified that CVE-2026-116606 does not require a login. It does require that the attacker can reach the administrative user interface. Mandiant’s disclosure for that flaw, MNDT-2026-0042, says an unauthenticated attacker can invoke a configuration-import function and restore a crafted backup archive, which can change the appliance’s global configuration. Mandiant lists Email Security Gateway versions earlier than 9.4.0.030 as affected.</p>
+<p>CVE-2026-111560, described in Mandiant’s MNDT-2026-0041, is an operating-system command injection in the timezone configuration field. An authenticated administrator can inject commands that then run with root privileges. Barracuda and CISA both say the two flaws can be chained. Used together, Barracuda says, they could let an attacker bypass authorization controls and obtain root access to the device. In all cases, Barracuda says successful exploitation requires access to the administrative interface.</p>
+<p>On November 9 at 9:00 p.m. EST, Barracuda updated the advisory: “We have identified exploitation activity affecting a small number of organizations.” It has not said how many organizations were affected, or what the attackers achieved. On November 10, CISA added both identifiers to the catalog, based on evidence of active exploitation, and set a due date of November 13. Both entries are marked for forensic triage. CISA lists known ransomware use as unknown.</p>
+<p>Those due dates bind federal civilian agencies. A private firm is not under the same mandate, but a three-day window is a useful priority signal, and the forensic-triage mark is a reason to look for compromise rather than only installing a patch.</p>
+<h2>Who is affected</h2>
+<p>CVE-2026-116606 affects the Barracuda Email Security Gateway only. CVE-2026-111560 also affects the Email Security Gateway, and it affects five other products: the Load Balancer Application Delivery Controller (ADC), Message Archiver, WAF Control Center, Web Application Firewall, and Web Security Gateway.</p>
+<p>Mandiant lists these affected version ranges for the command-injection flaw: Email Security Gateway 9.4.0.27 and earlier, Load Balancer ADC 6.4.0 and earlier, Web Application Firewall 11.0.1 and earlier, Web Security Gateway 16.1.100.100 and earlier, Message Archiver 5.5.4.0 and earlier, and WAF Control Center 2.2.1 and earlier. Barracuda’s own advice is to install the latest firmware and the security patches it lists, rather than to stop at a single build number.</p>
+<p>The patch identifiers in Barracuda’s advisory are BNSF-40425 for Email Security Gateway 9.4.017 and later, BNSF-40430 for older Email Security Gateway builds, BNADC-16586 for the Load Balancer ADC and the Web Application Firewall, BNMA-32468 for the Message Archiver, BNWF-60060 for the WAF Control Center, and BNYF-24789 for the Web Security Gateway.</p>
+<h2>What to do this week</h2>
+<ol>
+<li><strong>Find out if you have one of these appliances.</strong> Ask your IT provider whether you use a Barracuda Email Security Gateway, Load Balancer ADC, Message Archiver, WAF, WAF Control Center, or Web Security Gateway, including any unit they manage for you. Write down the answer.</li>
+<li><strong>Confirm the latest firmware and patches are on.</strong> Barracuda says customers should verify that systems are on the latest firmware and have received all security patches. If automatic patching was turned off, turn it back on. A device that is several versions behind may need more than one update. Contact Barracuda Support if you need help applying a patch.</li>
+<li><strong>Keep the admin interface off the internet.</strong> Barracuda recommends restricting administrative interfaces to trusted internal networks. Organizations whose admin pages are not reachable from the public internet are less exposed to this attack path.</li>
+<li><strong>If the admin page was exposed, do a forensic review.</strong> Installing a patch does not undo a change an attacker may already have made. CISA’s catalog entries for both flaws are marked for forensic triage. Ask your provider to look for unexpected configuration changes, unexpected backup restores, timezone changes, and unusual administrator activity, then follow Barracuda’s current guidance.</li>
+</ol>
+<h2>Questions to ask your IT provider</h2>
+<ul>
+<li>Do we run a Barracuda Email Security Gateway, Load Balancer ADC, Message Archiver, WAF, WAF Control Center, or Web Security Gateway, including any appliance you manage for us?</li>
+<li>Is the administrative interface reachable from the public internet? If it was, when was that closed, and what did you review afterward?</li>
+<li>Are we on the latest firmware, and have the patches Barracuda lists for CVE-2026-116606 and CVE-2026-111560 been applied? Is automatic patching turned on?</li>
+<li>If the admin page was exposed, have you looked for unexpected configuration changes, backup restores, timezone changes, and administrator activity?</li>
+</ul>
+<p>If you want a second opinion on what to ask your provider, our $29 <a href="https://circuits.fit/services/quick-answer.html">Quick Answer</a> service covers that question.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection">Barracuda advisory</a></li>
+<li><a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json">CISA KEV catalog JSON feed</a>, version 2026.11.10</li>
+<li><a href="https://www.cisa.gov/news-events/alerts/2026/11/10/cisa-adds-six-known-exploited-vulnerabilities-catalog">CISA, “CISA Adds Six Known Exploited Vulnerabilities to Catalog”</a>, November 10, 2026</li>
+<li><a href="https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0042.md">Mandiant, MNDT-2026-0042</a></li>
+<li><a href="https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0041.md">Mandiant, MNDT-2026-0041</a></li>
+</ul>
+<p>Related: <a href="https://circuits.fit/articles/n-able-n-central-offline-able2shell.html">N-able took N-central offline. Ask your MSP if they use it.</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>.</p>
+]]></content:encoded>
+</item>
 <item>
 <title>N-able took N-central offline. Ask your MSP if they use it.</title>
 <link>https://circuits.fit/articles/n-able-n-central-offline-able2shell.html</link>

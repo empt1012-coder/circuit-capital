@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barracuda ESG CVE-2026-116606 and CVE-2026-111560 CISA KEV: patch by Nov 13, 2026</title>
+  <meta name="description" content="CISA added Barracuda CVE-2026-116606 and CVE-2026-111560 to KEV on Nov 10, due Nov 13. Patch firmware, keep the admin UI off the internet, and triage if it was exposed.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <link rel="canonical" href="https://circuits.fit/articles/barracuda-esg-cisa-kev.html">
+  <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
+  <meta property="og:title" content="Barracuda appliances are on CISA’s exploited list">
+  <meta property="og:description" content="CISA added two Barracuda flaws to KEV on Nov 10, due Nov 13. Confirm firmware, keep the admin UI off the internet, and triage if it was exposed.">
+  <meta property="og:url" content="https://circuits.fit/articles/barracuda-esg-cisa-kev.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Circuit &amp; Capital">
+  <meta property="og:image" content="https://circuits.fit/assets/images/colo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Barracuda appliances are on CISA’s exploited list">
+  <meta name="twitter:description" content="CISA added two Barracuda flaws to KEV on Nov 10, due Nov 13. Confirm firmware, keep the admin UI off the internet, and triage if it was exposed.">
+  <meta name="twitter:image" content="https://circuits.fit/assets/images/colo.jpg">
+  <meta property="article:published_time" content="2026-11-10">
+    <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Barracuda appliances are on CISA’s exploited list. Check firmware this week.", "description": "CISA added two Barracuda flaws, CVE-2026-116606 and CVE-2026-111560, to its Known Exploited Vulnerabilities catalog on November 10, 2026, with a due date of November 13. Barracuda has identified exploitation activity affecting a small number of organizations. Confirm the latest firmware and patches, keep the admin interface off the internet, and review the device if that page was reachable.", "image": ["https://circuits.fit/assets/images/colo.jpg"], "datePublished": "2026-11-10", "dateModified": "2026-11-10", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/barracuda-esg-cisa-kev.html", "articleSection": "Policy"}
+  </script>
+  <meta name="google-adsense-account" content="ca-pub-3634982565972955">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3634982565972955" crossorigin="anonymous"></script>
+</head>
+<body data-base=".." data-page="policy">
+  <div id="site-header">
+      <a class="skip" href="#main">Skip to content</a>
+      <div class="topbar">
+        <div class="wrap">
+          <div>Sourced briefing · Est. 2026</div>
+          <div class="topbar__links">
+            <a href="../about.html">About</a>
+            <a class="hide-sm" href="../services/">Services</a>
+            <a href="../advertise.html">Advertise</a>
+            <a class="hide-sm" href="../contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <header class="masthead">
+        <div class="wrap masthead__row">
+          <div class="masthead__date" id="masthead-date"></div>
+          <a class="brand" href="../">
+            <svg class="brand__mark" viewBox="0 0 64 64" role="img" aria-label="Circuit and Capital">
+              <rect width="64" height="64" fill="#f4efe6"/>
+              <path fill="#c45c26" d="M12 48V14h9v26h13v8H12z"/>
+              <path class="trace" fill="none" stroke="#9a4318" stroke-width="1.6" stroke-linecap="square" d="M16 20h8v5H20v5h7"/>
+              <circle class="node" cx="24" cy="20" r="1.6" fill="#f4efe6"/>
+              <circle class="node node-2" cx="27" cy="30" r="1.6" fill="#f4efe6"/>
+              <path fill="#12151a" d="M36 18h16v2.6H39v4.4h12v2.6H39v4.4h14v2.6H36z"/>
+            </svg>
+            <span>
+              <div class="brand__name">Circuit <span>&amp;</span> Capital</div>
+              <div class="brand__tag">Sourced business and technology briefing</div>
+              
+            </span>
+          </a>
+          <div class="masthead__actions">
+            <button class="btn btn--icon" type="button" data-toggle-search aria-label="Search">Search</button>
+            <button class="menu-toggle" type="button" data-toggle-nav aria-label="Open menu" aria-expanded="false">☰</button>
+          </div>
+        </div>
+        <nav class="nav" id="site-nav">
+          <ul class="wrap"><li><a href="../">Home</a></li><li><a href="../briefing.html">Briefing</a></li><li><a href="../guides/">Guides</a></li><li><a href="../tools/">Tools</a></li><li><a href="../topics/">Topics</a></li><li><a href="../categories/markets.html">Markets</a></li><li><a href="../categories/technology.html">Technology</a></li><li><a class="is-active" href="../categories/policy.html">Policy</a></li><li><a href="../about.html">About</a></li></ul>
+        </nav>
+        <div class="search-bar" id="search-bar">
+          <form class="wrap" action="../search.html" method="get">
+            <input type="search" name="q" placeholder="Search briefings…" aria-label="Search">
+            <button class="btn btn--copper" type="submit">Go</button>
+          </form>
+        </div>
+      </header>
+    </div>
+  <main id="main">
+    <header class="article-hero wrap">
+      <div class="kicker">Policy</div>
+      <h1>Barracuda appliances are on CISA’s exploited list. Check firmware this week.</h1>
+      <p class="dek">CISA added two Barracuda flaws to its Known Exploited Vulnerabilities catalog on November 10, with a due date of November 13. Barracuda has identified exploitation activity affecting a small number of organizations. Confirm the latest firmware and patches, keep the admin interface off the internet, and review the device if that page was reachable.</p>
+      <div class="byline-row">
+        <span>Edited by <strong>Emilio Santos</strong></span>
+        <span><time datetime="2026-11-10">November 10, 2026</time></span>
+        <span>5 min read</span>
+      </div>
+    </header>
+    <figure class="article-cover wrap">
+      <picture><source srcset="../assets/images/colo.webp" type="image/webp"><img src="../assets/images/colo.jpg" alt="Rows of equipment in a colocation facility" width="1280" height="720" decoding="async"></picture>
+      <figcaption>An email or network appliance still needs its admin page kept off the public internet. Photo: Circuit &amp; Capital</figcaption>
+    </figure>
+    <div class="wrap article-layout">
+      <article class="prose">
+        <p class="lead-graf">On November 10, 2026, the U.S. Cybersecurity and Infrastructure Security Agency added two Barracuda flaws to its Known Exploited Vulnerabilities catalog. The federal due date is November 13. The night before, Barracuda updated its advisory to say it had identified exploitation activity affecting a small number of organizations.</p>
+        <p>If your business uses a Barracuda Email Security Gateway, or one of several other Barracuda appliances, treat it as a job for this week: confirm the latest firmware and patches are on, turn automatic patching back on if it was turned off, and keep the administrative interface off the public internet.</p>
+        <h2>What happened</h2>
+        <p>Barracuda published the advisory on November 2. It describes two vulnerabilities. <strong>CVE-2026-116606</strong> is a pre-authentication authorization bypass in the Email Security Gateway, with a CVSS score of 9.3. <strong>CVE-2026-111560</strong> is a command injection flaw, with a CVSS score of 8.6.</p>
+        <p>On November 5, Barracuda clarified that CVE-2026-116606 does not require a login. It does require that the attacker can reach the administrative user interface. Mandiant’s disclosure for that flaw, MNDT-2026-0042, says an unauthenticated attacker can invoke a configuration-import function and restore a crafted backup archive, which can change the appliance’s global configuration. Mandiant lists Email Security Gateway versions earlier than 9.4.0.030 as affected.</p>
+        <p>CVE-2026-111560, described in Mandiant’s MNDT-2026-0041, is an operating-system command injection in the timezone configuration field. An authenticated administrator can inject commands that then run with root privileges. Barracuda and CISA both say the two flaws can be chained. Used together, Barracuda says, they could let an attacker bypass authorization controls and obtain root access to the device. In all cases, Barracuda says successful exploitation requires access to the administrative interface.</p>
+        <p>On November 9 at 9:00 p.m. EST, Barracuda updated the advisory: “We have identified exploitation activity affecting a small number of organizations.” It has not said how many organizations were affected, or what the attackers achieved. On November 10, CISA added both identifiers to the catalog, based on evidence of active exploitation, and set a due date of November 13. Both entries are marked for forensic triage. CISA lists known ransomware use as unknown.</p>
+        <p>Those due dates bind federal civilian agencies. A private firm is not under the same mandate, but a three-day window is a useful priority signal, and the forensic-triage mark is a reason to look for compromise rather than only installing a patch.</p>
+        <h2>Who is affected</h2>
+        <p>CVE-2026-116606 affects the Barracuda Email Security Gateway only. CVE-2026-111560 also affects the Email Security Gateway, and it affects five other products: the Load Balancer Application Delivery Controller (ADC), Message Archiver, WAF Control Center, Web Application Firewall, and Web Security Gateway.</p>
+        <p>Mandiant lists these affected version ranges for the command-injection flaw: Email Security Gateway 9.4.0.27 and earlier, Load Balancer ADC 6.4.0 and earlier, Web Application Firewall 11.0.1 and earlier, Web Security Gateway 16.1.100.100 and earlier, Message Archiver 5.5.4.0 and earlier, and WAF Control Center 2.2.1 and earlier. Barracuda’s own advice is to install the latest firmware and the security patches it lists, rather than to stop at a single build number.</p>
+        <p>The patch identifiers in Barracuda’s advisory are BNSF-40425 for Email Security Gateway 9.4.017 and later, BNSF-40430 for older Email Security Gateway builds, BNADC-16586 for the Load Balancer ADC and the Web Application Firewall, BNMA-32468 for the Message Archiver, BNWF-60060 for the WAF Control Center, and BNYF-24789 for the Web Security Gateway.</p>
+        <h2>What to do this week</h2>
+        <ol>
+          <li><strong>Find out if you have one of these appliances.</strong> Ask your IT provider whether you use a Barracuda Email Security Gateway, Load Balancer ADC, Message Archiver, WAF, WAF Control Center, or Web Security Gateway, including any unit they manage for you. Write down the answer.</li>
+          <li><strong>Confirm the latest firmware and patches are on.</strong> Barracuda says customers should verify that systems are on the latest firmware and have received all security patches. If automatic patching was turned off, turn it back on. A device that is several versions behind may need more than one update. Contact Barracuda Support if you need help applying a patch.</li>
+          <li><strong>Keep the admin interface off the internet.</strong> Barracuda recommends restricting administrative interfaces to trusted internal networks. Organizations whose admin pages are not reachable from the public internet are less exposed to this attack path.</li>
+          <li><strong>If the admin page was exposed, do a forensic review.</strong> Installing a patch does not undo a change an attacker may already have made. CISA’s catalog entries for both flaws are marked for forensic triage. Ask your provider to look for unexpected configuration changes, unexpected backup restores, timezone changes, and unusual administrator activity, then follow Barracuda’s current guidance.</li>
+        </ol>
+        <h2>Questions to ask your IT provider</h2>
+        <ul>
+          <li>Do we run a Barracuda Email Security Gateway, Load Balancer ADC, Message Archiver, WAF, WAF Control Center, or Web Security Gateway, including any appliance you manage for us?</li>
+          <li>Is the administrative interface reachable from the public internet? If it was, when was that closed, and what did you review afterward?</li>
+          <li>Are we on the latest firmware, and have the patches Barracuda lists for CVE-2026-116606 and CVE-2026-111560 been applied? Is automatic patching turned on?</li>
+          <li>If the admin page was exposed, have you looked for unexpected configuration changes, backup restores, timezone changes, and administrator activity?</li>
+        </ul>
+        <p>If you want a second opinion on what to ask your provider, our $29 <a href="../services/quick-answer.html">Quick Answer</a> service covers that question.</p>
+        <h2>Sources</h2>
+        <ul class="sources">
+          <li><a href="https://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection" rel="noopener">Barracuda, “Pre-Authentication Authorization Bypass and Command Injection Vulnerabilities in Certain Barracuda Products”</a>, published November 2, 2026; updated November 5, 2026, 2:30 p.m. EST (authentication not required for CVE-2026-116606, administrative UI access required) and November 9, 2026, 9:00 p.m. EST (exploitation activity affecting a small number of organizations); CVSS 9.3 and 8.6; affected products and patch identifiers</li>
+          <li><a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">CISA Known Exploited Vulnerabilities catalog JSON feed</a>, version 2026.11.10, released November 10, 2026, at 2:03 p.m. Eastern time (CVE-2026-116606 and CVE-2026-111560 added November 10, due November 13, forensic triage marked Yes, known ransomware use Unknown; both entries note the flaws can be chained)</li>
+          <li><a href="https://www.cisa.gov/news-events/alerts/2026/11/10/cisa-adds-six-known-exploited-vulnerabilities-catalog" rel="noopener">CISA, “CISA Adds Six Known Exploited Vulnerabilities to Catalog”</a>, November 10, 2026 (additions based on evidence of active exploitation)</li>
+          <li><a href="https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0042.md" rel="noopener">Mandiant, MNDT-2026-0042</a> (CVE-2026-116606, Email Security Gateway versions earlier than 9.4.0.030, CVSS 9.3)</li>
+          <li><a href="https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0041.md" rel="noopener">Mandiant, MNDT-2026-0041</a> (CVE-2026-111560, command injection in the timezone field, affected products and versions, CVSS 8.6)</li>
+        </ul>
+        <p>Related: <a href="n-able-n-central-offline-able2shell.html">N-able took N-central offline. Ask your MSP if they use it.</a> and <a href="../topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
+        <div class="author-box">
+          <div class="avatar">ES</div>
+          <div>
+            <strong>Emilio Santos</strong> edits Circuit &amp; Capital. How we source and correct pieces: <a href="../editorial.html">editorial standards</a>.
+            <div class="meta"><a href="mailto:circuits50capital@circuits.fit">circuits50capital@circuits.fit</a></div>
+          </div>
+        </div>
+        <section class="newsletter" aria-labelledby="newsletter-heading">
+          <h2 id="newsletter-heading">Get the weekly Circuit &amp; Capital briefing</h2>
+          <p>One email a week with the latest articles and tools. Unsubscribe at any time.</p>
+          <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="d0ebd95b-cec8-4f1a-b043-2c8b7c8087b9"></script>
+        </section>
+      </article>
+      <aside class="sidebar">
+        <aside class="ad-slot ad-slot--rect" data-slot="sidebar" aria-label="Advertisement">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </aside>
+        <div class="section-head"><h2>Related</h2></div>
+        <div class="popular">
+          <ol>
+            <li><a href="n-able-n-central-offline-able2shell.html">N-able took N-central offline</a></li>
+            <li><a href="kev-patch-tuesday-calendar-nov-10-13.html">This week’s patch calendar</a></li>
+            <li><a href="../services/quick-answer.html">Quick Answer, $29</a></li>
+            <li><a href="../tools/risk-exception-register.html">Risk exception register</a></li>
+            <li><a href="../topics/security-vulnerabilities.html">Security and vulnerabilities hub</a></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <div id="site-footer">
+      <footer class="site-foot">
+        <div class="wrap foot-grid">
+          <div>
+            <h3>Circuit &amp; Capital</h3>
+            <p>Sourced briefings and operator guides on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</p>
+          </div>
+          <div>
+            <h3>Sections</h3>
+            <ul>
+              <li><a href="../">Home</a></li>
+              <li><a href="../briefing.html">Briefing</a></li>
+              <li><a href="../guides/">Guides</a></li>
+              <li><a href="../tools/">Tools</a></li><li><a href="../topics/">Topics</a></li>
+              <li><a href="../categories/markets.html">Markets</a></li>
+              <li><a href="../categories/technology.html">Technology</a></li>
+              <li><a href="../categories/policy.html">Policy</a></li>
+              <li><a href="../about.html">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Advertising</h3>
+            <ul>
+              <li><a href="../advertise.html">Advertise</a></li>
+              <li><a href="../advertise.html#specs">Ad specs</a></li>
+              <li><a href="../about.html">Masthead</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="../editorial.html">Editorial standards</a></li>
+              <li><a href="../corrections.html">Corrections</a></li>
+              <li><a href="../privacy.html">Privacy</a></li>
+              <li><a href="../terms.html">Terms</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Follow</h3>
+            <ul>
+              <li><a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a></li>
+              <li><a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a></li>
+              <li><a href="https://medium.com/@circuitsfit" rel="noopener">Medium</a></li>
+              <li><a href="https://dev.to/circuitsfit" rel="noopener">dev.to</a></li>
+              <li><a href="https://circuitsfit.hashnode.dev" rel="noopener">Hashnode</a></li>
+              <li><a href="https://x.com/circuitsfit" rel="noopener">X</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="wrap foot-bottom">
+          <div>© 2026 Circuit &amp; Capital. All rights reserved.</div>
+          <div>Circuit &amp; Capital is a business and technology publication. It is not a fitness brand.</div>
+        </div>
+      </footer>
+      <div class="ad-sticky" aria-label="Advertisement">
+        <button type="button" data-close-sticky aria-label="Close ad">×</button>
+        <div class="ad-slot" data-slot="mobileSticky" data-ad-slot="">
+          <span class="ad-slot__label">Advertisement</span>
+          <div class="ad-slot__box"></div>
+        </div>
+      </div>
+      <div class="cookie" id="cookie">
+        <p>We use a cookie to remember this choice. Accept may load analytics. Necessary only does not. This banner does not record the ad choice. See our <a href="../privacy.html">privacy policy</a>.</p>
+        <div class="cookie__row">
+          <button class="btn btn--copper" type="button" data-cookie="accept">Accept</button>
+          <button class="btn btn--ghost" type="button" data-cookie="reject" style="border-color:#5a6570">Necessary only</button>
+        </div>
+      </div>
+      <div class="toast" id="toast" role="status"></div>
+    </div>
+  <script src="../js/config.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="../js/ads.js"></script>
+</body>
+</html>

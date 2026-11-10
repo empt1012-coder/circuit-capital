@@ -1,6 +1,17 @@
 {
   "articles": [
     {
+      "slug": "barracuda-esg-cisa-kev",
+      "title": "Barracuda appliances are on CISA’s exploited list. Check firmware this week.",
+      "dek": "CISA added two Barracuda flaws to its Known Exploited Vulnerabilities catalog on November 10, with a due date of November 13. Barracuda has identified exploitation activity affecting a small number of organizations. Confirm the latest firmware and patches, keep the admin interface off the internet, and review the device if that page was reachable.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "November 10, 2026",
+      "readTime": 5,
+      "image": "assets/images/colo.jpg",
+      "body": "Barracuda Email Security Gateway ESG CVE-2026-116606 CVE-2026-111560 CISA KEV pre-authentication authorization bypass command injection firmware admin interface forensic triage November 13 2026 Mandiant WAF Load Balancer ADC Message Archiver WAF Control Center Web Security Gateway"
+    },
+    {
       "slug": "n-able-n-central-offline-able2shell",
       "title": "N-able took N-central offline. Ask your MSP if they use it.",
       "dek": "A researcher published 33 unpatched flaws, with exploit code, in the tool many managed service providers use to run client computers. N-able has taken hosted N-central down and told on-premises customers to leave servers off until a hotfix lands.",
