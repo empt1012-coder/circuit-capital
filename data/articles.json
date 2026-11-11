@@ -1,6 +1,39 @@
 {
   "articles": [
     {
+      "slug": "openssh-password-bypass-cve-2026-123158",
+      "title": "An OpenSSH bug lets attackers skip the password on some Linux servers. CISA’s deadline is November 12.",
+      "dek": "CISA added CVE-2026-123158 to its Known Exploited Vulnerabilities catalog on November 9, with a due date of November 12. It affects sshd built without PAM on systems using the musl C library, such as Alpine Linux. Update to OpenSSH 10.6p2 or your distribution’s fixed package and restart sshd, or turn password logins off.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "November 11, 2026",
+      "readTime": 6,
+      "image": "assets/images/datacenter.jpg",
+      "body": "OpenSSH CVE-2026-123158 password authentication bypass sshd PAM musl Alpine Linux 10.6p2 CISA KEV November 12 2026 PasswordAuthentication tiny-cloud doas GPUStack CVE-2026-102895 FreeSWITCH CVE-2026-116779 IBM Aspera Faspex CVE-2026-123218"
+    },
+    {
+      "slug": "cisco-broadworks-cve-2026-20320-kev",
+      "title": "Cisco BroadWorks is on CISA’s exploited list. Ask your phone provider if they patched.",
+      "dek": "CISA added CVE-2026-20320 to its Known Exploited Vulnerabilities catalog on November 10, with a due date of November 24. Cisco fixed the unauthenticated file-read flaw in August in release RI.2026.07, with no workaround. A security firm reported that an AI agent used it to break into a European telecom. Ask your provider, and check your own default passwords.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "November 11, 2026",
+      "readTime": 6,
+      "image": "assets/images/port.jpg",
+      "body": "Cisco BroadWorks CVE-2026-20320 XXE OCI XML parser RI.2026.07 CISA KEV November 24 2026 Operation Snowball Malbear Labs AI agent telecom hosted voice provider default passwords"
+    },
+    {
+      "slug": "copilot-business-usage-billing-default-2027",
+      "title": "Copilot usage billing moved to early 2027. Set your spending limit before you buy.",
+      "dek": "Microsoft now says new Microsoft 365 Copilot Business purchases through resellers will switch on usage-based billing by default in January to March 2027, not December 1. The default is 4,000 Copilot Credits per user per month, it applies across the tenant, and it can be capped at zero but not turned off.",
+      "category": "Markets",
+      "author": "Emilio Santos",
+      "date": "November 11, 2026",
+      "readTime": 6,
+      "image": "assets/images/finance.jpg",
+      "body": "Microsoft 365 Copilot Business usage-based billing CSP reseller spending limit 4,000 Copilot Credits per user FY27 Q3 January March 2027 December 1 Partner Center pay-as-you-go renewal"
+    },
+    {
       "slug": "barracuda-esg-cisa-kev",
       "title": "Barracuda appliances are on CISA’s exploited list. Check firmware this week.",
       "dek": "CISA added two Barracuda flaws to its Known Exploited Vulnerabilities catalog on November 10, with a due date of November 13. Barracuda has identified exploitation activity affecting a small number of organizations. Confirm the latest firmware and patches, keep the admin interface off the internet, and review the device if that page was reachable.",
@@ -260,8 +293,8 @@
     {
       "slug": "cyber-insurance-checklist-2026",
       "type": "guide",
-      "title": "Cyber Insurance Checklist for Mid-Market IT Budgets (2026)",
-      "dek": "MFA, EDR, immutable backups, IR retainer, and who owns broker versus IT while rates are still walking down.",
+      "title": "Cyber insurance renewal prep for mid-market IT budgets (2026)",
+      "dek": "Renewal-application prep: broker versus IT ownership, the questionnaire items that stall a binder, and each control as a budget line.",
       "category": "Guides",
       "author": "Emilio Santos",
       "date": "September 4, 2026",
@@ -284,8 +317,8 @@
     {
       "slug": "ai-spend-vs-return",
       "type": "guide",
-      "title": "How to Tell AI Spend from AI Return",
-      "dek": "Seat cost versus token cost, pilot versus production, and questions a board can ask. No guaranteed-return claims.",
+      "title": "AI budget review: how to tell AI spend from AI return",
+      "dek": "Portfolio-level AI budget review: sort every AI line into seat or usage, pilot or production, and ask the board questions that separate spend from return.",
       "category": "Guides",
       "author": "Emilio Santos",
       "date": "September 4, 2026",
@@ -320,8 +353,8 @@
     {
       "slug": "cyber-insurance-controls-checklist",
       "type": "guide",
-      "title": "What a Cyber Insurer Will Still Ask",
-      "dek": "MFA, EDR, backups, privilege, retainer — even when rates are falling.",
+      "title": "What a cyber insurer will still ask: the controls evidence checklist",
+      "dek": "Controls evidence: the proof to have ready for MFA, EDR, backups, privileged access and an incident retainer, plus a 60-day plan.",
       "category": "Guides",
       "author": "Emilio Santos",
       "date": "September 2, 2026",
@@ -332,8 +365,8 @@
     {
       "slug": "put-an-ai-cost-on-one-workflow",
       "type": "guide",
-      "title": "Put an AI Cost on One Workflow",
-      "dek": "Tokens, review time, and rework on a single process with a definition of done.",
+      "title": "Put an AI cost on one workflow: a 90-day costing method",
+      "dek": "One-workflow costing: a 90-day method to put token spend, review time and rework on a single process with a definition of done.",
       "category": "Guides",
       "author": "Emilio Santos",
       "date": "September 2, 2026",

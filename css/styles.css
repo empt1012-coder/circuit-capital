@@ -564,6 +564,11 @@ nav.nav {
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--rule);
 }
+.prose .follow-line {
+  font-size: 0.95em;
+  margin-top: 1.5rem;
+}
+
 .author-box {
   display: grid;
   grid-template-columns: 56px 1fr;

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://circuits.fit/articles/openssh-password-bypass-cve-2026-123158.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/cisco-broadworks-cve-2026-20320-kev.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/copilot-business-usage-billing-default-2027.html</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
     <loc>https://circuits.fit/articles/barracuda-esg-cisa-kev.html</loc>
     <lastmod>2026-11-10</lastmod>
   </url>
@@ -46,7 +58,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/briefing.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/contact.html</loc>
@@ -54,11 +66,11 @@
   </url>
   <url>
     <loc>https://circuits.fit/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/privacy.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/corrections.html</loc>
@@ -78,7 +90,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/articles/ai-spend-is-not-the-same-as-ai-return.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/astra-ultrafast-is-a-speed-claim.html</loc>
@@ -114,7 +126,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/articles/cyber-got-cheaper-the-questionnaire-did-not.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/cyber-insurance-it-budgets.html</loc>
@@ -166,11 +178,11 @@
   </url>
   <url>
     <loc>https://circuits.fit/categories/guides.html</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/categories/markets.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/categories/opinion.html</loc>
@@ -178,7 +190,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/categories/policy.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/categories/startups.html</loc>
@@ -194,7 +206,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/guides/ai-spend-vs-return.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html</loc>
@@ -214,11 +226,11 @@
   </url>
   <url>
     <loc>https://circuits.fit/guides/cyber-insurance-checklist-2026.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/guides/cyber-insurance-controls-checklist.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/guides/how-to-read-a-saas-renewal.html</loc>
@@ -226,7 +238,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/guides/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/guides/limit-what-an-agent-can-touch.html</loc>
@@ -242,7 +254,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/guides/software-buying-operating-skill.html</loc>
@@ -278,7 +290,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/tools/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/risk-exception-register.html</loc>
@@ -302,7 +314,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/editorial.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html</loc>
@@ -334,7 +346,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/articles/wordpress-core-upgrade-race-cisa-kev.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/ivanti-gitlab-cisco-kev-deadlines.html</loc>
@@ -354,11 +366,11 @@
   </url>
   <url>
     <loc>https://circuits.fit/topics/renewals-saas-spend.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/topics/security-vulnerabilities.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/topics/ai-costs.html</loc>
