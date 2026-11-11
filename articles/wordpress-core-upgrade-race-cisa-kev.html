@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="https://circuits.fit/assets/images/nightdesk.jpg">
   <meta property="article:published_time" content="2026-11-03">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "WordPress is on the exploited catalog. Get to 7.1.4 this week.", "description": "CISA added a WordPress Core race condition, CVE-2026-119977, to its exploited catalog on November 3, with a federal due date of November 6. WordPress 7.1.4, released October 28, fixes it. The risk sits in the upgrade itself.", "image": ["https://circuits.fit/assets/images/nightdesk.jpg"], "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/wordpress-core-upgrade-race-cisa-kev.html", "articleSection": "Policy"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "WordPress is on the exploited catalog. Get to 7.1.4 this week.", "description": "CISA added a WordPress Core race condition, CVE-2026-119977, to its exploited catalog on November 3, with a federal due date of November 6. WordPress 7.1.4, released October 28, fixes it. The risk sits in the upgrade itself.", "image": ["https://circuits.fit/assets/images/nightdesk.jpg"], "datePublished": "2026-11-03", "dateModified": "2026-11-11", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/wordpress-core-upgrade-race-cisa-kev.html", "articleSection": "Policy"}
   </script>
   <meta name="google-adsense-account" content="ca-pub-3634982565972955">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3634982565972955" crossorigin="anonymous"></script>
@@ -88,6 +88,7 @@
       <div class="byline-row">
         <span>Edited by <strong>Emilio Santos</strong></span>
         <span><time datetime="2026-11-03">November 3, 2026</time></span>
+        <span>Updated <time datetime="2026-11-11">November 11, 2026</time></span>
         <span>4 min read</span>
       </div>
     </header>
@@ -118,8 +119,25 @@
           <li><strong>If something looks wrong, preserve first.</strong> Take a full backup of files and database before cleaning, change all admin and hosting passwords, and ask your host for access logs.</li>
         </ol>
         <p>If you want a second opinion on whether you are exposed and what to do first, our <a href="../services/quick-answer.html">Quick Answer</a> service covers exactly that question.</p>
+        <h2>Worked example: when a site cannot be updated today</h2>
+        <p>Sometimes the honest answer from an agency is “not this week,” usually because a custom theme or plugin needs testing first. We ran that situation through our free <a href="../tools/risk-exception-register.html">risk exception register</a> on November 11, using the tool’s own scoring code with the review date set to November 4, the day after CISA’s listing. <strong>These are illustrative inputs, not a real client.</strong></p>
+        <ul>
+          <li><strong>Row 1.</strong> Control: CISA KEV. System: marketing site on WordPress 7.1.2. Owner: the web agency’s named contact. Reason: waiting to test a custom theme on 7.1.4. Compensating control: nightly backup. Funded: yes, 400. Expiry: November 13. Accepted by: the owner.</li>
+          <li><strong>Row 2.</strong> Control: Other. System: a 2024 campaign landing site. Reason: nobody remembers who built it. No owner, no expiry, no funded fix.</li>
+          <li><strong>Row 3.</strong> Control: Other. System: retire the 2024 campaign site. Owner: office manager. Reason: export the leads, then delete the site. Compensating control: maintenance mode. Funded: yes, 150. Expiry: December 31.</li>
+        </ul>
+        <p>The register returned:</p>
+        <ul>
+          <li>Row 1: “CISA KEV — Not waivable,” flag “Expires in 9 days.” A funded fix and a named owner do not change the label. The register’s position is that a known-exploited bug on a public website is a reason to update, not to record a delay, and a nightly backup does not stop code execution.</li>
+          <li>Row 2: flags “No owner. No expiry date. No funded fix.” This is the row that matters most in practice. A forgotten WordPress site is the one nobody updates.</li>
+          <li>Row 3: no flags. Turning the forgotten site into a funded, owned task with an end date is what a healthy exception looks like.</li>
+          <li>Summary line: “Not waivable: 1. Rows with a missing owner, expiry, or funded fix, or an expiry inside 30 days: 2.”</li>
+        </ul>
+        <p>Limits: the register checks for missing fields and dates. It does not know whether a site is exposed, whether the backup works, or whether the theme test is real. Amounts are in whatever currency you type, and dates use your device’s clock.</p>
+        <h2>Follow-up check, November 11</h2>
+        <p>We rechecked the primary sources eight days after the listing. WordPress.org’s public version-check service still offers 7.1.4 as the current release, and the WordPress security news page lists no newer security release. The CISA catalog entry is unchanged, still dated November 3. NVD now shows the record as Analyzed, last modified November 4. It previously showed Deferred.</p>
         <h2>What to watch next</h2>
-        <p>NVD lists the record as Deferred, so a fuller analysis may not follow. Watch the catalog row and the WordPress security announcements for changes. WordPress says its next major release, 7.2, is planned for December 8.</p>
+        <p>Watch the catalog row and the WordPress security announcements for changes. WordPress says its next major release, 7.2, is planned for December 8.</p>
         <h2>Sources</h2>
         <ul class="sources">
           <li><a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">CISA Known Exploited Vulnerabilities catalog JSON feed</a>, version 2026.11.03 (CVE-2026-119977: added November 3, due November 6, ransomware use Unknown, forensic triage Yes, CWE-367)</li>
@@ -128,7 +146,8 @@
           <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119977" rel="noopener">NVD entry, CVE-2026-119977</a> (affected versions 4.7 through 7.1.3)</li>
           <li><a href="https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk" rel="noopener">BOD 26-04, Prioritizing Security Updates Based on Risk</a></li>
         </ul>
-        <p>Related: <a href="ivanti-gitlab-cisco-kev-deadlines.html">Three exploited bugs, three deadlines: Ivanti, GitLab and Cisco VPN</a>, the previous catalog briefing, and <a href="../topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
+        <p>Related: <a href="../tools/risk-exception-register.html">Risk exception register</a>, the free tool used above, <a href="ivanti-gitlab-cisco-kev-deadlines.html">Three exploited bugs, three deadlines: Ivanti, GitLab and Cisco VPN</a>, the previous catalog briefing, and <a href="../topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
+        <p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>
         <div class="author-box">
           <div class="avatar">ES</div>
           <div>

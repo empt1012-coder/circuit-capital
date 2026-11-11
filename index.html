@@ -87,13 +87,13 @@
         </div>
         <article class="lead">
           <div class="lead__media">
-            <a href="articles/kev-patch-tuesday-calendar-nov-10-13.html"><picture><source srcset="assets/images/datacenter.webp" type="image/webp"><img src="assets/images/datacenter.jpg" alt="Rows of servers in a data center" width="1280" height="720" decoding="async"></picture></a>
+            <a href="articles/openssh-password-bypass-cve-2026-123158.html"><picture><source srcset="assets/images/datacenter.webp" type="image/webp"><img src="assets/images/datacenter.jpg" alt="Rows of servers in a data center" width="1280" height="720" decoding="async"></picture></a>
           </div>
           <div>
             <div class="kicker">Policy</div>
-            <h1><a href="articles/kev-patch-tuesday-calendar-nov-10-13.html">Next week’s patch calendar: four KEV deadlines and a Patch Tuesday</a></h1>
-            <p class="dek">Magento and Brotli are due November 10, VMware ESX November 11 and Ivanti Connect Secure November 13. Microsoft and Fortinet both publish on November 10. One page to plan the week.</p>
-            <div class="meta">Emilio Santos · November 4, 2026</div>
+            <h1><a href="articles/openssh-password-bypass-cve-2026-123158.html">An OpenSSH bug lets attackers skip the password on some Linux servers. CISA’s deadline is November 12.</a></h1>
+            <p class="dek">CISA added CVE-2026-123158 to its Known Exploited Vulnerabilities catalog on November 9, with a due date of November 12. It affects sshd built without PAM on systems using the musl C library, such as Alpine Linux. Update to OpenSSH 10.6p2 or your distribution’s fixed package and restart sshd, or turn password logins off.</p>
+            <div class="meta">Emilio Santos · November 11, 2026</div>
           </div>
         </article>
       </section>
@@ -106,6 +106,33 @@
           <a href="briefing.html">All briefings</a>
         </div>
         <div class="home-latest">
+          <article class="latest-row">
+            <a aria-label="An OpenSSH bug lets attackers skip the password on some Linux servers. CISA’s deadline is November 12." href="articles/openssh-password-bypass-cve-2026-123158.html"><picture><source srcset="assets/images/datacenter.webp" type="image/webp"><img src="assets/images/datacenter.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></picture></a>
+            <div>
+              <div class="kicker">Policy</div>
+              <h3><a href="articles/openssh-password-bypass-cve-2026-123158.html">An OpenSSH bug lets attackers skip the password on some Linux servers. CISA’s deadline is November 12.</a></h3>
+              <p class="dek">CISA added CVE-2026-123158 to its Known Exploited Vulnerabilities catalog on November 9, with a due date of November 12. It affects sshd built without PAM on systems using the musl C library, such as Alpine Linux. Update to OpenSSH 10.6p2 or your distribution’s fixed package and restart sshd, or turn password logins off.</p>
+              <div class="meta">Emilio Santos · November 11, 2026 · 6 min read</div>
+            </div>
+          </article>
+          <article class="latest-row">
+            <a aria-label="Cisco BroadWorks is on CISA’s exploited list. Ask your phone provider if they patched." href="articles/cisco-broadworks-cve-2026-20320-kev.html"><picture><source srcset="assets/images/port.webp" type="image/webp"><img src="assets/images/port.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></picture></a>
+            <div>
+              <div class="kicker">Policy</div>
+              <h3><a href="articles/cisco-broadworks-cve-2026-20320-kev.html">Cisco BroadWorks is on CISA’s exploited list. Ask your phone provider if they patched.</a></h3>
+              <p class="dek">CISA added CVE-2026-20320 to its Known Exploited Vulnerabilities catalog on November 10, with a due date of November 24. Cisco fixed the unauthenticated file-read flaw in August in release RI.2026.07, with no workaround. A security firm reported that an AI agent used it to break into a European telecom. Ask your provider, and check your own default passwords.</p>
+              <div class="meta">Emilio Santos · November 11, 2026 · 6 min read</div>
+            </div>
+          </article>
+          <article class="latest-row">
+            <a aria-label="Copilot usage billing moved to early 2027. Set your spending limit before you buy." href="articles/copilot-business-usage-billing-default-2027.html"><picture><source srcset="assets/images/finance.webp" type="image/webp"><img src="assets/images/finance.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></picture></a>
+            <div>
+              <div class="kicker">Markets</div>
+              <h3><a href="articles/copilot-business-usage-billing-default-2027.html">Copilot usage billing moved to early 2027. Set your spending limit before you buy.</a></h3>
+              <p class="dek">Microsoft now says new Microsoft 365 Copilot Business purchases through resellers will switch on usage-based billing by default in January to March 2027, not December 1. The default is 4,000 Copilot Credits per user per month, it applies across the tenant, and it can be capped at zero but not turned off.</p>
+              <div class="meta">Emilio Santos · November 11, 2026 · 6 min read</div>
+            </div>
+          </article>
           <article class="latest-row">
             <a aria-label="Barracuda appliances are on CISA’s exploited list. Check firmware this week." href="articles/barracuda-esg-cisa-kev.html"><picture><source srcset="assets/images/colo.webp" type="image/webp"><img src="assets/images/colo.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></picture></a>
             <div>
@@ -448,6 +475,9 @@
           <a href="tools/">All tools</a>
         </div>
         <ul class="updated-list">
+          <li><a href="articles/openssh-password-bypass-cve-2026-123158.html">OpenSSH password bypass briefing</a> · New November 11, 2026: CVE-2026-123158 added to CISA’s exploited catalog November 9, due November 12, who is affected (sshd without PAM on musl, such as Alpine), checked against OpenSSH, Alpine, CISA and NVD.</li>
+          <li><a href="articles/cisco-broadworks-cve-2026-20320-kev.html">Cisco BroadWorks briefing</a> · New November 11, 2026: CVE-2026-20320 added to CISA’s exploited catalog November 10, due November 24, with the question to send your phone or hosting provider, checked against Cisco and CISA.</li>
+          <li><a href="articles/copilot-business-usage-billing-default-2027.html">Copilot usage billing briefing</a> · New November 11, 2026: default-on usage billing for Copilot Business through resellers moved to January to March 2027, with a 10-user worked example, checked against Microsoft Partner Center.</li>
           <li><a href="articles/barracuda-esg-cisa-kev.html">Barracuda KEV briefing</a> · New November 10, 2026: CVE-2026-116606 and CVE-2026-111560 added to CISA’s exploited catalog, due November 13, checked against Barracuda, CISA and Mandiant.</li>
           <li><a href="articles/n-able-n-central-offline-able2shell.html">N-able N-central briefing</a> · New November 10, 2026: Able2Shell flaws published, hosted N-central taken offline, what to ask your MSP, checked against N-able’s status page.</li>
           <li><a href="articles/enterprise-ai-spend-four-reports-nov-2026.html">AI spend roundup</a> · New November 7, 2026: Menlo, West Monroe, RGP and CloudZero numbers side by side, with an FY2027 checklist.</li>
