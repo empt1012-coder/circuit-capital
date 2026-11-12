@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://circuits.fit/articles/chrome-157-update-cve-2026-125350.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/notion-ai-vendor-incident-fireworks.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
     <loc>https://circuits.fit/articles/openssh-password-bypass-cve-2026-123158.html</loc>
     <lastmod>2026-11-11</lastmod>
   </url>
@@ -58,7 +66,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/briefing.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/contact.html</loc>
@@ -66,7 +74,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/privacy.html</loc>
@@ -190,7 +198,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/categories/policy.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/categories/startups.html</loc>
@@ -370,7 +378,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/topics/security-vulnerabilities.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/topics/ai-costs.html</loc>
