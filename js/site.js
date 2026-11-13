@@ -89,6 +89,7 @@
           <div>
             <h3>Circuit &amp; Capital</h3>
             <p>Sourced briefings and operator guides on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</p>
+            <p>As featured in <a href="https://stonebridgeherald.com/article/cloud-based-collaboration-platforms/" rel="noopener">Stonebridge Herald</a>.</p>
           </div>
           <div>
             <h3>Sections</h3>
