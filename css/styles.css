@@ -899,6 +899,28 @@ footer.site-foot {
 .newsletter h2 { font-family: var(--display); font-size: 1.25rem; margin: 0 0 0.5rem; }
 .newsletter p { margin: 0 0 1rem; color: var(--ink-2); }
 
+/* Make the free subscribe form easier to see. Pack CTAs keep the plain .newsletter box. */
+.newsletter--inline,
+.newsletter[aria-labelledby="newsletter-heading"],
+.newsletter[aria-labelledby="tool-subscribe-heading"] {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--copper);
+  padding: 1.5rem 1.5rem 1.5rem 1.6rem;
+}
+.newsletter--inline {
+  margin: 1.75rem 0;
+}
+.newsletter--inline .btn--ink {
+  background: var(--copper);
+  border-color: var(--copper);
+  color: var(--paper);
+}
+.newsletter--inline .btn--ink:hover {
+  background: var(--copper-dark);
+  border-color: var(--copper-dark);
+}
+
 /* Partner card (homepage) */
 .partner .kicker { margin-bottom: 0.75rem; }
 .partner-body { display: flex; gap: 1.25rem; align-items: center; }
