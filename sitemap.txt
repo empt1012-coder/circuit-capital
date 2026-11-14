@@ -104,3 +104,5 @@ https://circuits.fit/articles/barracuda-esg-cisa-kev.html
 https://circuits.fit/articles/openssh-password-bypass-cve-2026-123158.html
 https://circuits.fit/articles/cisco-broadworks-cve-2026-20320-kev.html
 https://circuits.fit/articles/copilot-business-usage-billing-default-2027.html
+https://circuits.fit/articles/chrome-157-update-cve-2026-125350.html
+https://circuits.fit/articles/notion-ai-vendor-incident-fireworks.html

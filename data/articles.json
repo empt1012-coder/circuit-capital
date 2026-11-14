@@ -1,6 +1,28 @@
 {
   "articles": [
     {
+      "slug": "chrome-157-update-cve-2026-125350",
+      "title": "Relaunch Chrome this week. Check it shows 157.0.8103.78 or later.",
+      "dek": "Google’s November 9 Stable update fixed CVE-2026-125350, a use-after-free in XML that Google says is exploited in the wild. CISA added it to its Known Exploited Vulnerabilities catalog the next day, with a due date of November 24. The current Stable build, posted November 11, is 157.0.8103.78 for Linux and 157.0.8103.78/.79 for Windows and Mac, and it includes 83 security fixes, five of them Critical. Relaunch Chrome on every PC this week and confirm that version, or later.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "November 12, 2026",
+      "readTime": 5,
+      "image": "assets/images/nightdesk.jpg",
+      "body": "Chrome 157.0.8103.78 157.0.8103.79 CVE-2026-125350 use after free XML exploited in the wild CISA KEV November 24 2026 83 security fixes five Critical CVE-2026-126885 CVE-2026-126895 CVE-2026-126879 CVE-2026-126846 CVE-2026-126911 relaunch Stable Edge Opera"
+    },
+    {
+      "slug": "notion-ai-vendor-incident-fireworks",
+      "title": "Notion AI chat transcripts were exposed at a vendor. Keep passwords out of the chat.",
+      "dek": "Notion’s advisory, first posted November 10, says a security incident at Fireworks AI, the vendor Notion used for its Insights feature and for some open-weight models, affected fewer than 1% of workspaces. The exposed data is Notion AI chat transcripts used for Insights, and Notion says that for the vast majority of impacted workspaces the chats were not labeled with a user or a workspace. Notion has turned Insights off, stopped using Fireworks, and on November 11 revoked exposed Notion API keys it found in those messages. If Notion has not contacted you, it says no action is needed right now.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "November 12, 2026",
+      "readTime": 5,
+      "image": "assets/images/office.jpg",
+      "body": "Notion AI Fireworks AI Insights chat transcripts vendor incident fewer than 1% workspaces unattributable API keys revoked November 11 2026 password manager credentials open-weight models"
+    },
+    {
       "slug": "openssh-password-bypass-cve-2026-123158",
       "title": "An OpenSSH bug lets attackers skip the password on some Linux servers. CISA’s deadline is November 12.",
       "dek": "CISA added CVE-2026-123158 to its Known Exploited Vulnerabilities catalog on November 9, with a due date of November 12. It affects sshd built without PAM on systems using the musl C library, such as Alpine Linux. Update to OpenSSH 10.6p2 or your distribution’s fixed package and restart sshd, or turn password logins off.",
