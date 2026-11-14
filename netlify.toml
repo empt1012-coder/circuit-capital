@@ -11,6 +11,9 @@
     baseUrl = "https://circuits.fit"
     sitemapPath = "/sitemap.xml"
 
+[[plugins]]
+  package = "./netlify/plugins/indexnow"
+
 [[headers]]
   for = "/*"
   [headers.values]

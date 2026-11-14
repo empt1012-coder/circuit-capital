@@ -22,13 +22,15 @@ Contact is a Netlify Form on the live site. The newsletter signup is off until t
 
 ## IndexNow
 
-The IndexNow key file `fa0dbeb168f8be4d7b78c8a611a89d05.txt` lives at the publish root (served at https://circuits.fit/fa0dbeb168f8be4d7b78c8a611a89d05.txt). After deploying new content, run:
+The IndexNow key file `fa0dbeb168f8be4d7b78c8a611a89d05.txt` lives at the publish root (served at https://circuits.fit/fa0dbeb168f8be4d7b78c8a611a89d05.txt). A Netlify build plugin pings https://api.indexnow.org/indexnow after a successful deploy, submitting new or lastmod-changed URLs from `sitemap.xml`. If the previous sitemap cannot be fetched, it submits the full list. A failed ping does not fail the deploy.
+
+To submit the full list yourself after a deploy:
 
 ```
 ./scripts/indexnow.sh            # submits every <loc> in sitemap.xml
 ```
 
-It POSTs the URLs to https://api.indexnow.org/indexnow; HTTP 200 or 202 means success.
+HTTP 200 or 202 means success.
 
 ## RSS full content
 
