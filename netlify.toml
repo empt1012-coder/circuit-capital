@@ -1,4 +1,5 @@
 [build]
+  command = "python3 -m pip install --user -r requirements-feed.txt && python3 scripts/feed-content.py"
   publish = "."
 
 [build.environment]

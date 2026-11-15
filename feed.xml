@@ -21,21 +21,20 @@
 <p>The November 11 Stable post says the update includes 83 security fixes. Five are listed as Critical: <strong>CVE-2026-126885</strong>, a use-after-free in ServiceWorker; <strong>CVE-2026-126895</strong>, a use-after-free in CSS; <strong>CVE-2026-126879</strong>, a use-after-free in Layout; <strong>CVE-2026-126846</strong>, a use-after-free in Skia; and <strong>CVE-2026-126911</strong>, a use-after-free in Accessibility. None of the November 11 entries carry a note that they are being exploited.</p>
 <h2>What to do this week</h2>
 <ol>
-  <li><strong>Relaunch Chrome on every work PC this week</strong>, including laptops that have been left open for days. Chrome often downloads an update in the background, but the new build does not protect the user until the browser is relaunched.</li>
-  <li><strong>Confirm the version.</strong> In Chrome, open Settings and then About Chrome, or go to <code>chrome://settings/help</code>. You want 157.0.8103.78 or later. If an update is still downloading, wait for it to finish and relaunch again.</li>
-  <li><strong>If you manage Chrome centrally, force a relaunch</strong> rather than waiting for each person to close the browser. The November 11 build is rolling out over the coming days and weeks, so check again later in the week on any machine that is still behind.</li>
-  <li><strong>If your team also uses Microsoft Edge, Opera or another Chromium-based browser, check those products for their own current updates.</strong> CISA’s catalog entry notes that the November 9 flaw could affect them as well. A Chrome relaunch does not cover those browsers.</li>
-  <li><strong>Federal civilian agencies have until November 24</strong> to address CVE-2026-125350. A private firm is not under the same mandate, but the date is a useful priority signal: get to the current Chrome build this week, not next month.</li>
+<li><strong>Relaunch Chrome on every work PC this week</strong>, including laptops that have been left open for days. Chrome often downloads an update in the background, but the new build does not protect the user until the browser is relaunched.</li>
+<li><strong>Confirm the version.</strong> In Chrome, open Settings and then About Chrome, or go to <code>chrome://settings/help</code>. You want 157.0.8103.78 or later. If an update is still downloading, wait for it to finish and relaunch again.</li>
+<li><strong>If you manage Chrome centrally, force a relaunch</strong> rather than waiting for each person to close the browser. The November 11 build is rolling out over the coming days and weeks, so check again later in the week on any machine that is still behind.</li>
+<li><strong>If your team also uses Microsoft Edge, Opera or another Chromium-based browser, check those products for their own current updates.</strong> CISA’s catalog entry notes that the November 9 flaw could affect them as well. A Chrome relaunch does not cover those browsers.</li>
+<li><strong>Federal civilian agencies have until November 24</strong> to address CVE-2026-125350. A private firm is not under the same mandate, but the date is a useful priority signal: get to the current Chrome build this week, not next month.</li>
 </ol>
 <h2>Sources</h2>
 <ul class="sources">
-  <li><a href="https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_01744469280.html" rel="noopener">Google Chrome Releases, “Stable Channel Update for Desktop”</a>, November 11, 2026 (157.0.8103.78/.79 for Windows and Mac, 157.0.8103.78 for Linux; “This update includes 83 security fixes”; five Critical CVEs listed: CVE-2026-126885, CVE-2026-126895, CVE-2026-126879, CVE-2026-126846 and CVE-2026-126911; no exploited note on this post)</li>
-  <li><a href="https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html" rel="noopener">Google Chrome Releases, “Stable Channel Update for Desktop”</a>, November 9, 2026 (157.0.8103.50/.51 for Windows and Mac, 157.0.8103.50 for Linux; nine security fixes; CVE-2026-125350 rated High, use after free in XML, reported by Arni Hardarson of Neonix Security on October 12 and anonymously on November 6; “Google is aware that an exploit for CVE-2026-125350 exists in the wild.”)</li>
-  <li><a href="https://www.cisa.gov/news-events/alerts/2026/11/10/cisa-adds-six-known-exploited-vulnerabilities-catalog" rel="noopener">CISA, “CISA Adds Six Known Exploited Vulnerabilities to Catalog”</a>, November 10, 2026 (CVE-2026-125350 included, additions based on evidence of active exploitation)</li>
-  <li><a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">CISA Known Exploited Vulnerabilities catalog JSON feed</a>, version 2026.11.10, released November 10, 2026, at 2:03 p.m. Eastern time (CVE-2026-125350 added November 10, due November 24, forensic triage marked No, known ransomware use Unknown; the entry notes the flaw could affect other Chromium browsers including Microsoft Edge and Opera)</li>
+<li><a href="https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_01744469280.html" rel="noopener">Google Chrome Releases, “Stable Channel Update for Desktop”</a>, November 11, 2026 (157.0.8103.78/.79 for Windows and Mac, 157.0.8103.78 for Linux; “This update includes 83 security fixes”; five Critical CVEs listed: CVE-2026-126885, CVE-2026-126895, CVE-2026-126879, CVE-2026-126846 and CVE-2026-126911; no exploited note on this post)</li>
+<li><a href="https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html" rel="noopener">Google Chrome Releases, “Stable Channel Update for Desktop”</a>, November 9, 2026 (157.0.8103.50/.51 for Windows and Mac, 157.0.8103.50 for Linux; nine security fixes; CVE-2026-125350 rated High, use after free in XML, reported by Arni Hardarson of Neonix Security on October 12 and anonymously on November 6; “Google is aware that an exploit for CVE-2026-125350 exists in the wild.”)</li>
+<li><a href="https://www.cisa.gov/news-events/alerts/2026/11/10/cisa-adds-six-known-exploited-vulnerabilities-catalog" rel="noopener">CISA, “CISA Adds Six Known Exploited Vulnerabilities to Catalog”</a>, November 10, 2026 (CVE-2026-125350 included, additions based on evidence of active exploitation)</li>
+<li><a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">CISA Known Exploited Vulnerabilities catalog JSON feed</a>, version 2026.11.10, released November 10, 2026, at 2:03 p.m. Eastern time (CVE-2026-125350 added November 10, due November 24, forensic triage marked No, known ransomware use Unknown; the entry notes the flaw could affect other Chromium browsers including Microsoft Edge and Opera)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/openssh-password-bypass-cve-2026-123158.html">An OpenSSH bug lets attackers skip the password on some Linux servers</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/openssh-password-bypass-cve-2026-123158.html">An OpenSSH bug lets attackers skip the password on some Linux servers</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
 </item>
 <item>
 <title>Notion AI chat transcripts were exposed at a vendor. Keep passwords out of the chat.</title>
@@ -47,21 +46,21 @@
 <content:encoded><![CDATA[<p class="lead-graf">On November 10, 2026, Notion published an advisory about a security incident at Fireworks AI, a company it used to run classification jobs for a feature called Insights and to serve some open-weight models. Notion says the incident affects fewer than 1% of workspaces. The data involved is Notion AI chat transcripts used for Insights. Notion says that for the vast majority of impacted workspaces those chats were “unattributable”: they were not labeled with who wrote them or which workspace they came from, and they did not contain tool-call results.</p>
 <p>The practical point is wider than one product. Anything you type into an AI chat can end up with that tool’s own vendors. Keep passwords and API keys out of chat windows, share them through a password manager, and change any you have pasted. A short <a href="https://circuits.fit/guides/one-page-ai-use-rule.html">one-page AI use rule</a> can make that a team habit rather than a reminder you send after the fact.</p>
 <h2>What happened</h2>
-<p>On the evening of November 2, Fireworks notified Notion that a small set of data had been accessed by malicious actors. Notion says that dataset included Notion AI synthetic testing data, and that no Notion AI customer data was involved at that stage. By the morning of November 3, Notion says it had disconnected its systems from Fireworks, deleted all data in the Fireworks system, and stopped all communication with it.</p>
+<p>On the evening of November 2, Fireworks notified Notion that a small set of data had been accessed by malicious actors. Notion says that dataset included Notion AI synthetic testing data, and that no Notion AI customer data was involved at that stage. By the morning of November 3, Notion says it had disconnected its systems from Fireworks and stopped all communication with it. On November 4, Notion says it deleted all its data in the Fireworks system.</p>
 <p>On November 6, Fireworks notified Notion that malicious actors may have accessed potential customer data. Notion began another investigation. On November 8, Fireworks confirmed the final impacted dataset. On November 9, Notion reached out to impacted customers.</p>
 <p>After reviewing the November 8 dataset, Notion says it included Notion AI chat transcripts used for the Insights feature. For the vast majority of impacted workspaces, Notion says, those chats were unattributable: they were not labeled with a user or a workspace, and they did not contain tool-call results. Notion says no other Notion features were affected, and that this was not a breach of Notion’s own systems.</p>
-<p>The Insights feature has been disabled while Notion investigates, and Notion is no longer serving open-weight models through Fireworks. On November 11, Notion added an update: it had revoked exposed Notion API keys that were found in affected user messages during its investigation. The advisory was first published November 10. Notion also made a style and clarity update that same day, and said no previously reported facts had changed.</p>
+<p>The Insights feature has been disabled while Notion investigates, and Notion is no longer serving open-weight models through Fireworks. On November 11, Notion added an update: it had revoked exposed Notion API keys that were found in affected user messages during its investigation. On November 12, Notion says it reported exposed third-party API keys found in those messages to the vendors that issued them. The advisory was first published November 10. Notion also made a style and clarity update that same day, and said no previously reported facts had changed.</p>
 <h2>Who is affected, and what to do</h2>
 <p>Notion says it has contacted customers whose workspaces were affected. If you have not heard from Notion, it says it has not identified your workspace as affected, and no action is needed right now. The investigation is ongoing, and Notion says it will contact you directly if that changes.</p>
 <p>If Notion has contacted you, follow the instructions in that email. Notion says affected customers can retrieve and review the impacted data securely inside their workspace, and it recommends treating that data as if it were exposed. If anyone in an affected workspace pasted sensitive information, passwords, API keys or other credentials into Notion AI during the timeframe of the incident, rotate them.</p>
 <p>Going forward, treat an AI chat window the same way you would treat an email to a vendor: useful for work, not a place for secrets. Share logins through a password manager, not by pasting them into a prompt.</p>
 <p>If you want a simple plan for moving shared logins into a password manager, our $19 <a href="https://circuits.fit/services/password-manager-rollout-kit.html">Password Manager Rollout Kit</a> has a two-week plan, checklists, a staff email, a one-page policy and a tracker.</p>
+<p>Updated November 14, 2026, to match Notion’s later timeline: the disconnect was November 3, the data deletion was November 4, and on November 12 Notion reported exposed third-party API keys to the vendors that issued them.</p>
 <h2>Sources</h2>
 <ul class="sources">
-  <li><a href="https://www.notion.com/security/advisories/security-incident-involving-a-third-party-ai-vendor" rel="noopener">Notion, “Fireworks AI incident”</a>, originally published November 10, 2026; style and clarity update November 10, 2026; November 11, 2026 update on revocation of exposed Notion API keys found in affected user messages. The advisory says the incident affects fewer than 1% of workspaces; the exposed data is Insights chat transcripts, unattributable for the vast majority of impacted workspaces; Insights has been disabled and Notion is no longer serving open-weight models through Fireworks; affected customers should treat the data as exposed and rotate credentials pasted into Notion AI; customers Notion has not contacted need to take no action right now.</li>
+<li><a href="https://www.notion.com/security/advisories/security-incident-involving-a-third-party-ai-vendor" rel="noopener">Notion, “Fireworks AI incident”</a>, originally published November 10, 2026; style and clarity update November 10, 2026; November 11, 2026 update on revocation of exposed Notion API keys found in affected user messages; November 12, 2026 timeline update and notice that Notion reported exposed third-party API keys found in affected user messages to the vendors that issued them (posted in the advisory’s updates on November 13, 2026). The updated advisory says Notion disconnected from Fireworks and stopped communication by the morning of November 3, and deleted all its data in the Fireworks system on November 4. The advisory says the incident affects fewer than 1% of workspaces; the exposed data is Insights chat transcripts, unattributable for the vast majority of impacted workspaces; Insights has been disabled and Notion is no longer serving open-weight models through Fireworks; affected customers should treat the data as exposed and rotate credentials pasted into Notion AI; customers Notion has not contacted need to take no action right now.</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/guides/one-page-ai-use-rule.html">A one-page AI use rule</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/guides/one-page-ai-use-rule.html">A one-page AI use rule</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
 </item>
 <item>
 <title>An OpenSSH bug lets attackers skip the password on some Linux servers. CISA’s deadline is November 12.</title>
@@ -116,8 +115,7 @@
 <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123158" rel="noopener">NIST National Vulnerability Database, CVE-2026-123158</a>, published November 5, 2026 (description; CVSS 3.1 base score 8.1 from the CVE assigner)</li>
 <li><a href="https://github.com/openssh/openssh-portable/commit/4353fdc43ef646c43a8dda7025cc1a898caf1482" rel="noopener">OpenSSH portable, commit “avoid password authn bypass”</a> (the fix)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/barracuda-esg-cisa-kev.html">Barracuda appliances are on CISA’s exploited list</a>, <a href="https://circuits.fit/articles/kev-patch-tuesday-calendar-nov-10-13.html">this week’s patch calendar</a>, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/barracuda-esg-cisa-kev.html">Barracuda appliances are on CISA’s exploited list</a>, <a href="https://circuits.fit/articles/kev-patch-tuesday-calendar-nov-10-13.html">this week’s patch calendar</a>, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
 </item>
 <item>
 <title>Cisco BroadWorks is on CISA’s exploited list. Ask your phone provider if they patched.</title>
@@ -163,8 +161,7 @@
 <li><a href="https://malbearlabs.com/posts/operation-snowball-inside-an-autonomous-ai-intrusion-campaign" rel="noopener">Malbear Labs, “Operation Snowball: Inside an Autonomous AI Intrusion Campaign”</a>, November 8, 2026 (the security firm’s report; entry through CVE-2026-20320; 13 organizations; default database credentials)</li>
 <li><a href="https://www.infosecurity-magazine.com/news/operation-snowball-ai-telecom/" rel="noopener">Infosecurity Magazine, write-up of Operation Snowball</a> (notes the claims were not confirmed with victims)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html">PHP2Shell and the vendor inventory</a>, <a href="https://circuits.fit/articles/openssh-password-bypass-cve-2026-123158.html">the OpenSSH password bypass due November 12</a>, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html">PHP2Shell and the vendor inventory</a>, <a href="https://circuits.fit/articles/openssh-password-bypass-cve-2026-123158.html">the OpenSSH password bypass due November 12</a>, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
 </item>
 <item>
 <title>Copilot usage billing moved to early 2027. Set your spending limit before you buy.</title>
@@ -227,8 +224,7 @@
 <li><a href="https://learn.microsoft.com/en-us/partner-center/announcements/2026-october" rel="noopener">Microsoft Partner Center, October 2026 announcements</a> (new Copilot offers without a base subscription from December 1, 2026; add-on offers end of sale in CSP December 1)</li>
 <li><a href="https://www.microsoft.com/en-us/copilot/pricing/business" rel="noopener">Microsoft, Copilot for business pricing</a>, checked November 11, 2026 (Copilot Business add-on $21.00, shown at $18.00 per user per month paid yearly under a July 1 to December 31, 2026 promotion)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/microsoft-365-renewal-price-increase.html">Your Microsoft 365 renewal price, line by line</a>, <a href="https://circuits.fit/tools/software-renewal-scorecard.html">software renewal scorecard</a>, and <a href="https://circuits.fit/topics/renewals-saas-spend.html">Renewals and SaaS spend</a>, every renewal briefing, guide and tool in one place.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/microsoft-365-renewal-price-increase.html">Your Microsoft 365 renewal price, line by line</a>, <a href="https://circuits.fit/tools/software-renewal-scorecard.html">software renewal scorecard</a>, and <a href="https://circuits.fit/topics/renewals-saas-spend.html">Renewals and SaaS spend</a>, every renewal briefing, guide and tool in one place.</p>]]></content:encoded>
 </item>
 <item>
 <title>Barracuda appliances are on CISA’s exploited list. Check firmware this week.</title>
@@ -272,8 +268,7 @@
 <li><a href="https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0042.md" rel="noopener">Mandiant, MNDT-2026-0042</a> (CVE-2026-116606, Email Security Gateway versions earlier than 9.4.0.030, CVSS 9.3)</li>
 <li><a href="https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0041.md" rel="noopener">Mandiant, MNDT-2026-0041</a> (CVE-2026-111560, command injection in the timezone field, affected products and versions, CVSS 8.6)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/n-able-n-central-offline-able2shell.html">N-able took N-central offline. Ask your MSP if they use it.</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/n-able-n-central-offline-able2shell.html">N-able took N-central offline. Ask your MSP if they use it.</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
 </item>
 <item>
 <title>N-able took N-central offline. Ask your MSP if they use it.</title>
@@ -306,8 +301,7 @@
 <li><a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">CISA Known Exploited Vulnerabilities catalog JSON feed</a>, version 2026.11.09 (no Able2Shell or new N-central identifiers for this incident)</li>
 <li><a href="https://status.n-able.com/2026/11/10/n-central-2026-4-hf2-release-notes/" rel="noopener">N-able, “N-central 2026.4 HF2 Release Notes”</a>, posted November 10, 2026, 3:48 PM ET (build 2026.4.1.26, upgrade guidance, CVE list, known issues)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch. Check the logs.</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch. Check the logs.</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
 </item>
 <item>
 <title>Four AI spending reports in one week. The budget is outrunning the measurement.</title>
@@ -364,8 +358,7 @@
 <li><a href="https://www.cfo.com/news/cfos-expect-ai-to-pay-off-in-2-years-RGP-survey/873512/" rel="noopener">CFO.com, “CFOs expect AI to pay off in 2 years: survey,”</a> November 3, 2026</li>
 <li><a href="https://www.cloudzero.com/blog/ai-budget-season/" rel="noopener">CloudZero, “AI budget season: 87% are raising it, 61% can’t justify it,”</a> November 2, 2026 (vendor survey)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/gartner-revised-the-ai-bill.html">Gartner revised the AI bill</a> and <a href="https://circuits.fit/topics/ai-costs.html">all AI cost briefings</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/gartner-revised-the-ai-bill.html">Gartner revised the AI bill</a> and <a href="https://circuits.fit/topics/ai-costs.html">all AI cost briefings</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>Zyxel GS1900: the June patch did not stop the exploit</title>
@@ -445,8 +438,7 @@
 <li><a href="https://www.helpnetsecurity.com/2026/11/05/zyxel-cve-2026-107441-exploit/" rel="noopener">Help Net Security, “Patched Zyxel GS1900 switches remained open to in-the-wild exploit,”</a> November 5, 2026</li>
 <li><a href="https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/" rel="noopener">BleepingComputer, “Zyxel fixes zero-day exploited to hack nearly 1,000 network switches,”</a> November 4, 2026</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/kev-patch-tuesday-calendar-nov-10-13.html">Next week’s patch calendar</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">all security briefings</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/kev-patch-tuesday-calendar-nov-10-13.html">Next week’s patch calendar</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">all security briefings</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>Next week’s patch calendar: four KEV deadlines and a Patch Tuesday</title>
@@ -507,7 +499,7 @@
 <li>Fortinet’s PSIRT advisories on November 10. Watch for CVE numbers, severity scores, and any later note that a flaw is being exploited.</li>
 <li>New KEV additions. CISA’s feed updates as listings are added, and three-day deadlines, as with WordPress last week, are now common.</li>
 </ul>
-<figure class="cc-video cc-video--vertical"><video aria-label="A free weekly roundup of new actively exploited vulnerabilities: what they are, who is affected, and what to patch first." autoplay="" height="1280" loop="" muted="" playsinline="" poster="../assets/video/cc-kev-roundup-9x16.jpg" preload="metadata" width="720"><source src="https://circuits.fit/assets/video/cc-kev-roundup-9x16.mp4" type="video/mp4"/></video><figcaption class="sr-only">A free weekly roundup of new actively exploited vulnerabilities: what they are, who is affected, and what to patch first.</figcaption></figure>
+
 <p>We publish a free weekly roundup of newly exploited vulnerabilities: what they are, who is affected and what to patch first. <a href="https://emilios-newsletter-7fd333.beehiiv.com/subscribe" rel="noopener">Subscribe free</a> to get it. If you want help deciding what applies to you, our <a href="https://circuits.fit/services/quick-answer.html">Quick Answer</a> service covers that question.</p>
 <h2>Sources</h2>
 <ul class="sources">
@@ -521,8 +513,7 @@
 <li><a href="https://www.fortinet.com/blog/ciso-collective/fortinet-releases-security-hardening-release-for-multiple-products" rel="noopener">Fortinet, “Fortinet Releases Security Hardening Release for Multiple Products,”</a> Carl Windsor, October 21, 2026</li>
 <li><a href="https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk" rel="noopener">BOD 26-04, Prioritizing Security Updates Based on Risk</a></li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/wordpress-core-upgrade-race-cisa-kev.html">WordPress is on the exploited catalog. Get to 7.1.4 this week.</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/wordpress-core-upgrade-race-cisa-kev.html">WordPress is on the exploited catalog. Get to 7.1.4 this week.</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
 </item>
 <item>
 <title>Your Microsoft 365 renewal price, line by line</title>
@@ -612,8 +603,7 @@
 <ul class="sources">
 <li><a href="https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates" rel="noopener">Microsoft Licensing Resources, “Microsoft 365 Pricing and Packaging Updates,”</a> February 16, 2026, checked November 4, 2026</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/guides/software-renewal-tracker-template.html">How to build a software renewal tracker</a> and <a href="https://circuits.fit/articles/software-buying-is-an-operating-skill.html">Software buying is an operating skill</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/guides/software-renewal-tracker-template.html">How to build a software renewal tracker</a> and <a href="https://circuits.fit/articles/software-buying-is-an-operating-skill.html">Software buying is an operating skill</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>Write the staff AI policy now. The federal-state fight will not write it for you.</title>
@@ -681,8 +671,7 @@
 <li><a href="https://www.federalregister.gov/documents/2026/10/01/2026-20143/rule-on-impersonation-of-government-and-businesses" rel="noopener">Federal Register, Federal Trade Commission, “Rule on Impersonation of Government and Businesses,”</a> proposed rule, October 1, 2026, comments close November 30, 2026</li>
 <li><a href="https://doi.org/10.6028/NIST.AI.600-1" rel="noopener">NIST AI 600-1, Generative AI Profile of the AI Risk Management Framework</a></li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/board-questions-generative-ai.html">Board questions on generative AI</a> and <a href="https://circuits.fit/tools/agent-inventory.html">AI agent inventory</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/board-questions-generative-ai.html">Board questions on generative AI</a> and <a href="https://circuits.fit/tools/agent-inventory.html">AI agent inventory</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>How to choose a password manager for a small business</title>
@@ -865,8 +854,7 @@
 <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119977" rel="noopener">NVD entry, CVE-2026-119977</a> (affected versions 4.7 through 7.1.3)</li>
 <li><a href="https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk" rel="noopener">BOD 26-04, Prioritizing Security Updates Based on Risk</a></li>
 </ul>
-<p>Related: <a href="https://circuits.fit/tools/risk-exception-register.html">Risk exception register</a>, the free tool used above, <a href="https://circuits.fit/articles/ivanti-gitlab-cisco-kev-deadlines.html">Three exploited bugs, three deadlines: Ivanti, GitLab and Cisco VPN</a>, the previous catalog briefing, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/tools/risk-exception-register.html">Risk exception register</a>, the free tool used above, <a href="https://circuits.fit/articles/ivanti-gitlab-cisco-kev-deadlines.html">Three exploited bugs, three deadlines: Ivanti, GitLab and Cisco VPN</a>, the previous catalog briefing, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
 </item>
 <item>
 <title>Three exploited bugs, three deadlines: Ivanti, GitLab and Cisco VPN</title>
@@ -940,8 +928,7 @@
 <li>NVD entries <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111357" rel="noopener">CVE-2026-111357</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118527" rel="noopener">CVE-2026-118527</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-97229" rel="noopener">CVE-2026-97229</a> and <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76418" rel="noopener">CVE-2026-76418</a></li>
 <li><a href="https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk" rel="noopener">CISA BOD 26-04, Prioritizing Security Updates Based on Risk</a></li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/cisa-kev-magento-brotli-velocloud.html">CISA added Magento and a compression library</a>, the previous catalog roundup, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/cisa-kev-magento-brotli-velocloud.html">CISA added Magento and a compression library</a>, the previous catalog roundup, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
 </item>
 <item>
 <title>CISA added Magento and a compression library. Ask who owns the patch.</title>
@@ -992,8 +979,7 @@
 <li>NVD entries <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48356" rel="noopener">CVE-2026-48356</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111497" rel="noopener">CVE-2026-111497</a> and <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-114625" rel="noopener">CVE-2026-114625</a></li>
 <li><a href="https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk" rel="noopener">CISA BOD 26-04, Prioritizing Security Updates Based on Risk</a></li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html">PHP2Shell was probed before the patch</a>, the same vendor-inventory logic for PHP, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html">PHP2Shell was probed before the patch</a>, the same vendor-inventory logic for PHP, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
 </item>
 <item>
 <title>The SEC’s 2027 exam list names deepfakes and vendor oversight</title>
@@ -1036,8 +1022,7 @@
 <li><a href="https://www.sec.gov/newsroom/press-releases/2026-109-sec-announces-fiscal-year-2027-examination-priorities" rel="noopener">SEC press release 2026-109, “SEC Announces Fiscal Year 2027 Examination Priorities,”</a> October 23, 2026</li>
 <li><a href="https://www.sec.gov/files/2027-exam-priorities.pdf" rel="noopener">SEC Division of Examinations, “Examination Priorities: Fiscal Year 2027”</a> (PDF), section VII, “Risk Areas Impacting Various Market Participants,” and the message from the leadership team</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/the-sec-clock-starts-at-material.html">The SEC clock starts at material</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/the-sec-clock-starts-at-material.html">The SEC clock starts at material</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>How to Build a Software Renewal Tracker</title>
@@ -1460,8 +1445,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/" rel="noopener">CJ Moses, “Amazon Threat Intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot,”</a> AWS Security Blog, October 21, 2026</li>
 <li><a href="https://www.sophos.com/en-us/blog/proof-of-concept-exploit-released-for-php-vulnerabilities-109618-109619" rel="noopener">Sophos Counter Threat Unit, “Proof-of-concept exploit released for PHP vulnerabilities,”</a> updated October 22, 2026, 16:18 UTC, corrected October 22, 2026, 21:21 UTC</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch. Check the logs.</a>, the same lookback logic for a remote-support appliance, and <a href="https://circuits.fit/articles/cisa-listed-three-bugs-attackers-are-using.html">CISA listed three bugs attackers are already using</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch. Check the logs.</a>, the same lookback logic for a remote-support appliance, and <a href="https://circuits.fit/articles/cisa-listed-three-bugs-attackers-are-using.html">CISA listed three bugs attackers are already using</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>The BeyondTrust bug was used before the patch. Check the logs.</title>
@@ -1518,8 +1502,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk" rel="noopener">BOD 26-04, Prioritizing Security Updates Based on Risk</a>, June 10, 2026, and <a href="https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk" rel="noopener">its implementation guidance on forensic triage</a>, updated August 25, 2026</li>
 <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102764" rel="noopener">NVD entry, CVE-2026-102764</a></li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html">PHP2Shell was probed before the patch (October 22)</a>, <a href="https://circuits.fit/articles/citrix-netscaler-is-on-the-catalog-again.html">Citrix NetScaler is on the exploited catalog again</a>, <a href="https://circuits.fit/articles/cisa-listed-three-bugs-attackers-are-using.html">CISA listed three bugs attackers are already using</a>, and the guide <a href="https://circuits.fit/guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a>, which applies the same least-privilege logic to automated access.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html">PHP2Shell was probed before the patch (October 22)</a>, <a href="https://circuits.fit/articles/citrix-netscaler-is-on-the-catalog-again.html">Citrix NetScaler is on the exploited catalog again</a>, <a href="https://circuits.fit/articles/cisa-listed-three-bugs-attackers-are-using.html">CISA listed three bugs attackers are already using</a>, and the guide <a href="https://circuits.fit/guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a>, which applies the same least-privilege logic to automated access.</p>]]></content:encoded>
 </item>
 <item>
 <title>Gartner says the AI build-out may not pay back. Check who runs your compute.</title>
@@ -1569,8 +1552,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://www.businesswire.com/news/home/20261021492736/en/Gartner-Forecasts-Worldwide-IT-Spending-to-Grow-15-in-2027-Totaling-%247.35-Trillion" rel="noopener">Gartner via Business Wire, “Worldwide IT Spending to Grow 15% in 2027, Totaling $7.35 Trillion,”</a> October 21, 2026 (data center systems and memory pricing)</li>
 <li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-16-gartner-forecasts-worldwide-ai-spending-to-grow-49-point-5-percent-in-2026" rel="noopener">Gartner, worldwide AI spending forecast</a>, September 16, 2026 (context, covered in our earlier briefing)</li>
 </ul>
-<p>The gap of about $4.9 trillion and the 42% coverage ratio are Circuit &amp; Capital’s arithmetic from Gartner’s published figures, not Gartner numbers. Related: <a href="https://circuits.fit/articles/gartner-revised-the-ai-bill.html">Gartner revised the AI bill</a>, <a href="https://circuits.fit/articles/private-credit-software.html">Private credit is quietly funding the software roll-up</a>, and the guide <a href="https://circuits.fit/guides/how-to-read-a-saas-renewal.html">How to read a SaaS renewal</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>The gap of about $4.9 trillion and the 42% coverage ratio are Circuit &amp; Capital’s arithmetic from Gartner’s published figures, not Gartner numbers. Related: <a href="https://circuits.fit/articles/gartner-revised-the-ai-bill.html">Gartner revised the AI bill</a>, <a href="https://circuits.fit/articles/private-credit-software.html">Private credit is quietly funding the software roll-up</a>, and the guide <a href="https://circuits.fit/guides/how-to-read-a-saas-renewal.html">How to read a SaaS renewal</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>Citrix NetScaler Is on the Exploited Catalog Again</title>
@@ -1616,8 +1598,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://www.cve.org/CVERecord?id=CVE-2026-88779" rel="noopener">CVE record linked from the October 4 alert</a>, and <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-88779" rel="noopener">the NVD entry named in the catalog notes</a></li>
 <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88771" rel="noopener">CISA catalog, CVE-2026-88771</a> and <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88772" rel="noopener">CVE-2026-88772</a> (added September 27, due September 30; different notes, including Citrix CTX697096)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/cisa-listed-three-bugs-attackers-are-using.html">CISA listed three bugs attackers are already using</a> and <a href="https://circuits.fit/articles/the-sec-clock-starts-at-material.html">The SEC clock starts when you decide it matters</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/cisa-listed-three-bugs-attackers-are-using.html">CISA listed three bugs attackers are already using</a> and <a href="https://circuits.fit/articles/the-sec-clock-starts-at-material.html">The SEC clock starts when you decide it matters</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>Free tool: AI model cost per finished task</title>
@@ -1626,23 +1607,14 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <pubDate>Wed, 07 Oct 2026 12:00:00 +0000</pubDate>
 <description>Compare list price with the cost of a task that actually finishes, and the daily volume where self-hosting beats the API. Runs in your browser. No sign-in.</description>
 <author>circuits50capital@circuits.fit (Emilio Santos)</author>
-<content:encoded><![CDATA[<figure class="cc-video cc-video--vertical"><video aria-label="A free browser calculator for what one finished AI task costs, not the price per token." autoplay="" height="1280" loop="" muted="" playsinline="" poster="../assets/video/cc-tool-ai-cost-9x16.jpg" preload="metadata" width="720"><source src="https://circuits.fit/assets/video/cc-tool-ai-cost-9x16.mp4" type="video/mp4"/></video><figcaption class="sr-only">A free browser calculator for what one finished AI task costs, not the price per token.</figcaption></figure>
+<content:encoded><![CDATA[<h1>AI model cost per finished task</h1><p class="dek">Compare list price with the cost of a task that actually finishes, and the daily volume where self-hosting beats the API.</p>
+
+
 <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in your browser. Nothing is uploaded.</p>
 <p class="tool-rule">Attempts per task = 1 + average retries. Token cost uses each attempt. Review cost applies to the share of tasks that fail. Cost per successful task divides that total by the success rate. Listed cost is one attempt, before retries, failures, and review. A month in the break-even chart is 30 days. You type the prices. This page does not call a model.</p>
 <p class="tool-rule" id="cost-source">Showing the example. Replace it with your prices.</p>
 
-<section aria-live="polite" class="tool-out">
-<h2>Output</h2>
-<p class="tool-rule" id="cost-worked">The comparison appears here.</p>
-<div id="cost-chart"></div>
-<label for="cost-out">Cost per finished task and break-even</label>
-<textarea id="cost-out" readonly=""></textarea>
-<pre class="print-record" id="cost-printout"></pre>
-<div class="tool-actions">
-<button class="btn btn--copper" id="cost-copy" type="button">Copy as text</button>
-<button class="btn btn--ink" id="cost-print" type="button">Print / Save as PDF</button>
-</div>
-</section>
+
 
 <section class="tool-help">
 <h2>How to use this</h2>
@@ -1724,22 +1696,14 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <pubDate>Wed, 07 Oct 2026 12:00:00 +0000</pubDate>
 <description>List each agent, the identity it uses, and what it can change. Flags stale reviews and shared logins. Runs in your browser. No sign-in.</description>
 <author>circuits50capital@circuits.fit (Emilio Santos)</author>
-<content:encoded><![CDATA[<figure class="cc-video cc-video--wide"><video aria-label="A free tool to map which AI agents run in your company and what each one can access." autoplay="" height="720" loop="" muted="" playsinline="" poster="../assets/video/cc-tool-agent-map-16x9.jpg" preload="metadata" width="1280"><source src="https://circuits.fit/assets/video/cc-tool-agent-map-16x9.mp4" type="video/mp4"/></video><figcaption class="sr-only">A free tool to map which AI agents run in your company and what each one can access.</figcaption></figure>
+<content:encoded><![CDATA[<h1>AI agent inventory and access map</h1><p class="dek">List each agent, the identity it uses, and what it can change. Flags stale reviews and shared logins.</p>
+
+
 <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in your browser. Nothing is uploaded.</p>
 <p class="tool-rule">A row is flagged when the agent uses a person's account or a shared account, when it can write and has no owner, or when the last access review is missing or 90 days old or older. The file import is read in this browser. It is not uploaded.</p>
 <p class="tool-rule" id="agent-source">Showing the example. Replace it with your agents.</p>
 
-<section aria-live="polite" class="tool-out">
-<h2>Output</h2>
-<p class="tool-rule" id="agent-worked">The flag count appears here.</p>
-<label for="agent-out">Inventory and flags</label>
-<textarea id="agent-out" readonly=""></textarea>
-<pre class="print-record" id="agent-printout"></pre>
-<div class="tool-actions">
-<button class="btn btn--copper" id="agent-copy" type="button">Copy as text</button>
-<button class="btn btn--ink" id="agent-print" type="button">Print / Save as PDF</button>
-</div>
-</section>
+
 
 <section class="tool-help">
 <h2>How to use this</h2>
@@ -1818,22 +1782,14 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <pubDate>Wed, 07 Oct 2026 12:00:00 +0000</pubDate>
 <description>Record who decided an incident was material, and count four business days to the Item 1.05 date. Runs in your browser. No sign-in.</description>
 <author>circuits50capital@circuits.fit (Emilio Santos)</author>
-<content:encoded><![CDATA[<figure class="cc-video cc-video--wide"><video aria-label="A free worksheet for public companies to document how they decided Form 8-K Item 1.05 materiality. Not legal advice." autoplay="" height="720" loop="" muted="" playsinline="" poster="../assets/video/cc-tool-8k-worksheet-16x9.jpg" preload="metadata" width="1280"><source src="https://circuits.fit/assets/video/cc-tool-8k-worksheet-16x9.mp4" type="video/mp4"/></video><figcaption class="sr-only">A free worksheet for public companies to document how they decided Form 8-K Item 1.05 materiality. Not legal advice.</figcaption></figure>
+<content:encoded><![CDATA[<h1>SEC 8-K materiality worksheet</h1><p class="dek">Record who decided an incident was material, and count four business days to the Item 1.05 date.</p>
+
+
 <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in your browser. Nothing is uploaded.</p>
 <p class="tool-rule">Not legal advice. The Item 1.05 clock starts when the company determines the incident is material, not when it is discovered. This page counts four business days after that determination. It skips weekends and US federal holidays in the year of the determination and the following year. A holiday on Saturday is taken on Friday. A holiday on Sunday is taken on Monday. The page does not decide whether the incident is material.</p>
 <p class="tool-rule" id="k-source">Showing the example. Replace it with your record.</p>
 
-<section aria-live="polite" class="tool-out">
-<h2>Output</h2>
-<p class="tool-rule" id="k-worked">The due date appears here.</p>
-<label for="k-out">Who decided what, and when the filing is due</label>
-<textarea id="k-out" readonly=""></textarea>
-<pre class="print-record" id="k-printout"></pre>
-<div class="tool-actions">
-<button class="btn btn--copper" id="k-copy" type="button">Copy as text</button>
-<button class="btn btn--ink" id="k-print" type="button">Print / Save as PDF</button>
-</div>
-</section>
+
 
 <section class="tool-help">
 <h2>How to use this</h2>
@@ -1891,22 +1847,14 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <pubDate>Wed, 07 Oct 2026 12:00:00 +0000</pubDate>
 <description>Track an exception, its owner, and its expiry. Known-exploited bugs, MFA, backups, and EDR are marked not waivable. Runs in your browser. No sign-in.</description>
 <author>circuits50capital@circuits.fit (Emilio Santos)</author>
-<content:encoded><![CDATA[<figure class="cc-video cc-video--vertical"><video aria-label="A free browser register so every risk exception has an owner and an expiry date." autoplay="" height="1280" loop="" muted="" playsinline="" poster="../assets/video/cc-tool-risk-register-9x16.jpg" preload="metadata" width="720"><source src="https://circuits.fit/assets/video/cc-tool-risk-register-9x16.mp4" type="video/mp4"/></video><figcaption class="sr-only">A free browser register so every risk exception has an owner and an expiry date.</figcaption></figure>
+<content:encoded><![CDATA[<h1>Risk exception register</h1><p class="dek">Track an exception, its owner, and its expiry. Known-exploited bugs, MFA, backups, and EDR are marked not waivable.</p>
+
+
 <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in your browser. Nothing is uploaded.</p>
 <p class="tool-rule">Exceptions for a CISA Known Exploited Vulnerability, MFA, backups, or EDR are marked Not waivable. A row is also flagged when it has no owner, no expiry, or no funded fix, and when the expiry is past or inside 30 days. The file import is read in this browser. It is not uploaded.</p>
 <p class="tool-rule" id="risk-source">Showing the example. Replace it with your register.</p>
 
-<section aria-live="polite" class="tool-out">
-<h2>Output</h2>
-<p class="tool-rule" id="risk-worked">The register summary appears here.</p>
-<label for="risk-out">Exceptions and flags</label>
-<textarea id="risk-out" readonly=""></textarea>
-<pre class="print-record" id="risk-printout"></pre>
-<div class="tool-actions">
-<button class="btn btn--copper" id="risk-copy" type="button">Copy as text</button>
-<button class="btn btn--ink" id="risk-print" type="button">Print / Save as PDF</button>
-</div>
-</section>
+
 
 <section class="tool-help">
 <h2>How to use this</h2>
@@ -1963,18 +1911,12 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <pubDate>Mon, 05 Oct 2026 12:00:00 +0000</pubDate>
 <description>Decide keep, renegotiate, or replace before a renewal call. The points stay on the page. Runs in your browser. No sign-in.</description>
 <author>circuits50capital@circuits.fit (Emilio Santos)</author>
-<content:encoded><![CDATA[<p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
+<content:encoded><![CDATA[<h1>Software renewal scorecard</h1><p class="dek">Decide keep, renegotiate, or replace before a renewal call.</p>
+
+<p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
 <p class="tool-rule">Each gap has a fixed score. Seat use under 60% of paid seats, no price-up cap or an unknown cap, notice under 30 days, no full export, no SBOM, unknown AI training use, and no exit clause score 2. A named cap, including 0%, scores 0. Unknown export, SBOM, subprocessors or exit clause, and opt-out training, score 1. A data-return window under 30 days scores 1. Unlisted subprocessors score 2. Seats paid, seats active, notice period, data-return window and the cap question are required: if any is blank or invalid, the result is Incomplete, not Keep. 0 points is Keep. 1 to 7 is Renegotiate. 8 or more is Replace. No full export and no exit clause is Replace even when the total is lower.</p>
 
-<section aria-live="polite" class="tool-out">
-<h2>Output</h2>
-<p class="decision" id="renewal-decision">—</p>
-<p class="tool-rule" id="renewal-total">Run the scorecard. Every check stays visible.</p>
-<table class="points" id="renewal-points"></table>
-<label for="renewal-out">Copy this into the vendor email</label>
-<textarea id="renewal-out" readonly=""></textarea>
-<div class="tool-actions"><button class="btn btn--copper" id="renewal-copy" type="button">Copy</button></div>
-</section>
+
 
 <section class="tool-help">
 <h2>What this scorecard does</h2>
@@ -2052,16 +1994,12 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <pubDate>Mon, 05 Oct 2026 12:00:00 +0000</pubDate>
 <description>Write down what an agent may touch before it is turned on. Runs in your browser. No sign-in.</description>
 <author>circuits50capital@circuits.fit (Emilio Santos)</author>
-<content:encoded><![CDATA[<p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
+<content:encoded><![CDATA[<h1>Agent access limit sheet</h1><p class="dek">Write down what an agent may touch before it is turned on.</p>
+
+<p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
 <p class="tool-rule">Allow is what you listed. Deny is inherit. If inherit is yes, the gap line stays. Empty read, write, or call lines stay as “not listed.” They are not filled in for you.</p>
 
-<section aria-live="polite" class="tool-out">
-<h2>Output</h2>
-<label for="agent-out">Allow / deny list</label>
-<textarea id="agent-out" readonly=""></textarea>
-<div class="tool-actions"><button class="btn btn--copper" id="agent-copy" type="button">Copy</button></div>
-<p class="tool-context">Context, Gartner’s figure, not yours. In Gartner’s second-quarter survey of 297 cybersecurity leaders, 54% have no defined limit on agent access, or they let the agent reuse a person’s access.</p>
-</section>
+
 
 <section class="tool-help">
 <h2>Why write the limit down first</h2>
@@ -2110,22 +2048,12 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <pubDate>Mon, 05 Oct 2026 12:00:00 +0000</pubDate>
 <description>Ask a vendor for an ingredients list, then mark what came back. Runs in your browser. No sign-in.</description>
 <author>circuits50capital@circuits.fit (Emilio Santos)</author>
-<content:encoded><![CDATA[<p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
+<content:encoded><![CDATA[<h1>SBOM request pack</h1><p class="dek">Ask a vendor for an ingredients list, then mark what came back.</p>
+
+<p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
 <p class="tool-rule">The email asks for the 2026 CISA minimum elements, including for SaaS and AI software, not only code the buyer compiles. The field list below is the ask. Tick Received when a field comes back. Missing rows stay on the page.</p>
 
-<section aria-live="polite" class="tool-out">
-<h2>Email</h2>
-<label for="sbom-out">Copy this to the vendor</label>
-<textarea id="sbom-out" readonly=""></textarea>
-<div class="tool-actions"><button class="btn btn--copper" id="sbom-copy" type="button">Copy</button></div>
-<h2>What came back</h2>
-<table class="gap-table">
-<thead>
-<tr><th>Field</th><th>Asked</th><th>Received</th><th>Missing</th></tr>
-</thead>
-<tbody id="sbom-rows"></tbody>
-</table>
-</section>
+
 
 <section class="tool-help">
 <h2>Why ask for an SBOM</h2>
@@ -2180,15 +2108,12 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <pubDate>Mon, 05 Oct 2026 12:00:00 +0000</pubDate>
 <description>Separate a speed or savings claim from the bill. Runs in your browser. No sign-in.</description>
 <author>circuits50capital@circuits.fit (Emilio Santos)</author>
-<content:encoded><![CDATA[<p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
+<content:encoded><![CDATA[<h1>Vendor claim checker</h1><p class="dek">Separate a speed or savings claim from the bill.</p>
+
+<p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
 <p class="tool-rule">The pasted claim stays a claim. A vendor comparison is not the fact. If you enter volume and unit price, your cost is your arithmetic. It is printed next to the claim. It does not confirm the claim. If the figure belongs to NVIDIA, Gartner, CISA, or the vendor, the “whose number” line says so.</p>
 
-<section aria-live="polite" class="tool-out">
-<h2>Output</h2>
-<label for="claim-out">Claim, whose number, the gap, the bill, three questions</label>
-<textarea id="claim-out" readonly=""></textarea>
-<div class="tool-actions"><button class="btn btn--copper" id="claim-copy" type="button">Copy</button></div>
-</section>
+
 
 <section class="tool-help">
 <h2>Why check a vendor claim</h2>
@@ -2243,16 +2168,12 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <pubDate>Mon, 05 Oct 2026 12:00:00 +0000</pubDate>
 <description>See if an AI-native task still contributes after tokens and human review. Runs in your browser. No sign-in.</description>
 <author>circuits50capital@circuits.fit (Emilio Santos)</author>
-<content:encoded><![CDATA[<p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
+<content:encoded><![CDATA[<h1>Token cost to gross margin</h1><p class="dek">See if an AI-native task still contributes after tokens and human review.</p>
+
+<p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in this browser. Nothing is uploaded.</p>
 <p class="tool-rule">Token cost = (input tokens / 1,000,000) × price per 1M input tokens + (output tokens / 1,000,000) × price per 1M output tokens. Review cost = (minutes / 60) × loaded cost per hour. Contribution = price charged − token cost − review cost. Margin = contribution / price charged. You type the prices. This page does not call a model.</p>
 
-<section aria-live="polite" class="tool-out">
-<h2>Output</h2>
-<p class="tool-rule" id="margin-worked">The worked line appears here after you run it.</p>
-<label for="margin-out">Token cost, review cost, contribution, margin</label>
-<textarea id="margin-out" readonly=""></textarea>
-<div class="tool-actions"><button class="btn btn--copper" id="margin-copy" type="button">Copy</button></div>
-</section>
+
 
 <section class="tool-help">
 <h2>Why tokens are rarely the whole cost</h2>
@@ -2534,7 +2455,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <description>Gartner’s September 30 note: do not authorize a decision because someone recognized a face or a voice. Pair detection with another authenticator and a provenance check.</description>
 <author>circuits50capital@circuits.fit (Emilio Santos)</author>
 <content:encoded><![CDATA[<p class="lead-graf">Gartner’s September 30, 2026 release says deepfake threats are mainstream, and that CISOs should drive a process change: recognition is not an acceptable basis for authorizing a decision or an action. Detection software is one layer. Gartner also names contextual signals, additional authentication, and checks on content provenance.</p>
-<figure class="cc-video cc-video--vertical"><video aria-label="A familiar voice is not approval. Confirm payments, bank changes, and password resets on a second channel, using the number already on file." autoplay="" height="1280" loop="" muted="" playsinline="" poster="../assets/video/cc-voice-approval-9x16.jpg" preload="metadata" width="720"><source src="https://circuits.fit/assets/video/cc-voice-approval-9x16.mp4" type="video/mp4"/></video><figcaption class="sr-only">A familiar voice is not approval. Confirm payments, bank changes, and password resets on a second channel, using the number already on file.</figcaption></figure>
+
 <h2 id="rule">The rule</h2>
 <p>Write it in one sentence your accounts-payable clerk can repeat. Example: no payment, mailbox rule, or vendor-bank change is approved on a voice, a video, or a familiar writing style alone. A second channel, already on file, has to say yes. If you cannot write the sentence, the current process is “we know our people.”</p>
 
@@ -3100,8 +3021,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://www.sec.gov/files/ia-7023-fact-sheet.pdf" rel="noopener">SEC fact sheet, Investment Adviser and Regulated Fund Custody Rules</a></li>
 <li><a href="https://www.sec.gov/files/rules/proposed/2026/ia-7023.pdf" rel="noopener">SEC proposing release IA-7023</a></li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/the-sec-clock-starts-at-material.html">The SEC clock starts when you decide it matters</a> and <a href="https://circuits.fit/guides/before-the-sec-eight-k.html">Before the Form 8-K clock</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/the-sec-clock-starts-at-material.html">The SEC clock starts when you decide it matters</a> and <a href="https://circuits.fit/guides/before-the-sec-eight-k.html">Before the Form 8-K clock</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>Astra Ultrafast Is a Speed Claim. The Bill Is Still Yours.</title>
@@ -3133,8 +3053,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://x.com/Gartner_inc/status/2103170129525604515" rel="noopener">Gartner on X, AI cost and coding-agent pricing, September 24, 2026</a></li>
 <li><a href="https://x.com/nvidia/status/2104567031110533431" rel="noopener">NVIDIA on X, Open Agent Safety Platform, September 28, 2026</a></li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/nvidia-put-the-fence-outside-the-agent.html">NVIDIA put the fence outside the agent</a>, the <a href="https://circuits.fit/tools/vendor-claim-checker.html">vendor claim checker</a>, and <a href="https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/nvidia-put-the-fence-outside-the-agent.html">NVIDIA put the fence outside the agent</a>, the <a href="https://circuits.fit/tools/vendor-claim-checker.html">vendor claim checker</a>, and <a href="https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>NVIDIA Put the Fence Outside the Agent</title>
@@ -3184,8 +3103,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-30-gartner-identifies-top-five-actions-for-cisos-to-take-by-end-of-2026" rel="noopener">Gartner, five CISO actions, September 30, 2026</a> (the 54% access figure)</li>
 <li><a href="https://x.com/Gartner_inc/status/2105322053888811405" rel="noopener">Gartner on X, CIO budget pressure and the 2027 agenda preview, September 30, 2026</a></li>
 </ul>
-<p>Related on this site: <a href="https://circuits.fit/articles/ciso-five-moves-before-2027.html">Five moves Gartner wants from a CISO before 2027</a>, the <a href="https://circuits.fit/tools/agent-access-limit.html">agent access limit sheet</a>, then <a href="https://circuits.fit/guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a>, and <a href="https://circuits.fit/guides/one-page-ai-use-rule.html">A one-page AI use rule</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related on this site: <a href="https://circuits.fit/articles/ciso-five-moves-before-2027.html">Five moves Gartner wants from a CISO before 2027</a>, the <a href="https://circuits.fit/tools/agent-access-limit.html">agent access limit sheet</a>, then <a href="https://circuits.fit/guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a>, and <a href="https://circuits.fit/guides/one-page-ai-use-rule.html">A one-page AI use rule</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>CISA Listed Three Bugs Attackers Are Already Using</title>
@@ -3227,8 +3145,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU" rel="noopener">Cisco advisory linked from the CVE-2026-76504 catalog entry</a></li>
 <li><a href="https://support.apple.com/en-us/149226" rel="noopener">Apple support pages linked from the CVE-2026-86950 catalog entry</a> (<a href="https://support.apple.com/en-us/149228" rel="noopener">149228</a>, <a href="https://support.apple.com/en-us/149229" rel="noopener">149229</a>)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/the-sec-clock-starts-at-material.html">The SEC clock starts when you decide it matters</a> and <a href="https://circuits.fit/articles/sbom-now-covers-the-suite.html">The software ingredients list now covers the suite</a>. For the second question, “do we run this,” use the <a href="https://circuits.fit/tools/sbom-request-pack.html">SBOM request pack</a>, then <a href="https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html">Ask a vendor for an SBOM</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/the-sec-clock-starts-at-material.html">The SEC clock starts when you decide it matters</a> and <a href="https://circuits.fit/articles/sbom-now-covers-the-suite.html">The software ingredients list now covers the suite</a>. For the second question, “do we run this,” use the <a href="https://circuits.fit/tools/sbom-request-pack.html">SBOM request pack</a>, then <a href="https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html">Ask a vendor for an SBOM</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>Five Moves Gartner Wants from CISOs Before 2027</title>
@@ -3275,8 +3192,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://nvidianews.nvidia.com/news/open-agent-safety-platform" rel="noopener">NVIDIA newsroom, Open Agent Safety Platform, September 28, 2026</a></li>
 <li><a href="https://x.com/Gartner_inc/status/2105322053888811405" rel="noopener">Gartner on X, CIO budget pressure, September 30, 2026</a></li>
 </ul>
-<p>Operator pages: the <a href="https://circuits.fit/tools/agent-access-limit.html">agent access limit sheet</a>, then <a href="https://circuits.fit/guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a>, <a href="https://circuits.fit/guides/stop-using-a-voice-as-approval.html">Stop using a voice as approval</a>, and <a href="https://circuits.fit/guides/postquantum-pilot-questions.html">Questions before a post-quantum pilot</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Operator pages: the <a href="https://circuits.fit/tools/agent-access-limit.html">agent access limit sheet</a>, then <a href="https://circuits.fit/guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a>, <a href="https://circuits.fit/guides/stop-using-a-voice-as-approval.html">Stop using a voice as approval</a>, and <a href="https://circuits.fit/guides/postquantum-pilot-questions.html">Questions before a post-quantum pilot</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>The EU AI Act Did Not Slip. The High-Risk Part Did.</title>
@@ -3319,8 +3235,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689" rel="noopener">Regulation (EU) 2024/1689, the Artificial Intelligence Act, EUR-Lex</a></li>
 <li><a href="https://x.com/Gartner_inc/status/2101329994534236667" rel="noopener">Gartner on X, AI literacy requirements “now in effect,” September 19, 2026</a></li>
 </ul>
-<p>Operator pages: <a href="https://circuits.fit/guides/what-article-50-asks-a-buyer.html">What Article 50 asks a buyer</a> and <a href="https://circuits.fit/guides/one-page-ai-use-rule.html">A one-page AI use rule</a>. Earlier briefing: <a href="https://circuits.fit/articles/when-compliance-is-the-product.html">When compliance is the product</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Operator pages: <a href="https://circuits.fit/guides/what-article-50-asks-a-buyer.html">What Article 50 asks a buyer</a> and <a href="https://circuits.fit/guides/one-page-ai-use-rule.html">A one-page AI use rule</a>. Earlier briefing: <a href="https://circuits.fit/articles/when-compliance-is-the-product.html">When compliance is the product</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>The Software Ingredients List Now Covers the Suite</title>
@@ -3360,8 +3275,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://x.com/CISACyber/status/2103568824733667774" rel="noopener">CISA on X, WordPress, Apple, and Cisco catalog posts, September 25–30, 2026</a> (<a href="https://x.com/CISACyber/status/2105018745106079807" rel="noopener">Apple</a>, <a href="https://x.com/CISACyber/status/2105375718808957053" rel="noopener">Cisco</a>)</li>
 <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76504" rel="noopener">CISA Known Exploited Vulnerabilities catalog, rows read October 1, 2026</a></li>
 </ul>
-<p>Operator pages: the <a href="https://circuits.fit/tools/sbom-request-pack.html">SBOM request pack</a>, then <a href="https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html">Ask a vendor for an SBOM</a> and <a href="https://circuits.fit/guides/ai-sbom-extra-questions.html">Extra questions for an AI bill of materials</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Operator pages: the <a href="https://circuits.fit/tools/sbom-request-pack.html">SBOM request pack</a>, then <a href="https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html">Ask a vendor for an SBOM</a> and <a href="https://circuits.fit/guides/ai-sbom-extra-questions.html">Extra questions for an AI bill of materials</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>The SEC Clock Starts When You Decide It Matters</title>
@@ -3394,8 +3308,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://x.com/CISACyber/status/2103568824733667774" rel="noopener">CISA on X, the September 25–30 catalog posts</a> (<a href="https://x.com/CISACyber/status/2105018745106079807" rel="noopener">Apple</a>, <a href="https://x.com/CISACyber/status/2105375718808957053" rel="noopener">Cisco</a>)</li>
 <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76504" rel="noopener">CISA Known Exploited Vulnerabilities catalog, rows read October 1, 2026</a></li>
 </ul>
-<p>Operator page: <a href="https://circuits.fit/guides/before-the-sec-eight-k.html">Before the Form 8-K clock</a>. Related: <a href="https://circuits.fit/articles/cyber-insurance-it-budgets.html">Cyber insurance is rewriting the IT budget</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Operator page: <a href="https://circuits.fit/guides/before-the-sec-eight-k.html">Before the Form 8-K clock</a>. Related: <a href="https://circuits.fit/articles/cyber-insurance-it-budgets.html">Cyber insurance is rewriting the IT budget</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>Gartner Revised the AI Bill. Most of It Is Not Your Budget.</title>
@@ -3430,8 +3343,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://x.com/Gartner_inc/status/2105322053888811405" rel="noopener">Gartner on X, CIO budget pressure and the 2027 agenda preview, September 30, 2026</a></li>
 <li><a href="https://x.com/Gartner_inc/status/2103170129525604515" rel="noopener">Gartner on X, managing AI cost is becoming as important as deploying it, September 24, 2026</a></li>
 </ul>
-<p>Earlier briefing: <a href="https://circuits.fit/articles/ai-spend-is-not-the-same-as-ai-return.html">AI spend is not the same as AI return</a>. Operator guides: <a href="https://circuits.fit/guides/ai-spend-vs-return.html">How to tell AI spend from AI return</a>. For one workflow, use <a href="https://circuits.fit/tools/token-cost-margin.html">token cost to gross margin</a>, then <a href="https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Earlier briefing: <a href="https://circuits.fit/articles/ai-spend-is-not-the-same-as-ai-return.html">AI spend is not the same as AI return</a>. Operator guides: <a href="https://circuits.fit/guides/ai-spend-vs-return.html">How to tell AI spend from AI return</a>. For one workflow, use <a href="https://circuits.fit/tools/token-cost-margin.html">token cost to gross margin</a>, then <a href="https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>Cyber insurance renewal prep for mid-market IT budgets (2026)</title>
@@ -4195,8 +4107,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" rel="noopener">McKinsey, “The State of AI: Global Survey 2026”</a> (figures as reported in <a href="https://www.hpcwire.com/aiwire/2026/09/02/mckinsey-report-enterprise-ai-is-becoming-a-two-speed-race/" rel="noopener">HPCwire / AIwire, Sept. 2, 2026</a>)</li>
 <li><a href="https://www.pymnts.com/news/artificial-intelligence/2026/corporate-americas-top-1-spend-7400-per-employee-on-ai/" rel="noopener">PYMNTS, Ramp AI Index and Goldman Sachs earnings note, Aug. 17, 2026</a></li>
 </ul>
-<p>Operator guides: <a href="https://circuits.fit/guides/ai-spend-vs-return.html">How to tell AI spend from AI return</a>. For one workflow, use <a href="https://circuits.fit/tools/token-cost-margin.html">token cost to gross margin</a>, then <a href="https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a>. The September revision is <a href="https://circuits.fit/articles/gartner-revised-the-ai-bill.html">Gartner revised the AI bill</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Operator guides: <a href="https://circuits.fit/guides/ai-spend-vs-return.html">How to tell AI spend from AI return</a>. For one workflow, use <a href="https://circuits.fit/tools/token-cost-margin.html">token cost to gross margin</a>, then <a href="https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a>. The September revision is <a href="https://circuits.fit/articles/gartner-revised-the-ai-bill.html">Gartner revised the AI bill</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>Chip Licenses Keep Moving. The Mid-Tier Still Waits.</title>
@@ -4246,8 +4157,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://www.politico.com/news/2026/07/08/trump-ai-tech-chips-exports-00989167" rel="noopener">Politico, “China hardliners take aim at Commerce Department official,” July 8, 2026</a></li>
 <li><a href="https://www.ajupress.com/view/20260901095455306" rel="noopener">Aju Press, “Korea adds semiconductors to export control list,” Sept. 1, 2026</a></li>
 </ul>
-<p>The quarter checklist and forecast framing are the desk’s. Policy facts are as stated by the sources above.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>The quarter checklist and forecast framing are the desk’s. Policy facts are as stated by the sources above.</p>]]></content:encoded>
 </item>
 <item>
 <title>Cyber Insurance Got Cheaper. The Questionnaire Did Not.</title>
@@ -4286,8 +4196,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://www.insurancejournal.com/magazines/mag-features/2026/07/27/878813.htm" rel="noopener">Insurance Journal, AM Best U.S. cyber market, July 27, 2026</a></li>
 <li><a href="https://www.fitchratings.com/research/insurance/us-cyber-insurance-premiums-increase-27-05-2026" rel="noopener">Fitch Ratings, “U.S. Cyber Insurance Premiums Increase,” May 27, 2026</a></li>
 </ul>
-<p>Operator guides: <a href="https://circuits.fit/guides/cyber-insurance-checklist-2026.html">Cyber insurance renewal prep for mid-market IT budgets (2026)</a> and <a href="https://circuits.fit/guides/cyber-insurance-controls-checklist.html">What a cyber insurer will still ask</a>. If a public customer is on the policy, the disclosure clock is <a href="https://circuits.fit/guides/before-the-sec-eight-k.html">Before the Form 8-K clock</a>.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>Operator guides: <a href="https://circuits.fit/guides/cyber-insurance-checklist-2026.html">Cyber insurance renewal prep for mid-market IT budgets (2026)</a> and <a href="https://circuits.fit/guides/cyber-insurance-controls-checklist.html">What a cyber insurer will still ask</a>. If a public customer is on the policy, the disclosure clock is <a href="https://circuits.fit/guides/before-the-sec-eight-k.html">Before the Form 8-K clock</a>.</p>]]></content:encoded>
 </item>
 <item>
 <title>Software Buying Is an Operating Skill</title>
@@ -4335,8 +4244,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><strong>Vendor security artifacts.</strong> More buyers are asking for SBOMs and security logs in the contract. If your vendor cannot provide them, that is information about the vendor.</li>
 </ul>
 <h2>Sources</h2>
-<p>This is an operator note. It does not cite a buying survey. The 8% and the seven CRMs are illustrations, not a count.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>This is an operator note. It does not cite a buying survey. The 8% and the seven CRMs are illustrations, not a count.</p>]]></content:encoded>
 </item>
 <item>
 <title>When Compliance Is the Product</title>
@@ -4396,8 +4304,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-072020-concepts-controller-and-processor-gdpr_en" rel="noopener">EDPB Guidelines 07/2020 on controller and processor</a></li>
 <li><a href="https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2" rel="noopener">AICPA, SOC 2 overview</a></li>
 </ul>
-<p>The dates this desk uses are in the EU briefing. This note does not add a literacy procedure.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>The dates this desk uses are in the EU briefing. This note does not add a literacy procedure.</p>]]></content:encoded>
 </item>
 <item>
 <title>The AI Productivity Paradox at Mid-Market Companies</title>
@@ -4427,8 +4334,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://x.com/Gartner_inc/status/2105676140887089286" rel="noopener">Gartner on X, October 1, 2026</a>: most organizations are not yet ready to delegate work to AI agents.</li>
 <li><a href="https://x.com/Gartner_inc/status/2103170129525604515" rel="noopener">Gartner on X, September 24, 2026</a>: managing AI cost is becoming as important as deploying it.</li>
 </ul>
-<p>The 20% in the lead is a slide an operator will recognize. It is not a figure from those posts. The three sinks are the desk’s pattern, not a published survey.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>The 20% in the lead is a slide an operator will recognize. It is not a figure from those posts. The three sinks are the desk’s pattern, not a published survey.</p>]]></content:encoded>
 </item>
 <item>
 <title>Private Credit Is Quietly Funding the Software Roll-Up</title>
@@ -4474,8 +4380,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://www.federalreserve.gov/publications/financial-stability-report.htm" rel="noopener">Federal Reserve, Financial Stability Report archive</a></li>
 <li><a href="https://www.sec.gov/edgar/search/" rel="noopener">SEC EDGAR full-text search</a>, for BDC 8-K and 10-Q filings.</li>
 </ul>
-<p>The figures above are the Fed’s. The covenant and integration framing, and the “six turns” example, are desk illustration, not a specific deal.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>The figures above are the Fed’s. The covenant and integration framing, and the “six turns” example, are desk illustration, not a specific deal.</p>]]></content:encoded>
 </item>
 <item>
 <title>Chip Export Controls and the Suppliers Caught in Between</title>
@@ -4526,8 +4431,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C/part-764/section-764.5" rel="noopener">eCFR, 15 CFR 764.5, Voluntary self-disclosure</a></li>
 <li><a href="https://www.bis.gov/licensing/classify-your-item" rel="noopener">BIS, Classify your item</a> and <a href="https://www.bis.gov/learn-support/export-compliance-programs" rel="noopener">BIS, Export Compliance Programs</a></li>
 </ul>
-<p>The case facts are from BIS. The mid-tier framing, the $40 million supplier and the quarter checklist are the desk’s.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>The case facts are from BIS. The mid-tier framing, the $40 million supplier and the quarter checklist are the desk’s.</p>]]></content:encoded>
 </item>
 <item>
 <title>Cyber Insurance Is Rewriting the IT Budget</title>
@@ -4583,8 +4487,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><strong>Pricing turns.</strong> Soft markets end. Controls you add now will matter more when rates rise again.</li>
 </ul>
 <h2>Sources</h2>
-<p>This note does not cite a premium, a deductible, or a loss ratio. The measured market note is <a href="https://circuits.fit/articles/cyber-got-cheaper-the-questionnaire-did-not.html">Cyber got cheaper. The questionnaire did not.</a></p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>This note does not cite a premium, a deductible, or a loss ratio. The measured market note is <a href="https://circuits.fit/articles/cyber-got-cheaper-the-questionnaire-did-not.html">Cyber got cheaper. The questionnaire did not.</a></p>]]></content:encoded>
 </item>
 <item>
 <title>The New Unit Economics of AI-Native Startups</title>
@@ -4632,8 +4535,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://platform.openai.com/docs/guides/batch" rel="noopener">OpenAI, Batch API guide</a>: 50% cost discount versus synchronous APIs, 24-hour completion window.</li>
 <li><a href="https://genai.owasp.org/llm-top-10/" rel="noopener">OWASP Top 10 for LLM Applications, 2025</a>: LLM10, Unbounded Consumption.</li>
 </ul>
-<p>The margin lines in this note, including the old 80-point habit and the path toward 70%, are desk framing. They are not measurements from these sources.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>The margin lines in this note, including the old 80-point habit and the path toward 70%, are desk framing. They are not measurements from these sources.</p>]]></content:encoded>
 </item>
 <item>
 <title>Cloud Repatriation: When the Bill Becomes the Strategy</title>
@@ -4698,8 +4600,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://www.gov.uk/cma-cases/cloud-services-market-investigation" rel="noopener">UK CMA, cloud services market investigation</a>: final decision published July 31, 2025</li>
 <li><a href="https://www.finops.org/framework/" rel="noopener">FinOps Foundation, FinOps Framework</a></li>
 </ul>
-<p>This note does not cite a repatriation survey. The twelve-month comparison is a method, not a published savings figure.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>This note does not cite a repatriation survey. The twelve-month comparison is a method, not a published savings figure.</p>]]></content:encoded>
 </item>
 <item>
 <title>Six Questions Every Board Should Ask About Generative AI</title>
@@ -4751,8 +4652,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><a href="https://genai.owasp.org/llm-top-10/" rel="noopener">OWASP Top 10 for LLM Applications, 2025 edition</a>: includes sensitive information disclosure, excessive agency, system prompt leakage and unbounded consumption.</li>
 <li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" rel="noopener">Regulation (EU) 2024/1689, the Artificial Intelligence Act, on EUR-Lex</a></li>
 </ul>
-<p>The six questions and the “good answer” tests are the desk’s. The sources above are cited for the specific facts attributed to them.</p>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+<p>The six questions and the “good answer” tests are the desk’s. The sources above are cited for the specific facts attributed to them.</p>]]></content:encoded>
 </item>
 <item>
 <title>Retail Media Networks Are Eating the Digital Ad Market</title>
@@ -4805,8 +4705,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <p>This is an operator note. It does not cite an ad-market forecast or a retailer’s filing.</p>
 <ul class="sources">
 <li><a href="https://www.mediaratingcouncil.org/standards-and-guidelines" rel="noopener">Media Rating Council, Standards and Guidelines</a>: lists the IAB/MRC Retail Media Measurement Guidelines, January 2024 (<a href="https://www.mediaratingcouncil.org/sites/default/files/Standards/IAB_Retail_Media_Measurement_Guidelines_January2024.pdf" rel="noopener">PDF</a>)</li>
-</ul>
-<p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuitandcapital.bsky.social" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>]]></content:encoded>
+</ul>]]></content:encoded>
 </item>
 </channel>
 </rss>
