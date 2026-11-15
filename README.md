@@ -34,4 +34,11 @@ HTTP 200 or 202 means success.
 
 ## RSS full content
 
-After adding an item to `feed.xml`, run `python3 scripts/feed-content.py` to (re)generate `<content:encoded>` full-body HTML for every item (idempotent; needs beautifulsoup4).
+Netlify runs `python3 scripts/feed-content.py` on every deploy so each `feed.xml` item gets a full `<content:encoded>` body. After adding an item to `feed.xml`, you can also run the script locally (idempotent; needs beautifulsoup4):
+
+```
+python3 -m pip install -r requirements-feed.txt
+python3 scripts/feed-content.py
+```
+
+Tool pages get the heading, dek and explanation, not the interactive form.
