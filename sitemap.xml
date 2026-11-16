@@ -246,7 +246,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/guides/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/guides/limit-what-an-agent-can-touch.html</loc>
@@ -386,7 +386,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/services/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/start/</loc>
@@ -394,7 +394,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/services/quick-answer.html</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/services/contract-review.html</loc>
@@ -430,6 +430,14 @@
   </url>
   <url>
     <loc>https://circuits.fit/services/microsoft-365-renewal-check.html</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/services/incident-response-kit.html</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/guides/first-30-minutes-security-incident.html</loc>
+    <lastmod>2026-11-16</lastmod>
   </url>
 </urlset>

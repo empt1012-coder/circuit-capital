@@ -106,3 +106,5 @@ https://circuits.fit/articles/cisco-broadworks-cve-2026-20320-kev.html
 https://circuits.fit/articles/copilot-business-usage-billing-default-2027.html
 https://circuits.fit/articles/chrome-157-update-cve-2026-125350.html
 https://circuits.fit/articles/notion-ai-vendor-incident-fireworks.html
+https://circuits.fit/services/incident-response-kit.html
+https://circuits.fit/guides/first-30-minutes-security-incident.html
