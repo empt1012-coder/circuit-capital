@@ -148,3 +148,7 @@ https://www.circuits.fit/* https://circuits.fit/:splat 301!
 /subscribed.html / 301!
 /subscribed / 301!
 /subscribed/ / 301!
+/services/incident-response-kit /services/incident-response-kit.html 301!
+/services/incident-response-kit/ /services/incident-response-kit.html 301!
+/guides/first-30-minutes-security-incident /guides/first-30-minutes-security-incident.html 301!
+/guides/first-30-minutes-security-incident/ /guides/first-30-minutes-security-incident.html 301!
