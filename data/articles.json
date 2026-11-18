@@ -1,6 +1,39 @@
 {
   "articles": [
     {
+      "slug": "sonicwall-sslvpn-saml-mfa-bypass-cve-2026-19868",
+      "title": "SonicWall VPN with SAML sign-in? Check one version and one setting before Friday.",
+      "dek": "CISA added SonicWall CVE-2026-19868 to its exploited list on November 6, with a November 20 due date. A valid password for an older sign-in method can skip single sign-on and the MFA it enforces. SonicWall fixed it in SonicOS 7.3.4-7013 and 8.2.3-8015 and published a workaround on November 9.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "November 18, 2026",
+      "readTime": 5,
+      "image": "assets/images/datacenter.jpg",
+      "body": "SonicWall SonicOS SSL VPN SSLVPN CVE-2026-19868 SAML MFA bypass LDAP RADIUS TACACS+ SNWLID-2026-0014 7.3.4-7013 8.2.3-8015 Gen7 Gen8 TZ NSa NSv CISA KEV November 20 2026 firewall VPN"
+    },
+    {
+      "slug": "screenconnect-cve-2026-84869-msp-technician-clients",
+      "title": "Your IT provider updated ScreenConnect. Did it update the technicians’ PCs too?",
+      "dek": "On November 16, Huntress reported attackers exploiting ScreenConnect CVE-2026-84869 against IT providers’ technicians. The fix, version 26.6.5, has been out since September, but it has to reach every technician’s client, not just the server. Microsoft also described a separate ScreenConnect campaign the same week. Ask your provider in writing.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "November 18, 2026",
+      "readTime": 5,
+      "image": "assets/images/nightdesk.jpg",
+      "body": "ConnectWise ScreenConnect CVE-2026-84869 26.6.5 MSP IT provider technician host client Huntress SCKit Microsoft RMM+ Labtech Plus TransferFiles remote access CISA KEV Java4Shell CVE-2026-114938"
+    },
+    {
+      "slug": "fcc-sim-swap-rule-free-sim-lock",
+      "title": "Your carrier must offer a free SIM lock by December 17. Turn it on for the phones that approve payments.",
+      "dek": "The FCC’s SIM swap rules took effect on November 17, 2026, and carriers must comply by December 17. They require a free lock against SIM changes, an alert before any SIM change, and a free way to report fraud. Here is what to switch on this week, and what the rules do not cover yet.",
+      "category": "Policy",
+      "author": "Emilio Santos",
+      "date": "November 18, 2026",
+      "readTime": 6,
+      "image": "assets/images/office.jpg",
+      "body": "FCC SIM swap port-out fraud rule 91 FR 73684 47 CFR 64.2010 December 17 2026 SIM lock Number Lock SIM Protection Port Out Protection Wireless Account Lock Verizon T-Mobile AT&T SMS MFA carrier"
+    },
+    {
       "slug": "chrome-157-update-cve-2026-125350",
       "title": "Relaunch Chrome this week. Check it shows 157.0.8103.78 or later.",
       "dek": "Google’s November 9 Stable update fixed CVE-2026-125350, a use-after-free in XML that Google says is exploited in the wild. CISA added it to its Known Exploited Vulnerabilities catalog the next day, with a due date of November 24. The current Stable build, posted November 11, is 157.0.8103.78 for Linux and 157.0.8103.78/.79 for Windows and Mac, and it includes 83 security fixes, five of them Critical. Relaunch Chrome on every PC this week and confirm that version, or later.",

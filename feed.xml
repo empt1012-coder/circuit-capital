@@ -5,7 +5,170 @@
 <link>https://circuits.fit/</link>
 <description>Sourced operator briefings on AI spend, agents, chips, cyber, and policy. Edited by Emilio Santos.</description>
 <language>en-us</language>
-<lastBuildDate>Thu, 12 Nov 2026 13:10:00 +0000</lastBuildDate>
+<lastBuildDate>Wed, 18 Nov 2026 20:30:00 +0000</lastBuildDate>
+<item>
+<title>SonicWall VPN with SAML sign-in? Check one version and one setting before Friday.</title>
+<link>https://circuits.fit/articles/sonicwall-sslvpn-saml-mfa-bypass-cve-2026-19868.html</link>
+<guid>https://circuits.fit/articles/sonicwall-sslvpn-saml-mfa-bypass-cve-2026-19868.html</guid>
+<pubDate>Wed, 18 Nov 2026 20:30:00 +0000</pubDate>
+<description>CISA added SonicWall CVE-2026-19868 to its exploited list on November 6, with a November 20 due date. A valid password for an older sign-in method can skip single sign-on and the MFA it enforces. SonicWall fixed it in SonicOS 7.3.4-7013 and 8.2.3-8015 and published a workaround on November 9.</description>
+<author>circuits50capital@circuits.fit (Emilio Santos)</author>
+<content:encoded><![CDATA[<p class="lead-graf">If your business uses a SonicWall firewall for remote access, and staff sign in to the SSL VPN through a single sign-on page (SAML), there is one version to check and one setting to understand before Friday, November 20, 2026. That is the federal due date CISA set when it added SonicWall CVE-2026-19868 to its Known Exploited Vulnerabilities catalog on November 6.</p>
+<p>The flaw does not let a stranger in with no password. It lets someone who already holds a valid password for an older sign-in method skip the single sign-on step, and with it the multi-factor prompt that single sign-on was supposed to enforce. For a small firm, that is the difference between “we have MFA on the VPN” and “every route into the VPN needs MFA.” Those are not the same claim, and insurers increasingly ask about the second one.</p>
+<h2>What happened</h2>
+<p>SonicWall’s security advisory SNWLID-2026-0014, “SonicWall SonicOS Affected By Multiple Vulnerabilities,” covers seven CVEs in SonicOS, the operating system on its Gen7 and Gen8 firewalls. Its revision history dates version 1.0 to November 5 and version 1.1 to November 9. The CVE record for CVE-2026-19868 was published on November 6.</p>
+<p>SonicWall describes CVE-2026-19868 as an authentication enforcement flaw in the SonicOS SSL VPN service that “may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls,” and says successful exploitation “may also bypass SAML-enforced multi-factor authentication (MFA).” In plain terms: if the firewall still accepts logins checked against LDAP, RADIUS, TACACS+ or similar servers, a valid password from one of those may get a user past the SAML page.</p>
+<p>Two details in the advisory matter most. First, SonicWall says the flaw affects the SSL VPN “ONLY” when SAML is enabled for SSL VPN logins. Second, it says its security team “has investigated a report indicating potential exploitation” and urges customers to upgrade as soon as possible. SonicWall scores the flaw 7.1 (High). CISA added it to the catalog on the same day the CVE was published, with a November 20 due date for federal agencies. CISA lists known ransomware use as unknown.</p>
+<h2>Which firewalls, and which builds fix it</h2>
+<p>We read the affected and fixed versions from SonicWall’s advisory on November 18:</p>
+<ul>
+<li><strong>Gen7</strong> hardware (TZ 270, 370, 470, 570 and 670 series, NSa 2700 to 6700, NSsp 10700 to 15700) and Gen7 NSv virtual firewalls (NSv 270, 470, 870): affected on <strong>7.3.3-7015 and older</strong>, fixed in <strong>7.3.4-7013 and higher</strong>.</li>
+<li><strong>Gen8</strong> hardware (TZ 80, 280, 380, 480, 580 and 680 series, NSa 2800 to 5800) and Gen8 NSv (XS, S, M, L): affected on <strong>8.2.2-8015 and older</strong>, fixed in <strong>8.2.3-8015 and higher</strong>.</li>
+</ul>
+<p>The advisory lists Gen7 and Gen8 SonicOS platforms only. If you run an older or different SonicWall product, check the advisory and SonicWall’s support pages for your exact model rather than assuming either way.</p>
+<p>The same advisory also fixes six other SonicOS flaws, including two in the management interface that SonicWall scores 8.8 and a pre-authentication heap overflow in the SSL VPN service that can crash it (7.5). Those are not on CISA’s catalog, but the upgrade that fixes CVE-2026-19868 is the natural time to close them too.</p>
+<h2>If you cannot upgrade by Friday</h2>
+<p>Version 1.1 of the advisory, dated November 9, added a workaround. If SAML is in use and upgrading is not possible, SonicWall says to disable or delete any active LDAP, RADIUS and TACACS+ authentication servers configured on the firewall. It gives the menu path for each, under Device, Users, Settings, Authentication. Before you switch them off, find out what else relies on those servers, such as admin logins or Wi-Fi authentication, so the workaround does not lock out the people who need to finish the upgrade.</p>
+<h2>What it means for CFOs and CISOs</h2>
+<p>The lesson here is broader than one firewall. Many firms turned on single sign-on with MFA for the VPN and left the older sign-in methods configured “just in case.” Every one of those is a second door. When a cyber insurance form or a client security questionnaire asks whether MFA is required for all remote access, the honest answer depends on the doors you forgot, not the one you built.</p>
+<p>There is also a budget point. A firewall that is out of support, or whose subscription has lapsed, may not be able to take the fixed build at all. If that is your situation, the cost of this week is not an hour of IT time; it is a replacement you may have been deferring. Better to learn that now, on your own schedule, than during an incident.</p>
+<p>Finally, this is a vendor-management question for most small firms. If an IT provider runs your firewall, the patch is theirs to apply and the evidence is yours to keep. A dated, written answer is worth more than a verbal “we’re on it.”</p>
+<h2>What to do this week</h2>
+<ol>
+<li><strong>Find out if this applies.</strong> Ask whoever manages your network two questions: do we have a SonicWall Gen7 or Gen8 firewall, and does its SSL VPN use SAML single sign-on? If either answer is no, note it and move on.</li>
+<li><strong>Check the SonicOS version.</strong> It should read 7.3.4-7013 or later on Gen7, or 8.2.3-8015 or later on Gen8. If not, schedule the upgrade before Friday. <a href="https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014" rel="noopener">SonicWall’s advisory</a> is the place to confirm the fixed build for your model.</li>
+<li><strong>Apply the workaround if the upgrade slips.</strong> Disable or delete active LDAP, RADIUS and TACACS+ servers on the firewall, after checking what depends on them.</li>
+<li><strong>Compare logins for the days your logs still cover.</strong> Every SSL VPN session should line up with a sign-in at your identity provider. A VPN session with no matching single sign-on record is worth a closer look.</li>
+<li><strong>Write it down.</strong> Record the model, the version before and after, the date and who did the work. If the upgrade cannot happen this week, log it with a date and an owner in our free <a href="https://circuits.fit/tools/risk-exception-register.html">risk exception register</a>. If anything looks wrong in the logs, our <a href="https://circuits.fit/guides/first-30-minutes-security-incident.html">first 30 minutes guide</a> covers what to do first.</li>
+</ol>
+<h2>What to watch next</h2>
+<ul>
+<li><strong>SonicWall’s advisory.</strong> It says SonicWall investigated a report of potential exploitation but gives no detail. Watch for a revision that adds indicators or changes the workaround.</li>
+<li><strong>CISA’s catalog entry.</strong> The due date binds federal agencies, but it is a useful outside deadline for everyone else.</li>
+<li><strong>Insurance renewals.</strong> Expect more questions about whether MFA covers every remote-access path. Have your answer, and the date you checked, ready.</li>
+</ul>
+<p>Not sure whether your VPN uses SAML, or which build you are on? Our $49 <a href="https://circuits.fit/services/am-i-affected-check.html">Am I Affected? Check</a> reads the advisory against what you run and replies within 1 business day with a plain answer and 3 to 5 steps. For a single narrower question, such as how to word the request to your IT provider, our $29 <a href="https://circuits.fit/services/quick-answer.html">Quick Answer</a> covers it in writing.</p>
+<h2>Sources</h2>
+<ul class="sources">
+<li><a href="https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014" rel="noopener">SonicWall PSIRT, “SonicWall SonicOS Affected By Multiple Vulnerabilities,” SNWLID-2026-0014</a>, version 1.1, November 9, 2026, read November 18, 2026 (CVE-2026-19868 description, SAML-only condition, report of potential exploitation, CVSS 7.1, affected and fixed versions, workaround)</li>
+<li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" rel="noopener">CISA Known Exploited Vulnerabilities catalog</a>, catalog version 2026.11.17, checked November 18, 2026 (CVE-2026-19868 added November 6, due November 20, known ransomware use Unknown)</li>
+<li><a href="https://www.cve.org/CVERecord?id=CVE-2026-19868" rel="noopener">CVE record CVE-2026-19868</a>, published November 6, 2026 (affected versions 7.3.3-7015 and older, 8.2.2-8015 and older)</li>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19868" rel="noopener">NIST National Vulnerability Database, CVE-2026-19868</a></li>
+</ul>
+<p>Related: <a href="https://circuits.fit/articles/ivanti-gitlab-cisco-kev-deadlines.html">reading CISA’s due dates</a>, <a href="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">the BeyondTrust remote support zero-day</a>, <a href="https://circuits.fit/articles/screenconnect-cve-2026-84869-msp-technician-clients.html">ScreenConnect and your IT provider</a>, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
+</item>
+<item>
+<title>Your IT provider updated ScreenConnect. Did it update the technicians’ PCs too?</title>
+<link>https://circuits.fit/articles/screenconnect-cve-2026-84869-msp-technician-clients.html</link>
+<guid>https://circuits.fit/articles/screenconnect-cve-2026-84869-msp-technician-clients.html</guid>
+<pubDate>Wed, 18 Nov 2026 20:20:00 +0000</pubDate>
+<description>On November 16, Huntress reported attackers exploiting ScreenConnect CVE-2026-84869 against IT providers’ technicians. The fix, version 26.6.5, has been out since September, but it has to reach every technician’s client, not just the server. Microsoft also described a separate ScreenConnect campaign the same week. Ask your provider in writing.</description>
+<author>circuits50capital@circuits.fit (Emilio Santos)</author>
+<content:encoded><![CDATA[<p class="lead-graf">If an outside IT provider supports your business, there is a good chance it uses ConnectWise ScreenConnect to reach your computers. On November 16, 2026, the security firm Huntress reported that attackers have exploited a ScreenConnect flaw, CVE-2026-84869, against IT providers’ own technicians. The fix has been out since September 8. The question for you is not technical. It is whether your provider applied it everywhere it needs to be, and you can ask that in one email.</p>
+<p>The detail that makes this different: updating the ScreenConnect server is not enough. The vulnerable code runs in the client on the technician’s own PC. A provider can be fully patched on paper and still have technicians on old clients, which is what Huntress says it found.</p>
+<h2>What happened</h2>
+<p>ConnectWise published its security bulletin for ScreenConnect 26.6.5 on September 8, 2026. It describes a condition in the ScreenConnect client that “may allow files to be transferred and executed through an active remote session without authorization or Host confirmation in certain circumstances.” ConnectWise rates it 9.9 on the CVSS scale, says versions before 26.6.5 are affected and ScreenConnect servers are not, and gives Priority 1, its highest, recommending installation “within days.” For cloud customers it says no server action is required, but after upgrading partners must “reinstall your host clients and update your access agents.” As a temporary step, it says to remove the TransferFiles permission from roles.</p>
+<p>CISA added CVE-2026-84869 to its Known Exploited Vulnerabilities catalog on September 11, with a federal due date of September 14, and marks it for forensic triage.</p>
+<h2>What Huntress found</h2>
+<p>Huntress’s November 16 report says it confirmed in-the-wild exploitation in which a guest in a remote session pushed a file that the connecting technician’s host client then ran, with no prompt on the technician’s screen. Its main findings:</p>
+<ul>
+<li>On November 12, a technician at one IT provider joined a blank-named session. Within about nine seconds, a guest-pushed batch file had run, reported to the attacker and installed a rebranded ScreenConnect client pointing at the attacker’s own server, named to look like Windows Update.</li>
+<li>On November 13, a second technician’s client ran a harmless “canary” text file, which Huntress reads as a test that the exploit works.</li>
+<li>Since October 20, Huntress counted at least 688,000 guest “run file” requests for batch files across 42 IT providers’ ScreenConnect servers, from 29 IP addresses, sprayed in the hope a technician would join.</li>
+<li>Many technicians were still on 22.x, 24.2 and 25.8 clients weeks after the fix shipped.</li>
+</ul>
+<p>Huntress recommends updating every technician’s host client to 26.6.5 or later, hunting for the client launching scripts from its temporary folder, and, where a hit is found, rotating every credential reachable from that technician’s workstation. Its reasoning is the part business owners should read twice: a technician’s PC typically holds remote management consoles, saved credentials and access to every customer.</p>
+<h2>A separate campaign the same week</h2>
+<p>On November 13, Microsoft published research on a campaign it calls SCKit, which it says ConnectWise first reported on November 11. Attackers gained unauthorized access to IT providers’ cloud-hosted ScreenConnect instances, used it to install unauthorized remote-access clients on managed computers, and deployed a component designed to deliver a payload to a technician who connects. Microsoft says ConnectWise’s advisory describes an authentication flaw in versions 1.0.31 and 1.0.32 of the third-party RMM+ extension, which accepted an empty key when none was set, and that the entry method is still under investigation. Its guidance is to keep the identified extensions disabled and to investigate technician workstations and downstream computers, because removing a rogue client alone does not remove the toolkit’s persistence. Huntress says SCKit does not appear to exploit CVE-2026-84869 directly.</p>
+<h2>What it means for CFOs and CISOs</h2>
+<p>For a business that buys IT support, this is a vendor-management problem. Your provider’s remote-access tool is, in effect, a key to every computer it manages, including yours. You do not need to understand the exploit. You need a written, dated answer that the key is looked after, and you need to know what your contract says the provider must tell you after an incident.</p>
+<p>This also shows up in paperwork. Cyber insurance applications and client security questionnaires increasingly ask how third parties with remote access are controlled. “Our MSP handles it” is not an answer an underwriter can score. “Our MSP confirmed in writing on November 19 that all technician clients are on 26.6.5 or later and the RMM+ extensions are disabled” is.</p>
+<h2>What to do this week</h2>
+<ol>
+<li><strong>Find out what your provider uses.</strong> Ask which remote-access tool it uses to reach your machines. If it is not ScreenConnect, ask the same questions about the tool it does use.</li>
+<li><strong>Send these questions in writing.</strong> “Are all of your technicians’ ScreenConnect host clients and access agents on version 26.6.5 or later, and when was that confirmed? Are the RMM+ and Labtech Plus extensions disabled on your ScreenConnect instance? Have you checked our computers for ScreenConnect clients you did not install? Who can join a session as a guest, and is the web console restricted by IP or VPN?”</li>
+<li><strong>Keep the answer.</strong> File the reply, the date and the name of the person who sent it with your vendor records. Our <a href="https://circuits.fit/tools/vendor-claim-checker.html">vendor claim checker</a> helps you separate a specific answer from a vague one.</li>
+<li><strong>Check your contract.</strong> Does it require the provider to tell you about a security incident affecting its tools, and how fast? If not, add it at renewal. Our guide on <a href="https://circuits.fit/guides/what-belongs-in-a-processor-clause.html">what belongs in a processor clause</a> has wording to start from.</li>
+<li><strong>Inventory remote-access tools on your own machines.</strong> List every remote-support app installed, who it belongs to and whether it is still needed. Remove what no one can explain.</li>
+</ol>
+<h2>What to watch next</h2>
+<ul>
+<li><strong>ConnectWise’s bulletins.</strong> Watch for updates on the RMM+ extension and the SCKit investigation.</li>
+<li><strong>Provider notices.</strong> If your provider was affected, you may get a notice. Read it for dates, which machines were reachable and which credentials were rotated.</li>
+<li><strong>Other tools your provider runs.</strong> CISA also issued an alert on November 17 urging organizations to patch a critical Java flaw, CVE-2026-114938, including copies of Java bundled inside other products. If your provider manages servers for you, it is a reasonable follow-up question.</li>
+</ul>
+<p>Not sure whether your IT provider’s tools are affected, or what a good answer looks like? Our $49 <a href="https://circuits.fit/services/am-i-affected-check.html">Am I Affected? Check</a> reads the advisories against what you tell us about your setup and replies within 1 business day with a plain answer and 3 to 5 steps, including what to ask your provider.</p>
+<h2>Sources</h2>
+<ul class="sources">
+<li><a href="https://www.connectwise.com/company/trust/security-bulletins/2026-09-08-screenconnect-bulletin" rel="noopener">ConnectWise, “ScreenConnect 26.6.5 Security Patch,”</a> September 8, 2026, checked November 18, 2026 (CVE-2026-84869, CVSS 9.9, versions before 26.6.5 affected, servers not impacted, reinstall host clients, TransferFiles mitigation)</li>
+<li><a href="https://www.huntress.com/blog/cve-2026-84869-screenconnect-technician-exploitation" rel="noopener">Huntress, “CVE-2026-84869 in ScreenConnect Exploited to Run Malicious Files on MSP Technician Accounts,”</a> John Hammond, November 16, 2026 (in-the-wild exploitation, 688,000 requests across 42 servers, client versions, recommendations)</li>
+<li><a href="https://www.microsoft.com/en-us/security/blog/2026/11/13/sckit-abuses-screenconnect-deploy-remote-access-target-technician-sessions/" rel="noopener">Microsoft Security Blog, “SCKit abuses ScreenConnect to deploy remote access and target technician sessions,”</a> November 13, 2026 (RMM+ extension flaw per ConnectWise, mitigation guidance)</li>
+<li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" rel="noopener">CISA Known Exploited Vulnerabilities catalog</a>, catalog version 2026.11.17, checked November 18, 2026 (CVE-2026-84869 added September 11, due September 14, forensic triage Yes)</li>
+<li><a href="https://www.cisa.gov/news-events/alerts/2026/11/17/critical-java-vulnerability-requires-immediate-patching" rel="noopener">CISA, “Critical Java Vulnerability Requires Immediate Patching,”</a> November 17, 2026 (CVE-2026-114938)</li>
+</ul>
+<p>Related: <a href="https://circuits.fit/articles/n-able-n-central-offline-able2shell.html">N-able N-central and your IT provider</a>, <a href="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">the BeyondTrust remote support zero-day</a>, <a href="https://circuits.fit/articles/sonicwall-sslvpn-saml-mfa-bypass-cve-2026-19868.html">SonicWall SSL VPN and SAML</a>, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Your carrier must offer a free SIM lock by December 17. Turn it on for the phones that approve payments.</title>
+<link>https://circuits.fit/articles/fcc-sim-swap-rule-free-sim-lock.html</link>
+<guid>https://circuits.fit/articles/fcc-sim-swap-rule-free-sim-lock.html</guid>
+<pubDate>Wed, 18 Nov 2026 20:10:00 +0000</pubDate>
+<description>The FCC’s SIM swap rules took effect on November 17, 2026, and carriers must comply by December 17. They require a free lock against SIM changes, an alert before any SIM change, and a free way to report fraud. Here is what to switch on this week, and what the rules do not cover yet.</description>
+<author>circuits50capital@circuits.fit (Emilio Santos)</author>
+<content:encoded><![CDATA[<p class="lead-graf">On November 17, 2026, the Federal Communications Commission’s SIM swap rules took effect, three years after the agency adopted them. Mobile carriers must comply by December 17. The part a small business can use right away is simple: every carrier will have to offer a free lock that stops anyone from moving your phone number to a new SIM until you take the lock off.</p>
+<p>That matters because many firms still tie money to a phone number. Bank sign-in codes arrive by text message. Payroll and Microsoft 365 accounts fall back to SMS. Vendors call a mobile number to confirm a change in bank details. If a criminal talks a carrier into moving that number to their own SIM, the codes and the calls go to them. The new rules give you a free control and a warning. They take a few minutes per phone to use.</p>
+<h2>What happened</h2>
+<p>The Federal Register notice published on November 17 (91 FR 73684) comes from the FCC’s Wireline Competition Bureau. It says the White House Office of Management and Budget approved the paperwork requirements behind the 2023 rules on January 15, 2025, which was the last step before they could take effect. The notice makes the new paragraphs of the FCC’s customer-data rule, 47 CFR 64.2010(h), effective November 17, 2026, and sets December 17, 2026 as the date carriers must comply.</p>
+<p>The rules come from the FCC’s SIM Swap and Port-Out Fraud Order, FCC 23-95, released November 16, 2023 and published in the Federal Register on December 8, 2023. They apply to mobile carriers, including resellers that run on another carrier’s network. Under the rules, a carrier must:</p>
+<ul>
+<li>use secure ways to confirm a customer’s identity before a SIM change, not ones that rely on readily available biographical, account or payment details;</li>
+<li>have procedures for failed authentication attempts on SIM change requests;</li>
+<li>notify the customer immediately when a SIM change is requested, before carrying it out;</li>
+<li>offer every customer, at no cost, the option to lock the account against SIM changes, and not process a SIM change until the customer turns the lock off;</li>
+<li>describe its account protection measures in clear language on its website and app;</li>
+<li>give customers a free, easy way to report a fraudulent SIM change, investigate it promptly, and provide documentation on request;</li>
+<li>keep records of SIM change requests, fraud and the authentication methods used for at least three years;</li>
+<li>train staff to spot fraudulent SIM change attempts.</li>
+</ul>
+<h2>What it does not change yet</h2>
+<p>The 2023 order also wrote parallel rules for “port-outs,” when a number is moved to a different carrier, in 47 CFR 52.37. Those were delayed along with the SIM rules. The November 17 notice names only the SIM change paragraphs, so we do not treat the port-out rules as in force yet. In practice that gap is smaller than it sounds, because the large carriers already offer a separate number transfer lock (see below). It is still worth turning on both.</p>
+<p>The rules also do not make SMS codes safe. A lock makes a SIM swap harder; it does not stop phishing pages that ask for the code, or a staff member reading a code out to a caller. The stronger fix is to stop relying on text messages for the accounts that move money.</p>
+<h2>What the big carriers offer today</h2>
+<p>We checked the carriers’ own support pages on November 18. Names differ, and business accounts are sometimes managed through a separate portal or account rep:</p>
+<ul>
+<li><strong>Verizon</strong> offers SIM Protection, which blocks SIM and device changes, and Number Lock, which blocks transfers to another carrier. Both are set in the My Verizon app, and Verizon describes Number Lock as free.</li>
+<li><strong>T-Mobile</strong> offers SIM Protection and a separate Port Out Protection, both free. Port Out Protection is added line by line, and only the primary account holder can remove it. Business accounts manage SIM protection in T-Mobile’s Account Hub.</li>
+<li><strong>AT&amp;T</strong> offers Wireless Account Lock, a free setting in the AT&amp;T app that disables specific transactions and account changes for every line on the account. AT&amp;T emails the primary account holder and texts each line whenever it is turned on or off.</li>
+</ul>
+<p>If you use a smaller carrier or a reseller, look on its website for an “account protection” page. From December 17, the rules require one.</p>
+<h2>What it means for CFOs and CISOs</h2>
+<p>A phone number is often the weakest link in a payment process, and it is controlled by an account most finance teams never look at: the carrier account. Whoever can sign in to that account, or talk a carrier’s support line into a change, can redirect the codes. The new rules shift some of the burden onto carriers, but the lock only helps if someone turns it on and knows who can turn it off.</p>
+<p>There is a cost angle too. The lock is free. A fraudulent transfer after a SIM swap is not. A few minutes per phone, on the four or five numbers that approve money, is about as cheap as a control gets. If your cyber insurance application asks how you protect against social engineering, this is a concrete, dated answer you can give.</p>
+<h2>What to do this week</h2>
+<ol>
+<li><strong>List the phones that matter.</strong> Whose mobile number receives bank, payroll, Microsoft 365 or Google Workspace codes, or gets callbacks to approve payments? Usually the owner, the controller, the accounts payable lead and the IT admin.</li>
+<li><strong>Turn on the SIM lock and the number transfer lock on each.</strong> Write down who can unlock them and how. Put a strong, non-obvious account PIN on the carrier account, and keep it in your password manager.</li>
+<li><strong>Move money accounts off SMS where you can.</strong> Use an authenticator app or a passkey for banking, payroll and admin accounts. Our <a href="https://circuits.fit/guides/password-manager-small-business.html">password manager guide</a> covers storing the backups.</li>
+<li><strong>Add one line to your payment rule.</strong> A call about a new number or a “lost phone” never authorizes a payment or a bank change. Confirm on a number already on file. Our guide <a href="https://circuits.fit/guides/stop-using-a-voice-as-approval.html">Stop using a voice as approval</a> has the wording.</li>
+<li><strong>Know the warning sign.</strong> If a work phone suddenly shows no service or emergency calls only, and the network is fine for everyone else, call the carrier from another phone and check for a SIM change.</li>
+</ol>
+<h2>What to watch next</h2>
+<ul>
+<li><strong>December 17.</strong> The compliance date. Expect carriers to add or rename lock settings and publish account protection pages around then.</li>
+<li><strong>The port-out paragraphs.</strong> Watch for a separate FCC notice making the 47 CFR 52.37 changes effective.</li>
+<li><strong>Your bank’s options.</strong> Ask whether your bank supports app-based or passkey sign-in for business accounts, and whether callbacks can go to a desk line instead of a mobile.</li>
+</ul>
+<p>Not sure which of your logins still send codes by text, or how to word a request to your bank? Ask us one question through our $29 <a href="https://circuits.fit/services/quick-answer.html">Quick Answer</a> and get a written reply.</p>
+<h2>Sources</h2>
+<ul class="sources">
+<li><a href="https://www.federalregister.gov/documents/2026/11/17/2026-23400/protecting-consumers-from-sim-swap-and-port-out-fraud" rel="noopener">Federal Register, Federal Communications Commission, “Protecting Consumers From SIM-Swap and Port-Out Fraud,”</a> final rule; announcement of effective and compliance dates, 91 FR 73684, FR Doc. 2026-23400, November 17, 2026 (effective November 17, 2026; compliance December 17, 2026; OMB approval January 15, 2025)</li>
+<li><a href="https://www.federalregister.gov/documents/2023/12/08/2023-26338/protecting-consumers-from-sim-swap-and-port-out-fraud" rel="noopener">Federal Register, Federal Communications Commission, “Protecting Consumers From SIM-Swap and Port-Out Fraud,”</a> FCC 23-95, 88 FR 85794, December 8, 2023 (rule text for 47 CFR 64.2010(h) and 52.37)</li>
+<li><a href="https://www.verizon.com/support/knowledge-base-309293/" rel="noopener">Verizon, “Enable / Disable SIM Protection and Number Lock”</a> and <a href="https://www.verizon.com/support/port-out-faqs/" rel="noopener">port-out FAQs</a>, checked November 18, 2026</li>
+<li><a href="https://www.t-mobile.com/support/plans-features/help-with-t-mobile-account-fraud" rel="noopener">T-Mobile, “Protect your T-Mobile account from fraud”</a> and <a href="https://www.t-mobile.com/support/account/transfer-your-phone-number" rel="noopener">“Transfer your phone number”</a> (Port Out Protection), checked November 18, 2026</li>
+<li><a href="https://www.att.com/support/article/wireless/000102016/" rel="noopener">AT&amp;T, “Learn about Wireless Account Lock”</a>, last updated April 22, 2026, checked November 18, 2026</li>
+</ul>
+<p>Related: <a href="https://circuits.fit/guides/stop-using-a-voice-as-approval.html">Stop using a voice as approval</a>, <a href="https://circuits.fit/guides/cyber-insurance-controls-checklist.html">cyber insurance controls checklist</a>, and <a href="https://circuits.fit/articles/staff-ai-use-policy-federal-state.html">the staff AI policy and payment confirmation rule</a>.</p>]]></content:encoded>
+</item>
 <item>
 <title>Relaunch Chrome this week. Check it shows 157.0.8103.78 or later.</title>
 <link>https://circuits.fit/articles/chrome-157-update-cve-2026-125350.html</link>
@@ -619,7 +782,7 @@
 <li><strong>December 11, 2025: the White House order.</strong> Executive Order 14365, “Ensuring a National Policy Framework for Artificial Intelligence,” sets a policy of “a minimally burdensome national policy framework for AI.” It directed the Attorney General to set up an AI Litigation Task Force within 30 days to challenge state AI laws it considers inconsistent with that policy, and directed the Secretary of Commerce to publish, within 90 days, an evaluation identifying “onerous” state AI laws. It also called for a legislative recommendation for a federal framework that preempts conflicting state laws, while saying that recommendation should not preempt state laws on child safety, AI data center infrastructure, or state government use of AI.</li>
 <li><strong>The order is not a statute.</strong> It directs federal agencies. It does not itself repeal any state law. A state AI law stays in force unless a court strikes it down or Congress preempts it.</li>
 <li><strong>States keep legislating.</strong> Several states have passed laws on AI disclosures and automated decisions in hiring and other areas. We did not cite any specific state law in this piece because we could not re-check the official text today. If you operate in a state with an AI law, read that state’s official text or ask counsel.</li>
-<li><strong>FTC impersonation rule, comments close November 30.</strong> On October 1, 2026, the Federal Trade Commission published a proposed rule in the Federal Register that would address search engines, social media and other digital platforms that further government and business impersonation scams. It is a proposal, not a compliance date. Comments close November 30, 2026. It is relevant here because AI-generated voices and messages are now a common tool in impersonation fraud.</li>
+<li><strong>FTC impersonation rulemaking (ANPRM), comments close November 30.</strong> On October 1, 2026, the Federal Trade Commission published an advance notice of proposed rulemaking (ANPRM) in the Federal Register asking for comment on whether to write rules covering search engines, social media and other digital platforms that further government and business impersonation scams. It is an early step: there is no proposed rule text and no compliance date. Comments close November 30, 2026. It is relevant here because AI-generated voices and messages are now a common tool in impersonation fraud.</li>
 </ul>
 <h2>Why a small firm should write a policy anyway</h2>
 <p>The legal fight is about what AI developers and large deployers must disclose or test. The everyday risk at a small firm is simpler and already covered by rules you live with:</p>
@@ -662,13 +825,13 @@
 <ul>
 <li><strong>Commerce’s evaluation of state AI laws</strong> and any lawsuits filed by the Justice Department’s AI Litigation Task Force. Those would be the first concrete signs of which state laws are under challenge.</li>
 <li><strong>Federal legislation.</strong> The order asks for a legislative recommendation. Only Congress can preempt state law broadly.</li>
-<li><strong>The FTC impersonation proposal</strong> after comments close on November 30.</li>
+<li><strong>The FTC impersonation ANPRM</strong> after comments close on November 30. A proposed rule, if the FTC decides to write one, would be a separate, later notice.</li>
 <li><strong>Your own state.</strong> Check your state legislature’s official site for AI laws with effective dates in 2026 and 2027.</li>
 </ul>
 <h2>Sources</h2>
 <ul class="sources">
 <li><a href="https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/" rel="noopener">The White House, “Ensuring a National Policy Framework for Artificial Intelligence,”</a> Executive Order 14365, December 11, 2025, checked November 4, 2026</li>
-<li><a href="https://www.federalregister.gov/documents/2026/10/01/2026-20143/rule-on-impersonation-of-government-and-businesses" rel="noopener">Federal Register, Federal Trade Commission, “Rule on Impersonation of Government and Businesses,”</a> proposed rule, October 1, 2026, comments close November 30, 2026</li>
+<li><a href="https://www.federalregister.gov/documents/2026/10/01/2026-20143/rule-on-impersonation-of-government-and-businesses" rel="noopener">Federal Register, Federal Trade Commission, “Rule on Impersonation of Government and Businesses,”</a> advance notice of proposed rulemaking, 91 FR 62347, October 1, 2026, comments close November 30, 2026</li>
 <li><a href="https://doi.org/10.6028/NIST.AI.600-1" rel="noopener">NIST AI 600-1, Generative AI Profile of the AI Risk Management Framework</a></li>
 </ul>
 <p>Related: <a href="https://circuits.fit/articles/board-questions-generative-ai.html">Board questions on generative AI</a> and <a href="https://circuits.fit/tools/agent-inventory.html">AI agent inventory</a>.</p>]]></content:encoded>
@@ -2737,6 +2900,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <h3>Does a US-only company need this?</h3>
 <p>Only if the GDPR, or a contract that imports it, applies. This page tells you how to tell the two PDFs apart. It does not decide applicability.</p>
 </section>
+<p><strong>Reviewing a DPA because a renewal is coming up?</strong> The <a href="https://circuits.fit/services/renewal-audit.html">Renewal Audit</a> ($199) reviews up to 25 renewals with every notice deadline on a calendar, and our <a href="https://circuits.fit/services/contract-review.html">Contract &amp; Renewal Terms Review</a> covers one contract’s terms. Neither is legal advice.</p>
 <h2>Sources</h2>
 <ul class="sources">
 <li><a href="https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/new-standard-contractual-clauses-questions-and-answers-overview_en" rel="noopener">European Commission, questions and answers on the 2021 standard contractual clauses</a></li>
@@ -3701,6 +3865,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 </tbody>
 </table>
 <p>Those names are examples of the category, not a ranking and not a recommendation. Below a thousand employees, an export from identity, a pull from accounts payable, and a 90-day last-login report will get you through the first cycle. Above that, you will miss ghosts without a discovery pass. In either case, the operating skill is the owner and the kill date. The software does not buy itself well.</p>
+<p><strong>Rather hand it off?</strong> The <a href="https://circuits.fit/services/renewal-audit.html">Renewal Audit</a> reviews up to 25 renewals for a fixed $199 and returns a written report in 5 business days. If you would rather run the process yourself, the <a href="https://emilios-newsletter-7fd333.beehiiv.com/products/renewal-risk-operator-pack">Renewal &amp; Risk Operator Pack</a> ($29) has the renewal scorecard and risk exception register as Excel and Google Sheets workbooks.</p>
 <h2>Sources</h2>
 <ul class="sources">
 <li><a href="https://www.vertice.one/insights/unused-saas-applications" rel="noopener">Vertice, unused SaaS applications, Q2 2026</a></li>
@@ -4328,6 +4493,16 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <h2>What to cut, what to keep</h2>
 <p>If you cannot point to a before-and-after number in 90 days, you do not have a deployment. You have a subscription. Treat it like any other underperforming SaaS: consolidate tools, kill overlapping copilots, and put the remaining spend next to a process map.</p>
 <p>Keep the models. Kill the theater. The productivity story in 2026 will not be won by the company with the most seats. It will be won by the company that rewired the few workflows that actually set the P&amp;L.</p>
+<h2>A worked example (illustrative)</h2>
+<p>The numbers below are made up for illustration. They are not from a survey or a customer, and the method is the one our free <a href="https://circuits.fit/tools/ai-cost-per-task.html">AI cost per finished task</a> calculator uses: count the review and rework, not just the draft.</p>
+<p>Take a ten-person firm that sends 400 client follow-up emails a month. Written by hand, each takes 12 minutes. At a loaded cost of $45 an hour, that is 80 hours and $3,600 a month.</p>
+<p>Now add an AI drafting tool at an example cost of $300 a month for the team. Every draft still gets a 3-minute read. A draft that is wrong, because it invented a date or missed the point, needs another 10 minutes to fix. What happens next depends on one number: the share of drafts that are usable on the first pass.</p>
+<ul>
+<li><strong>70% usable first time:</strong> 400 × (3 + 30% × 10) minutes = 40 hours, or $1,800, plus $300 for the tool. Total $2,100. Half the hours come back.</li>
+<li><strong>40% usable first time:</strong> 400 × (3 + 60% × 10) minutes = 60 hours, or $2,700, plus $300. Total $3,000. A quarter of the hours come back, and the saving is $600, not $1,500.</li>
+<li><strong>20% usable first time:</strong> 400 × (3 + 80% × 10) minutes = 73 hours and 20 minutes, or $3,300, plus $300. Total $3,600. The firm pays for a tool and saves nothing.</li>
+</ul>
+<p>Same tool, same price, same seats. The difference is entirely the first-pass rate, which no seat-count dashboard shows. That is the case for measuring one workflow before and after: time 20 real drafts, count how many go out with only a read, and put that rate into the calculator before deciding to renew or expand.</p>
 <p>Gartner posted on October 1 that most organizations are not yet ready to delegate work to AI agents, and on September 24 that managing AI cost is becoming as important as deploying it. Those posts are the announcement. The pages that tell you what to do start with <a href="https://circuits.fit/tools/token-cost-margin.html">token cost to gross margin</a>, then the guides: <a href="https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a>, <a href="https://circuits.fit/guides/one-page-ai-use-rule.html">A one-page AI use rule</a>, and <a href="https://circuits.fit/guides/ai-spend-vs-return.html">How to tell AI spend from AI return</a>.</p>
 <h2>Sources</h2>
 <ul class="sources">

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://circuits.fit/articles/sonicwall-sslvpn-saml-mfa-bypass-cve-2026-19868.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/screenconnect-cve-2026-84869-msp-technician-clients.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://circuits.fit/articles/fcc-sim-swap-rule-free-sim-lock.html</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
     <loc>https://circuits.fit/articles/chrome-157-update-cve-2026-125350.html</loc>
     <lastmod>2026-11-12</lastmod>
   </url>
@@ -54,7 +66,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/articles/staff-ai-use-policy-federal-state.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/about.html</loc>
@@ -66,7 +78,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/briefing.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/contact.html</loc>
@@ -74,7 +86,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/privacy.html</loc>
@@ -82,7 +94,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/corrections.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/terms.html</loc>
@@ -94,7 +106,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/articles/ai-productivity-paradox.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/ai-spend-is-not-the-same-as-ai-return.html</loc>
@@ -198,7 +210,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/categories/policy.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/categories/startups.html</loc>
@@ -246,7 +258,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/guides/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/guides/limit-what-an-agent-can-touch.html</loc>
@@ -266,7 +278,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/guides/software-buying-operating-skill.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/guides/stop-using-a-voice-as-approval.html</loc>
@@ -278,7 +290,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/guides/what-belongs-in-a-processor-clause.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/8k-materiality-worksheet.html</loc>
@@ -298,7 +310,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/tools/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/risk-exception-register.html</loc>
@@ -350,7 +362,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/services/renewal-audit.html</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/wordpress-core-upgrade-race-cisa-kev.html</loc>
@@ -378,7 +390,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/topics/security-vulnerabilities.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/topics/ai-costs.html</loc>
@@ -386,11 +398,11 @@
   </url>
   <url>
     <loc>https://circuits.fit/services/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/start/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/services/quick-answer.html</loc>
@@ -446,6 +458,6 @@
   </url>
   <url>
     <loc>https://circuits.fit/guides/first-30-minutes-security-incident.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
 </urlset>

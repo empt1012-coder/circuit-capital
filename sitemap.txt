@@ -110,3 +110,6 @@ https://circuits.fit/services/incident-response-kit.html
 https://circuits.fit/services/am-i-affected-check.html
 https://circuits.fit/services/patch-watch-alert.html
 https://circuits.fit/guides/first-30-minutes-security-incident.html
+https://circuits.fit/articles/sonicwall-sslvpn-saml-mfa-bypass-cve-2026-19868.html
+https://circuits.fit/articles/screenconnect-cve-2026-84869-msp-technician-clients.html
+https://circuits.fit/articles/fcc-sim-swap-rule-free-sim-lock.html
