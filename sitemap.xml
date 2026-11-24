@@ -2,39 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://circuits.fit/articles/sonicwall-sslvpn-saml-mfa-bypass-cve-2026-19868.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/screenconnect-cve-2026-84869-msp-technician-clients.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/fcc-sim-swap-rule-free-sim-lock.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/chrome-157-update-cve-2026-125350.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/notion-ai-vendor-incident-fireworks.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/openssh-password-bypass-cve-2026-123158.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/cisco-broadworks-cve-2026-20320-kev.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/copilot-business-usage-billing-default-2027.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/barracuda-esg-cisa-kev.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/guides/password-manager-and-backup-tools-small-teams.html</loc>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/articles/n-able-n-central-offline-able2shell.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/zyxel-gs1900-patched-is-not-fixed.html</loc>
@@ -78,7 +78,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/briefing.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/contact.html</loc>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/privacy.html</loc>
@@ -126,7 +126,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/articles/chip-licenses-keep-moving.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/cisa-listed-three-bugs-attackers-are-using.html</loc>
@@ -170,7 +170,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/articles/retail-media-networks.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/sbom-now-covers-the-suite.html</loc>
@@ -290,7 +290,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/guides/what-belongs-in-a-processor-clause.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/8k-materiality-worksheet.html</loc>
@@ -302,7 +302,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/tools/agent-inventory.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/ai-cost-per-task.html</loc>
@@ -310,7 +310,7 @@
   </url>
   <url>
     <loc>https://circuits.fit/tools/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/tools/risk-exception-register.html</loc>
@@ -342,11 +342,11 @@
   </url>
   <url>
     <loc>https://circuits.fit/articles/gartner-ai-infrastructure-impairment-neoclouds.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/guides/software-renewal-tracker-template.html</loc>
@@ -386,15 +386,15 @@
   </url>
   <url>
     <loc>https://circuits.fit/topics/renewals-saas-spend.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/topics/security-vulnerabilities.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/topics/ai-costs.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/services/</loc>
@@ -450,11 +450,11 @@
   </url>
   <url>
     <loc>https://circuits.fit/services/am-i-affected-check.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/services/patch-watch-alert.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://circuits.fit/guides/first-30-minutes-security-incident.html</loc>

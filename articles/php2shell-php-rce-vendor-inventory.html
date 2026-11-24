@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PHP2Shell CVE-2026-109618, CVE-2026-109619: PHP RCE patch</title>
-  <meta name="description" content="PHP2Shell (CVE-2026-109618, CVE-2026-109619) is unauthenticated RCE in PHP, fixed Oct 21 in 8.5.12 and 8.4.27. Exploit attempts from Oct 17. What to check.">
+  <title>PHP2Shell CVE-2026-109618 and CVE-2026-109619: PHP RCE patch and log review — Circuit &amp; Capital</title>
+  <meta name="description" content="PHP2Shell (CVE-2026-109618, CVE-2026-109619) is unauthenticated PHP remote code execution, fixed October 21 in PHP 8.5.12 and 8.4.27. Exploit attempts were seen from October 17. What to patch and which vendor products to inventory.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,19 +15,19 @@
 
   <link rel="canonical" href="https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html">
   <link rel="alternate" type="application/rss+xml" title="Circuit &amp; Capital" href="https://circuits.fit/feed.xml">
-  <meta property="og:title" content="PHP2Shell CVE-2026-109618, CVE-2026-109619: PHP RCE patch">
-  <meta property="og:description" content="PHP2Shell (CVE-2026-109618, CVE-2026-109619) is unauthenticated RCE in PHP, fixed Oct 21 in 8.5.12 and 8.4.27. Exploit attempts from Oct 17. What to check.">
+  <meta property="og:title" content="PHP2Shell CVE-2026-109618 and CVE-2026-109619: PHP RCE patch, and log review from October 17 — Circuit &amp; Capital">
+  <meta property="og:description" content="PHP2Shell (CVE-2026-109618, CVE-2026-109619) is unauthenticated PHP remote code execution, fixed October 21 in PHP 8.5.12 and 8.4.27. Exploit attempts were seen from October 17. What to patch and which vendor products to inventory.">
   <meta property="og:url" content="https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Circuit &amp; Capital">
   <meta property="og:image" content="https://circuits.fit/assets/images/colo.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PHP2Shell CVE-2026-109618, CVE-2026-109619: PHP RCE patch">
-  <meta name="twitter:description" content="PHP2Shell (CVE-2026-109618, CVE-2026-109619) is unauthenticated RCE in PHP, fixed Oct 21 in 8.5.12 and 8.4.27. Exploit attempts from Oct 17. What to check.">
+  <meta name="twitter:title" content="PHP2Shell CVE-2026-109618 and CVE-2026-109619: PHP RCE patch, and log review from October 17 — Circuit &amp; Capital">
+  <meta name="twitter:description" content="PHP2Shell (CVE-2026-109618, CVE-2026-109619) is unauthenticated PHP remote code execution, fixed October 21 in PHP 8.5.12 and 8.4.27. Exploit attempts were seen from October 17. What to patch and which vendor products to inventory.">
   <meta name="twitter:image" content="https://circuits.fit/assets/images/colo.jpg">
   <meta property="article:published_time" content="2026-10-22">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "PHP2Shell was probed before the patch. Start the log review at October 17.", "description": "PHP2Shell (CVE-2026-109618, CVE-2026-109619) allows unauthenticated remote code execution in PHP. Amazon saw an attempt October 17, before the October 21 patch. What CISOs and CFOs should check this week.", "image": ["https://circuits.fit/assets/images/colo.jpg"], "datePublished": "2026-10-22", "dateModified": "2026-10-26", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html", "articleSection": "Policy"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "PHP2Shell CVE-2026-109618 and CVE-2026-109619: PHP RCE patch, and log review from October 17", "description": "PHP2Shell (CVE-2026-109618, CVE-2026-109619) is unauthenticated PHP remote code execution, fixed October 21 in PHP 8.5.12 and 8.4.27. Exploit attempts were seen from October 17. What to patch and which vendor products to inventory.", "image": ["https://circuits.fit/assets/images/colo.jpg"], "datePublished": "2026-10-22", "dateModified": "2026-11-23", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html", "articleSection": "Policy"}
   </script>
   <meta name="google-adsense-account" content="ca-pub-3634982565972955">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3634982565972955" crossorigin="anonymous"></script>
@@ -83,7 +83,7 @@
   <main id="main">
     <header class="article-hero wrap">
       <div class="kicker">Policy</div>
-      <h1>PHP2Shell was probed before the patch. Start the log review at October 17.</h1>
+      <h1>PHP2Shell CVE-2026-109618 and CVE-2026-109619: PHP RCE patch, and log review from October 17</h1>
       <p class="dek">PHP fixed two unauthenticated remote code execution bugs on October 21. Amazon saw an exploit attempt on October 17. Most companies run PHP inside software they buy, so the work is a vendor inventory, not only a patch.</p>
       <div class="byline-row">
         <span>Edited by <strong>Emilio Santos</strong></span>

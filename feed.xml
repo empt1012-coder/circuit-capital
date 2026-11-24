@@ -55,7 +55,14 @@
 <li><a href="https://www.cve.org/CVERecord?id=CVE-2026-19868" rel="noopener">CVE record CVE-2026-19868</a>, published November 6, 2026 (affected versions 7.3.3-7015 and older, 8.2.2-8015 and older)</li>
 <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19868" rel="noopener">NIST National Vulnerability Database, CVE-2026-19868</a></li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/ivanti-gitlab-cisco-kev-deadlines.html">reading CISA’s due dates</a>, <a href="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">the BeyondTrust remote support zero-day</a>, <a href="https://circuits.fit/articles/screenconnect-cve-2026-84869-msp-technician-clients.html">ScreenConnect and your IT provider</a>, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/ivanti-gitlab-cisco-kev-deadlines.html">reading CISA’s due dates</a>, <a href="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">the BeyondTrust remote support zero-day</a>, <a href="https://circuits.fit/articles/screenconnect-cve-2026-84869-msp-technician-clients.html">ScreenConnect and your IT provider</a>, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
+<section aria-labelledby="related-tools-heading" class="related-tools">
+<h2 id="related-tools-heading">Related free tools</h2>
+<ul>
+<li><a href="https://circuits.fit/tools/risk-exception-register.html">Risk exception register</a> — Track an exception, its owner, and its expiry.</li>
+</ul>
+<p><a href="https://emilios-newsletter-7fd333.beehiiv.com/subscribe">Get the weekly briefing</a></p>
+</section>]]></content:encoded>
 </item>
 <item>
 <title>Your IT provider updated ScreenConnect. Did it update the technicians’ PCs too?</title>
@@ -106,7 +113,14 @@
 <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" rel="noopener">CISA Known Exploited Vulnerabilities catalog</a>, catalog version 2026.11.17, checked November 18, 2026 (CVE-2026-84869 added September 11, due September 14, forensic triage Yes)</li>
 <li><a href="https://www.cisa.gov/news-events/alerts/2026/11/17/critical-java-vulnerability-requires-immediate-patching" rel="noopener">CISA, “Critical Java Vulnerability Requires Immediate Patching,”</a> November 17, 2026 (CVE-2026-114938)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/n-able-n-central-offline-able2shell.html">N-able N-central and your IT provider</a>, <a href="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">the BeyondTrust remote support zero-day</a>, <a href="https://circuits.fit/articles/sonicwall-sslvpn-saml-mfa-bypass-cve-2026-19868.html">SonicWall SSL VPN and SAML</a>, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/n-able-n-central-offline-able2shell.html">N-able N-central and your IT provider</a>, <a href="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">the BeyondTrust remote support zero-day</a>, <a href="https://circuits.fit/articles/sonicwall-sslvpn-saml-mfa-bypass-cve-2026-19868.html">SonicWall SSL VPN and SAML</a>, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>.</p>
+<section aria-labelledby="related-tools-heading" class="related-tools">
+<h2 id="related-tools-heading">Related free tools</h2>
+<ul>
+<li><a href="https://circuits.fit/tools/vendor-claim-checker.html">Vendor claim checker</a> — Separate a speed or savings claim from who measured it and what the bill still is.</li>
+</ul>
+<p><a href="https://emilios-newsletter-7fd333.beehiiv.com/subscribe">Get the weekly briefing</a></p>
+</section>]]></content:encoded>
 </item>
 <item>
 <title>Your carrier must offer a free SIM lock by December 17. Turn it on for the phones that approve payments.</title>
@@ -152,6 +166,7 @@
 <li><strong>Add one line to your payment rule.</strong> A call about a new number or a “lost phone” never authorizes a payment or a bank change. Confirm on a number already on file. Our guide <a href="https://circuits.fit/guides/stop-using-a-voice-as-approval.html">Stop using a voice as approval</a> has the wording.</li>
 <li><strong>Know the warning sign.</strong> If a work phone suddenly shows no service or emergency calls only, and the network is fine for everyone else, call the carrier from another phone and check for a SIM change.</li>
 </ol>
+<p>If a payment-approving phone still cannot get the free SIM lock, log it with an owner and a review date in our free <a href="https://circuits.fit/tools/risk-exception-register.html">risk exception register</a>.</p>
 <h2>What to watch next</h2>
 <ul>
 <li><strong>December 17.</strong> The compliance date. Expect carriers to add or rename lock settings and publish account protection pages around then.</li>
@@ -167,17 +182,24 @@
 <li><a href="https://www.t-mobile.com/support/plans-features/help-with-t-mobile-account-fraud" rel="noopener">T-Mobile, “Protect your T-Mobile account from fraud”</a> and <a href="https://www.t-mobile.com/support/account/transfer-your-phone-number" rel="noopener">“Transfer your phone number”</a> (Port Out Protection), checked November 18, 2026</li>
 <li><a href="https://www.att.com/support/article/wireless/000102016/" rel="noopener">AT&amp;T, “Learn about Wireless Account Lock”</a>, last updated April 22, 2026, checked November 18, 2026</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/guides/stop-using-a-voice-as-approval.html">Stop using a voice as approval</a>, <a href="https://circuits.fit/guides/cyber-insurance-controls-checklist.html">cyber insurance controls checklist</a>, and <a href="https://circuits.fit/articles/staff-ai-use-policy-federal-state.html">the staff AI policy and payment confirmation rule</a>.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/guides/stop-using-a-voice-as-approval.html">Stop using a voice as approval</a>, <a href="https://circuits.fit/guides/cyber-insurance-controls-checklist.html">cyber insurance controls checklist</a>, and <a href="https://circuits.fit/articles/staff-ai-use-policy-federal-state.html">the staff AI policy and payment confirmation rule</a>.</p>
+<section aria-labelledby="related-tools-heading" class="related-tools">
+<h2 id="related-tools-heading">Related free tools</h2>
+<ul>
+<li><a href="https://circuits.fit/tools/risk-exception-register.html">Risk exception register</a> — Track an exception, its owner, and its expiry.</li>
+</ul>
+<p><a href="https://emilios-newsletter-7fd333.beehiiv.com/subscribe">Get the weekly briefing</a></p>
+</section>]]></content:encoded>
 </item>
 <item>
-<title>Relaunch Chrome this week. Check it shows 157.0.8103.78 or later.</title>
+<title>Relaunch Chrome this week. Check it shows 157.0.8103.50/.51 or later.</title>
 <link>https://circuits.fit/articles/chrome-157-update-cve-2026-125350.html</link>
 <guid>https://circuits.fit/articles/chrome-157-update-cve-2026-125350.html</guid>
 <pubDate>Thu, 12 Nov 2026 13:10:00 +0000</pubDate>
-<description>Google’s November 9 Stable update fixed CVE-2026-125350, a use-after-free in XML that Google says is exploited in the wild. CISA added it to its Known Exploited Vulnerabilities catalog the next day, with a due date of November 24. The current Stable build, posted November 11, is 157.0.8103.78 for Linux and 157.0.8103.78/.79 for Windows and Mac, and it includes 83 security fixes, five of them Critical. Relaunch Chrome on every PC this week and confirm that version, or later.</description>
+<description>Google’s November 9 Stable update fixed CVE-2026-125350 in Chrome 157.0.8103.50 for Linux and 157.0.8103.50/.51 for Windows and Mac. CISA added it to its Known Exploited Vulnerabilities catalog the next day, with a due date of November 24. Relaunch Chrome on every PC this week and confirm 157.0.8103.50/.51 or later. A later November 11 build, 157.0.8103.78/.79, is also fine.</description>
 <author>circuits50capital@circuits.fit (Emilio Santos)</author>
 <content:encoded><![CDATA[<p class="lead-graf">On November 9, 2026, Google released Chrome 157.0.8103.50 for Linux and 157.0.8103.50/.51 for Windows and Mac. The update fixed CVE-2026-125350, a use-after-free in XML. Google said it is aware that an exploit for that flaw exists in the wild. The next day, the U.S. Cybersecurity and Infrastructure Security Agency added the CVE to its Known Exploited Vulnerabilities catalog. The federal due date is November 24.</p>
-<p>On November 11, Google released a further Stable update, 157.0.8103.78 for Linux and 157.0.8103.78/.79 for Windows and Mac. That build includes 83 security fixes, five of them rated Critical. Google has not marked any of those November 11 fixes as exploited. The job this week is simpler than the version numbers: relaunch Chrome on every PC and confirm it shows 157.0.8103.78 or later. If you manage Chrome centrally, force a relaunch so the update actually takes effect.</p>
+<p>On November 11, Google released a further Stable update, 157.0.8103.78 for Linux and 157.0.8103.78/.79 for Windows and Mac. That build includes 83 security fixes, five of them rated Critical. Google has not marked any of those November 11 fixes as exploited. The job this week is simpler than the version numbers: relaunch Chrome on every PC and confirm it shows 157.0.8103.50/.51 or later, the November 9 fix. A later November 11 build, 157.0.8103.78/.79, is also fine. If you manage Chrome centrally, force a relaunch so the update actually takes effect.</p>
 <h2>What happened</h2>
 <p>Google’s November 9 Stable channel post lists nine security fixes. <strong>CVE-2026-125350</strong> is rated High and is described as a use-after-free in XML. It was reported by Arni Hardarson (Neonix Security) on October 12 and by an anonymous reporter on November 6. At the bottom of the same post, Google wrote: “Google is aware that an exploit for CVE-2026-125350 exists in the wild.”</p>
 <p>CISA added the CVE to the catalog on November 10, in a batch of six, based on evidence of active exploitation. The catalog entry, in version 2026.11.10 of the feed, is due November 24. CISA describes it as a use-after-free in Chromium’s XML component that could allow a remote attacker to execute arbitrary code inside the sandbox through a crafted webpage. It also notes that the flaw could affect other browsers that use Chromium, including Microsoft Edge and Opera. Known ransomware use is listed as unknown. The entry is not marked for forensic triage.</p>
@@ -185,11 +207,12 @@
 <h2>What to do this week</h2>
 <ol>
 <li><strong>Relaunch Chrome on every work PC this week</strong>, including laptops that have been left open for days. Chrome often downloads an update in the background, but the new build does not protect the user until the browser is relaunched.</li>
-<li><strong>Confirm the version.</strong> In Chrome, open Settings and then About Chrome, or go to <code>chrome://settings/help</code>. You want 157.0.8103.78 or later. If an update is still downloading, wait for it to finish and relaunch again.</li>
+<li><strong>Confirm the version.</strong> In Chrome, open Settings and then About Chrome, or go to <code>chrome://settings/help</code>. You want 157.0.8103.50/.51 or later. If an update is still downloading, wait for it to finish and relaunch again.</li>
 <li><strong>If you manage Chrome centrally, force a relaunch</strong> rather than waiting for each person to close the browser. The November 11 build is rolling out over the coming days and weeks, so check again later in the week on any machine that is still behind.</li>
 <li><strong>If your team also uses Microsoft Edge, Opera or another Chromium-based browser, check those products for their own current updates.</strong> CISA’s catalog entry notes that the November 9 flaw could affect them as well. A Chrome relaunch does not cover those browsers.</li>
 <li><strong>Federal civilian agencies have until November 24</strong> to address CVE-2026-125350. A private firm is not under the same mandate, but the date is a useful priority signal: get to the current Chrome build this week, not next month.</li>
 </ol>
+<p>If a PC cannot be updated this week, log it with an owner and a review date in our free <a href="https://circuits.fit/tools/risk-exception-register.html">risk exception register</a>.</p>
 <h2>Sources</h2>
 <ul class="sources">
 <li><a href="https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_01744469280.html" rel="noopener">Google Chrome Releases, “Stable Channel Update for Desktop”</a>, November 11, 2026 (157.0.8103.78/.79 for Windows and Mac, 157.0.8103.78 for Linux; “This update includes 83 security fixes”; five Critical CVEs listed: CVE-2026-126885, CVE-2026-126895, CVE-2026-126879, CVE-2026-126846 and CVE-2026-126911; no exploited note on this post)</li>
@@ -197,7 +220,14 @@
 <li><a href="https://www.cisa.gov/news-events/alerts/2026/11/10/cisa-adds-six-known-exploited-vulnerabilities-catalog" rel="noopener">CISA, “CISA Adds Six Known Exploited Vulnerabilities to Catalog”</a>, November 10, 2026 (CVE-2026-125350 included, additions based on evidence of active exploitation)</li>
 <li><a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">CISA Known Exploited Vulnerabilities catalog JSON feed</a>, version 2026.11.10, released November 10, 2026, at 2:03 p.m. Eastern time (CVE-2026-125350 added November 10, due November 24, forensic triage marked No, known ransomware use Unknown; the entry notes the flaw could affect other Chromium browsers including Microsoft Edge and Opera)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/openssh-password-bypass-cve-2026-123158.html">An OpenSSH bug lets attackers skip the password on some Linux servers</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/openssh-password-bypass-cve-2026-123158.html">An OpenSSH bug lets attackers skip the password on some Linux servers</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
+<section aria-labelledby="related-tools-heading" class="related-tools">
+<h2 id="related-tools-heading">Related free tools</h2>
+<ul>
+<li><a href="https://circuits.fit/tools/risk-exception-register.html">Risk exception register</a> — Track an exception, its owner, and its expiry.</li>
+</ul>
+<p><a href="https://emilios-newsletter-7fd333.beehiiv.com/subscribe">Get the weekly briefing</a></p>
+</section>]]></content:encoded>
 </item>
 <item>
 <title>Notion AI chat transcripts were exposed at a vendor. Keep passwords out of the chat.</title>
@@ -217,13 +247,22 @@
 <p>Notion says it has contacted customers whose workspaces were affected. If you have not heard from Notion, it says it has not identified your workspace as affected, and no action is needed right now. The investigation is ongoing, and Notion says it will contact you directly if that changes.</p>
 <p>If Notion has contacted you, follow the instructions in that email. Notion says affected customers can retrieve and review the impacted data securely inside their workspace, and it recommends treating that data as if it were exposed. If anyone in an affected workspace pasted sensitive information, passwords, API keys or other credentials into Notion AI during the timeframe of the incident, rotate them.</p>
 <p>Going forward, treat an AI chat window the same way you would treat an email to a vendor: useful for work, not a place for secrets. Share logins through a password manager, not by pasting them into a prompt.</p>
+<p>If your team uses Notion AI or other AI tools, list each one in our free <a href="https://circuits.fit/tools/agent-inventory.html">AI agent inventory</a>, including the identity it uses and what it can see. If you keep using a tool after an incident like this, log that decision with an owner and a review date in the <a href="https://circuits.fit/tools/risk-exception-register.html">risk exception register</a>.</p>
 <p>If you want a simple plan for moving shared logins into a password manager, our $19 <a href="https://circuits.fit/services/password-manager-rollout-kit.html">Password Manager Rollout Kit</a> has a two-week plan, checklists, a staff email, a one-page policy and a tracker.</p>
 <p>Updated November 14, 2026, to match Notion’s later timeline: the disconnect was November 3, the data deletion was November 4, and on November 12 Notion reported exposed third-party API keys to the vendors that issued them.</p>
 <h2>Sources</h2>
 <ul class="sources">
 <li><a href="https://www.notion.com/security/advisories/security-incident-involving-a-third-party-ai-vendor" rel="noopener">Notion, “Fireworks AI incident”</a>, originally published November 10, 2026; style and clarity update November 10, 2026; November 11, 2026 update on revocation of exposed Notion API keys found in affected user messages; November 12, 2026 timeline update and notice that Notion reported exposed third-party API keys found in affected user messages to the vendors that issued them (posted in the advisory’s updates on November 13, 2026). The updated advisory says Notion disconnected from Fireworks and stopped communication by the morning of November 3, and deleted all its data in the Fireworks system on November 4. The advisory says the incident affects fewer than 1% of workspaces; the exposed data is Insights chat transcripts, unattributable for the vast majority of impacted workspaces; Insights has been disabled and Notion is no longer serving open-weight models through Fireworks; affected customers should treat the data as exposed and rotate credentials pasted into Notion AI; customers Notion has not contacted need to take no action right now.</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/guides/one-page-ai-use-rule.html">A one-page AI use rule</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/guides/one-page-ai-use-rule.html">A one-page AI use rule</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
+<section aria-labelledby="related-tools-heading" class="related-tools">
+<h2 id="related-tools-heading">Related free tools</h2>
+<ul>
+<li><a href="https://circuits.fit/tools/agent-inventory.html">AI agent inventory and access map template</a> — List each agent, the identity it uses, and what it can change.</li>
+<li><a href="https://circuits.fit/tools/risk-exception-register.html">Risk exception register</a> — Track an exception, its owner, and its expiry.</li>
+</ul>
+<p><a href="https://emilios-newsletter-7fd333.beehiiv.com/subscribe">Get the weekly briefing</a></p>
+</section>]]></content:encoded>
 </item>
 <item>
 <title>An OpenSSH bug lets attackers skip the password on some Linux servers. CISA’s deadline is November 12.</title>
@@ -260,6 +299,7 @@
 <li><strong>Rebuild images.</strong> Alpine says images built from 3.21.10, 3.22.8, 3.23.8, 3.24.4 and later include the fixed package. Older point releases do not, so update running instances and rebuild base images and containers.</li>
 <li><strong>Check for a past login on exposed machines.</strong> Alpine’s advice: look in <code>/var/log/messages</code> for sshd lines reading “Accepted password for” an account that has no password, such as <code>alpine</code>, root or any key-only user. Review <code>doas</code> use and recently created users, files and authorized keys. If you cannot rule out a login, treat the machine as compromised.</li>
 </ol>
+<p>If a machine cannot be updated this week, log it with an owner and a review date in our free <a href="https://circuits.fit/tools/risk-exception-register.html">risk exception register</a>.</p>
 <h2>Also added to KEV November 9 (due November 12)</h2>
 <p>CISA added three other flaws the same day, all with the same November 12 due date and all marked for forensic triage: <strong>GPUStack CVE-2026-102895</strong>, an improper authentication flaw that CISA says could allow unauthenticated administrative access; <strong>SignalWire FreeSWITCH CVE-2026-116779</strong>, a code injection flaw; and <strong>IBM Aspera Faspex CVE-2026-123218</strong>, an incorrect authorization flaw that could let an authenticated user escalate privileges. If you run any of them, follow the vendor advisory linked from CISA’s catalog entry.</p>
 <h2>What to watch next</h2>
@@ -278,7 +318,14 @@
 <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123158" rel="noopener">NIST National Vulnerability Database, CVE-2026-123158</a>, published November 5, 2026 (description; CVSS 3.1 base score 8.1 from the CVE assigner)</li>
 <li><a href="https://github.com/openssh/openssh-portable/commit/4353fdc43ef646c43a8dda7025cc1a898caf1482" rel="noopener">OpenSSH portable, commit “avoid password authn bypass”</a> (the fix)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/barracuda-esg-cisa-kev.html">Barracuda appliances are on CISA’s exploited list</a>, <a href="https://circuits.fit/articles/kev-patch-tuesday-calendar-nov-10-13.html">this week’s patch calendar</a>, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/barracuda-esg-cisa-kev.html">Barracuda appliances are on CISA’s exploited list</a>, <a href="https://circuits.fit/articles/kev-patch-tuesday-calendar-nov-10-13.html">this week’s patch calendar</a>, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
+<section aria-labelledby="related-tools-heading" class="related-tools">
+<h2 id="related-tools-heading">Related free tools</h2>
+<ul>
+<li><a href="https://circuits.fit/tools/risk-exception-register.html">Risk exception register</a> — Track an exception, its owner, and its expiry.</li>
+</ul>
+<p><a href="https://emilios-newsletter-7fd333.beehiiv.com/subscribe">Get the weekly briefing</a></p>
+</section>]]></content:encoded>
 </item>
 <item>
 <title>Cisco BroadWorks is on CISA’s exploited list. Ask your phone provider if they patched.</title>
@@ -324,7 +371,14 @@
 <li><a href="https://malbearlabs.com/posts/operation-snowball-inside-an-autonomous-ai-intrusion-campaign" rel="noopener">Malbear Labs, “Operation Snowball: Inside an Autonomous AI Intrusion Campaign”</a>, November 8, 2026 (the security firm’s report; entry through CVE-2026-20320; 13 organizations; default database credentials)</li>
 <li><a href="https://www.infosecurity-magazine.com/news/operation-snowball-ai-telecom/" rel="noopener">Infosecurity Magazine, write-up of Operation Snowball</a> (notes the claims were not confirmed with victims)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html">PHP2Shell and the vendor inventory</a>, <a href="https://circuits.fit/articles/openssh-password-bypass-cve-2026-123158.html">the OpenSSH password bypass due November 12</a>, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html">PHP2Shell and the vendor inventory</a>, <a href="https://circuits.fit/articles/openssh-password-bypass-cve-2026-123158.html">the OpenSSH password bypass due November 12</a>, and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
+<section aria-labelledby="related-tools-heading" class="related-tools">
+<h2 id="related-tools-heading">Related free tools</h2>
+<ul>
+<li><a href="https://circuits.fit/tools/risk-exception-register.html">Risk exception register</a> — Track an exception, its owner, and its expiry.</li>
+</ul>
+<p><a href="https://emilios-newsletter-7fd333.beehiiv.com/subscribe">Get the weekly briefing</a></p>
+</section>]]></content:encoded>
 </item>
 <item>
 <title>Copilot usage billing moved to early 2027. Set your spending limit before you buy.</title>
@@ -387,7 +441,14 @@
 <li><a href="https://learn.microsoft.com/en-us/partner-center/announcements/2026-october" rel="noopener">Microsoft Partner Center, October 2026 announcements</a> (new Copilot offers without a base subscription from December 1, 2026; add-on offers end of sale in CSP December 1)</li>
 <li><a href="https://www.microsoft.com/en-us/copilot/pricing/business" rel="noopener">Microsoft, Copilot for business pricing</a>, checked November 11, 2026 (Copilot Business add-on $21.00, shown at $18.00 per user per month paid yearly under a July 1 to December 31, 2026 promotion)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/microsoft-365-renewal-price-increase.html">Your Microsoft 365 renewal price, line by line</a>, <a href="https://circuits.fit/tools/software-renewal-scorecard.html">software renewal scorecard</a>, and <a href="https://circuits.fit/topics/renewals-saas-spend.html">Renewals and SaaS spend</a>, every renewal briefing, guide and tool in one place.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/microsoft-365-renewal-price-increase.html">Your Microsoft 365 renewal price, line by line</a>, <a href="https://circuits.fit/tools/software-renewal-scorecard.html">software renewal scorecard</a>, and <a href="https://circuits.fit/topics/renewals-saas-spend.html">Renewals and SaaS spend</a>, every renewal briefing, guide and tool in one place.</p>
+<section aria-labelledby="related-tools-heading" class="related-tools">
+<h2 id="related-tools-heading">Related free tools</h2>
+<ul>
+<li><a href="https://circuits.fit/tools/software-renewal-scorecard.html">Software renewal scorecard</a> — Score a renewal as keep, renegotiate, or replace, and copy a six-line vendor agenda.</li>
+</ul>
+<p><a href="https://emilios-newsletter-7fd333.beehiiv.com/subscribe">Get the weekly briefing</a></p>
+</section>]]></content:encoded>
 </item>
 <item>
 <title>Barracuda appliances are on CISA’s exploited list. Check firmware this week.</title>
@@ -415,6 +476,7 @@
 <li><strong>Keep the admin interface off the internet.</strong> Barracuda recommends restricting administrative interfaces to trusted internal networks. Organizations whose admin pages are not reachable from the public internet are less exposed to this attack path.</li>
 <li><strong>If the admin page was exposed, do a forensic review.</strong> Installing a patch does not undo a change an attacker may already have made. CISA’s catalog entries for both flaws are marked for forensic triage. Ask your provider to look for unexpected configuration changes, unexpected backup restores, timezone changes, and unusual administrator activity, then follow Barracuda’s current guidance.</li>
 </ol>
+<p>If a device cannot be patched this week, or you are still waiting on a provider’s answer, log it with an owner and a review date in our free <a href="https://circuits.fit/tools/risk-exception-register.html">risk exception register</a>.</p>
 <h2>Questions to ask your IT provider</h2>
 <ul>
 <li>Do we run a Barracuda Email Security Gateway, Load Balancer ADC, Message Archiver, WAF, WAF Control Center, or Web Security Gateway, including any appliance you manage for us?</li>
@@ -431,7 +493,14 @@
 <li><a href="https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0042.md" rel="noopener">Mandiant, MNDT-2026-0042</a> (CVE-2026-116606, Email Security Gateway versions earlier than 9.4.0.030, CVSS 9.3)</li>
 <li><a href="https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0041.md" rel="noopener">Mandiant, MNDT-2026-0041</a> (CVE-2026-111560, command injection in the timezone field, affected products and versions, CVSS 8.6)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/n-able-n-central-offline-able2shell.html">N-able took N-central offline. Ask your MSP if they use it.</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/n-able-n-central-offline-able2shell.html">N-able took N-central offline. Ask your MSP if they use it.</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
+<section aria-labelledby="related-tools-heading" class="related-tools">
+<h2 id="related-tools-heading">Related free tools</h2>
+<ul>
+<li><a href="https://circuits.fit/tools/risk-exception-register.html">Risk exception register</a> — Track an exception, its owner, and its expiry.</li>
+</ul>
+<p><a href="https://emilios-newsletter-7fd333.beehiiv.com/subscribe">Get the weekly briefing</a></p>
+</section>]]></content:encoded>
 </item>
 <item>
 <title>N-able took N-central offline. Ask your MSP if they use it.</title>
@@ -453,6 +522,7 @@
 <li><strong>Check logins and new admin accounts since November 8.</strong> Ask your provider to review login activity and any new administrator accounts from November 8 onward, and to look for unexpected remote sessions or new scripts, before they turn N-central back on. Huntress recommends that review because earlier N-central incidents saw attackers create admin accounts and push tools into client networks.</li>
 <li><strong>Watch N-able’s status page for the all-clear.</strong> Hosted N-central comes back when N-able says so. The official page is <a href="https://uptime.n-able.com/" rel="noopener">uptime.n-able.com</a>.</li>
 </ol>
+<p>If your provider has not confirmed a hotfix or a review, log that gap with an owner and a date in our free <a href="https://circuits.fit/tools/risk-exception-register.html">risk exception register</a>.</p>
 <p>When this piece first ran, no CVE identifiers had been assigned, according to SecurityWeek. N-able’s Hotfix 2 release notes now list seven, including CVE-2026-125882 (code execution through a file repository upload path traversal) and CVE-2026-125878 (OGNL injection). The flaws were not on CISA’s Known Exploited Vulnerabilities catalog as of feed version 2026.11.09. That does not change the advice. Follow N-able’s current direction rather than waiting for a catalog entry.</p>
 <p>If you want a second opinion on what to ask your provider, our $29 <a href="https://circuits.fit/services/quick-answer.html">Quick Answer</a> service covers that question.</p>
 <h2>Sources</h2>
@@ -464,7 +534,14 @@
 <li><a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noopener">CISA Known Exploited Vulnerabilities catalog JSON feed</a>, version 2026.11.09 (no Able2Shell or new N-central identifiers for this incident)</li>
 <li><a href="https://status.n-able.com/2026/11/10/n-central-2026-4-hf2-release-notes/" rel="noopener">N-able, “N-central 2026.4 HF2 Release Notes”</a>, posted November 10, 2026, 3:48 PM ET (build 2026.4.1.26, upgrade guidance, CVE list, known issues)</li>
 </ul>
-<p>Related: <a href="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch. Check the logs.</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>]]></content:encoded>
+<p>Related: <a href="https://circuits.fit/articles/beyondtrust-remote-support-zero-day.html">The BeyondTrust bug was used before the patch. Check the logs.</a> and <a href="https://circuits.fit/topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
+<section aria-labelledby="related-tools-heading" class="related-tools">
+<h2 id="related-tools-heading">Related free tools</h2>
+<ul>
+<li><a href="https://circuits.fit/tools/risk-exception-register.html">Risk exception register</a> — Track an exception, its owner, and its expiry.</li>
+</ul>
+<p><a href="https://emilios-newsletter-7fd333.beehiiv.com/subscribe">Get the weekly briefing</a></p>
+</section>]]></content:encoded>
 </item>
 <item>
 <title>Four AI spending reports in one week. The budget is outrunning the measurement.</title>
@@ -1558,7 +1635,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 </section>]]></content:encoded>
 </item>
 <item>
-<title>PHP2Shell was probed before the patch. Start the log review at October 17.</title>
+<title>PHP2Shell CVE-2026-109618 and CVE-2026-109619: PHP RCE patch, and log review from October 17</title>
 <link>https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html</link>
 <guid>https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html</guid>
 <pubDate>Thu, 22 Oct 2026 20:00:00 +0000</pubDate>
@@ -1668,7 +1745,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <p>Related: <a href="https://circuits.fit/articles/php2shell-php-rce-vendor-inventory.html">PHP2Shell was probed before the patch (October 22)</a>, <a href="https://circuits.fit/articles/citrix-netscaler-is-on-the-catalog-again.html">Citrix NetScaler is on the exploited catalog again</a>, <a href="https://circuits.fit/articles/cisa-listed-three-bugs-attackers-are-using.html">CISA listed three bugs attackers are already using</a>, and the guide <a href="https://circuits.fit/guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a>, which applies the same least-privilege logic to automated access.</p>]]></content:encoded>
 </item>
 <item>
-<title>Gartner says the AI build-out may not pay back. Check who runs your compute.</title>
+<title>Gartner AI infrastructure impairment: the $3.5 trillion forecast and neoclouds</title>
 <link>https://circuits.fit/articles/gartner-ai-infrastructure-impairment-neoclouds.html</link>
 <guid>https://circuits.fit/articles/gartner-ai-infrastructure-impairment-neoclouds.html</guid>
 <pubDate>Wed, 21 Oct 2026 12:00:00 +0000</pubDate>
@@ -1853,13 +1930,13 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 </section>]]></content:encoded>
 </item>
 <item>
-<title>Free tool: AI agent inventory and access map</title>
+<title>Free tool: AI agent inventory and access map template</title>
 <link>https://circuits.fit/tools/agent-inventory.html</link>
 <guid>https://circuits.fit/tools/agent-inventory.html</guid>
 <pubDate>Wed, 07 Oct 2026 12:00:00 +0000</pubDate>
 <description>List each agent, the identity it uses, and what it can change. Flags stale reviews and shared logins. Runs in your browser. No sign-in.</description>
 <author>circuits50capital@circuits.fit (Emilio Santos)</author>
-<content:encoded><![CDATA[<h1>AI agent inventory and access map</h1><p class="dek">List each agent, the identity it uses, and what it can change. Flags stale reviews and shared logins.</p>
+<content:encoded><![CDATA[<h1>AI agent inventory and access map template</h1><p class="dek">List each agent, the identity it uses, and what it can change. Flags stale reviews and shared logins.</p>
 
 
 <p class="tool-banner">Not legal, tax, insurance, or procurement advice. Inputs stay in your browser. Nothing is uploaded.</p>
@@ -2130,7 +2207,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <h3>Is my data sent anywhere?</h3>
 <p>No. The scoring runs in your browser. Nothing is uploaded.</p>
 <h3>Why does opt-out AI training score a point?</h3>
-<p>Opt-out means your data may be used unless someone remembers to switch it off. Opt-in means it is not used unless you agree. The guide <a href="https://circuits.fit/guides/what-belongs-in-a-processor-clause.html">What belongs in a processor clause</a> covers the contract side.</p>
+<p>Opt-out means your data may be used unless someone remembers to switch it off. Opt-in means it is not used unless you agree. The guide <a href="https://circuits.fit/guides/what-belongs-in-a-processor-clause.html">Article 28 processor clauses: what belongs in a DPA (checklist for small teams)</a> covers the contract side.</p>
 <h3>Why ask for an SBOM on a SaaS product?</h3>
 <p>CISA’s 2026 minimum elements for SBOMs say hosted software is in scope. See <a href="https://circuits.fit/guides/ask-a-vendor-for-an-sbom.html">Ask a vendor for an SBOM</a>.</p>
 <h3>What if the vendor refuses every request?</h3>
@@ -2604,7 +2681,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <ul>
 <li><a href="https://circuits.fit/articles/ciso-five-moves-before-2027.html">Five moves Gartner wants from a CISO before 2027</a></li>
 <li><a href="https://circuits.fit/guides/one-page-ai-use-rule.html">A one-page AI use rule</a></li>
-<li><a href="https://circuits.fit/tools/agent-inventory.html">AI agent inventory and access map</a></li>
+<li><a href="https://circuits.fit/tools/agent-inventory.html">AI agent inventory and access map template</a></li>
 <li><a href="https://circuits.fit/tools/agent-access-limit.html">Agent access limit sheet</a></li>
 <li><a href="https://circuits.fit/articles/nvidia-put-the-fence-outside-the-agent.html">Nvidia put the fence outside the agent</a></li>
 </ul>
@@ -2840,7 +2917,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 </section>]]></content:encoded>
 </item>
 <item>
-<title>What Belongs in a Processor Clause</title>
+<title>Article 28 processor clauses: what belongs in a DPA (checklist for small teams)</title>
 <link>https://circuits.fit/guides/what-belongs-in-a-processor-clause.html</link>
 <guid>https://circuits.fit/guides/what-belongs-in-a-processor-clause.html</guid>
 <pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
@@ -3067,7 +3144,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <ul>
 <li><a href="https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a></li>
 <li><a href="https://circuits.fit/guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a></li>
-<li><a href="https://circuits.fit/tools/agent-inventory.html">AI agent inventory and access map</a></li>
+<li><a href="https://circuits.fit/tools/agent-inventory.html">AI agent inventory and access map template</a></li>
 <li><a href="https://circuits.fit/articles/board-questions-generative-ai.html">Six questions every board should ask</a></li>
 </ul>
 </section>]]></content:encoded>
@@ -4275,7 +4352,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <p>Operator guides: <a href="https://circuits.fit/guides/ai-spend-vs-return.html">How to tell AI spend from AI return</a>. For one workflow, use <a href="https://circuits.fit/tools/token-cost-margin.html">token cost to gross margin</a>, then <a href="https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a>. The September revision is <a href="https://circuits.fit/articles/gartner-revised-the-ai-bill.html">Gartner revised the AI bill</a>.</p>]]></content:encoded>
 </item>
 <item>
-<title>Chip Licenses Keep Moving. The Mid-Tier Still Waits.</title>
+<title>H200 AI chip export licenses: BIS case-by-case review and Korea’s Sept. 1 rules</title>
 <link>https://circuits.fit/articles/chip-licenses-keep-moving.html</link>
 <guid>https://circuits.fit/articles/chip-licenses-keep-moving.html</guid>
 <pubDate>Wed, 02 Sep 2026 12:00:00 +0000</pubDate>
@@ -4429,7 +4506,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <h2>Policy as a wedge</h2>
 <p>Export rules, privacy law, and sector guidance will keep splitting the market into “good enough for a startup” and “good enough for a bank.” The second market pays more and moves slower. Builders who ignore it will still sell. Builders who fake it will get a lawsuit with a product name on it.</p>
 <p>Treat compliance as packaging only if you can open the box. Otherwise it is a liability with a landing page.</p>
-<p>The pages that open the box are the guides: <a href="https://circuits.fit/guides/what-article-50-asks-a-buyer.html">What Article 50 asks a buyer</a>, <a href="https://circuits.fit/guides/what-belongs-in-a-processor-clause.html">What belongs in a processor clause</a>, and <a href="https://circuits.fit/guides/one-page-ai-use-rule.html">A one-page AI use rule</a>. Gartner’s September 19 post says EU AI Act literacy requirements are now in effect. That is Gartner’s claim. The timeline is the <a href="https://circuits.fit/articles/eu-ai-act-what-still-applies.html">EU briefing</a>.</p>
+<p>The pages that open the box are the guides: <a href="https://circuits.fit/guides/what-article-50-asks-a-buyer.html">What Article 50 asks a buyer</a>, <a href="https://circuits.fit/guides/what-belongs-in-a-processor-clause.html">Article 28 processor clauses: what belongs in a DPA (checklist for small teams)</a>, and <a href="https://circuits.fit/guides/one-page-ai-use-rule.html">A one-page AI use rule</a>. Gartner’s September 19 post says EU AI Act literacy requirements are now in effect. That is Gartner’s claim. The timeline is the <a href="https://circuits.fit/articles/eu-ai-act-what-still-applies.html">EU briefing</a>.</p>
 <h2>Updated October 2026: what moved since August</h2>
 <p>This note first ran on August 31. Three dated items have moved closer, and they are the reason compliance features now show up on order forms rather than in appendices.</p>
 <ul>
@@ -4447,7 +4524,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <li><strong>Log location and retention.</strong> Which region holds the audit log, how long it is kept, and whether you can set the retention yourself.</li>
 <li><strong>Export without a ticket.</strong> Can you export logs and data in a documented, machine-readable format from the admin console or an API? If export requires professional services, write the cost down.</li>
 <li><strong>The four-part data-use map.</strong> For customer data and prompts, ask separately about training, evaluation, human review, and subprocessors. Get each answer in writing and tied to the product tier you are buying.</li>
-<li><strong>Processor terms.</strong> If the GDPR applies to the data, check that the data-processing addendum covers what Article 28 requires: subject matter, duration, nature and purpose of processing, types of data, sub-processor rules, and deletion or return at the end. <a href="https://circuits.fit/guides/what-belongs-in-a-processor-clause.html">What belongs in a processor clause</a> walks through it.</li>
+<li><strong>Processor terms.</strong> If the GDPR applies to the data, check that the data-processing addendum covers what Article 28 requires: subject matter, duration, nature and purpose of processing, types of data, sub-processor rules, and deletion or return at the end. <a href="https://circuits.fit/guides/what-belongs-in-a-processor-clause.html">Article 28 processor clauses: what belongs in a DPA (checklist for small teams)</a> walks through it.</li>
 <li><strong>Assurance scope.</strong> Ask for the current SOC 2 report and read which systems and which period it covers. Note anything you bought that sits outside that scope.</li>
 <li><strong>Exit terms.</strong> For EU data processing services, check how the switching and data-export terms line up with the Data Act dates above. For everything else, write the exit into the contract: format, timeline, and who pays.</li>
 <li><strong>Price the tier.</strong> If any answer above is “only in Enterprise,” price Enterprise as the real cost and compare vendors on that basis.</li>
@@ -4811,7 +4888,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <h2>What to do this quarter</h2>
 <ul>
 <li><strong>Put the six questions on one agenda.</strong> Send them to management two weeks before the meeting and ask for written answers, not a presentation.</li>
-<li><strong>Ask for the tool inventory.</strong> Every approved AI tool, its owner, the data it touches and the contract that governs it. The <a href="https://circuits.fit/tools/agent-inventory.html">AI agent inventory and access map</a> is a free template.</li>
+<li><strong>Ask for the tool inventory.</strong> Every approved AI tool, its owner, the data it touches and the contract that governs it. The <a href="https://circuits.fit/tools/agent-inventory.html">AI agent inventory and access map template</a> is a free worksheet.</li>
 <li><strong>Get one unit cost.</strong> Choose one workflow and price it end to end with <a href="https://circuits.fit/guides/put-an-ai-cost-on-one-workflow.html">Put an AI cost on one workflow</a> and the <a href="https://circuits.fit/tools/token-cost-margin.html">token cost to gross margin</a> calculator.</li>
 <li><strong>Adopt a one-page rule.</strong> A short use policy that staff can actually read beats a long one they cannot. Start from <a href="https://circuits.fit/guides/one-page-ai-use-rule.html">A one-page AI use rule</a>.</li>
 <li><strong>Limit agent permissions.</strong> Use the <a href="https://circuits.fit/tools/agent-access-limit.html">agent access limit sheet</a> and <a href="https://circuits.fit/guides/limit-what-an-agent-can-touch.html">Limit what an agent can touch</a> before any agent is allowed to act without a human.</li>
@@ -4830,7 +4907,7 @@ Overdue?:        =IF(X5="","",IF(X5&lt;TODAY(),"Overdue","OK"))</code></pre>
 <p>The six questions and the “good answer” tests are the desk’s. The sources above are cited for the specific facts attributed to them.</p>]]></content:encoded>
 </item>
 <item>
-<title>Retail Media Networks Are Eating the Digital Ad Market</title>
+<title>Retail media networks and retail ad networks, explained</title>
 <link>https://circuits.fit/articles/retail-media-networks.html</link>
 <guid>https://circuits.fit/articles/retail-media-networks.html</guid>
 <pubDate>Mon, 10 Aug 2026 12:00:00 +0000</pubDate>

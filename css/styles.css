@@ -968,3 +968,26 @@ footer.site-foot {
 .prose .tool-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
 .prose .tool-table-wrap table{min-width:560px}
 @media (min-width:641px){.prose .tool-scroll-note{display:none}}
+
+/* Related free tools (articles and topic hubs) */
+.related-tools {
+  margin: 1.75rem 0;
+  padding: 1.15rem 1.25rem 1.15rem 1.35rem;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--copper);
+}
+.related-tools h2 {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  margin: 0 0 0.65rem;
+}
+.related-tools ul {
+  margin: 0 0 0.75rem;
+  padding-left: 1.15rem;
+}
+.related-tools li { margin: 0.3rem 0; }
+.related-tools p { margin: 0; }
+.related-tools--hub {
+  margin: 0 0 1.75rem;
+}
