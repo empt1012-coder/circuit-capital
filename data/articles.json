@@ -35,8 +35,8 @@
     },
     {
       "slug": "chrome-157-update-cve-2026-125350",
-      "title": "Relaunch Chrome this week. Check it shows 157.0.8103.78 or later.",
-      "dek": "Google’s November 9 Stable update fixed CVE-2026-125350, a use-after-free in XML that Google says is exploited in the wild. CISA added it to its Known Exploited Vulnerabilities catalog the next day, with a due date of November 24. The current Stable build, posted November 11, is 157.0.8103.78 for Linux and 157.0.8103.78/.79 for Windows and Mac, and it includes 83 security fixes, five of them Critical. Relaunch Chrome on every PC this week and confirm that version, or later.",
+      "title": "Relaunch Chrome this week. Check it shows 157.0.8103.50/.51 or later.",
+      "dek": "Google’s November 9 Stable update fixed CVE-2026-125350 in Chrome 157.0.8103.50 for Linux and 157.0.8103.50/.51 for Windows and Mac. CISA added it to its Known Exploited Vulnerabilities catalog the next day, with a due date of November 24. Relaunch Chrome on every PC this week and confirm 157.0.8103.50/.51 or later. A later November 11 build, 157.0.8103.78/.79, is also fine.",
       "category": "Policy",
       "author": "Emilio Santos",
       "date": "November 12, 2026",
@@ -300,7 +300,7 @@
     {
       "slug": "what-belongs-in-a-processor-clause",
       "type": "guide",
-      "title": "What Belongs in a Processor Clause",
+      "title": "Article 28 processor clauses: what belongs in a DPA (checklist for small teams)",
       "dek": "The Commission adopted two different sets of standard clauses on June 4, 2021. One governs a processor inside the EEA. The other governs a transfer out. Do not sign the wrong PDF.",
       "category": "Guides",
       "author": "Emilio Santos",
@@ -475,7 +475,7 @@
     },
     {
       "slug": "php2shell-php-rce-vendor-inventory",
-      "title": "PHP2Shell was probed before the patch. Start the log review at October 17.",
+      "title": "PHP2Shell CVE-2026-109618 and CVE-2026-109619: PHP RCE patch, and log review from October 17",
       "dek": "PHP fixed two unauthenticated remote code execution bugs on October 21. Amazon saw an exploit attempt on October 17. Most companies run PHP inside software they buy, so the work is a vendor inventory, not only a patch.",
       "category": "Policy",
       "author": "Emilio Santos",
@@ -497,7 +497,7 @@
     },
     {
       "slug": "gartner-ai-infrastructure-impairment-neoclouds",
-      "title": "Gartner says the AI build-out may not pay back. Check who runs your compute.",
+      "title": "Gartner AI infrastructure impairment: the $3.5 trillion forecast and neoclouds",
       "dek": "Gartner says $3.5 trillion of AI infrastructure could face impairment by 2030 and that over 80% of neoclouds will cease independent operations. For buyers, that is a supplier-risk question.",
       "category": "Markets",
       "author": "Emilio Santos",
@@ -629,7 +629,7 @@
     },
     {
       "slug": "chip-licenses-keep-moving",
-      "title": "Chip Licenses Keep Moving. The Mid-Tier Still Waits.",
+      "title": "H200 AI chip export licenses: BIS case-by-case review and Korea’s Sept. 1 rules",
       "dek": "BIS opened a case-by-case window for H200-class chips. Korea tightened AI-chip exports on Sept. 1.",
       "category": "Policy",
       "author": "Emilio Santos",
@@ -750,7 +750,7 @@
     },
     {
       "slug": "retail-media-networks",
-      "title": "Retail Media Networks Are Eating the Digital Ad Market",
+      "title": "Retail media networks and retail ad networks, explained",
       "dek": "Closed-loop purchase data beat the open web. The next fight is over who owns the aisle.",
       "category": "Business",
       "author": "Emilio Santos",

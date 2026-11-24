@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="https://circuits.fit/assets/images/colo.jpg">
   <meta property="article:published_time" content="2026-11-10">
     <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Barracuda appliances are on CISA’s exploited list. Check firmware this week.", "description": "CISA added two Barracuda flaws, CVE-2026-116606 and CVE-2026-111560, to its Known Exploited Vulnerabilities catalog on November 10, 2026, with a due date of November 13. Barracuda has identified exploitation activity affecting a small number of organizations. Confirm the latest firmware and patches, keep the admin interface off the internet, and review the device if that page was reachable.", "image": ["https://circuits.fit/assets/images/colo.jpg"], "datePublished": "2026-11-10", "dateModified": "2026-11-10", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/barracuda-esg-cisa-kev.html", "articleSection": "Policy"}
+  {"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Barracuda appliances are on CISA’s exploited list. Check firmware this week.", "description": "CISA added two Barracuda flaws, CVE-2026-116606 and CVE-2026-111560, to its Known Exploited Vulnerabilities catalog on November 10, 2026, with a due date of November 13. Barracuda has identified exploitation activity affecting a small number of organizations. Confirm the latest firmware and patches, keep the admin interface off the internet, and review the device if that page was reachable.", "image": ["https://circuits.fit/assets/images/colo.jpg"], "datePublished": "2026-11-10", "dateModified": "2026-11-23", "author": {"@type": "Person", "name": "Emilio Santos", "url": "https://circuits.fit/about.html"}, "publisher": {"@type": "Organization", "name": "Circuit & Capital", "logo": {"@type": "ImageObject", "url": "https://circuits.fit/assets/apple-touch-icon.png", "width": 1024, "height": 1024}}, "mainEntityOfPage": "https://circuits.fit/articles/barracuda-esg-cisa-kev.html", "articleSection": "Policy"}
   </script>
   <meta name="google-adsense-account" content="ca-pub-3634982565972955">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3634982565972955" crossorigin="anonymous"></script>
@@ -116,6 +116,8 @@
           <li><strong>Keep the admin interface off the internet.</strong> Barracuda recommends restricting administrative interfaces to trusted internal networks. Organizations whose admin pages are not reachable from the public internet are less exposed to this attack path.</li>
           <li><strong>If the admin page was exposed, do a forensic review.</strong> Installing a patch does not undo a change an attacker may already have made. CISA’s catalog entries for both flaws are marked for forensic triage. Ask your provider to look for unexpected configuration changes, unexpected backup restores, timezone changes, and unusual administrator activity, then follow Barracuda’s current guidance.</li>
         </ol>
+
+        <p>If a device cannot be patched this week, or you are still waiting on a provider’s answer, log it with an owner and a review date in our free <a href="../tools/risk-exception-register.html">risk exception register</a>.</p>
         <h2>Questions to ask your IT provider</h2>
         <ul>
           <li>Do we run a Barracuda Email Security Gateway, Load Balancer ADC, Message Archiver, WAF, WAF Control Center, or Web Security Gateway, including any appliance you manage for us?</li>
@@ -133,6 +135,14 @@
           <li><a href="https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0041.md" rel="noopener">Mandiant, MNDT-2026-0041</a> (CVE-2026-111560, command injection in the timezone field, affected products and versions, CVSS 8.6)</li>
         </ul>
         <p>Related: <a href="n-able-n-central-offline-able2shell.html">N-able took N-central offline. Ask your MSP if they use it.</a> and <a href="../topics/security-vulnerabilities.html">Security and vulnerabilities</a>, every security briefing, guide and tool in one place.</p>
+        <section class="related-tools" aria-labelledby="related-tools-heading">
+          <h2 id="related-tools-heading">Related free tools</h2>
+          <ul>
+          <li><a href="../tools/risk-exception-register.html">Risk exception register</a> — Track an exception, its owner, and its expiry.</li>
+          </ul>
+          <p><a href="https://emilios-newsletter-7fd333.beehiiv.com/subscribe">Get the weekly briefing</a></p>
+        </section>
+
         <p class="follow-line">Follow Circuit &amp; Capital on <a href="https://bsky.app/profile/circuits.fit" rel="noopener">Bluesky</a>, <a href="https://www.facebook.com/circuitandcapital" rel="noopener">Facebook</a> and <a href="https://x.com/circuitsfit" rel="noopener">X (@circuitsfit)</a> for new briefings.</p>
         <div class="author-box">
           <div class="avatar">ES</div>

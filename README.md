@@ -42,3 +42,7 @@ python3 scripts/feed-content.py
 ```
 
 Tool pages get the heading, dek and explanation, not the interactive form.
+
+## Related free tools on articles
+
+New briefings should include a “Related free tools” block after the sources / related paragraph and before the follow line. Copy `partials/related-tools.example.html`, swap in one or two matching tools from `/tools/`, and keep the “Get the weekly briefing” link. The site has no build-time include, so the block has to be copied into each article’s HTML. CSS for the block is `.related-tools` in `css/styles.css`.

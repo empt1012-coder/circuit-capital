@@ -17,7 +17,7 @@
     {
       "path": "tools/agent-inventory.html",
       "kind": "Tool",
-      "title": "AI agent inventory and access map",
+      "title": "AI agent inventory and access map template",
       "dek": "List each agent, the identity it uses, and what it can change. Flags stale reviews and shared logins.",
       "body": "free download template checklist CSV Excel XLSX PDF"
     },
